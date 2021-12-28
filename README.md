@@ -1,0 +1,1 @@
+This will have a basic form that collects email, country, zip code, password and password confirmation data.
