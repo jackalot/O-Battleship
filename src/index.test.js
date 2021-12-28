@@ -1,3 +1,5 @@
-test('this is a test for tests', () => {
-  expect(1).toBe(1);
-});
+const indexFile =  require('index');
+
+test("ship factory returns an object", () => {
+    expect(indexFile.shipFactory(3)).toBe(typeof("object"));
+})
