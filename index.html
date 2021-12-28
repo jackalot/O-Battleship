@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Forms Practice</title>
+    </head>
+    <body>
+        <label for="email">Enter an email <strong>*</strong></label>
+        <input type="email" name="email" class="email" required>
+        <p class="email-error"></p>
+        <label for="country">Enter a country <strong>*</strong></label>
+        <input type="text" name="country" class="country" required>
+        <p class="country-error"></p>
+        <label for="zip-code">Enter the zip code <strong>*</strong></label>
+        <input type="number" name="zip-code" class="zip-code" min="10000" max="99999"required>
+        <p class="zip-code-error"></p>
+            <div class="password-div">
+                <label for="password">Enter a password <strong>*</strong></label>
+                <input type="password" name="password" class="password" minlength="8" required>
+                <p class="password-error"></p>
+                <label for="confirm-password">Confirm password: <strong>*</strong></label>
+                <input type="password" name="confirm-password" class="confirm-password" minlength="8" required>
+                <p class="confirm-password-error"></p>
+            </div>
+        <button class="submit">submit</button>
+        <p class="high-five"></p>
+        <script src="main.js"></script>
+    </body>
+</html>
