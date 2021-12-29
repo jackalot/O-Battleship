@@ -1,9 +1,9 @@
 const indexFile =  require('./index');
 
-test.only("ship factory returns an object", () => {
+test("ship factory returns an object", () => {
     expect(indexFile.shipFactory({ coord1: [1, 1], coord2: [1, 7]}).toBe(typeof({})));
 })
-test("ship factory return a length of 6", () => {
+test.only("ship factory return a length of 6", () => {
     expect(indexFile.shipFactory({ coord1: [1, 1], coord2: [1, 7]}).toBe({length: 6}));
 })
 test("ship factory will get hit at [1, 1]", () => {
