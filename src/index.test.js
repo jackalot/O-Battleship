@@ -1,4 +1,4 @@
-const shipFile =  require('./ship');
+const shipFile = require('./ship');
 
 test.only("ship factory returns an object", () => {
     expect(shipFile.shipFactory({ coord1: [1, 1], coord2: [1, 7]}).toBe(typeof({})));
