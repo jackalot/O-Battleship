@@ -1,14 +1,14 @@
-const indexFile =  require('./index');
+const shipFile =  require('./ship');
 
 test("ship factory returns an object", () => {
-    expect(indexFile.shipFactory({ coord1: [1, 1], coord2: [1, 7]}).toBe(typeof({})));
+    expect(shipFile.shipFactory({ coord1: [1, 1], coord2: [1, 7]}).toBe(typeof({})));
 })
 test.only("ship factory return a length of 6", () => {
-    expect(indexFile.shipFactory({ coord1: [1, 1], coord2: [1, 7]}).toBe({length: 6}));
+    expect(shipFile({ coord1: [1, 1], coord2: [1, 7]}).toBe({length: 6}));
 })
 test("ship factory will get hit at [1, 1]", () => {
-    expect(indexFile.shipFactory.hit([1, 1], { coord1: [1, 1], coord2: [1, 7]})).toBe(true);
+    expect(shipFile.shipFactory.hit([1, 1], { coord1: [1, 1], coord2: [1, 7]})).toBe(true);
 })
 test("ship factory will not sink", () => {
-    expect(indexFile.shipFactory.sink().toBe(false));
+    expect(shipFile.shipFactory.sink().toBe(false));
 })
