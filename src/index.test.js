@@ -2,7 +2,7 @@ const shipFile = require('./ship');
 const { TestWatcher } = require("jest");
 
 test.only("ship factory returns an object", () => {
-    expect(shipFile({ coord1: [1, 1], coord2: [1, 7]})).toBe(typeof(Object));
+    expect(shipFile( coord1 = [1, 1], coord2 = [1, 7])).toStrictEqual({ coord1: [1, 1], coord2: [1, 7]});
 })
 test("ship factory return a length of 6", () => {
     expect(shipFile({ coord1: [1, 1], coord2: [1, 7]}).toBe({length: 6}));
