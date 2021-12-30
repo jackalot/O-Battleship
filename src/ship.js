@@ -1,10 +1,13 @@
 function shipFactory(coord1, coord2) {
   function lengthMeasurer() {
-    let xAxis = 0;
-    for (let i = coord1[0]; i < coord2[0]; i++) {
-      xAxis += 1;
+    const yAxis = coord2.x - coord1.x;
+    const xAxis = coord2.y - coord1.y;
+    if (xAxis === 0) {
+      return yAxis;
     }
-    return xAxis;
+    if (yAxis === 0) {
+      return xAxis;
+    }
   }
   const length = lengthMeasurer();
   return { coord1, coord2, length };
