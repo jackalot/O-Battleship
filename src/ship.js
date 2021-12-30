@@ -8,7 +8,7 @@ function shipFactory(coord1, coord2) {
     if (yAxis === 0) {
       return xAxis;
     }
-    return undefined;
+    return console.error('error');
   };
   return { coord1, coord2, lengthMeasurer };
 }
