@@ -1,15 +1,15 @@
 function shipFactory(coord1, coord2) {
-  function lengthMeasurer() {
-    const yAxis = coord2.x - coord1.x;
-    const xAxis = coord2.y - coord1.y;
+  const lengthMeasurer = (newCoord1, newCoord2) => {
+    const yAxis = newCoord2.x - newCoord1.x;
+    const xAxis = newCoord2.y - newCoord1.y;
     if (xAxis === 0) {
       return yAxis;
     }
     if (yAxis === 0) {
       return xAxis;
     }
-  }
-  const length = lengthMeasurer();
-  return { coord1, coord2, length };
+    return undefined;
+  };
+  return { coord1, coord2, lengthMeasurer };
 }
 module.exports = shipFactory;
