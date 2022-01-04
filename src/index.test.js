@@ -8,7 +8,7 @@ test("mockShip returns an object", () => {
 test("mockShip returns a length of 6", () => {
     expect(mockShip.lengthMeasurer(coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7})).toBe(6);
 })
-test.only("mockShip will get hit at [1, 1], [1, 1]", () => {
+test.only("mockShip will get hit at [1, 1]", () => {
     expect(mockShip.hit({x: 1, y: 1})).toBe(true);
 })
 test("mockShip will not sink", () => {
