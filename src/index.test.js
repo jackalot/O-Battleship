@@ -1,7 +1,7 @@
 const shipFile = require('./ship');
 const { TestWatcher } = require("jest");
 const mockShip = shipFile(coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7});
-console.log(mockShip);
+console.log(mockShip.shipParts);
 //  this test is giving errors
 test.skip("mockShip returns an object", () => {
     expect(mockShip).toBe( coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7});
@@ -14,6 +14,9 @@ test("mockShip will get hit at [1, 1]", () => {
 })
 test("mockShip will get hit at [1, 7]", () => {
     expect(mockShip.hit({x: 1, y: 7})).toBe(true);
+})
+test.only("mockShip.shipParts will return every part", () => {
+    expect(mockShip.shipParts()).toBe("success");
 })
 test.skip("mockShip will not sink", () => {
     expect(mockShip.hitsink().toBe(false));
