@@ -1,6 +1,6 @@
 const shipFile = require('./ship');
 const { TestWatcher } = require("jest");
-const mockShip = shipFile(coord1 = [1, 1], coord2 = [1, 7]);
+const mockShip = shipFile(coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 1});
 console.log(mockShip);
 test("mockShip returns an object", () => {
     expect(mockShip).toBe({ coord1: [1, 1], coord2: [1, 7]});
