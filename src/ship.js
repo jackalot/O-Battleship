@@ -19,10 +19,21 @@ const shipFactory = (coord1, coord2) => {
     }
     return false;
   }
+  //  we know its the same y, but now check if the same X
+  function guessYMinusCoordYIsZero(guessCoord) {
+    if (guessCoord.x >= coord1.x || guessCoord.x <= coord2.x) {
+      return true;
+    }
+    return false;
+  }
   function hit(guessCoord) {
     if (guessCoord.x - coord1.x === 0) {
-      const result = guessXMinusCoordXIsZero(guessCoord);
-      return result;
+      const resultY = guessXMinusCoordXIsZero(guessCoord);
+      return resultY;
+    }
+    if (guessCoord.y - coord1.y === 0) {
+      const resultX = guessYMinusCoordYIsZero(guessCoord);
+      return resultX;
     }
     return false;
   }
