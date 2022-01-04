@@ -14,10 +14,7 @@ const shipFactory = (coord1, coord2) => {
   this.coord2 = coord2;
   //  we know its the same x, but now check if the same Y
   function guessXMinusCoordXIsZero(guessCoord) {
-    if (guessCoord.y > coord1.y || guessCoord.y < coord2.y) {
-      return true;
-    }
-    if (guessCoord.y === coord1.y || guessCoord.y === coord2.y) {
+    if (guessCoord.y >= coord1.y || guessCoord.y <= coord2.y) {
       return true;
     }
     return false;
