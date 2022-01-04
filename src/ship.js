@@ -12,6 +12,7 @@ const shipFactory = (coord1, coord2) => {
   }
   this.coord1 = coord1;
   this.coord2 = coord2;
+  // hit() Helper function
   //  we know its the same x, but now check if the same Y
   function guessXMinusCoordXIsZero(guessCoord) {
     if (guessCoord.y >= coord1.y || guessCoord.y <= coord2.y) {
@@ -19,6 +20,7 @@ const shipFactory = (coord1, coord2) => {
     }
     return false;
   }
+  // hit() Helper function
   //  we know its the same y, but now check if the same X
   function guessYMinusCoordYIsZero(guessCoord) {
     if (guessCoord.x >= coord1.x || guessCoord.x <= coord2.x) {
