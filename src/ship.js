@@ -12,6 +12,7 @@ const shipFactory = (coord1, coord2) => {
   }
   this.coord1 = coord1;
   this.coord2 = coord2;
+  // this function will get the length of the ship and make a object for each part. Then return
   function shipParts() {
     return 'success';
   }
