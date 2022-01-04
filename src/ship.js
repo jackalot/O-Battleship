@@ -17,7 +17,6 @@ const shipFactory = (coord1, coord2) => {
     if (guessCoord.y > coord1.y || guessCoord.y < coord2.y) {
       return true;
     }
-    console.log(`guessCoord.y is ${guessCoord.y}and coord1 is ${coord1.y}`);
     if (guessCoord.y === coord1.y || guessCoord.y === coord2.y) {
       return true;
     }
@@ -25,7 +24,6 @@ const shipFactory = (coord1, coord2) => {
   }
   function hit(guessCoord) {
     if (guessCoord.x - coord1.x === 0) {
-      console.log('this is a test');
       const result = guessXMinusCoordXIsZero(guessCoord);
       return result;
     }
