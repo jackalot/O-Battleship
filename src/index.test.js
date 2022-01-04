@@ -16,5 +16,5 @@ test("mockShip will get hit at [1, 7]", () => {
     expect(mockShip.hit({x: 1, y: 7})).toBe(true);
 })
 test.skip("mockShip will not sink", () => {
-    expect(shipFile.shipFactory.sink().toBe(false));
+    expect(mockShip.hitsink().toBe(false));
 })
