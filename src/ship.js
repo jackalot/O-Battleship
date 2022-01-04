@@ -10,23 +10,21 @@ const shipFactory = (coord1, coord2) => {
     }
     return console.error('error');
   }
-  function hit(guessCoord) {
-    //  test x axis on our ship
-    let matchesX = false;
-    for (let i = coord1.x; i < coord2.x; i++) {
-      if (guessCoord.x === i) {
-        matchesX = true;
-      }
-    }
-    // test y axis on our ship
-    let matchesY = false;
-    for (let i = coord1.y; i < coord2.x; i += 1) {
-      if (guessCoord.y === i) {
-        matchesY = true;
-      }
-    }
-    if (matchesX === true && matchesY === true) {
+  this.coord1 = coord1;
+  this.coord2 = coord2;
+  //  we know its the same x, but now check if the same Y
+  function guessXMinusCoordXIsZero(guessCoord) {
+    if (guessCoord.y > coord1.y || guessCoord.y < coord2.y) {
       return true;
+    }
+    if (guessCoord.y === coord1.y || guessCoord.y === coord2.y) {
+      return true;
+    }
+  }
+  function hit(guessCoord) {
+    if (guessCoord.x - coord1.x === 0) {
+      const result = guessXMinusCoordXIsZero(guessCoord);
+      return result;
     }
     return false;
   }
