@@ -12,6 +12,9 @@ const shipFactory = (coord1, coord2) => {
   }
   this.coord1 = coord1;
   this.coord2 = coord2;
+  function shipParts() {
+    return 'success';
+  }
   // hit() Helper function
   //  we know its the same x, but now check if the same Y
   function guessXMinusCoordXIsZero(guessCoord) {
@@ -39,8 +42,10 @@ const shipFactory = (coord1, coord2) => {
     }
     return false;
   }
+  function sink() {
+  }
   return {
-    coord1, coord2, lengthMeasurer, hit,
+    coord1, coord2, lengthMeasurer, hit, sink, shipParts,
   };
 };
 module.exports = shipFactory;
