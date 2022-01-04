@@ -10,6 +10,28 @@ const shipFactory = (coord1, coord2) => {
     }
     return console.error('error');
   }
-  return { coord1, coord2, lengthMeasurer };
+  function hit(guessCoord) {
+    //  test x axis on our ship
+    let matchesX = false;
+    for (let i = coord1.x; i < coord2.x; i++) {
+      if (guessCoord.x === i) {
+        matchesX = true;
+      }
+    }
+    // test y axis on our ship
+    let matchesY = false;
+    for (let i = coord1.y; i < coord2.x; i += 1) {
+      if (guessCoord.y === i) {
+        matchesY = true;
+      }
+    }
+    if (matchesX === true && matchesY === true) {
+      return true;
+    }
+    return false;
+  }
+  return {
+    coord1, coord2, lengthMeasurer, hit,
+  };
 };
 module.exports = shipFactory;
