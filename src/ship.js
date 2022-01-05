@@ -51,6 +51,7 @@ const shipFactory = (coord1, coord2) => {
       return allParts;
     } return null;
   }
+  const myParts = shipParts();
   // hit() Helper function
   //  we know its the same x, but now check if the same Y
   function guessXMinusCoordXIsZero(guessCoord) {
@@ -79,6 +80,20 @@ const shipFactory = (coord1, coord2) => {
     return false;
   }
   function sink() {
+    const length = lengthMeasurer(coord1, coord2);
+    const orientation = shipOrientation();
+    if (orientation === 'horizontal') {
+      let sunkParts = 0;
+      for (let i = coord1.x; i < length; i += 1) {
+        if (myParts[i].hasSunk === true) {
+          sunkParts += 1;
+        }
+      }
+      if (sunkParts === length) {
+        return 'you sunk my battle ship!';
+      }
+      return 'I still have parts left';
+    }
   }
   return {
     coord1, coord2, lengthMeasurer, hit, sink, shipParts,
