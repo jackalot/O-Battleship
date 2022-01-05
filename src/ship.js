@@ -32,13 +32,22 @@ const shipFactory = (coord1, coord2) => {
   // this function will get the length of the ship and make a object for each part. Then return
   function shipParts() {
     const length = lengthMeasurer(coord1, coord2);
-    const oriantation = shipOrientation();
+    const orientation = shipOrientation();
     const allParts = [];
-    for (let i = coord1.x; i < length; i += 1) {
-      const newPart = new Part(`part${i}`, { x: i, y: coord1.y });
-      allParts.push(newPart);
+    if (orientation === 'horizontal') {
+      for (let i = coord1.x; i < length; i += 1) {
+        const newPart = new Part(`part${i}`, { x: i, y: coord1.y });
+        allParts.push(newPart);
+      }
+      return allParts;
     }
-    return allParts;
+    if (orientation === 'vertical') {
+      for (let i = coord1.y; i < length; i += 1) {
+        const newPart = new Part(`part${i}`, { x: coord1.y, y: i });
+        allParts.push(newPart);
+      }
+      return allParts;
+    } return null;
   }
   // hit() Helper function
   //  we know its the same x, but now check if the same Y
