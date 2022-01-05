@@ -19,5 +19,5 @@ test("mockShip.shipParts will return every part", () => {
     expect(mockShip.shipParts()).toEqual([{"hasSunk": false, "partCoordinates": {"x": 1, "y": 1}, "partName": "part1"}, {"hasSunk": false, "partCoordinates": {"x": 2, "y": 1}, "partName": "part2"}, {"hasSunk": false, "partCoordinates": {"x": 3, "y": 1}, "partName": "part3"}, {"hasSunk": false, "partCoordinates": {"x": 4, "y": 1}, "partName": "part4"}, {"hasSunk": false, "partCoordinates": {"x": 5, "y": 1}, "partName": "part5"}]    );
 })
 test.only("mockShip will not sink", () => {
-    expect(mockShip.sink().toBe('I still have parts left'));
+    expect(mockShip.sink()).toBe('I still have parts left');
 })
