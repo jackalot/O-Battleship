@@ -15,10 +15,10 @@ const shipFactory = (coord1, coord2) => {
     const yAxis = coord2.x - coord1.x;
     const xAxis = coord2.y - coord1.y;
     if (xAxis === 0) {
-      return 'vertical';
+      return 'horizontal';
     }
     if (yAxis === 0) {
-      return 'horizontal';
+      return 'vertical';
     }
     return console.error('error');
   }
@@ -56,6 +56,11 @@ const shipFactory = (coord1, coord2) => {
   //  we know its the same x, but now check if the same Y
   function guessXMinusCoordXIsZero(guessCoord) {
     if (guessCoord.y >= coord1.y || guessCoord.y <= coord2.y) {
+      for (let i = 0; i < myParts; i += 1) {
+        if (guessCoord.y === myParts[i].partCoordinates.y) {
+          myParts[i].hasSunk = true;
+        }
+      }
       return true;
     }
     return false;
@@ -64,6 +69,11 @@ const shipFactory = (coord1, coord2) => {
   //  we know its the same y, but now check if the same X
   function guessYMinusCoordYIsZero(guessCoord) {
     if (guessCoord.x >= coord1.x || guessCoord.x <= coord2.x) {
+      for (let i = 0; i < myParts; i += 1) {
+        if (guessCoord.x === myParts[i].partCoordinates.x) {
+          myParts[i].hasSunk = true;
+        }
+      }
       return true;
     }
     return false;
