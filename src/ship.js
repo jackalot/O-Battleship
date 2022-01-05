@@ -80,11 +80,12 @@ const shipFactory = (coord1, coord2) => {
     return false;
   }
   function sink() {
+    console.log(myParts[1].hasSunk);
     const length = lengthMeasurer(coord1, coord2);
     const orientation = shipOrientation();
     if (orientation === 'horizontal') {
       let sunkParts = 0;
-      for (let i = coord1.x; i < length; i += 1) {
+      for (let i = coord1.x; i < length - 1; i += 1) {
         if (myParts[i].hasSunk === true) {
           sunkParts += 1;
         }
@@ -96,7 +97,7 @@ const shipFactory = (coord1, coord2) => {
     }
     if (orientation === 'vertical') {
       let sunkParts = 0;
-      for (let i = coord1.y; i < length; i += 1) {
+      for (let i = coord1.y; i < length - 1; i += 1) {
         if (myParts[i].hasSunk === true) {
           sunkParts += 1;
         }
