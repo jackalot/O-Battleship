@@ -20,7 +20,9 @@ test.only("mockShip.shipParts will return every part", () => {
      "partName": "part1"}, {"hasSunk": false, "partCoordinates": {"x": 1, "y": 2}, "partName": "part2"},
      {"hasSunk": false, "partCoordinates": {"x": 1, "y": 3}, "partName": "part3"},
       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 4}, "partName": "part4"},
-       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 5}, "partName": "part5"}]    );
+       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 5}, "partName": "part5"},
+       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 6}, "partName": "part6"}, 
+       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 7}, "partName": "part7"}]    );
 })
 test("mockShip will not sink", () => {
     expect(mockShip.sink()).toBe('I still have parts left');
