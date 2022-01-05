@@ -94,6 +94,19 @@ const shipFactory = (coord1, coord2) => {
       }
       return 'I still have parts left';
     }
+    if (orientation === 'vertical') {
+      let sunkParts = 0;
+      for (let i = coord1.y; i < length; i += 1) {
+        if (myParts[i].hasSunk === true) {
+          sunkParts += 1;
+        }
+      }
+      if (sunkParts === length) {
+        return 'you sunk my battle ship!';
+      }
+      return 'I still have parts left';
+    }
+    return 'error';
   }
   return {
     coord1, coord2, lengthMeasurer, hit, sink, shipParts,
