@@ -24,12 +24,14 @@ const shipFactory = (coord1, coord2) => {
   }
   this.coord1 = coord1;
   this.coord2 = coord2;
+  // This is an object constructor for ship parts that makes each part for the ship
   function Part(partName, partCoordinates) {
     this.partName = partName;
     this.partCoordinates = partCoordinates;
     this.hasSunk = false;
   }
-  // this function will get the length of the ship and make a object for each part. Then return
+  // This gets the length, orientation, and then makes each part have its corresponding coordinate,
+  //  then returns all of them in an array
   function shipParts() {
     const length = lengthMeasurer(coord1, coord2);
     const orientation = shipOrientation();
