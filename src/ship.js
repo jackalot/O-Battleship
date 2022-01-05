@@ -10,6 +10,18 @@ const shipFactory = (coord1, coord2) => {
     }
     return console.error('error');
   }
+  //  Returns the orientation of the ship as a string
+  function shipOrientation() {
+    const yAxis = coord2.x - coord1.x;
+    const xAxis = coord2.y - coord1.y;
+    if (xAxis === 0) {
+      return 'vertical';
+    }
+    if (yAxis === 0) {
+      return 'horizontal';
+    }
+    return console.error('error');
+  }
   this.coord1 = coord1;
   this.coord2 = coord2;
   function Part(partName, partCoordinates) {
@@ -20,6 +32,7 @@ const shipFactory = (coord1, coord2) => {
   // this function will get the length of the ship and make a object for each part. Then return
   function shipParts() {
     const length = lengthMeasurer(coord1, coord2);
+    const oriantation = shipOrientation();
     const allParts = [];
     for (let i = coord1.x; i < length; i += 1) {
       const newPart = new Part(`part${i}`, { x: i, y: coord1.y });
