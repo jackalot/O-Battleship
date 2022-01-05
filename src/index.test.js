@@ -16,7 +16,7 @@ test("mockShip will get hit at [1, 7]", () => {
     expect(mockShip.hit({x: 1, y: 7})).toBe(true);
 })
 test.only("mockShip.shipParts will return every part", () => {
-    expect(mockShip.shipParts()).toBe("success");
+    expect(mockShip.shipParts()).toBe([{"hasSunk": false, "partCoordinates": {"x": 1, "y": 1}, "partName": "part1"}, {"hasSunk": false, "partCoordinates": {"x": 2, "y": 1}, "partName": "part2"}, {"hasSunk": false, "partCoordinates": {"x": 3, "y": 1}, "partName": "part3"}, {"hasSunk": false, "partCoordinates": {"x": 4, "y": 1}, "partName": "part4"}, {"hasSunk": false, "partCoordinates": {"x": 5, "y": 1}, "partName": "part5"}]    );
 })
 test.skip("mockShip will not sink", () => {
     expect(mockShip.hitsink().toBe(false));
