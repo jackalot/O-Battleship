@@ -12,9 +12,20 @@ const shipFactory = (coord1, coord2) => {
   }
   this.coord1 = coord1;
   this.coord2 = coord2;
+  function Part(partName, partCoordinates) {
+    this.partName = partName;
+    this.partCoordinates = partCoordinates;
+    this.hasSunk = false;
+  }
   // this function will get the length of the ship and make a object for each part. Then return
   function shipParts() {
-    return 'success';
+    const length = lengthMeasurer(coord1, coord2);
+    const allParts = [];
+    for (let i = coord1.x; i < length; i += 1) {
+      const newPart = new Part(`part${i}`, { x: i, y: coord1.y });
+      allParts.push(newPart);
+    }
+    return allParts;
   }
   // hit() Helper function
   //  we know its the same x, but now check if the same Y
