@@ -42,6 +42,8 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return null;
   }
-  return { bottomLeftCorner, topRightCorner, placeShip };
+  return {
+    bottomLeftCorner, topRightCorner, placeShip, checkValidCoord,
+  };
 };
 module.exports = gameBoardFactory;
