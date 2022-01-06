@@ -1,4 +1,4 @@
-import shipFactory from './ship';
+const shipFactory = require('./ship');
 
 const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   //  checkValidCorner() helper function
@@ -31,9 +31,16 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     if (CBLC === true && CTPRC === true) {
       return true;
     }
+    return false;
   }
   function placeShip(firstCoord, secondCoord) {
-    const checkFirstCoord = checkValidCoord(checkValidCoord);
+    const checkFirstCoord = checkValidCoord(firstCoord);
+    const checkSecondCoord = checkValidCoord(secondCoord);
+    if (checkFirstCoord === true && checkSecondCoord === true) {
+      const ourShip = shipFactory(firstCoord, secondCoord);
+      return ourShip;
+    }
+    return null;
   }
   return { bottomLeftCorner, topRightCorner, placeShip };
 };
