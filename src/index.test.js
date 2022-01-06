@@ -13,3 +13,6 @@ test("gameBoard recieves an attack at [1, 1] and it hits due to the ship there",
 test("gameBoard recieves an attack at [2, 6] and it misses due to no ship there", () => {
     expect(boardFile.recieveAttack(coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7})).toBe(true);
 })
+test("gameBoard checks if all ships have sunk, and returns false as theres still one ship up", () => {
+    expec(boardFile.allShipsSunk()).toBe(false);
+})
