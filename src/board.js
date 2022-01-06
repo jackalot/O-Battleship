@@ -1,7 +1,7 @@
 import shipFactory from './ship';
 
 const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
-  //  checkValidCorner() hellper function
+  //  checkValidCorner() helper function
   // checks if the coord is out of bounds of the bottomLeftCorner
   function checkBottomLeftCorner(coord) {
     if (coord.x >= bottomLeftCorner.x) {
@@ -12,6 +12,8 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return true;
   }
+  //  checkValidCorner() helper function
+  // checks if the coord is out of bounds of the topRightCorner
   function checkTopRightCorner(coord) {
     if (coord.x <= topRightCorner.x) {
       if (coord.y <= topRightCorner.y) {
