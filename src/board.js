@@ -1,20 +1,34 @@
 const shipFactory = require('./ship');
 
 const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
-  //  checkValidCorner() helper function
-  // checks if the coord is out of bounds of the bottomLeftCorner
-  function checkBottomLeftCorner(coord) {
+  // checkBottomLeftCorner() helper function
+  // checks if the coord is greater than the bottemLeftCorener
+  function checkGreaterThanBLC(coord) {
     if (coord.x > bottomLeftCorner.x) {
       if (coord.y > bottomLeftCorner.y) {
         return true;
       }
       return false;
     }
+    return false;
+  }
+  function checkEquealToBLC(coord) {
     if (coord.x === bottomLeftCorner.x) {
       if (coord.y === bottomLeftCorner.y) {
         return true;
       }
       return false;
+    }
+    return false;
+  }
+  //  checkValidCorner() helper function
+  // checks if the coord is out of bounds of the bottomLeftCorner
+  function checkBottomLeftCorner(coord) {
+    const greaterThan = checkGreaterThanBLC(coord);
+    const equalTo = checkEquealToBLC(coord);
+    // as long as one of the two are true, then it's valid
+    if (greaterThan === true || equalTo === true) {
+      return true;
     }
     return false;
   }
