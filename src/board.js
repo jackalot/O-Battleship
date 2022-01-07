@@ -4,13 +4,19 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   //  checkValidCorner() helper function
   // checks if the coord is out of bounds of the bottomLeftCorner
   function checkBottomLeftCorner(coord) {
-    if (coord.x >= bottomLeftCorner.x) {
-      if (coord.y >= bottomLeftCorner.y) {
-        return false;
+    if (coord.x > bottomLeftCorner.x) {
+      if (coord.y > bottomLeftCorner.y) {
+        return true;
       }
-      return true;
+      return false;
     }
-    return true;
+    if (coord.x === bottomLeftCorner.x) {
+      if (coord.y === bottomLeftCorner.y) {
+        return true;
+      }
+      return false;
+    }
+    return false;
   }
   //  checkValidCorner() helper function
   // checks if the coord is out of bounds of the topRightCorner
@@ -44,7 +50,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     return null;
   }
   return {
-    bottomLeftCorner, topRightCorner, placeShip, checkValidCoord,
+    bottomLeftCorner, topRightCorner, placeShip, checkValidCoord, checkBottomLeftCorner,
   };
 };
 module.exports = gameBoardFactory;
