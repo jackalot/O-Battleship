@@ -24,10 +24,10 @@ test("[1,7] is not equal to the top right corner, [10, 10]", () => {
     expect(mockBoard.checkEqualToTRC({x:1, y: 7})).toBe(false);
 })
 test.only("[1,1] is not greater than the top right corner, [10, 10]", () => {
-    expect(mockBoard.checkLessThanTRC({x:1, y: 1})).toBe(false);
+    expect(mockBoard.checkLessThanTRC({x:1, y: 1})).toBe(true);
 })
 test.only("[1,7] is not greater than the top right corner, [10, 10]", () => {
-    expect(mockBoard.checkLessThanTRC({x:1, y: 7})).toBe(false);
+    expect(mockBoard.checkLessThanTRC({x:1, y: 7})).toBe(true);
 })
 // ]!
 test("[1,1] is a valid coordinate on the game board", () => {
