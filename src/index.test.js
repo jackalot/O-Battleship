@@ -17,10 +17,10 @@ test.skip("[1,7] is not smaller than the bottom left corner, [1, 1]", () => {
     expect(mockBoard.checkGreaterThanBLC({x: 1, y: 7})).toBe(false);
 })
 // ]?
-test.only("[1,1] is not equal to the top right corner, [10, 10]", () => {
+test("[1,1] is not equal to the top right corner, [10, 10]", () => {
     expect(mockBoard.checkEqualToTRC({x:1, y: 1})).toBe(false);
 })
-test.only("[1,7] is not equal to the top right corner, [10, 10]", () => {
+test("[1,7] is not equal to the top right corner, [10, 10]", () => {
     expect(mockBoard.checkEqualToTRC({x:1, y: 7})).toBe(false);
 })
 test.only("[1,1] is not greater than the top right corner, [10, 10]", () => {
