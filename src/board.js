@@ -64,7 +64,13 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     return null;
   }
   return {
-    bottomLeftCorner, topRightCorner, placeShip, checkValidCoord, checkBottomLeftCorner,
+    bottomLeftCorner,
+    topRightCorner,
+    placeShip,
+    checkValidCoord,
+    checkBottomLeftCorner,
+    checkGreaterThanBLC,
+    checkEquealToBLC,
   };
 };
 module.exports = gameBoardFactory;
