@@ -43,6 +43,8 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return false;
   }
+  // checkTopRightCorner() helper function
+  // checks if the coord is less than the top right corner
   function checkLessThanTRC(coord) {
     if (coord.x < topRightCorner.x) {
       if (coord.y < topRightCorner.y) {
@@ -57,7 +59,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   function checkTopRightCorner(coord) {
     const checkEqual = checkEqualToTRC(coord);
     const checkLess = checkLessThanTRC(coord);
-    if (checkEqual === true) {
+    if (checkEqual === true || checkLess === true) {
       return true;
     }
     return false;
