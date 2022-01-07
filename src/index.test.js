@@ -4,16 +4,16 @@ const shipFile = require('./ship');
 const mockBoard = boardFile(coord1 = {x: 1, y: 1}, coord2 = {x: 10, y: 10})
 // checkValidCoord() helper functions marked with ![
 // checkBottomLeftCorner() helper functions marked with ?[
-test("[1,1] is equal to the bottom left corner, [1, 1]", () => {
+test.skip("[1,1] is equal to the bottom left corner, [1, 1]", () => {
     expect(mockBoard.checkEqualToBLC({x: 1, y: 1})).toBe(true);
 })
-test("[1,7] is equal to the bottom left corner, [1, 1]", () => {
+test.skip("[1,7] is equal to the bottom left corner, [1, 1]", () => {
     expect(mockBoard.checkEqualToBLC({x: 1, y: 7})).toBe(false);
 })
-test("[1,1] is not smaller than the bottom left corner, [1, 1]", () => {
+test.skip("[1,1] is not smaller than the bottom left corner, [1, 1]", () => {
     expect(mockBoard.checkGreaterThanBLC({x: 1, y: 1})).toBe(false);
 })
-test("[1,7] is not smaller than the bottom left corner, [1, 1]", () => {
+test.skip("[1,7] is not smaller than the bottom left corner, [1, 1]", () => {
     expect(mockBoard.checkGreaterThanBLC({x: 1, y: 7})).toBe(false);
 })
 // ]?
