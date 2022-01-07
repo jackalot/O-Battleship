@@ -2,7 +2,10 @@ const { TestWatcher } = require("jest");
 const boardFile = require('./board');
 const shipFile = require('./ship');
 const mockBoard = boardFile(coord1 = {x: 1, y: 1}, coord2 = {x: 10, y: 10})
-test.only("[1,1] is a valid coordinate on the game board", () => {
+test.only("[1,1] is not bigger than the bottom left corner, [1, 1]", () => {
+    expect(mockBoard.checkBottomLeftCorner({x: 1, y: 1})).toBe(true);
+})
+test("[1,1] is a valid coordinate on the game board", () => {
     expect(mockBoard.checkValidCoord({x: 1, y: 1})).toBe(true);
 })
 test("gameBoard has placed a ship from [1,1] to [1,7]", () => {
