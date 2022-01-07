@@ -5,7 +5,9 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   // checks if the coord is greater than the bottemLeftCorener
   function checkGreaterThanBLC(coord) {
     if (coord.x > bottomLeftCorner.x) {
+      console.log('coord.x > bottomLefCorner.x');
       if (coord.y > bottomLeftCorner.y) {
+        console.log('coord.y > bottomLeftCOrner.y');
         return true;
       }
       return false;
@@ -26,7 +28,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   function checkBottomLeftCorner(coord) {
     const greaterThan = checkGreaterThanBLC(coord);
     const equalTo = checkEqualToBLC(coord);
-    console.log(greaterThan, equalTo);
+    //  console.log(greaterThan, equalTo);
     // as long as one of the two are true, then it's valid
     if (greaterThan === true || equalTo === true) {
       return true;
