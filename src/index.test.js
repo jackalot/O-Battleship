@@ -23,6 +23,12 @@ test.only("[1,1] is not equal to the top right corner, [10, 10]", () => {
 test.only("[1,7] is not equal to the top right corner, [10, 10]", () => {
     expect(mockBoard.checkEqualToTRC({x:1, y: 7})).toBe(false);
 })
+test.only("[1,1] is not greater than the top right corner, [10, 10]", () => {
+    expect(mockBoard.checkLessThanTRC({x:1, y: 1})).toBe(false);
+})
+test.only("[1,7] is not greater than the top right corner, [10, 10]", () => {
+    expect(mockBoard.checkLessThanTRC({x:1, y: 7})).toBe(false);
+})
 // ]!
 test("[1,1] is a valid coordinate on the game board", () => {
     expect(mockBoard.checkValidCoord({x: 1, y: 1})).toBe(true);
