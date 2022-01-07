@@ -12,7 +12,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return false;
   }
-  function checkEquealToBLC(coord) {
+  function checkEqualToBLC(coord) {
     if (coord.x === bottomLeftCorner.x) {
       if (coord.y === bottomLeftCorner.y) {
         return true;
@@ -25,7 +25,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   // checks if the coord is out of bounds of the bottomLeftCorner
   function checkBottomLeftCorner(coord) {
     const greaterThan = checkGreaterThanBLC(coord);
-    const equalTo = checkEquealToBLC(coord);
+    const equalTo = checkEqualToBLC(coord);
     // as long as one of the two are true, then it's valid
     if (greaterThan === true || equalTo === true) {
       return true;
@@ -69,8 +69,8 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     placeShip,
     checkValidCoord,
     checkBottomLeftCorner,
+    checkEqualToBLC,
     checkGreaterThanBLC,
-    checkEquealToBLC,
   };
 };
 module.exports = gameBoardFactory;
