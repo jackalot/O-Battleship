@@ -70,6 +70,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     checkBottomLeftCorner,
     checkEqualToBLC,
     checkGreaterThanBLC,
+    checkTopRightCorner,
   };
 };
 module.exports = gameBoardFactory;
