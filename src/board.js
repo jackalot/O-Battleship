@@ -43,10 +43,20 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return false;
   }
+  function checkLessThanTRC(coord) {
+    if (coord.x < topRightCorner.x) {
+      if (coord.y < topRightCorner.y) {
+        return true;
+      }
+      return false;
+    }
+    return false;
+  }
   //  checkValidCorner() helper function
   // checks if the coord is out of bounds of the topRightCorner
   function checkTopRightCorner(coord) {
     const checkEqual = checkEqualToTRC(coord);
+    const checkLess = checkLessThanTRC(coord);
     if (checkEqual === true) {
       return true;
     }
@@ -81,6 +91,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     checkGreaterThanBLC,
     checkTopRightCorner,
     checkEqualToTRC,
+    checkLessThanTRC,
   };
 };
 module.exports = gameBoardFactory;
