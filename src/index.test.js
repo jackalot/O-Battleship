@@ -13,7 +13,7 @@ test("[1,7] is equal to the bottom left corner, [1, 1]", () => {
 test("[1,1] is greater than the bottom left corner, [1, 1]", () => {
     expect(mockBoard.checkGreaterThanBLC({x: 1, y: 1})).toBe(false);
 })
-test.only("[1,7] is greater than the bottom left corner, [1, 1]", () => {
+test("[1,7] is greater than the bottom left corner, [1, 1]", () => {
     expect(mockBoard.checkGreaterThanBLC({x: 1, y: 7})).toBe(true);
 })
 // ]?
@@ -30,7 +30,7 @@ test("[1,7] is not greater than the top right corner, [10, 10]", () => {
     expect(mockBoard.checkLessThanTRC({x:1, y: 7})).toBe(true);
 })
 // ]!
-test.skip("[1,1] is a valid according to the Bottom Left Corner", () => {
+test("[1,1] is a valid according to the Bottom Left Corner", () => {
     expect(mockBoard.checkBottomLeftCorner({x: 1, y: 1})).toBe(true);
 })
 test("[1,7] is a valid according to the Bottom Left Corner", () => {
