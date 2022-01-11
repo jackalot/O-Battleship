@@ -5,10 +5,11 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   // checks if the coord is greater than the bottemLeftCorener
   function checkGreaterThanBLC(coord) {
     if (coord.x > bottomLeftCorner.x) {
-      if (coord.y > bottomLeftCorner.y) {
-        return true;
-      }
-      return false;
+      return true;
+    }
+    // if x isnt greater, check if y is.
+    if (coord.y > bottomLeftCorner.y) {
+      return true;
     }
     return false;
   }
