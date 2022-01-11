@@ -33,7 +33,7 @@ test("[1,7] is not greater than the top right corner, [10, 10]", () => {
 test.skip("[1,1] is a valid according to the Bottom Left Corner", () => {
     expect(mockBoard.checkBottomLeftCorner({x: 1, y: 1})).toBe(true);
 })
-test.only("[1,7] is a valid according to the Bottom Left Corner", () => {
+test("[1,7] is a valid according to the Bottom Left Corner", () => {
     expect(mockBoard.checkBottomLeftCorner({x: 1, y: 7})).toBe(true);
 })
 test("[1,1] is a valid according to the Top Right Corner", () => {
