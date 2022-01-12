@@ -50,7 +50,7 @@ test("[1,7] is a valid coordinate on the game board", () => {
 })
 test("gameBoard has placed a ship from [1,1] to [1,7]", () => {
     //so if game board has a function called placeShip, and it places a ship that will have a return function, it will return its coordinates?
-    expect(mockBoard.placeShip(coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7})).toBe(coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7});
+    expect(mockBoard.placeShip({x: 1, y: 1},{x: 1, y: 7})).toBe({x: 1, y: 1},{x: 1, y: 7});
 })
 //it also sends the hit() function to the corresponding ship
 test.skip("gameBoard recieves an attack at [1, 1] and it hits due to the ship there", () => {
