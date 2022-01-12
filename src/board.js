@@ -3,6 +3,7 @@ const shipFactory = require('./ship');
 const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   // checkBottomLeftCorner() helper function
   // checks if the coord is greater than the bottemLeftCorener
+  const myShips = [];
   function checkGreaterThanBLC(coord) {
     if (coord.x > bottomLeftCorner.x) {
       return true;
@@ -80,6 +81,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     const checkSecondCoord = checkValidCoord(secondCoord);
     if (checkFirstCoord === true && checkSecondCoord === true) {
       const ourShip = shipFactory(firstCoord, secondCoord);
+      myShips.push(ourShip);
       return ourShip;
     }
     return null;
