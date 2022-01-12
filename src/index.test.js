@@ -58,7 +58,7 @@ test.only("gameBoard recieves an attack at [1, 1] and it hits due to the ship th
 })
 //it also keeps track of the missed attacks
 test.skip("gameBoard recieves an attack at [2, 6] and it misses due to no ship there", () => {
-    expect(boardFile.recieveAttack(coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7})).toBe(false);
+    expect(boardFile.recieveAttack({x: 2, y: 7})).toBe(false);
 })
 test.skip("gameBoard checks if all ships have sunk, and returns false as theres still one ship up", () => {
     expect(boardFile.allShipsSunk()).toBe(false);
