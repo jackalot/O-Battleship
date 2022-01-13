@@ -8,7 +8,7 @@ const shipFactory = (coord1, coord2) => {
     if (yAxis === 0) {
       return xAxis;
     }
-    return console.error('error');
+    return null;
   }
   //  Returns the orientation of the ship as a string
   function shipOrientation() {
@@ -20,7 +20,7 @@ const shipFactory = (coord1, coord2) => {
     if (yAxis === 0) {
       return 'vertical';
     }
-    return console.error('error');
+    return null;
   }
   this.coord1 = coord1;
   this.coord2 = coord2;
@@ -90,7 +90,6 @@ const shipFactory = (coord1, coord2) => {
     return false;
   }
   function sink() {
-    console.log(myParts);
     const length = lengthMeasurer(coord1, coord2);
     const orientation = shipOrientation();
     if (orientation === 'horizontal') {
