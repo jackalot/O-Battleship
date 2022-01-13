@@ -60,6 +60,6 @@ test("gameBoard recieves an attack at [1, 1] and it hits due to the ship there",
 test("gameBoard recieves an attack at [2, 6] and it misses due to no ship there", () => {
     expect(mockBoard.recieveAttack({x: 2, y: 7})).toBe(false);
 })
-test.only("gameBoard checks if all ships have sunk, and returns false as theres still one ship up", () => {
+test("gameBoard checks if all ships have sunk, and returns false as theres still one ship up", () => {
     expect(mockBoard.allShipsSunk()).toBe(false);
 })
