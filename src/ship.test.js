@@ -1,7 +1,6 @@
 const shipFile = require('./ship');
 const { TestWatcher } = require("jest");
 const mockShip = shipFile(coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7});
-console.log(mockShip.shipParts);
 //  this test is giving errors
 test("mockShip returns an object", () => {
     expect(mockShip).toMatchObject({ coord1: {x: 1, y: 1}, coord2: {x: 1, y: 7} });
