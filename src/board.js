@@ -106,6 +106,8 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
         sunkShipsSum += 1;
       }
     }
+    //  If the corresponding functions test uses an only method
+    //  then myships would === 0 which means it would always return true
     if (myShips.length > 0) {
       if (sunkShipsSum === myShips.length) {
         return true;
