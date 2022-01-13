@@ -98,6 +98,19 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return false;
   }
+  function allShipsSunk() {
+    let sunkShipsSum = 0;
+    for (let i = 0; i < myShips.length; i += 1) {
+      const result = myShips[i].sink();
+      if (result === 'you sunk my battle ship!') {
+        sunkShipsSum += 1;
+      }
+    }
+    if (sunkShipsSum === myShips.length) {
+      return true;
+    }
+    return false;
+  }
   return {
     bottomLeftCorner,
     topRightCorner,
@@ -110,6 +123,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     checkTopRightCorner,
     checkEqualToTRC,
     checkLessThanTRC,
+    allShipsSunk,
   };
 };
 module.exports = gameBoardFactory;
