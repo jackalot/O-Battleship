@@ -90,6 +90,9 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     const checkCoord = checkValidCoord(coordinate);
     if (checkCoord === true) {
       console.log(myShips);
+      for (let i = 0; i < myShips.length; i += 1) {
+
+      }
     }
     return false;
   }
