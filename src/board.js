@@ -86,6 +86,13 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return null;
   }
+  function recieveAttack(coordinate) {
+    const checkCoord = checkValidCoord(coordinate);
+    if (checkCoord === true) {
+
+    }
+    return false;
+  }
   return {
     bottomLeftCorner,
     topRightCorner,
