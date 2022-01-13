@@ -89,7 +89,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   function recieveAttack(coordinate) {
     const checkCoord = checkValidCoord(coordinate);
     if (checkCoord === true) {
-
+      console.log(myShips);
     }
     return false;
   }
@@ -97,6 +97,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     bottomLeftCorner,
     topRightCorner,
     placeShip,
+    recieveAttack,
     checkValidCoord,
     checkBottomLeftCorner,
     checkEqualToBLC,
