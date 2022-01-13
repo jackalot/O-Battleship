@@ -89,9 +89,11 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   function recieveAttack(coordinate) {
     const checkCoord = checkValidCoord(coordinate);
     if (checkCoord === true) {
-      console.log(myShips);
       for (let i = 0; i < myShips.length; i += 1) {
-
+        const result = myShips[i].hit(coordinate);
+        if (result === true) {
+          return true;
+        }
       }
     }
     return false;
