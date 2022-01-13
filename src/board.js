@@ -106,8 +106,10 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
         sunkShipsSum += 1;
       }
     }
-    if (sunkShipsSum === myShips.length) {
-      return true;
+    if (myShips.length > 0) {
+      if (sunkShipsSum === myShips.length) {
+        return true;
+      }
     }
     return false;
   }
