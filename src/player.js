@@ -5,7 +5,10 @@ const playerFactory = (playerName, playerTurn) => {
   //  this is for the AI to attack randomly, also helps check we didnt hit
   //   an already missed/hit coordinate
   function sendRandomAttack(playerAttacking) {
-
+    const xAxis = Math.floor(Math.random * 10);
+    const yAxis = Math.floor(Math.random * 10);
+    const coordinates = { xAxis, yAxis };
+    const fitsBoard = ourBoard.checkValidCoord(coordinates);
   }
   function swapTurn() {
     // eslint doesnt like this function but its the easiest
