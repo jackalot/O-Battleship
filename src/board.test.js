@@ -63,3 +63,7 @@ test("gameBoard recieves an attack at [2, 6] and it misses due to no ship there"
 test("gameBoard checks if all ships have sunk, and returns false as theres still one ship up", () => {
     expect(mockBoard.allShipsSunk()).toBe(false);
 })
+// checks if the specified coord has been hit or missed already
+test("gameBoard checks if 2, 5 has a hit or miss on it already", () => {
+    expect(mockBoard.checkAvailableCoord({x: 2, y: 5})).toBe(true);
+})
