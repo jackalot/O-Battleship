@@ -6,12 +6,17 @@ const playerFactory = (playerName, playerTurn) => {
     const result = playerAttacking.ourBoard.recieveAttack(coordinates);
     return result;
   }
+  // calls the players board to place a ship at the desired coordinates
+  function placeShip(coordinates) {
+    const result = ourBoard.placeShip(coordinates);
+    return result;
+  }
   function sayHi() {
     console.log('hi');
   }
   sayHi();
   return {
-    playerName, playerTurn, ourBoard, sendAttack,
+    playerName, playerTurn, ourBoard, sendAttack, placeShip,
   };
 };
 module.exports = playerFactory;
