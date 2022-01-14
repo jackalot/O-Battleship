@@ -15,7 +15,7 @@ test("player1 sends an attack to player2's board at [2,2] and it hits", () => {
 test.skip("player2 will now have the player turn 0 (meaning its their turn)", () => {
     expect(player2.swapTurn()).toBe(0);
 })
-test.only("player1 will now have the player turn 1 (meaning its not their turn)", () => {
+test.skip("player1 will now have the player turn 1 (meaning its not their turn)", () => {
     expect(player1.swapTurn()).toBe(1);
 })
 // true in this case means that after sending random attacks it managed to attack a valid coordinate
