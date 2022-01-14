@@ -1,7 +1,7 @@
 const { TestWatcher } = require("jest");
 const playerFile = require("./player");
 const player1 = playerFile("Player 1", 0);
-const player2 = playerFile("Player 2", 1);
+const player2 = playerFile("CPU", 1);
 test("player1 places a ship from [1, 1] to [1,7]", () => {
     expect(player1.placeShip( {x: 1, y: 1}, {x: 1, y: 7})).toMatchObject({ coord1: {x: 1, y: 1}, coord2: {x: 1, y: 7} });
 })
