@@ -24,10 +24,6 @@ const playerFactory = (playerName, playerTurn) => {
     const result = ourBoard.placeShip(coord1, coord2);
     return result;
   }
-  function sayHi() {
-    console.log('hi');
-  }
-  sayHi();
   return {
     playerName, playerTurn, ourBoard, sendAttack, placeShip, swapTurn,
   };
