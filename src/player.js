@@ -17,6 +17,8 @@ const playerFactory = (playerName, playerTurn) => {
   }
   function sendAttack(playerAttacking, coordinates) {
     const result = playerAttacking.ourBoard.recieveAttack(coordinates);
+    swapTurn();
+    playerAttacking.swapTurn();
     return result;
   }
   // calls the players board to place a ship at the desired coordinates
