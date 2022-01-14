@@ -2,6 +2,11 @@ const boardFile = require('./board');
 
 const playerFactory = (playerName, playerTurn) => {
   const ourBoard = boardFile({ x: 1, y: 1 }, { x: 10, y: 10 });
+  //  this is for the AI to attack randomly, also helps check we didnt hit
+  //   an already missed/hit coordinate
+  function sendRandomAttack(playerAttacking) {
+
+  }
   function swapTurn() {
     // eslint doesnt like this function but its the easiest
     //  solution other than true or false
