@@ -19,6 +19,6 @@ test.skip("player1 will now have the player turn 1 (meaning its not their turn)"
     expect(player1.swapTurn()).toBe(1);
 })
 // true in this case means that after sending random attacks it managed to attack a valid coordinate
-test("player2(CPU) sends a random attack to player1's board and it will return true", ()=> {
+test.skip("player2(CPU) sends a random attack to player1's board and it will return true", ()=> {
 expect(player2.sendRandomAttack(player1)).toBe(true);
 })
