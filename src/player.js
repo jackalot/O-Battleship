@@ -7,8 +7,8 @@ const playerFactory = (playerName, playerTurn) => {
     return result;
   }
   // calls the players board to place a ship at the desired coordinates
-  function placeShip(coordinates) {
-    const result = ourBoard.placeShip(coordinates);
+  function placeShip(coord1, coord2) {
+    const result = ourBoard.placeShip(coord1, coord2);
     return result;
   }
   function sayHi() {
