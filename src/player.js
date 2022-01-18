@@ -5,9 +5,10 @@ const playerFactory = (playerName, playerTurn) => {
   //  this is for the AI to attack randomly, also helps check we didnt hit
   //   an already missed/hit coordinate
   function sendRandomAttack(playerAttacking) {
-    const xAxis = Math.floor(Math.random * playerAttacking.ourBoard.topRightCorner.x);
-    const yAxis = Math.floor(Math.random * playerAttacking.ourBoard.topRightCorner.y);
+    const xAxis = Math.floor(Math.random() * playerAttacking.ourBoard.topRightCorner.x);
+    const yAxis = Math.floor(Math.random() * playerAttacking.ourBoard.topRightCorner.y);
     const coordinates = { xAxis, yAxis };
+    console.log(coordinates);
     const fitsBoard = playerAttacking.ourBoard.checkValidCoord(coordinates);
     if (fitsBoard === true) {
       // check if these coordinates on the boord have a miss or hit checked already.
