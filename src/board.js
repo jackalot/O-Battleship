@@ -4,6 +4,8 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   // checkBottomLeftCorner() helper function
   // checks if the coord is greater than the bottemLeftCorner
   const myShips = [];
+  //  stores all the coords for hits and misses
+  const hitOrMissedCoords = [];
   function checkGreaterThanBLC(coord) {
     if (coord.x > bottomLeftCorner.x) {
       return true;
@@ -87,7 +89,6 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     return null;
   }
   function checkAvailableCoord(coordinate) {
-
   }
   function recieveAttack(coordinate) {
     const checkCoord = checkValidCoord(coordinate);
@@ -95,6 +96,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
       for (let i = 0; i < myShips.length; i += 1) {
         const result = myShips[i].hit(coordinate);
         if (result === true) {
+          hitOrMissedCoords.push(coordinate);
           return true;
         }
       }
