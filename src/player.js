@@ -8,12 +8,13 @@ const playerFactory = (playerName, playerTurn) => {
     const xAxis = Math.floor(Math.random * 10);
     const yAxis = Math.floor(Math.random * 10);
     const coordinates = { xAxis, yAxis };
-    const fitsBoard = playerAttacking.checkValidCoord(coordinates);
+    const fitsBoard = playerAttacking.ourBoard.checkValidCoord(coordinates);
     if (fitsBoard === true) {
       // check if these coordinates on the boord have a miss or hit checked already.
       const openCoordinate = playerAttacking.ourBoard.checkAvailableCoord(coordinates);
       return openCoordinate;
     }
+    return false;
   }
   function swapTurn() {
     // eslint doesnt like this function but its the easiest
@@ -40,7 +41,7 @@ const playerFactory = (playerName, playerTurn) => {
     return result;
   }
   return {
-    playerName, playerTurn, ourBoard, sendAttack, placeShip, swapTurn,
+    playerName, playerTurn, ourBoard, sendAttack, placeShip, swapTurn, sendRandomAttack,
   };
 };
 module.exports = playerFactory;
