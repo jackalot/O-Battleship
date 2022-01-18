@@ -91,8 +91,10 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   function checkAvailableCoord(coordinate) {
     let matches = 0;
     for (let i = 0; i < hitOrMissedCoords.length; i += 1) {
-      if (coordinate === hitOrMissedCoords[i]) {
-        matches += 1;
+      if (coordinate.x === hitOrMissedCoords[i].x) {
+        if (coordinate.y === hitOrMissedCoords[i].y) {
+          matches += 1;
+        }
       }
     }
     if (matches > 0) {
