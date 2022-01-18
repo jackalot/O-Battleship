@@ -98,9 +98,10 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     if (matches > 0) {
       return false;
     }
-    if (matches === 0) {
-      return true;
+    if (matches < 0) {
+      return false;
     }
+    return true;
   }
   function recieveAttack(coordinate) {
     const checkCoord = checkValidCoord(coordinate);
