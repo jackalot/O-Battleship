@@ -131,6 +131,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     checkEqualToTRC,
     checkLessThanTRC,
     allShipsSunk,
+    checkAvailableCoord,
   };
 };
 module.exports = gameBoardFactory;
