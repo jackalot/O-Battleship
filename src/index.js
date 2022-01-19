@@ -1,3 +1,5 @@
+import './style.css';
+
 const playerOneDomBoard = document.querySelector('#playerOneBoard');
 const playerTwoDomBoard = document.querySelector('#playerTwoBoard');
 const playerFile = require('./player');
