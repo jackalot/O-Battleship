@@ -1,0 +1,13 @@
+.box {
+ background-color: green;
+ width: 30px;
+ border-radius: 20px;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(16, minimax(0, 5px));
+    background-color: green;
+}
+body {
+    background-color: green;
+}
