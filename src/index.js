@@ -11,6 +11,9 @@ function populateBoard(board, player) {
     {
         board.removeChild(board.firstChild);
     }
-    const table = document.querySelector()
+    const table = document.createElement("table");
+    board.append(table);
+    
+}    
 board.append(player.ourBoard.)
 }
