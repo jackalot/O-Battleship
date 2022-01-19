@@ -11,7 +11,10 @@ function populateBoard(board, player) {
     board.removeChild(board.firstChild);
   }
   const table = document.createElement('table');
+  const totalSlots = player.ourBoard.topRightCorner.x * player.ourBoard.topRightCorner.y;
+  for (let i = 0; i < totalSlots; i += 1) {
 
+  }
   board.append(table);
 }
 populateBoard(playerOneDomBoard, playerOne);
