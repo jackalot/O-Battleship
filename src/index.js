@@ -14,6 +14,7 @@ function populateBoard(board, player) {
   for (let i = 0; i < totalSlots; i += 1) {
     const box = document.createElement('div');
     box.classList.add('box');
+    board.appendChild(box);
   }
 }
 populateBoard(playerOneDomBoard, playerOne);
