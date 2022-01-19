@@ -11,16 +11,7 @@ function populateBoard(board, player) {
     board.removeChild(board.firstChild);
   }
   const table = document.createElement('table');
-  const allTRS = [];
-  for (let i = 0; i < player.ourBoard.topRightCorner.y; i += 1) {
-    const tr = document.createElement('tr');
-    table.append(tr);
-    allTRS.push(tr);
-  }
-  for (let i = 0; i < player.ourBoard.topRightCorner.x; i += 1) {
-    const td = document.createElement('td');
-    allTRS[i].append();
-  }
+
   board.append(table);
 }
 populateBoard(playerOneDomBoard, playerOne);
