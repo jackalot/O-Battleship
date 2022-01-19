@@ -10,11 +10,10 @@ function populateBoard(board, player) {
   while (board.firstChild) {
     board.removeChild(board.firstChild);
   }
-  const table = document.createElement('table');
   const totalSlots = player.ourBoard.topRightCorner.x * player.ourBoard.topRightCorner.y;
   for (let i = 0; i < totalSlots; i += 1) {
-
+    const box = document.createElement('div');
+    box.classList.add('box');
   }
-  board.append(table);
 }
 populateBoard(playerOneDomBoard, playerOne);
