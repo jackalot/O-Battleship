@@ -7,13 +7,10 @@ const playerTwo = playerFile('CPU', 1);
 playerOne.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
 playerTwo.ourBoard.placeShip({ x: 2, y: 2 }, { x: 8, y: 2 });
 function populateBoard(board, player) {
-    while(board.firstChild)
-    {
-        board.removeChild(board.firstChild);
-    }
-    const table = document.createElement("table");
-    board.append(table);
-    
-}    
-board.append(player.ourBoard.)
+  while (board.firstChild) {
+    board.removeChild(board.firstChild);
+  }
+  const table = document.createElement('table');
+  board.append(table);
 }
+populateBoard(playerOneDomBoard, playerOne);
