@@ -1,12 +1,9 @@
-.box {
- background-color: blue;
- width: 30px;
-}
 .board {
     display: grid;
     background-color: green;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    width: 20px;
 }
 .box {
     background-color: white;
