@@ -22,3 +22,20 @@
 body {
     background-color: green;
 }
+.players {
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+}
+.playerOne {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+margin-left: 10%;
+}
+.playerTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 50%;
+}
