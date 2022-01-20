@@ -20,3 +20,4 @@ function populateBoard(board, player) {
   }
 }
 populateBoard(playerOneDomBoard, playerOne);
+populateBoard(playerTwoDomBoard, playerTwo);
