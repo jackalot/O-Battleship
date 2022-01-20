@@ -9,9 +9,6 @@
     grid-template-rows: repeat(5,1fr);
 }
 .box {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 10px;
