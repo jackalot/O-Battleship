@@ -1,6 +1,5 @@
 .board {
     display: grid;
-    background-color: green;
     grid-template-columns: repeat(10,1fr);
     grid-template-rows: repeat(10,1fr);
     width: 20px;
