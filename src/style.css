@@ -11,6 +11,15 @@
     padding: 10px;
     text-align: center;
 }
+.containsShip {
+    background-color: blue;
+}
+.hit {
+    background-color: red;
+}
+.miss {
+    background-color: gray;
+}
 body {
     background-color: green;
 }
