@@ -10,7 +10,7 @@
     padding: 10px;
     text-align: center;
 }
-.box :hover {
+.box:hover {
     background-color: orange;
 }
 .fakeHoverBox {
