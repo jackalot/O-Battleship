@@ -32,7 +32,7 @@ function populateBoard(board, player) {
     const box = document.createElement('div');
     //  this is x 10 or below, 10 is the limit of the board
     if (i > 11) {
-      // find a ship on x = 1
+      // find a ship on x = 1 - 10
     }
     //  this is x 10
     if (i < 21) {

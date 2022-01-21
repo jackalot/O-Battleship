@@ -88,6 +88,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return null;
   }
+  //  find the first ship according to the coordinate that is sent
   function findFirstShip(coordinate) {
     for (let i = 0; i < myShips.length; i += 1) {
       const thisShip = myShips[i];
