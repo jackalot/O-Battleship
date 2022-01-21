@@ -14,6 +14,9 @@ function populateBoard(board, player) {
   }
   const totalSlots = player.ourBoard.topRightCorner.x * player.ourBoard.topRightCorner.y;
   /*
+  for loop values of the board
+  The board is 10 wide and 10 tall
+  and the loop creates it in this order
   1  2   3  4  5  6  7  8  9 10
   11 12 13 14 15 16 17 18 19 20
   21 22 23 24 25 26 27 28 29 30
