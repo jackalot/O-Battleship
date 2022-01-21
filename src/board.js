@@ -88,6 +88,9 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return null;
   }
+  function findFirstShip(coordinate) {
+
+  }
   function checkAvailableCoord(coordinate) {
     let matches = 0;
     for (let i = 0; i < hitOrMissedCoords.length; i += 1) {
@@ -149,6 +152,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     checkLessThanTRC,
     allShipsSunk,
     checkAvailableCoord,
+    findFirstShip,
   };
 };
 module.exports = gameBoardFactory;
