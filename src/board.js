@@ -89,7 +89,15 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     return null;
   }
   function findFirstShip(coordinate) {
-
+    for (let i = 0; i < myShips.length; i += 1) {
+      const thisShip = myShips[i];
+      thisShip.myParts.array.forEach((part) => {
+        if (part.partCoordinates === coordinate) {
+          return true;
+        }
+        return false;
+      });
+    }
   }
   function checkAvailableCoord(coordinate) {
     let matches = 0;
