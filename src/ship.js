@@ -119,7 +119,7 @@ const shipFactory = (coord1, coord2) => {
     return 'error';
   }
   return {
-    coord1, coord2, lengthMeasurer, hit, sink, shipParts,
+    coord1, coord2, lengthMeasurer, hit, sink, shipParts, myParts,
   };
 };
 module.exports = shipFactory;
