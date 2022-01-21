@@ -91,13 +91,14 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   function findFirstShip(coordinate) {
     for (let i = 0; i < myShips.length; i += 1) {
       const thisShip = myShips[i];
-      thisShip.myParts.array.forEach((part) => {
-        if (part.partCoordinates === coordinate) {
-          return true;
-        }
-        return false;
-      });
+      const parts = thisShip.shipParts();
+      console.log(parts);
+      const index = parts.indexOf(coordinate);
+      if (index !== -1) {
+        return true;
+      }
     }
+    return false;
   }
   function checkAvailableCoord(coordinate) {
     let matches = 0;
