@@ -10,6 +10,12 @@
     padding: 10px;
     text-align: center;
 }
+.box :hover {
+    background-color: orange;
+}
+.fakeHoverBox {
+    background-color: orange;
+}
 .containsShip {
     background-color: blue;
 }
