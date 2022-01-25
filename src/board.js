@@ -88,28 +88,9 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return null;
   }
-  // findFirstShip() helper function
-  // checks the parts if its the same coordinates
-  function comparePartsToCoordinates(parts, coordinates) {
-    for (let i = 0; i < parts; i += 1) {
-      if (parts[i].partCoordinates === coordinates) {
-        return true;
-      }
-    }
-    return false;
-  }
   //  find the first ship according to the coordinate that is sent
   function findFirstShip(coordinate) {
-    for (let i = 0; i < myShips.length; i += 1) {
-      const thisShip = myShips[i]; // out of the array of ships, get this ship
-      const parts = thisShip.shipParts(); // from this ship, get each part
-      console.log(parts);
-      const result = comparePartsToCoordinates(parts, coordinate);
-      if (result === true) {
-        return true;
-      }
-    }
-    return false;
+
   }
   function checkAvailableCoord(coordinate) {
     let matches = 0;
