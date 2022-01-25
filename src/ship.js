@@ -118,6 +118,10 @@ const shipFactory = (coord1, coord2) => {
     }
     return 'error';
   }
+  // Helper function for anything that requires coordinates
+  function allCoordinates() {
+
+  }
   return {
     coord1, coord2, lengthMeasurer, hit, sink, shipParts, myParts,
   };
