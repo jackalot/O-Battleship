@@ -121,12 +121,13 @@ const shipFactory = (coord1, coord2) => {
   // Helper function for anything that requires coordinates
   function allCoordinates() {
     const coordinateArray = [];
+    console.log(myParts);
     for (let i = 0; i < myParts.length; i += 1) {
 
     }
   }
   return {
-    coord1, coord2, lengthMeasurer, hit, sink, allCoordinates,
+    coord1, coord2, lengthMeasurer, hit, sink, allCoordinates, shipParts,
   };
 };
 module.exports = shipFactory;
