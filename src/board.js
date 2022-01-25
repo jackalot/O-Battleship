@@ -88,6 +88,11 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return null;
   }
+  // findFirstShip() helper function
+  // indexOf() doesn't work with objects, so this is indexOf() but for our coordinates
+  function coordinateIndex(coordinate) {
+
+  }
   //  find the first ship according to the coordinate that is sent
   function findFirstShip(coordinate) {
     for (let i = 0; i < myShips; i += 1) {
