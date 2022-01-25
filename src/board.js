@@ -90,14 +90,25 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   }
   // findFirstShip() helper function
   // indexOf() doesn't work with objects, so this is indexOf() but for our coordinates
-  function coordinateIndex(coordinate) {
-
+  function coordinateIndex(shipCoordinates, inputCoordinate) {
+    let index = -1;
+    for(let i = 0; i < shipCoordinates.length; i += 1)
+    {
+      if(shipCoordinates[i].x === inputCoordinates.x)
+      {
+        if(shipCoordinates[i]).y === inputcoordinates.y)
+        {
+          index = i;
+        }
+      }
+    }
+    return index;
   }
   //  find the first ship according to the coordinate that is sent
   function findFirstShip(coordinate) {
     for (let i = 0; i < myShips; i += 1) {
       const shipCoordinates = myShips[i].getAllCoordinates();
-      const index = shipCoordinates.indexOf(coordinate);
+      const index = shipCoordinates.coordinateIndex(shipCoordinates, coordinate);
       if (index > -1) {
         return true;
       }
