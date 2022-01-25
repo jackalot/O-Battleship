@@ -92,12 +92,9 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   // indexOf() doesn't work with objects, so this is indexOf() but for our coordinates
   function coordinateIndex(shipCoordinates, inputCoordinate) {
     let index = -1;
-    for(let i = 0; i < shipCoordinates.length; i += 1)
-    {
-      if(shipCoordinates[i].x === inputCoordinates.x)
-      {
-        if(shipCoordinates[i]).y === inputcoordinates.y)
-        {
+    for (let i = 0; i < shipCoordinates.length; i += 1) {
+      if (shipCoordinates[i].x === inputCoordinate.x) {
+        if (shipCoordinates[i].y === inputCoordinate.y) {
           index = i;
         }
       }
