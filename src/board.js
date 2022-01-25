@@ -94,9 +94,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     let index = -1;
     for (let i = 0; i < shipCoordinates.length; i += 1) {
       if (shipCoordinates[i].x === inputCoordinate.x) {
-        console.log(`shipCoordinates ${shipCoordinates[i].x} and input coordinate ${inputCoordinate.x}`);
         if (shipCoordinates[i].y === inputCoordinate.y) {
-          console.log(`shipCoordinates ${shipCoordinates[i].y} and input coordinate ${inputCoordinate.y}`);
           index = i;
         }
       }
@@ -108,7 +106,6 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     for (let i = 0; i < myShips.length; i += 1) {
       const shipCoordinates = myShips[i].getAllCoordinates();
       const index = coordinateIndex(shipCoordinates, coordinate);
-      console.log(`index is ${index}`);
       if (index > -1) {
         return true;
       }
