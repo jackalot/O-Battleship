@@ -17,18 +17,18 @@ function populateBoard(board, player) {
   for loop values of the board
   The board is 10 wide and 10 tall
   and the loop creates it in this order
-  1  2   3  4  5  6  7  8  9 10
-  11 12 13 14 15 16 17 18 19 20
-  21 22 23 24 25 26 27 28 29 30
-  31 32 33 34 35 36 37 38 39 40
-  41 42 43 44 45 46 47 48 49 50
-  51 52 53 54 55 56 57 58 59 60
-  61 62 63 64 65 66 67 68 69 70
-  71 72 73 74 75 76 77 78 79 80
-  81 82 83 84 85 86 87 88 89 90
-  91 92 93 94 95 96 97 98 99 100
+    0  1  2  3  4  5  6  7  8  9
+   10 11 12 13 14 15 16 17 18 19
+   20 21 22 23 24 25 26 27 28 29
+   30 11 12 13 14 15 16 17 18 39
+   40 11 12 13 14 15 16 17 18 49
+   50 11 12 13 14 15 16 17 18 59
+   60 11 12 13 14 15 16 17 18 69
+   70 11 12 13 14 15 16 17 18 79
+   80 11 12 13 14 15 16 17 18 89
+   90 11 12 13 14 15 16 17 18 99
   */
-  for (let i = 0; i < totalSlots; i += 1) {
+  for (let i = 0; i < 100; i += 1) {
     const box = document.createElement('div');
     //  this is x 10 or below, 10 is the limit of the board
     if (i < 11) {
@@ -41,7 +41,11 @@ function populateBoard(board, player) {
     }
     //  this is x 10
     if (i < 21) {
-
+      const possibleShip = player.ourBoard.findFirstShip({ x: i, y: 2 });
+      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${i}, y: 1`);
+      if (possibleShip === true) {
+        box.classList.add('containsShip');
+      }
     }
     box.classList.add('box');
     board.appendChild(box);
