@@ -26,3 +26,6 @@ test("mockShip.shipParts will return every part", () => {
 test("mockShip will not sink", () => {
     expect(mockShip.sink()).toBe('I still have parts left');
 })
+test("mockShip will return all of its coordinates, including the parts", () => {
+    expect(mockShip,allCoordinates()).toBe([{x:1,y:1}])
+})
