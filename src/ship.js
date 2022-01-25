@@ -121,10 +121,10 @@ const shipFactory = (coord1, coord2) => {
   // Helper function for anything that requires coordinates
   function allCoordinates() {
     const coordinateArray = [];
-    console.log(myParts);
     for (let i = 0; i < myParts.length; i += 1) {
-
+      coordinateArray.push(myParts[i].partCoordinates);
     }
+    return coordinateArray;
   }
   return {
     coord1, coord2, lengthMeasurer, hit, sink, allCoordinates, shipParts,
