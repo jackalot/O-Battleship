@@ -162,6 +162,11 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return false;
   }
+  // Checks if theres a miss or hit on this coordinate
+  function checkMissesAndHits() {
+    // loop through misses and hits and sort through each
+    // to see if this coordinate has a miss or a hit
+  }
   return {
     bottomLeftCorner,
     topRightCorner,
@@ -177,6 +182,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     allShipsSunk,
     checkAvailableCoord,
     findFirstShip,
+    checkMissesAndHits,
   };
 };
 module.exports = gameBoardFactory;
