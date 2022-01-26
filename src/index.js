@@ -7,7 +7,9 @@ const playerFile = require('./player');
 const playerOne = playerFile('player 1', 0);
 const playerTwo = playerFile('CPU', 1);
 playerOne.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
+playerOne.ourBoard.placeShip({ x: 8, y: 2 }, { x: 8, y: 8 });
 playerTwo.ourBoard.placeShip({ x: 2, y: 2 }, { x: 8, y: 2 });
+playerTwo.ourBoard.placeShip({ x: 9, y: 9 }, { x: 1, y: 9 });
 function populateBoard(board, player) {
   while (board.firstChild) {
     board.removeChild(board.firstChild);
