@@ -178,9 +178,19 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     return false;
   }
   // Checks if theres a miss or hit on this coordinate
-  function checkMissesAndHits() {
+  function checkMissesAndHits(coordinate) {
     // loop through misses and hits and sort through each
     // to see if this coordinate has a miss or a hit
+    for (let i = 0; i < hitOrMissedCoords.length; i += 1) {
+      if (coordinate.x === hitOrMissedCoords[i].coordinate.x) {
+        if (coordinate.y === hitOrMissedCoords[i].coordinate.y) {
+          if (hitOrMissedCoords[i].coordType === 'Hit') {
+            return 'hit';
+          }
+          return 'miss';
+        }
+      }
+    }
   }
   return {
     bottomLeftCorner,
