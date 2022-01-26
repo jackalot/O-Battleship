@@ -56,6 +56,62 @@ function populateBoard(board, player) {
         box.classList.add('containsShip');
       }
     }
+    if (i < 40) {
+      const xAxis = i - 30;
+      const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 4 });
+      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 4`);
+      if (possibleShip === true) {
+        box.classList.add('containsShip');
+      }
+    }
+    if (i < 50) {
+      const xAxis = i - 40;
+      const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 5 });
+      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 5`);
+      if (possibleShip === true) {
+        box.classList.add('containsShip');
+      }
+    }
+    if (i < 60) {
+      const xAxis = i - 50;
+      const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 6 });
+      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 6`);
+      if (possibleShip === true) {
+        box.classList.add('containsShip');
+      }
+    }
+    if (i < 70) {
+      const xAxis = i - 60;
+      const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 7 });
+      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 7`);
+      if (possibleShip === true) {
+        box.classList.add('containsShip');
+      }
+    }
+    if (i < 80) {
+      const xAxis = i - 70;
+      const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 8 });
+      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 8`);
+      if (possibleShip === true) {
+        box.classList.add('containsShip');
+      }
+    }
+    if (i < 90) {
+      const xAxis = i - 80;
+      const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 9 });
+      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 9`);
+      if (possibleShip === true) {
+        box.classList.add('containsShip');
+      }
+    }
+    if (i < 100) {
+      const xAxis = i - 90;
+      const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 10 });
+      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 10`);
+      if (possibleShip === true) {
+        box.classList.add('containsShip');
+      }
+    }
     box.classList.add('box');
     board.appendChild(box);
   }
