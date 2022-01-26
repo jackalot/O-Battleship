@@ -43,7 +43,15 @@ function populateBoard(board, player) {
     if (i < 20) {
       const xAxis = i - 10;
       const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 2 });
-      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${i}, y: 1`);
+      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 2`);
+      if (possibleShip === true) {
+        box.classList.add('containsShip');
+      }
+    }
+    if (i < 30) {
+      const xAxis = i - 20;
+      const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 3 });
+      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 3`);
       if (possibleShip === true) {
         box.classList.add('containsShip');
       }
