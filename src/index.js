@@ -28,7 +28,7 @@ function populateBoard(board, player) {
    80 11 12 13 14 15 16 17 18 89
    90 11 12 13 14 15 16 17 18 99
   */
-  for (let i = 0; i < 100; i += 1) {
+  for (let i = 0; i < totalSlots; i += 1) {
     const box = document.createElement('div');
     //  this is x 10 or below, 10 is the limit of the board
     if (i < 10) {
