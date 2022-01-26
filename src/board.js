@@ -6,6 +6,14 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   const myShips = [];
   //  stores all the coords for hits and misses
   const hitOrMissedCoords = [];
+  // hit or misses will store each item like this:
+  /*
+  {
+    ourCoordinates: { x: 1, y: 1 },
+    coordType: "Miss"
+  }
+  Other wise, coordType will be "Hit"
+  */
   function checkGreaterThanBLC(coord) {
     if (coord.x > bottomLeftCorner.x) {
       return true;
