@@ -120,10 +120,12 @@ function populateBoard(board, player) {
 }
 //  When a box is clicked, send it to this function
 function attackBox(playerDefending, coordinates) {
-  if (playerOne === playerDefending) {
+  // if playerOne is defending and their turn is 1 (meaning they can't attack)
+  if (playerOne === playerDefending && playerOne.playerTurn === 1) {
     const result = playerOne.ourBoard.recieveAttack(coordinates);
   }
-  if (playerTwo === playerDefending) {
+  // if playerTwo is defending and their turn is 1 (meaning they can't attack)
+  if (playerTwo === playerDefending && playerTwo.playerTurn === 1) {
     const result = playerTwo.ourBoard.recieveAttack(coordinates);
   }
 }
