@@ -40,8 +40,9 @@ function populateBoard(board, player) {
       }
     }
     //  this is x 10
-    if (i < 21) {
-      const possibleShip = player.ourBoard.findFirstShip({ x: i, y: 2 });
+    if (i < 20) {
+      const xAxis = i - 10;
+      const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 2 });
       console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${i}, y: 1`);
       if (possibleShip === true) {
         box.classList.add('containsShip');
