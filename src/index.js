@@ -12,6 +12,7 @@ playerTwo.ourBoard.placeShip({ x: 2, y: 2 }, { x: 8, y: 2 });
 playerTwo.ourBoard.placeShip({ x: 9, y: 9 }, { x: 1, y: 9 });
 //  When a box is clicked, send it to this function
 function attackBox(playerDefending, coordinates) {
+  console.log('hi');
   // if playerOne is defending and their turn is 1 (meaning they can't attack)
   if (playerOne === playerDefending && playerOne.playerTurn === 1) {
     const result = playerOne.ourBoard.recieveAttack(coordinates);
@@ -52,8 +53,7 @@ function populateBoard(board, player) {
         box.classList.add('containsShip');
       }
       box.addEventListener('click', () => {
-        const xAxis = i - 70;
-        attackBox(player, {x: xAxis, y: });
+        attackBox(player, { x: i, y: 1 });
       });
     }
     //  this is x 10
@@ -65,8 +65,7 @@ function populateBoard(board, player) {
         box.classList.add('containsShip');
       }
       box.addEventListener('click', () => {
-        const xAxis = i - 70;
-        attackBox(player, {x: xAxis, y: });
+        attackBox(player, { x: xAxis, y: 2 });
       });
     }
     if (i < 30) {
@@ -77,8 +76,7 @@ function populateBoard(board, player) {
         box.classList.add('containsShip');
       }
       box.addEventListener('click', () => {
-        const xAxis = i - 70;
-        attackBox(player, {x: xAxis, y: });
+        attackBox(player, { x: xAxis, y: 3 });
       });
     }
     if (i < 40) {
@@ -89,8 +87,7 @@ function populateBoard(board, player) {
         box.classList.add('containsShip');
       }
       box.addEventListener('click', () => {
-        const xAxis = i - 70;
-        attackBox(player, {x: xAxis, y: });
+        attackBox(player, { x: xAxis, y: 4 });
       });
     }
     if (i < 50) {
@@ -101,10 +98,8 @@ function populateBoard(board, player) {
         box.classList.add('containsShip');
       }
       box.addEventListener('click', () => {
-        const xAxis = i - 70;
-        attackBox(player, {x: xAxis, y: });
+        attackBox(player, { x: xAxis, y: 5 });
       });
-      
     }
     if (i < 60) {
       const xAxis = i - 50;
@@ -114,8 +109,7 @@ function populateBoard(board, player) {
         box.classList.add('containsShip');
       }
       box.addEventListener('click', () => {
-        const xAxis = i - 70;
-        attackBox(player, {x: xAxis, y: });
+        attackBox(player, { x: xAxis, y: 6 });
       });
     }
     if (i < 70) {
@@ -126,8 +120,7 @@ function populateBoard(board, player) {
         box.classList.add('containsShip');
       }
       box.addEventListener('click', () => {
-        const xAxis = i - 70;
-        attackBox(player, { x: xAxis, y: 8 });
+        attackBox(player, { x: xAxis, y: 7 });
       });
     }
     if (i < 80) {
@@ -149,6 +142,9 @@ function populateBoard(board, player) {
       if (possibleShip === true) {
         box.classList.add('containsShip');
       }
+      box.addEventListener('click', () => {
+        attackBox(player, { x: xAxis, y: 9 });
+      });
     }
     if (i < 100) {
       const xAxis = i - 90;
@@ -157,6 +153,9 @@ function populateBoard(board, player) {
       if (possibleShip === true) {
         box.classList.add('containsShip');
       }
+      box.addEventListener('click', () => {
+        attackBox(player, { x: xAxis, y: 10 });
+      });
     }
     box.classList.add('box');
     board.appendChild(box);
