@@ -31,7 +31,7 @@ function populateBoard(board, player) {
   for (let i = 0; i < 100; i += 1) {
     const box = document.createElement('div');
     //  this is x 10 or below, 10 is the limit of the board
-    if (i < 11) {
+    if (i < 10) {
       // find a ship on x = 1 - 10
       const possibleShip = player.ourBoard.findFirstShip({ x: i, y: 1 });
       console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${i}, y: 1`);
