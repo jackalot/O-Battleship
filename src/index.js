@@ -10,6 +10,17 @@ playerOne.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
 playerOne.ourBoard.placeShip({ x: 8, y: 2 }, { x: 8, y: 8 });
 playerTwo.ourBoard.placeShip({ x: 2, y: 2 }, { x: 8, y: 2 });
 playerTwo.ourBoard.placeShip({ x: 9, y: 9 }, { x: 1, y: 9 });
+//  When a box is clicked, send it to this function
+function attackBox(playerDefending, coordinates) {
+  // if playerOne is defending and their turn is 1 (meaning they can't attack)
+  if (playerOne === playerDefending && playerOne.playerTurn === 1) {
+    const result = playerOne.ourBoard.recieveAttack(coordinates);
+  }
+  // if playerTwo is defending and their turn is 1 (meaning they can't attack)
+  if (playerTwo === playerDefending && playerTwo.playerTurn === 1) {
+    const result = playerTwo.ourBoard.recieveAttack(coordinates);
+  }
+}
 function populateBoard(board, player) {
   while (board.firstChild) {
     board.removeChild(board.firstChild);
@@ -40,6 +51,10 @@ function populateBoard(board, player) {
       if (possibleShip === true) {
         box.classList.add('containsShip');
       }
+      box.addEventListener('click', () => {
+        const xAxis = i - 70;
+        attackBox(player, {x: xAxis, y: });
+      });
     }
     //  this is x 10
     if (i < 20) {
@@ -49,6 +64,10 @@ function populateBoard(board, player) {
       if (possibleShip === true) {
         box.classList.add('containsShip');
       }
+      box.addEventListener('click', () => {
+        const xAxis = i - 70;
+        attackBox(player, {x: xAxis, y: });
+      });
     }
     if (i < 30) {
       const xAxis = i - 20;
@@ -57,6 +76,10 @@ function populateBoard(board, player) {
       if (possibleShip === true) {
         box.classList.add('containsShip');
       }
+      box.addEventListener('click', () => {
+        const xAxis = i - 70;
+        attackBox(player, {x: xAxis, y: });
+      });
     }
     if (i < 40) {
       const xAxis = i - 30;
@@ -65,6 +88,10 @@ function populateBoard(board, player) {
       if (possibleShip === true) {
         box.classList.add('containsShip');
       }
+      box.addEventListener('click', () => {
+        const xAxis = i - 70;
+        attackBox(player, {x: xAxis, y: });
+      });
     }
     if (i < 50) {
       const xAxis = i - 40;
@@ -73,6 +100,11 @@ function populateBoard(board, player) {
       if (possibleShip === true) {
         box.classList.add('containsShip');
       }
+      box.addEventListener('click', () => {
+        const xAxis = i - 70;
+        attackBox(player, {x: xAxis, y: });
+      });
+      
     }
     if (i < 60) {
       const xAxis = i - 50;
@@ -81,6 +113,10 @@ function populateBoard(board, player) {
       if (possibleShip === true) {
         box.classList.add('containsShip');
       }
+      box.addEventListener('click', () => {
+        const xAxis = i - 70;
+        attackBox(player, {x: xAxis, y: });
+      });
     }
     if (i < 70) {
       const xAxis = i - 60;
@@ -89,6 +125,10 @@ function populateBoard(board, player) {
       if (possibleShip === true) {
         box.classList.add('containsShip');
       }
+      box.addEventListener('click', () => {
+        const xAxis = i - 70;
+        attackBox(player, { x: xAxis, y: 8 });
+      });
     }
     if (i < 80) {
       const xAxis = i - 70;
@@ -97,6 +137,10 @@ function populateBoard(board, player) {
       if (possibleShip === true) {
         box.classList.add('containsShip');
       }
+      box.addEventListener('click', () => {
+        const xAxis = i - 70;
+        attackBox(player, { x: xAxis, y: 8 });
+      });
     }
     if (i < 90) {
       const xAxis = i - 80;
@@ -116,17 +160,6 @@ function populateBoard(board, player) {
     }
     box.classList.add('box');
     board.appendChild(box);
-  }
-}
-//  When a box is clicked, send it to this function
-function attackBox(playerDefending, coordinates) {
-  // if playerOne is defending and their turn is 1 (meaning they can't attack)
-  if (playerOne === playerDefending && playerOne.playerTurn === 1) {
-    const result = playerOne.ourBoard.recieveAttack(coordinates);
-  }
-  // if playerTwo is defending and their turn is 1 (meaning they can't attack)
-  if (playerTwo === playerDefending && playerTwo.playerTurn === 1) {
-    const result = playerTwo.ourBoard.recieveAttack(coordinates);
   }
 }
 populateBoard(playerOneDomBoard, playerOne);
