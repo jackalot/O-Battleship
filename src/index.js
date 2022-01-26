@@ -118,5 +118,14 @@ function populateBoard(board, player) {
     board.appendChild(box);
   }
 }
+//  When a box is clicked, send it to this function
+function attackBox(playerDefending, coordinates) {
+  if (playerOne === playerDefending) {
+    const result = playerOne.ourBoard.recieveAttack(coordinates);
+  }
+  if (playerTwo === playerDefending) {
+    const result = playerTwo.ourBoard.recieveAttack(coordinates);
+  }
+}
 populateBoard(playerOneDomBoard, playerOne);
 populateBoard(playerTwoDomBoard, playerTwo);
