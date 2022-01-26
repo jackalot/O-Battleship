@@ -126,8 +126,8 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   function checkAvailableCoord(coordinate) {
     let matches = 0;
     for (let i = 0; i < hitOrMissedCoords.length; i += 1) {
-      if (coordinate.x === hitOrMissedCoords[i].x) {
-        if (coordinate.y === hitOrMissedCoords[i].y) {
+      if (coordinate.x === hitOrMissedCoords[i].ourCoordinates.x) {
+        if (coordinate.y === hitOrMissedCoords[i].ourCoordinates.y) {
           matches += 1;
         }
       }
@@ -182,8 +182,8 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     // loop through misses and hits and sort through each
     // to see if this coordinate has a miss or a hit
     for (let i = 0; i < hitOrMissedCoords.length; i += 1) {
-      if (coordinate.x === hitOrMissedCoords[i].coordinate.x) {
-        if (coordinate.y === hitOrMissedCoords[i].coordinate.y) {
+      if (coordinate.x === hitOrMissedCoords[i].ourCoordinates.x) {
+        if (coordinate.y === hitOrMissedCoords[i].ourCoordinates.y) {
           if (hitOrMissedCoords[i].coordType === 'Hit') {
             return 'hit';
           }
