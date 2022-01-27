@@ -185,9 +185,9 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
       if (coordinate.x === hitOrMissedCoords[i].ourCoordinates.x) {
         if (coordinate.y === hitOrMissedCoords[i].ourCoordinates.y) {
           if (hitOrMissedCoords[i].coordType === 'Hit') {
-            return 'hit';
+            return 'Hit';
           }
-          return 'miss';
+          return 'Miss';
         }
       }
     }
