@@ -52,9 +52,16 @@ function populateBoard(board, player) {
     if (i < 10) {
       // find a ship on x = 1 - 10
       const possibleShip = player.ourBoard.findFirstShip({ x: i, y: 1 });
+      const hitOrMiss = player.ourBoard.checkMissesAndHits({ x: i, y: 1 });
       console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${i}, y: 1`);
       if (possibleShip === true) {
         box.classList.add('containsShip');
+      }
+      if (hitOrMiss === 'Hit') {
+        box.classList.add('hit');
+      }
+      if (hitOrMiss === 'Miss') {
+        box.classList.add('miss');
       }
       box.addEventListener('click', () => {
         attackBox(player, { x: i, y: 1 });
