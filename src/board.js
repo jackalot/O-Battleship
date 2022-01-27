@@ -191,6 +191,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
         }
       }
     }
+    return 'none';
   }
   return {
     bottomLeftCorner,
