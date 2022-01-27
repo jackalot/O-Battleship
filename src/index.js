@@ -32,6 +32,7 @@ function attackBox(playerDefending, coordinates) {
     populateBoard(playerTwoDomBoard, playerTwo);
   }
 }
+// Will populate the board will the appropiate color
 function populateBoard(board, player) {
 
 }
