@@ -120,6 +120,7 @@ function populateBoard(board, player) {
     }
     if (i < 50) {
       const xAxis = i - 40;
+      const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 5 });
       const hitOrMiss = player.ourBoard.checkMissesAndHits({ x: i, y: 5 });
       if (possibleShip === true) {
         box.classList.add('containsShip');
