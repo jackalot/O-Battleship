@@ -1,9 +1,7 @@
 .board {
-    display: grid;
-    grid-template-columns: repeat(10,1fr);
-    grid-template-rows: repeat(10,1fr);
-    width: 20px;
+    background-color: black;
 }
+/* instead of grids we will use tables */
 .box {
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.8);
