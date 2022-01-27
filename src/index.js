@@ -7,6 +7,10 @@ const playerFile = require('./player');
 const playerOne = playerFile('player 1', 0);
 const playerTwo = playerFile('CPU', 1);
 playerOne.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
+console.log(playerOne.ourBoard.topRightCorner);
+console.log(playerOne.ourBoard.bottomLeftCorner);
+console.log(playerTwo.ourBoard.topRightCorner);
+console.log(playerTwo.ourBoard.bottomLeftCorner);
 //  When a box is clicked, send it to this function
 function attackBox(playerDefending, coordinates) {
   console.log('hi');
