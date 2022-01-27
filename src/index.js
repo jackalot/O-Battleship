@@ -53,7 +53,6 @@ function populateBoard(board, player) {
       // find a ship on x = 1 - 10
       const possibleShip = player.ourBoard.findFirstShip({ x: i, y: 1 });
       const hitOrMiss = player.ourBoard.checkMissesAndHits({ x: i, y: 1 });
-      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${i}, y: 1`);
       if (possibleShip === true) {
         box.classList.add('containsShip');
       }
@@ -71,9 +70,15 @@ function populateBoard(board, player) {
     if (i < 20) {
       const xAxis = i - 10;
       const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 2 });
-      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 2`);
+      const hitOrMiss = player.ourBoard.checkMissesAndHits({ x: i, y: 2 });
       if (possibleShip === true) {
         box.classList.add('containsShip');
+      }
+      if (hitOrMiss === 'Hit') {
+        box.classList.add('hit');
+      }
+      if (hitOrMiss === 'Miss') {
+        box.classList.add('miss');
       }
       box.addEventListener('click', () => {
         attackBox(player, { x: xAxis, y: 2 });
@@ -82,9 +87,15 @@ function populateBoard(board, player) {
     if (i < 30) {
       const xAxis = i - 20;
       const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 3 });
-      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 3`);
+      const hitOrMiss = player.ourBoard.checkMissesAndHits({ x: i, y: 3 });
       if (possibleShip === true) {
         box.classList.add('containsShip');
+      }
+      if (hitOrMiss === 'Hit') {
+        box.classList.add('hit');
+      }
+      if (hitOrMiss === 'Miss') {
+        box.classList.add('miss');
       }
       box.addEventListener('click', () => {
         attackBox(player, { x: xAxis, y: 3 });
@@ -93,9 +104,15 @@ function populateBoard(board, player) {
     if (i < 40) {
       const xAxis = i - 30;
       const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 4 });
-      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 4`);
+      const hitOrMiss = player.ourBoard.checkMissesAndHits({ x: i, y: 4 });
       if (possibleShip === true) {
         box.classList.add('containsShip');
+      }
+      if (hitOrMiss === 'Hit') {
+        box.classList.add('hit');
+      }
+      if (hitOrMiss === 'Miss') {
+        box.classList.add('miss');
       }
       box.addEventListener('click', () => {
         attackBox(player, { x: xAxis, y: 4 });
@@ -103,10 +120,15 @@ function populateBoard(board, player) {
     }
     if (i < 50) {
       const xAxis = i - 40;
-      const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 5 });
-      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 5`);
+      const hitOrMiss = player.ourBoard.checkMissesAndHits({ x: i, y: 5 });
       if (possibleShip === true) {
         box.classList.add('containsShip');
+      }
+      if (hitOrMiss === 'Hit') {
+        box.classList.add('hit');
+      }
+      if (hitOrMiss === 'Miss') {
+        box.classList.add('miss');
       }
       box.addEventListener('click', () => {
         attackBox(player, { x: xAxis, y: 5 });
@@ -115,9 +137,15 @@ function populateBoard(board, player) {
     if (i < 60) {
       const xAxis = i - 50;
       const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 6 });
-      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 6`);
+      const hitOrMiss = player.ourBoard.checkMissesAndHits({ x: i, y: 6 });
       if (possibleShip === true) {
         box.classList.add('containsShip');
+      }
+      if (hitOrMiss === 'Hit') {
+        box.classList.add('hit');
+      }
+      if (hitOrMiss === 'Miss') {
+        box.classList.add('miss');
       }
       box.addEventListener('click', () => {
         attackBox(player, { x: xAxis, y: 6 });
@@ -126,9 +154,15 @@ function populateBoard(board, player) {
     if (i < 70) {
       const xAxis = i - 60;
       const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 7 });
-      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 7`);
+      const hitOrMiss = player.ourBoard.checkMissesAndHits({ x: i, y: 7 });
       if (possibleShip === true) {
         box.classList.add('containsShip');
+      }
+      if (hitOrMiss === 'Hit') {
+        box.classList.add('hit');
+      }
+      if (hitOrMiss === 'Miss') {
+        box.classList.add('miss');
       }
       box.addEventListener('click', () => {
         attackBox(player, { x: xAxis, y: 7 });
@@ -137,9 +171,15 @@ function populateBoard(board, player) {
     if (i < 80) {
       const xAxis = i - 70;
       const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 8 });
-      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 8`);
+      const hitOrMiss = player.ourBoard.checkMissesAndHits({ x: i, y: 8 });
       if (possibleShip === true) {
         box.classList.add('containsShip');
+      }
+      if (hitOrMiss === 'Hit') {
+        box.classList.add('hit');
+      }
+      if (hitOrMiss === 'Miss') {
+        box.classList.add('miss');
       }
       box.addEventListener('click', () => {
         const xAxis = i - 70;
@@ -149,9 +189,15 @@ function populateBoard(board, player) {
     if (i < 90) {
       const xAxis = i - 80;
       const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 9 });
-      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 9`);
+      const hitOrMiss = player.ourBoard.checkMissesAndHits({ x: i, y: 9 });
       if (possibleShip === true) {
         box.classList.add('containsShip');
+      }
+      if (hitOrMiss === 'Hit') {
+        box.classList.add('hit');
+      }
+      if (hitOrMiss === 'Miss') {
+        box.classList.add('miss');
       }
       box.addEventListener('click', () => {
         attackBox(player, { x: xAxis, y: 9 });
@@ -160,9 +206,15 @@ function populateBoard(board, player) {
     if (i < 100) {
       const xAxis = i - 90;
       const possibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 10 });
-      console.log(`possibleShip is ${possibleShip} and the coordinates are x: ${xAxis}, y: 10`);
+      const hitOrMiss = player.ourBoard.checkMissesAndHits({ x: i, y: 10 });
       if (possibleShip === true) {
         box.classList.add('containsShip');
+      }
+      if (hitOrMiss === 'Hit') {
+        box.classList.add('hit');
+      }
+      if (hitOrMiss === 'Miss') {
+        box.classList.add('miss');
       }
       box.addEventListener('click', () => {
         attackBox(player, { x: xAxis, y: 10 });
