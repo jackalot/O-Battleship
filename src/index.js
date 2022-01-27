@@ -8,9 +8,13 @@ const playerOne = playerFile('player 1', 0);
 const playerTwo = playerFile('CPU', 1);
 playerOne.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
 playerTwo.ourBoard.placeShip({ x: 2, y: 2 }, { x: 7, y: 2 });
+console.log('player one topRight corner(Limit):');
 console.log(playerOne.ourBoard.topRightCorner);
+console.log(`player one bottomLeftCorner(Limit):${playerOne.ourBoard.bottomLeftCorner}`);
 console.log(playerOne.ourBoard.bottomLeftCorner);
-console.log(playerTwo.ourBoard.topRightCorner);
+console.log(`player two topRightCorner(Limit): ${playerTwo.ourBoard.topRightCorner}`);
+console.log(playerTwo.ourBoard.bottomLeftCorner);
+console.log(`player two bottomLeftCorner(Limit): ${playerTwo.ourBoard.bottomLeftCorner}`);
 console.log(playerTwo.ourBoard.bottomLeftCorner);
 //  When a box is clicked, send it to this function
 function attackBox(playerDefending, coordinates) {
