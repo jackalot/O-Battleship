@@ -43,3 +43,11 @@ function populateBoard(board, player) {
 }
 populateBoard(playerOneDomBoard, playerOne);
 populateBoard(playerTwoDomBoard, playerTwo);
+//  Due to a weird DOM bug where similar cases couldnt be found online on how to fix
+// where the boxTypes div moved into the playerTwo Div upon start Up of
+// index.html, causing the boxTypes div to wrap around the playerTwo board.
+// This function will fix that.
+function reallignBoxTypesDiv() {
+
+}
+reallignBoxTypesDiv();
