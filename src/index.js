@@ -34,7 +34,7 @@ function attackBox(playerDefending, coordinates) {
 }
 // Will populate the board will the appropiate color
 function populateBoard(board, player) {
-  for (let i = 0; i < 100; i += 1) {
+  for (let i = 1; i < 100; i += 1) {
     //  row 1
     if (i < 11) {
       // do whats needed on row 1.
