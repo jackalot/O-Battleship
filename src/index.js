@@ -59,5 +59,26 @@ function createBoxTypesDiv() {
   missDiv.classList.add('box');
   missDiv.classList.add('miss');
   boxTypesDiv.append(missDiv);
+  const hitText = document.createElement('p');
+  hitText.textContent = 'Hit';
+  boxTypesDiv.append(hitText);
+  const hitDiv = document.createElement('div');
+  hitDiv.classList.add('box');
+  hitDiv.classList.add('hit');
+  boxTypesDiv.append(hitDiv);
+  const containsShipText = document.createElement('p');
+  containsShipText.textContent = 'Contains Ship';
+  boxTypesDiv.append(containsShipText);
+  const containsShipDiv = document.createElement('div');
+  containsShipDiv.classList.add('box');
+  containsShipDiv.classList.add('containsShip');
+  boxTypesDiv.append(containsShipDiv);
+  const hoveringText = document.createElement('p');
+  hoveringText.textContent = 'Currently Hovering';
+  boxTypesDiv.append(hoveringText);
+  const hoveringDiv = document.createElement('div');
+  hoveringDiv.classList.add('box');
+  hoveringDiv.classList.add('fakeHoverBox');
+  boxTypesDiv.append(hoveringDiv);
 }
 createBoxTypesDiv();
