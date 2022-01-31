@@ -55,7 +55,7 @@ function populateBoard(board, player) {
           attackBox(playerOne, { x: i, y: 1 });
         });
       } else if (player === playerTwo) {
-        const selectedBox = document.querySelector(`#P1Box-${i}-1`);
+        const selectedBox = document.querySelector(`#P2Box-${i}-1`);
         const possibleHitOrMiss = player.ourBoard.checkMissesAndHits({ x: i, y: 1 });
         const PossibleShip = player.ourBoard.findFirstShip({ x: i, y: 1 });
         if (possibleHitOrMiss === 'Hit') {
@@ -75,7 +75,7 @@ function populateBoard(board, player) {
   }
 }
 populateBoard(playerOneDomBoard, playerOne);
-populateBoard(playerTwoDomBoard, playerTwo);
+// populateBoard(playerTwoDomBoard, playerTwo);
 //  Due to a weird DOM bug where similar cases couldnt be found online on how to fix
 // where the boxTypes div moved into the playerTwo Div upon start Up of
 // index.html, causing the boxTypes div to wrap around the playerTwo board.
