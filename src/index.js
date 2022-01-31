@@ -38,6 +38,12 @@ function populateBoard(board, player) {
     //  row 1
     if (i < 11) {
       // do whats needed on row 1.
+      if (player === playerOne) {
+        const selectedBox = document.querySelector(`#P1Box1-${i}`);
+        const possibleHitOrMiss = player.ourBoard.possibleHitOrMiss({ x: i, y: 1 });
+      } else if (player === playerTwo) {
+
+      }
     }
   }
 }
