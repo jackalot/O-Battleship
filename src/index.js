@@ -49,7 +49,10 @@ populateBoard(playerTwoDomBoard, playerTwo);
 // This function will fix that.
 function createBoxTypesDiv() {
   const body = document.querySelector('body');
-  const boxTypes = document.querySelector('.boxTypes');
-  body.append(boxTypes);
+  const oldBoxTypes = document.querySelector('.boxTypes');
+  // first eliminate the original boxTypes div
+  while (oldBoxTypes.firstChild) {
+    oldBoxTypes.removeChild(oldBoxTypes.firstChild);
+  }
 }
 createBoxTypesDiv();
