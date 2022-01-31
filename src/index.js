@@ -55,5 +55,9 @@ function createBoxTypesDiv() {
   const missText = document.createElement('p');
   missText.textContent = 'Miss';
   boxTypesDiv.append(missText);
+  const missDiv = document.createElement('div');
+  missDiv.classList.add('box');
+  missDiv.classList.add('miss');
+  boxTypesDiv.append(missDiv);
 }
 createBoxTypesDiv();
