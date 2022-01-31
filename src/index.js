@@ -49,8 +49,11 @@ populateBoard(playerTwoDomBoard, playerTwo);
 // This function will fix that.
 function createBoxTypesDiv() {
   const body = document.querySelector('body');
+  const boxTypesDiv = document.createElement('div');
+  boxTypesDiv.classList.add('boxTypes');
+  body.append(boxTypesDiv);
   const missText = document.createElement('p');
   missText.textContent = 'Miss';
-  body.append(missText);
+  boxTypesDiv.append(missText);
 }
 createBoxTypesDiv();
