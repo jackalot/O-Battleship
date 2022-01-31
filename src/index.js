@@ -40,7 +40,7 @@ function populateBoard(board, player) {
       // do whats needed on row 1.
       if (player === playerOne) {
         const selectedBox = document.querySelector(`#P1Box1-${i}`);
-        const possibleHitOrMiss = player.ourBoard.possibleHitOrMiss({ x: i, y: 1 });
+        const possibleHitOrMiss = player.ourBoard.checkMissesAndHits({ x: i, y: 1 });
         const PossibleShip = player.ourBoard.findFirstShip({ x: i, y: 1 });
         if (possibleHitOrMiss === 'Hit') {
           selectedBox.classList('hit');
