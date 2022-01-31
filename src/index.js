@@ -48,6 +48,8 @@ populateBoard(playerTwoDomBoard, playerTwo);
 // index.html, causing the boxTypes div to wrap around the playerTwo board.
 // This function will fix that.
 function reallignBoxTypesDiv() {
-
+  const body = document.querySelector('body');
+  const boxTypes = document.querySelector('.boxTypes');
+  body.append(boxTypes);
 }
 reallignBoxTypesDiv();
