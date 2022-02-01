@@ -115,6 +115,33 @@ function populateBoard(board, player) {
         createBox(`#P2Box-${xAxis}-7`, player, { x: xAxis, y: 7 });
       }
     }
+    // 70 - 81 is the eigth row
+    if (i < 81 && i > 70) {
+      const xAxis = Math.floor(i / 70);
+      if (player === playerOne) {
+        createBox(`#P1Box-${xAxis}-8`, player, { x: xAxis, y: 8 });
+      } else if (player === playerTwo) {
+        createBox(`#P2Box-${xAxis}-8`, player, { x: xAxis, y: 8 });
+      }
+    }
+    // 80 - 91 is the ninth row
+    if (i < 91 && i > 80) {
+      const xAxis = Math.floor(i / 80);
+      if (player === playerOne) {
+        createBox(`#P1Box-${xAxis}-9`, player, { x: xAxis, y: 9 });
+      } else if (player === playerTwo) {
+        createBox(`#P2Box-${xAxis}-9`, player, { x: xAxis, y: 9 });
+      }
+    }
+    // 90 - 101 is the tenth row
+    if (i < 101 && i > 90) {
+      const xAxis = Math.floor(i / 90);
+      if (player === playerOne) {
+        createBox(`#P1Box-${xAxis}-10`, player, { x: xAxis, y: 10 });
+      } else if (player === playerTwo) {
+        createBox(`#P2Box-${xAxis}-10`, player, { x: xAxis, y: 10 });
+      }
+    }
   }
 }
 populateBoard(playerOneDomBoard, playerOne);
