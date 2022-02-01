@@ -96,21 +96,7 @@ function populateBoard(board, player) {
       // do whats needed on row 2.
       if (player === playerOne) {
         console.log(xAxis);
-        const selectedBox = document.querySelector(`#P1Box-${xAxis}-2`);
-        const possibleHitOrMiss = player.ourBoard.checkMissesAndHits({ x: xAxis, y: 2 });
-        const PossibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 2 });
-        if (possibleHitOrMiss === 'Hit') {
-          selectedBox.classList('hit');
-        }
-        if (possibleHitOrMiss === 'Miss') {
-          selectedBox.classList.add('miss');
-        }
-        if (PossibleShip === true) {
-          selectedBox.classList.add('containsShip');
-        }
-        selectedBox.addEventListener('click', () => {
-          attackBox(playerOne, { x: xAxis, y: 2 });
-        });
+        createBox(`#P1Box-${xAxis}-2`, player, { x: xAxis, y: 2 });
       } else if (player === playerTwo) {
         const selectedBox = document.querySelector(`#P2Box-${xAxis}-1`);
         const possibleHitOrMiss = player.ourBoard.checkMissesAndHits({ x: xAxis, y: 1 });
