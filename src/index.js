@@ -79,12 +79,40 @@ function populateBoard(board, player) {
         createBox(`#P2Box-${xAxis}-3`, player, { x: xAxis, y: 3 });
       }
     }
+    // 30 - 41 is the fourth row
     if (i < 41 && i > 30) {
       const xAxis = Math.floor(i / 30);
       if (player === playerOne) {
         createBox(`#P1Box-${xAxis}-4`, player, { x: xAxis, y: 4 });
       } else if (player === playerTwo) {
         createBox(`#P2Box-${xAxis}-4`, player, { x: xAxis, y: 4 });
+      }
+    }
+    // 40 - 51 is the fifth row
+    if (i < 51 && i > 40) {
+      const xAxis = Math.floor(i / 40);
+      if (player === playerOne) {
+        createBox(`#P1Box-${xAxis}-5`, player, { x: xAxis, y: 5 });
+      } else if (player === playerTwo) {
+        createBox(`#P2Box-${xAxis}-5`, player, { x: xAxis, y: 5 });
+      }
+    }
+    // 50 - 61 is the sixth row
+    if (i < 61 && i > 50) {
+      const xAxis = Math.floor(i / 50);
+      if (player === playerOne) {
+        createBox(`#P1Box-${xAxis}-6`, player, { x: xAxis, y: 6 });
+      } else if (player === playerTwo) {
+        createBox(`#P2Box-${xAxis}-6`, player, { x: xAxis, y: 6 });
+      }
+    }
+    // 60 - 71 is the seventh row
+    if (i < 71 && i > 60) {
+      const xAxis = Math.floor(i / 60);
+      if (player === playerOne) {
+        createBox(`#P1Box-${xAxis}-7`, player, { x: xAxis, y: 7 });
+      } else if (player === playerTwo) {
+        createBox(`#P2Box-${xAxis}-7`, player, { x: xAxis, y: 7 });
       }
     }
   }
