@@ -12,7 +12,7 @@ playerOne.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
 playerTwo.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
 //  When a box is clicked, send it to this function
 function attackBox(playerDefending, coordinates) {
-  console.log('hi');
+  console.log('hi this is the attack box click');
   // if playerOne is defending and their turn is 1 (meaning they can't attack)
   if (playerOne === playerDefending && playerOne.playerTurn === 1) {
     playerOne.ourBoard.recieveAttack(coordinates);
@@ -33,7 +33,7 @@ function createBox(queryString, player, coordinate) {
   const possibleHitOrMiss = player.ourBoard.checkMissesAndHits(coordinate);
   const possibleShip = player.ourBoard.findFirstShip(coordinate);
   if (possibleHitOrMiss === 'Hit') {
-    selectedBox.classList('hit');
+    selectedBox.classList.add('hit');
   }
   if (possibleHitOrMiss === 'Miss') {
     selectedBox.classList.add('miss');
@@ -41,7 +41,8 @@ function createBox(queryString, player, coordinate) {
   if (possibleShip === true) {
     selectedBox.classList.add('containsShip');
   }
-  selectedBox.addEventListener('click', () => {
+  selectedBox.parentNode.addEventListener('click', () => {
+    console.log('clicked');
     attackBox(player, coordinate);
   });
 }
