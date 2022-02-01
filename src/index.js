@@ -79,6 +79,14 @@ function populateBoard(board, player) {
         createBox(`#P2Box-${xAxis}-3`, player, { x: xAxis, y: 3 });
       }
     }
+    if (i < 41 && i > 30) {
+      const xAxis = Math.floor(i / 30);
+      if (player === playerOne) {
+        createBox(`#P1Box-${xAxis}-4`, player, { x: xAxis, y: 4 });
+      } else if (player === playerTwo) {
+        createBox(`#P2Box-${xAxis}-4`, player, { x: xAxis, y: 4 });
+      }
+    }
   }
 }
 populateBoard(playerOneDomBoard, playerOne);
