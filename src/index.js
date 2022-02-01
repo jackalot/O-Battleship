@@ -32,8 +32,11 @@ function attackBox(playerDefending, coordinates) {
     populateBoard(playerTwoDomBoard, playerTwo);
   }
 }
+//  This is a populateBoard() Helperfunction
+// creates a box and applies its needed styles
 function createBox(queryString, player, coordinate) {
-
+  const selectedBox = document.querySelector(queryString);
+  const possibleHitOrMiss = player.ourBoard.checkMissesAndHits(coordinate);
 }
 // Will populate the board will the appropiate color
 function populateBoard(board, player) {
