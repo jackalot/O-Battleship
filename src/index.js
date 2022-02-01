@@ -38,6 +38,18 @@ function createBox(queryString, player, coordinate) {
   const selectedBox = document.querySelector(queryString);
   const possibleHitOrMiss = player.ourBoard.checkMissesAndHits(coordinate);
   const possibleShip = player.ourBoard.findFirstShip(coordinate);
+  if (possibleHitOrMiss === 'Hit') {
+    selectedBox.classList('hit');
+  }
+  if (possibleHitOrMiss === 'Miss') {
+    selectedBox.classList.add('miss');
+  }
+  if (possibleShip === true) {
+    selectedBox.classList.add('containsShip');
+  }
+  selectedBox.addEventListener('click', () => {
+    attackBox(player, coordinate);
+  });
 }
 // Will populate the board will the appropiate color
 function populateBoard(board, player) {
