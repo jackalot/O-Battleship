@@ -13,7 +13,7 @@ console.log(playerOne.ourBoard.topRightCorner);
 console.log(`player one bottomLeftCorner(Limit):${playerOne.ourBoard.bottomLeftCorner}`);
 console.log(playerOne.ourBoard.bottomLeftCorner);
 console.log(`player two topRightCorner(Limit): ${playerTwo.ourBoard.topRightCorner}`);
-console.log(playerTwo.ourBoard.bottomLeftCorner);
+console.log(playerTwo.ourBoard.topRightCorner);
 console.log(`player two bottomLeftCorner(Limit): ${playerTwo.ourBoard.bottomLeftCorner}`);
 console.log(playerTwo.ourBoard.bottomLeftCorner);
 //  When a box is clicked, send it to this function
