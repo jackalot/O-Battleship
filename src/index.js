@@ -71,11 +71,11 @@ function populateBoard(board, player) {
       }
     }
     if (i < 31 && i > 20) {
-      const xAxis = Math.floor(i / 10);
+      const xAxis = Math.floor(i / 20);
       if (player === playerOne) {
-        createBox(`#P1Box-${xAxis}-2`, player, { x: xAxis, y: 2 });
+        createBox(`#P1Box-${xAxis}-3`, player, { x: xAxis, y: 3 });
       } else if (player === playerTwo) {
-        createBox(`#P2Box-${xAxis}-2`, player, { x: xAxis, y: 2 });
+        createBox(`#P2Box-${xAxis}-3`, player, { x: xAxis, y: 3 });
       }
     }
   }
