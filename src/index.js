@@ -71,6 +71,44 @@ function populateBoard(board, player) {
           attackBox(playerTwo, { x: i, y: 1 });
         });
       }
+    } //  10 - 21 is the second row
+    if (i < 21 && i > 10) {
+      const xAxis = Math.floor(i / 10);
+      // do whats needed on row 2.
+      if (player === playerOne) {
+        console.log(xAxis);
+        const selectedBox = document.querySelector(`#P1Box-${xAxis}-2`);
+        const possibleHitOrMiss = player.ourBoard.checkMissesAndHits({ x: xAxis, y: 2 });
+        const PossibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 2 });
+        if (possibleHitOrMiss === 'Hit') {
+          selectedBox.classList('hit');
+        }
+        if (possibleHitOrMiss === 'Miss') {
+          selectedBox.classList.add('miss');
+        }
+        if (PossibleShip === true) {
+          selectedBox.classList.add('containsShip');
+        }
+        selectedBox.addEventListener('click', () => {
+          attackBox(playerOne, { x: xAxis, y: 2 });
+        });
+      } else if (player === playerTwo) {
+        const selectedBox = document.querySelector(`#P2Box-${xAxis}-1`);
+        const possibleHitOrMiss = player.ourBoard.checkMissesAndHits({ x: xAxis, y: 1 });
+        const PossibleShip = player.ourBoard.findFirstShip({ x: xAxis, y: 1 });
+        if (possibleHitOrMiss === 'Hit') {
+          selectedBox.classList('hit');
+        }
+        if (possibleHitOrMiss === 'Miss') {
+          selectedBox.classList.add('miss');
+        }
+        if (PossibleShip === true) {
+          selectedBox.classList.add('containsShip');
+        }
+        selectedBox.addEventListener('click', () => {
+          attackBox(playerTwo, { x: i, y: 1 });
+        });
+      }
     }
   }
 }
