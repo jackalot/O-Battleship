@@ -70,6 +70,7 @@ function populateBoard(board, player) {
         createBox(`#P2Box-${xAxis}-2`, player, { x: xAxis, y: 2 });
       }
     }
+    //  20 - 31 is the third row
     if (i < 31 && i > 20) {
       const xAxis = Math.floor(i / 20);
       if (player === playerOne) {
