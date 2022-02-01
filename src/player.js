@@ -1,7 +1,7 @@
 const boardFile = require('./board');
 
 const playerFactory = (playerName, playerTurn) => {
-  const ourBoard = boardFile({ x: 0, y: 0 }, { x: 10, y: 10 });
+  const ourBoard = boardFile({ x: 1, y: 1 }, { x: 10, y: 10 });
   //  this is for the AI to attack randomly, also helps check we didnt hit
   //   an already missed/hit coordinate
   function sendRandomAttack(playerAttacking) {
