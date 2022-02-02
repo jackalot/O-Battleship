@@ -67,6 +67,7 @@ function populateBoard(board, player) {
     } //  10 - 21 is the second row
     if (i < 21 && i > 10) {
       const xAxis = Math.floor(i / 10);
+      console.log(xAxis);
       if (player === playerOne) {
         createBox(`#P1Box-${xAxis}-2`, player, { x: xAxis, y: 2 });
       } else if (player === playerTwo) {
