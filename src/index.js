@@ -15,14 +15,22 @@ function attackBox(playerDefending, coordinates) {
   // if playerOne is defending and their turn is 1 (meaning they can't attack)
   if (playerOne === playerDefending && playerOne.playerTurn === 1) {
     playerOne.ourBoard.recieveAttack(coordinates);
+    playerOne.swapTurn();
+    playerTwo.swapTurn();
     // eslint-disable-next-line no-use-before-define
     populateBoard(playerOneDomBoard, playerOne);
+    console.log(playerOne.playerTurn);
+    console.log(playerTwo.playerTurn);
   }
   // if playerTwo is defending and their turn is 1 (meaning they can't attack)
   if (playerTwo === playerDefending && playerTwo.playerTurn === 1) {
     playerTwo.ourBoard.recieveAttack(coordinates);
+    playerTwo.swapTurn();
+    playerOne.swapTurn();
     // eslint-disable-next-line no-use-before-define
     populateBoard(playerTwoDomBoard, playerTwo);
+    console.log(playerOne.playerTurn);
+    console.log(playerTwo.playerTurn);
   }
 }
 //  This is a populateBoard() Helperfunction
