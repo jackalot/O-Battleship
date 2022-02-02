@@ -12,6 +12,7 @@ playerOne.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
 playerTwo.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
 //  When a box is clicked, send it to this function
 function attackBox(playerDefending, coordinates) {
+  console.log(`playerDefending is ${playerDefending.playerName} and the coordinates are ${coordinates.x}, ${coordinates.y}`);
   // if playerOne is defending and their turn is 1 (meaning they can't attack)
   if (playerOne === playerDefending && playerOne.playerTurn === 1) {
     playerOne.ourBoard.recieveAttack(coordinates);
