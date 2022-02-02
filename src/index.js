@@ -53,7 +53,8 @@ function createBox(queryString, player, coordinate) {
     attackBox(player, coordinate);
   });
 }
-// Will populate the board will the appropiate color
+// Loops through the board and gets the needed xAxis for each row
+// Then sends to createBox the queryString, player, and coordinates
 function populateBoard(board, player) {
   for (let i = 1; i < 100; i += 1) {
     //  row 1
