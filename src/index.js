@@ -51,7 +51,7 @@ function createBox(queryString, player, coordinate) {
   if (possibleShip === true) {
     selectedBox.classList.add('containsShip');
   }
-  selectedBox.parentNode.addEventListener('click', () => {
+  selectedBox.addEventListener('click', () => {
     attackBox(player, coordinate);
   });
 }
