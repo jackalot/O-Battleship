@@ -12,6 +12,10 @@ playerOne.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
 playerTwo.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
 playerOne.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
 playerTwo.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
+// clears all the boxes and their event listeners
+function clearBoxes(player) {
+
+}
 //  When a box is clicked, send it to this function
 function attackBox(playerDefending, coordinates) {
   console.log(`playerDefending is ${playerDefending.playerName} and the coordinates are ${coordinates.x}, ${coordinates.y}`);
