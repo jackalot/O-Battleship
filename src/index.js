@@ -51,9 +51,12 @@ function createBox(queryString, player, coordinate) {
   if (possibleShip === true) {
     selectedBox.classList.add('containsShip');
   }
-  selectedBox.addEventListener('click', () => {
-    attackBox(player, coordinate);
-  });
+  const coordAvailable = player.ourBoard.checkAvailableCoord(coordinate);
+  if (coordAvailable === true) {
+    selectedBox.addEventListener('click', () => {
+      attackBox(player, coordinate);
+    });
+  }
 }
 // Loops through the board and gets the needed xAxis for each row
 // Then sends to createBox the queryString, player, and coordinates
