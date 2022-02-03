@@ -71,13 +71,19 @@ function createBox(queryString, player, coordinate) {
   const possibleShip = player.ourBoard.findFirstShip(coordinate);
   if (possibleHitOrMiss === 'Hit') {
     selectedBox.classList.add('hit');
+  } else {
+    selectedBox.classList.remove('hit');
   }
   if (possibleHitOrMiss === 'Miss') {
     selectedBox.classList.add('miss');
+  } else {
+    selectedBox.classList.remove('miss');
   }
   if (possibleShip === true && possibleHitOrMiss === 'none') {
     selectedBox.classList.add('containsShip');
     boxEvent(selectedBox, player, coordinate);
+  } else {
+    selectedBox.classList.remove('containsShip');
   }
   if (possibleHitOrMiss === 'none') {
     boxEvent(selectedBox, player, coordinate);
