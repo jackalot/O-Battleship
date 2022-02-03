@@ -37,9 +37,10 @@ function attackBox(playerDefending, coordinates) {
     playerOne.ourBoard.recieveAttack(coordinates);
     playerOne.swapTurn();
     playerTwo.swapTurn();
-    clearBoxes(playerDefending);
-    // eslint-disable-next-line no-use-before-define
-    //  populateBoard(playerOneDomBoard, playerOne);
+    clearBoxes(playerDefending).then(
+      // eslint-disable-next-line no-use-before-define
+      populateBoard(playerOneDomBoard, playerOne),
+    );
     console.log(playerOne.playerTurn);
     console.log(playerTwo.playerTurn);
   }
@@ -48,9 +49,10 @@ function attackBox(playerDefending, coordinates) {
     playerTwo.ourBoard.recieveAttack(coordinates);
     playerTwo.swapTurn();
     playerOne.swapTurn();
-    clearBoxes(playerDefending);
-    // eslint-disable-next-line no-use-before-define
-    //  populateBoard(playerTwoDomBoard, playerTwo);
+    clearBoxes(playerDefending).then(
+      // eslint-disable-next-line no-use-before-define
+      populateBoard(playerTwoDomBoard, playerTwo),
+    );
     console.log(playerOne.playerTurn);
     console.log(playerTwo.playerTurn);
   }
