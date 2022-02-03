@@ -15,11 +15,18 @@ playerTwo.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
 // clears all the boxes and their event listeners
 function clearBoxes(player) {
   if (player === playerOne) {
-    const Boxes = playerOneDomBoard.getElementsByClassName('box');
+    const Boxes = playerOneDomBoard.getElementsByClassName('hit');
+    for (let i = 0; i < Boxes.length; i += 1) {
+      // eslint-disable-next-line no-use-before-define
+      Boxes[i].removeEventListener('click', attackBox);
+    }
     console.log(Boxes);
   } else if (player === playerTwo) {
-    const Boxes = playerTwoDomBoard.getElementsByClassName('box');
-    console.log(Boxes);
+    const Boxes = playerTwoDomBoard.getElementsByClassName('hit');
+    for (let i = 0; i < Boxes.length; i += 1) {
+      // eslint-disable-next-line no-use-before-define
+      Boxes[i].removeEventListener('click', attackBox);
+    }
   }
 }
 //  When a box is clicked, send it to this function
@@ -41,8 +48,9 @@ function attackBox(playerDefending, coordinates) {
     playerTwo.ourBoard.recieveAttack(coordinates);
     playerTwo.swapTurn();
     playerOne.swapTurn();
+    clearBoxes(playerDefending);
     // eslint-disable-next-line no-use-before-define
-    populateBoard(playerTwoDomBoard, playerTwo);
+    //  populateBoard(playerTwoDomBoard, playerTwo);
     console.log(playerOne.playerTurn);
     console.log(playerTwo.playerTurn);
   }
