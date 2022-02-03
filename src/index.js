@@ -75,7 +75,7 @@ function createBox(queryString, player, coordinate) {
   if (possibleHitOrMiss === 'Miss') {
     selectedBox.classList.add('miss');
   }
-  if (possibleShip === true) {
+  if (possibleShip === true && possibleHitOrMiss === 'none') {
     selectedBox.classList.add('containsShip');
     boxEvent(selectedBox, player, coordinate);
   }
