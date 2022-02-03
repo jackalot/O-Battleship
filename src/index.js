@@ -13,7 +13,7 @@ playerTwo.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
 playerOne.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
 playerTwo.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
 //  When a box is clicked, send it to this function
-function attackBox(playerDefending, coordinates) {
+function attackBox(playerDefending, coordinates, thisBox) {
   console.log(`playerDefending is ${playerDefending.playerName} and the coordinates are ${coordinates.x}, ${coordinates.y}`);
   // if playerOne is defending and their turn is 1 (meaning they can't attack)
   if (playerOne === playerDefending && playerOne.playerTurn === 1) {
@@ -52,7 +52,7 @@ function createBox(queryString, player, coordinate) {
     selectedBox.classList.add('containsShip');
   }
   selectedBox.addEventListener('click', () => {
-    attackBox(player, coordinate);
+    attackBox(player, coordinate, selectedBox);
   });
 }
 // Loops through the board and gets the needed xAxis for each row
