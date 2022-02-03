@@ -36,6 +36,14 @@ function attackBox(playerDefending, coordinates) {
     console.log(playerTwo.playerTurn);
   }
 }
+function boxEvent(box, player, coordinate) {
+  const coordAvailable = player.ourBoard.checkAvailableCoord(coordinate);
+  if (coordAvailable === true) {
+    box.addEventListener('click', () => {
+      attackBox(player, coordinate);
+    });
+  }
+}
 //  This is a populateBoard() Helperfunction
 // creates a box and applies its needed styles
 function createBox(queryString, player, coordinate) {
@@ -50,12 +58,10 @@ function createBox(queryString, player, coordinate) {
   }
   if (possibleShip === true) {
     selectedBox.classList.add('containsShip');
+    boxEvent(selectedBox, player, coordinate);
   }
-  const coordAvailable = player.ourBoard.checkAvailableCoord(coordinate);
-  if (coordAvailable === true) {
-    selectedBox.addEventListener('click', () => {
-      attackBox(player, coordinate);
-    });
+  if (possibleHitOrMiss === 'none') {
+    boxEvent(selectedBox, player, coordinate);
   }
 }
 // Loops through the board and gets the needed xAxis for each row
