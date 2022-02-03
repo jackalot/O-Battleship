@@ -14,7 +14,13 @@ playerOne.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
 playerTwo.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
 // clears all the boxes and their event listeners
 function clearBoxes(player) {
-
+  if (player === playerOne) {
+    const Boxes = playerOneDomBoard.getElementsByClassName('box');
+    console.log(Boxes);
+  } else if (player === playerTwo) {
+    const Boxes = playerTwoDomBoard.getElementsByClassName('box');
+    console.log(Boxes);
+  }
 }
 //  When a box is clicked, send it to this function
 function attackBox(playerDefending, coordinates) {
@@ -24,8 +30,9 @@ function attackBox(playerDefending, coordinates) {
     playerOne.ourBoard.recieveAttack(coordinates);
     playerOne.swapTurn();
     playerTwo.swapTurn();
+    clearBoxes(playerDefending);
     // eslint-disable-next-line no-use-before-define
-    populateBoard(playerOneDomBoard, playerOne);
+    //  populateBoard(playerOneDomBoard, playerOne);
     console.log(playerOne.playerTurn);
     console.log(playerTwo.playerTurn);
   }
