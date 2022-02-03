@@ -84,9 +84,11 @@ function createBox(queryString, player, coordinate) {
     boxEvent(selectedBox, player, coordinate);
   } else {
     selectedBox.classList.remove('containsShip');
+    clearBoxes(player);
   }
   if (possibleHitOrMiss === 'none') {
     boxEvent(selectedBox, player, coordinate);
+    clearBoxes(player);
   }
 }
 // Loops through the board and gets the needed xAxis for each row
