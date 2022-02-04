@@ -20,7 +20,7 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
 psuedo code: 
 function updateDOMBoard(myPlayer)
 {
-    //
+    //  Allows you to apply any click EventListener to any function
     function applyClickEvent(element, function) {
         element.addEventListener('click', ()=> {
             function();
