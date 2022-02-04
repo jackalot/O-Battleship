@@ -11,7 +11,7 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
 
 
 psuedo code: 
-function updateDOMBoard()
+function updateDOMBoard(myPlayer)
 {
 
 }
