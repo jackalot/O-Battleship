@@ -1,8 +1,10 @@
 Focus, make a file called updateDOMBoard that update the DOM board for us:
 - the function name will be updateDOMBoard().
 - its input paramaters will be: myPlayer, 
+{
 
-
+}
+- export updateDOMBoard
 
 
 
@@ -13,3 +15,4 @@ function updateDOMBoard()
 {
 
 }
+module.exports = updateDOMBoard;
