@@ -23,7 +23,7 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
     and when the element is clicked, function will be called.
 }
 - a function insde called searchShip() {
-    -searchShip will have the paramater coordinate
+    -searchShip will have the parameter coordinate
 }
 - export updateDOMBoard
 
@@ -40,7 +40,7 @@ function updateDOMBoard(myPlayer)
         element.removeEventListener('click', function);
     }
     function searchShip(coordinate) {
-
+        
     }
 }
 module.exports = updateDOMBoard;
