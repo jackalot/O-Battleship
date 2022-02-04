@@ -4,7 +4,7 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
 {
 
 }
-- export updateDOMBoard
+
 
 - a function inside called applyEvent() {
     - its paramaters will be  ={
@@ -20,9 +20,9 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
         * function
     }
     - inside the function, it will removeEvent an event listener from the element
-    and when the elemnt is clicked, function will be called.
+    and when the element is clicked, function will be called.
 }
-
+- export updateDOMBoard
 
 
 psuedo code: 
