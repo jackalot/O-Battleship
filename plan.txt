@@ -24,6 +24,10 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
 }
 - a function insde called searchShip() {
     -searchShip will have the parameter coordinate
+    -searchShip will then have a variable named result
+    which equals to myPlayer and will access myPlayer.ourBoard and use
+    the board.js function 'findFirstShip'
+    -it will then return the result;
 }
 - export updateDOMBoard
 
@@ -40,7 +44,8 @@ function updateDOMBoard(myPlayer)
         element.removeEventListener('click', function);
     }
     function searchShip(coordinate) {
-        
+        const result = myPlayer.ourBoard.findFirstShip(coordinate);
+        return result;
     }
 }
 module.exports = updateDOMBoard;
