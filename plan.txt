@@ -39,7 +39,7 @@ function updateDOMBoard(myPlayer)
     function removeClickEvent(element, function) {
         element.removeEventListener('click', function);
     }
-    function searchShip() {
+    function searchShip(coordinate) {
 
     }
 }
