@@ -6,13 +6,21 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
 }
 - export updateDOMBoard
 
-
+- a function inside called applyEvent() {
+    - its paramaters will be  ={
+        * element
+        * function
+    }
+}
 
 
 
 psuedo code: 
 function updateDOMBoard(myPlayer)
 {
+    //
+    function applyEvent(element, function) {
 
+    }
 }
 module.exports = updateDOMBoard;
