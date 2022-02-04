@@ -1,1 +1,15 @@
-Focus, make a file called DOMcreateBoard that can create a DOM board for us:
+Focus, make a file called checkDOMBoard that can create a DOM board for us:
+- the function name will be checkDOMBoard().
+- its input paramaters will be: myPlayer, 
+
+
+
+
+
+
+
+psuedo code: 
+function checkDOMBoard()
+{
+
+}
