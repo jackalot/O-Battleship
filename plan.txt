@@ -22,8 +22,8 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
     - inside the function, it will removeEvent an event listener from the element
     and when the element is clicked, function will be called.
 }
-- a function insde called searchShips() {
-
+- a function insde called searchShip() {
+    -searchShip will have the paramater coordinate
 }
 - export updateDOMBoard
 
@@ -39,7 +39,7 @@ function updateDOMBoard(myPlayer)
     function removeClickEvent(element, function) {
         element.removeEventListener('click', function);
     }
-    function searchShips() {
+    function searchShip() {
 
     }
 }
