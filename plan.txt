@@ -29,12 +29,23 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
     the board.js function 'findFirstShip'
     -it will then return the result;
 }
-- a function inside calld searchMiss() {
+- a function inside called searchMiss() {
     -searchMiss will have the parameter coordinate
     - searchMiss will then have a variable named result
     which equals to myPlayer and will access myPlayer.ourBoard and use
     the board.js function 'checkMissesAndHits'
     -it will then check if result is 'Miss'
+        {
+            - if so, return true
+        }
+    - if not return false
+}
+- a function inside called searchHit() {
+    -searchHit will have the parameter coordinate
+    -searchMiss will then have a variable named result
+    which equals to myPlayer and will access myPlayer.ourBoard and use
+    the board.js function 'checkMissesAndHits'
+    -it will then check if result is 'Hit'
         {
             - if so, return true
         }
@@ -65,6 +76,9 @@ function updateDOMBoard(myPlayer)
             return true;
         }
         return false;
+    }
+    function searchHit(coordinate) {
+        const result = myPlayer.ourBoard.checkMissesAndHits(coordinate);
     }
 }
 module.exports = updateDOMBoard;
