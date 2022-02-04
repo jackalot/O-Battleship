@@ -14,6 +14,14 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
     - inside the function, it will apply an event listener to the element
     and when the element is clicked, function will be called.
 }
+- a function inside called removeEvent() {
+    - its paramaters will be = {
+        * element
+        * function
+    }
+    - inside the function, it will removeEvent an event listener from the element
+    and when the elemnt is clicked, function will be called.
+}
 
 
 
@@ -23,6 +31,12 @@ function updateDOMBoard(myPlayer)
     //  Allows you to apply any click EventListener to any function
     function applyClickEvent(element, function) {
         element.addEventListener('click', ()=> {
+            function();
+        })
+    }
+    //  Allows you to remove any EventListener from any element
+    function applyClickEvent(element, function) {
+        element.removeEventListener('click', ()=> {
             function();
         })
     }
