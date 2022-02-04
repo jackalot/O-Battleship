@@ -51,6 +51,13 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
         }
     - if not return false
 }
+- we now need a function that will sort through the board row by row.
+- a function inside called findInRow() {
+    - its parameters will be {
+        * collumn
+        * itemFunctionToFind (this could be, searchHit, searchMiss, searchShip)
+    }
+}
 - export updateDOMBoard
 
 
@@ -84,6 +91,10 @@ function updateDOMBoard(myPlayer)
             return true;
         }
         return false;
+    }
+    function findInRow(collumn, itemFunctionToFind)
+    {
+
     }
 }
 module.exports = updateDOMBoard;
