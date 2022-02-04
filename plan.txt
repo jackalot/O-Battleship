@@ -22,6 +22,9 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
     - inside the function, it will removeEvent an event listener from the element
     and when the element is clicked, function will be called.
 }
+- a function insde called searchShips() {
+
+}
 - export updateDOMBoard
 
 
@@ -35,6 +38,9 @@ function updateDOMBoard(myPlayer)
     //  Allows you to remove any Click EventListener from any element
     function removeClickEvent(element, function) {
         element.removeEventListener('click', function);
+    }
+    function searchShips() {
+
     }
 }
 module.exports = updateDOMBoard;
