@@ -30,15 +30,11 @@ function updateDOMBoard(myPlayer)
 {
     //  Allows you to apply any click EventListener to any function
     function applyClickEvent(element, function) {
-        element.addEventListener('click', ()=> {
-            function();
-        })
+        element.addEventListener('click', function);
     }
-    //  Allows you to remove any EventListener from any element
-    function applyClickEvent(element, function) {
-        element.removeEventListener('click', ()=> {
-            function();
-        })
+    //  Allows you to remove any Click EventListener from any element
+    function removeClickEvent(element, function) {
+        element.removeEventListener('click', function);
     }
 }
 module.exports = updateDOMBoard;
