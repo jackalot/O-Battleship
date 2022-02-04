@@ -11,6 +11,8 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
         * element
         * function
     }
+    - inside the function, it will apply an event listener to the element
+    and when the element is clicked, function will be called.
 }
 
 
@@ -19,8 +21,10 @@ psuedo code:
 function updateDOMBoard(myPlayer)
 {
     //
-    function applyEvent(element, function) {
-
+    function applyClickEvent(element, function) {
+        element.addEventListener('click', ()=> {
+            function();
+        })
     }
 }
 module.exports = updateDOMBoard;
