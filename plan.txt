@@ -79,6 +79,11 @@ function updateDOMBoard(myPlayer)
     }
     function searchHit(coordinate) {
         const result = myPlayer.ourBoard.checkMissesAndHits(coordinate);
+        if(result === 'Hit')
+        {
+            return true;
+        }
+        return false;
     }
 }
 module.exports = updateDOMBoard;
