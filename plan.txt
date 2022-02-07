@@ -102,7 +102,7 @@ function updateDOMBoard(myPlayer, searchQuery)
     {
         for(let i = 1; i < 10; i += 1)
         {
-            
+            const currentBox = document.querySelector(`${queryString}-${i}-${collumn}`)
         }
     }
 }
