@@ -114,5 +114,9 @@ function updateDOMBoard(myPlayer, searchQuery)
             const currentBox = document.querySelector(`${queryString}-${collumn}-${i}`);
         }
     }
+    function sendNextCollumn()
+    {
+        
+    }
 }
 module.exports = updateDOMBoard;
