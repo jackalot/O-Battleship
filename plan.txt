@@ -1,8 +1,8 @@
 Focus, make a file called updateDOMBoard that update the DOM board for us:
 - the function name will be updateDOMBoard().
-- its input paramaters will be: myPlayer, 
+- its input paramaters will be = 
 {
-
+myPlayer, queryString
 }
 
 
@@ -53,9 +53,14 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
 }
 - we now need a function that will sort through the board row by row.
 - a function inside called findInRow() {
-    - its parameters will be {
+    - its parameters will be = {
+        * row
         * collumn
-        * searchFuntion (this could be, searchHit, searchMiss, searchShip)
+        * searchFunction (this could be, searchHit, searchMiss, searchShip)
+    }
+    - a for loop of i < 10 goes
+    {
+        - it will then do a query selector using queryString + i + collumn
     }
 
 }
