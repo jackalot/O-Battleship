@@ -119,7 +119,9 @@ function updateDOMBoard(myPlayer, searchQuery)
         //  this funcions main purpose is to send a collumn to findInRow();
         for(let i = 0; i < 10; i += 1)
         {
-            
+            findInRow(i, searchHit)
+            findInRow(i, searchMiss)
+            findInRow(i, searchShip)
         }
     }
 }
