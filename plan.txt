@@ -53,7 +53,10 @@ myPlayer, queryString
 }
 //  findInRow() helperFunction 
 - a function inside called checkBox() {
-    - its paramater will be coordinate
+    - its paramaters will be {
+        * coordinate
+        * temporaryBox
+    }
 }
 - a function inside called findInRow() {
     - its parameters will be = {
