@@ -62,7 +62,9 @@ myPlayer, queryString
     {
         - it will then do a query selector using queryString + i + collumn
     }
-
+}
+- a function inside called sendNextCollumn () {
+//  this funcions main purpose is to send a collumn to findInRow();
 }
 - export updateDOMBoard
 
