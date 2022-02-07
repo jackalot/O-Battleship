@@ -65,6 +65,10 @@ myPlayer, queryString
     {
         -if it is, then apply the "miss" class to the box.
     }
+    - else check if the coordinate given is a Ship using searchShip
+    {
+        -if it is, then apply the "containsShip" class to the box.
+    }
 }
 - a function inside called findInRow() {
     - its parameters will be = {
