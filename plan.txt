@@ -60,14 +60,17 @@ myPlayer, queryString
     - first it will check if the coordinate given is a Hit using searchHit
     {
        - if it is, then apply the "hit" class to the box.
+       - it will then call removeEvent();
     }
     - else check if the coordinate given is a Miss using searchMiss
     {
         -if it is, then apply the "miss" class to the box.
+        - it will then call removeEvent();
     }
     - else check if the coordinate given is a Ship using searchShip
     {
         -if it is, then apply the "containsShip" class to the box.
+        - it will then call applyEvent();
     }
 }
 - a function inside called findInRow() {
