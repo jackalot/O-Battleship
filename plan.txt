@@ -68,7 +68,7 @@ myPlayer, queryString
 
 
 psuedo code: 
-function updateDOMBoard(myPlayer)
+function updateDOMBoard(myPlayer, searchQuery)
 {
     //  Allows you to apply any click EventListener to any function
     function applyClickEvent(element, function) {
@@ -98,9 +98,12 @@ function updateDOMBoard(myPlayer)
         }
         return false;
     }
-    function findInRow(collumn, itemFunctionToFind)
+    function findInRow(row, collumn, searchFunction)
     {
-
+        for(let i = 1; i < 10; i += 1)
+        {
+            
+        }
     }
 }
 module.exports = updateDOMBoard;
