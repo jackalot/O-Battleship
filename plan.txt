@@ -57,6 +57,10 @@ myPlayer, queryString
         * coordinate
         * temporaryBox
     }
+    - first it will check if the coordinate given is a Hit using searchHit
+    {
+       - if it is, then apply the "Hit" class to the box"
+    }
 }
 - a function inside called findInRow() {
     - its parameters will be = {
