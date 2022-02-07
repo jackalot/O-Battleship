@@ -55,8 +55,9 @@ Focus, make a file called updateDOMBoard that update the DOM board for us:
 - a function inside called findInRow() {
     - its parameters will be {
         * collumn
-        * itemFunctionToFind (this could be, searchHit, searchMiss, searchShip)
+        * searchFuntion (this could be, searchHit, searchMiss, searchShip)
     }
+
 }
 - export updateDOMBoard
 
