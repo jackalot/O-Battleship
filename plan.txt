@@ -54,7 +54,6 @@ myPlayer, queryString
 - we now need a function that will sort through the board row by row.
 - a function inside called findInRow() {
     - its parameters will be = {
-        * row
         * collumn
         * searchFunction (this could be, searchHit, searchMiss, searchShip)
     }
@@ -65,6 +64,14 @@ myPlayer, queryString
 }
 - a function inside called sendNextCollumn () {
 //  this funcions main purpose is to send a collumn to findInRow();
+    - a for loop with i < 10 occurs
+    {
+        - on each loop, it calls findInRow and sends i as the collumn
+        - it sends findInRow with each searchFunction so:
+        findInRow(i, searchHit)
+        findInRow(i, searchMiss)
+        etc.
+    }
 }
 - export updateDOMBoard
 
