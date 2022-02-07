@@ -151,6 +151,7 @@ function updateDOMBoard(myPlayer, searchQuery)
         for(let i = 1; i < 10; i += 1)
         {
             const currentBox = document.querySelector(`${queryString}-${collumn}-${i}`);
+            checkBox({ x: collumn, y: i}, currentBox);
         }
     }
     function sendNextCollumn()
