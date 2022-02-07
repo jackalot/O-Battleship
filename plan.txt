@@ -107,7 +107,7 @@ function updateDOMBoard(myPlayer, searchQuery)
         }
         return false;
     }
-    function findInRow(row, collumn, searchFunction)
+    function findInRow(row, collumn)
     {
         for(let i = 1; i < 10; i += 1)
         {
