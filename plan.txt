@@ -55,7 +55,6 @@ myPlayer, queryString
 - a function inside called findInRow() {
     - its parameters will be = {
         * collumn
-        * searchFunction (this could be, searchHit, searchMiss, searchShip)
     }
     - a for loop of i < 10 goes
     {
