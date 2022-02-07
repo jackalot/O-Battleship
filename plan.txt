@@ -51,7 +51,10 @@ myPlayer, queryString
         }
     - if not return false
 }
-- we now need a function that will sort through the board row by row.
+//  findInRow() helperFunction 
+- a function inside called checkBox() {
+    - its paramater will be coordinate
+}
 - a function inside called findInRow() {
     - its parameters will be = {
         * collumn
