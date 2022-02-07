@@ -124,6 +124,23 @@ function updateDOMBoard(myPlayer, searchQuery)
         }
         return false;
     }
+    function checkBox(coordinate, temporaryBox) {
+        const hitResult = searchHit(coordinate);
+        const missResult = searchMiss(coordinate);
+        const shipResult = searchMiss(coordinate);
+        if(hitResult === true)
+        {
+            temporaryBox.classList.add('.hit');
+        }
+        else if(missResult === true)
+        {
+            temporaryBox.classList.add('.miss');
+        }
+        else if(shipResult === true)
+        {
+            temporaryBox.classList.add('.containsShip');
+        }
+    }
     function findInRow(row, collumn)
     {
         for(let i = 1; i < 10; i += 1)
