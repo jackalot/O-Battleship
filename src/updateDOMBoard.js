@@ -56,5 +56,6 @@ function updateDOMBoard(myPlayer, searchQuery) {
       findInRow(i, searchShip);
     }
   }
+  return { sendNextCollumn };
 }
 module.exports = updateDOMBoard;
