@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/jackalot/O-Forms-Practice#readme",
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.2",
     "css-loader": "^6.5.1",
     "eslint": "^8.4.0",
     "eslint-config-airbnb-base": "^15.0.0",
