@@ -44,7 +44,7 @@ function updateDOMBoard(myPlayer, searchQuery) {
   }
   function findInRow(row, collumn) {
     for (let i = 1; i < 10; i += 1) {
-      const currentBox = document.querySelector(`${queryString}-${collumn}-${i}`);
+      const currentBox = document.querySelector(`${searchQuery}-${collumn}-${i}`);
       checkBox({ x: collumn, y: i }, currentBox);
     }
   }
