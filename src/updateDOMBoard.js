@@ -28,15 +28,18 @@ function updateDOMBoard(myPlayer, searchQuery) {
   function checkBox(coordinate, temporaryBox) {
     const hitResult = searchHit(coordinate);
     const missResult = searchMiss(coordinate);
-    const shipResult = searchMiss(coordinate);
+    const shipResult = searchShip(coordinate);
     if (hitResult === true) {
       temporaryBox.classList.add('.hit');
+      //  The below function requires another function that may not be done yet
       // removeClickEvent();
     } else if (missResult === true) {
       temporaryBox.classList.add('.miss');
+      //  The below function requires another function that may not be done yet
       //  removeClickEvent();
     } else if (shipResult === true) {
       temporaryBox.classList.add('.containsShip');
+      //  The below function requires another function that may not be done yet
       // applyClickEvent();
     } else if (hitResult === false && missResult === false && shipResult === false) {
       // applyClickEvent();
@@ -52,8 +55,6 @@ function updateDOMBoard(myPlayer, searchQuery) {
   function sendNextCollumn() {
     //  this funcions main purpose is to send a collumn to findInRow();
     for (let i = 0; i < 10; i += 1) {
-      findInRow(i);
-      findInRow(i);
       findInRow(i);
     }
   }
