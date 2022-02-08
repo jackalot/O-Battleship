@@ -31,15 +31,16 @@ function updateDOMBoard(myPlayer, searchQuery) {
     const shipResult = searchMiss(coordinate);
     if (hitResult === true) {
       temporaryBox.classList.add('.hit');
-      removeClickEvent();
+      // removeClickEvent();
     } else if (missResult === true) {
       temporaryBox.classList.add('.miss');
-      removeClickEvent();
+      //  removeClickEvent();
     } else if (shipResult === true) {
       temporaryBox.classList.add('.containsShip');
-      applyClickEvent();
+      // applyClickEvent();
     } else if (hitResult === false && missResult === false && shipResult === false) {
-      applyClickEvent();
+      // applyClickEvent();
+      console.log('this would be a empty effect but there is nothing for it yet');
     }
   }
   function findInRow(collumn) {
