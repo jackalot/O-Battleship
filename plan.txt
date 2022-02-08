@@ -72,6 +72,10 @@ myPlayer, queryString
         -if it is, then apply the "containsShip" class to the box.
         - it will then call applyEvent();
     }
+    - else if it has none of those variables, then its an empty square
+    {
+        - it will then call applyEvent();
+    }
 }
 - a function inside called findInRow() {
     - its parameters will be = {
