@@ -152,6 +152,10 @@ function updateDOMBoard(myPlayer, searchQuery)
             temporaryBox.classList.add('.containsShip');
             applyEvent();
         }
+        else if(hitResult === false && missResult === false && shipResult === false)
+        {
+            applyEvent();
+        }
     }
     function findInRow(row, collumn)
     {
