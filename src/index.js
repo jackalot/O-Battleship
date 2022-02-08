@@ -8,6 +8,7 @@ const domBoardFile = require('./updateDOMBoard');
 const playerOne = playerFile('player 1', 0);
 const playerTwo = playerFile('CPU', 1);
 const p1DomBoardManager = domBoardFile(playerOne, '#P1Box');
+p1DomBoardManager.sendNextCollumn();
 playerOne.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
 playerTwo.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
 playerOne.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
