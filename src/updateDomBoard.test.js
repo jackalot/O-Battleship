@@ -6,4 +6,4 @@ import '@testing-library/jest-dom';
 player1.placeShip({ x: 1, y: 1 }, { x: 1, y: 2 });
 p1DomBoardManager.sendNextCollumn();
 const tempBox = getByTestId(`P1Box-1-1`)
-expect()
+expect(tempBox).toHaveClass(containsShip);
