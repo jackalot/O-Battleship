@@ -42,18 +42,18 @@ function updateDOMBoard(myPlayer, searchQuery) {
       applyClickEvent();
     }
   }
-  function findInRow(row, collumn) {
+  function findInRow(collumn) {
     for (let i = 1; i < 10; i += 1) {
-      const currentBox = document.querySelector(`${searchQuery}-${collumn}-${i}`);
+      const currentBox = document.querySelector(`#${searchQuery}-${collumn}-${i}`);
       checkBox({ x: collumn, y: i }, currentBox);
     }
   }
   function sendNextCollumn() {
     //  this funcions main purpose is to send a collumn to findInRow();
     for (let i = 0; i < 10; i += 1) {
-      findInRow(i, searchHit);
-      findInRow(i, searchMiss);
-      findInRow(i, searchShip);
+      findInRow(i);
+      findInRow(i);
+      findInRow(i);
     }
   }
   return { sendNextCollumn };
