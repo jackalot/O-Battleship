@@ -58,6 +58,13 @@ function updateDOMBoard(myPlayer, searchQuery) {
       findInRow(i);
     }
   }
-  return { sendNextCollumn };
+  //  These are tests
+  function checkForClass(element, className) {
+    if (element.classList.contains(className)) {
+      return true;
+    }
+    return false;
+  }
+  return { sendNextCollumn, checkForClass };
 }
 module.exports = updateDOMBoard;
