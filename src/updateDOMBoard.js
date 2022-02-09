@@ -65,6 +65,8 @@ function updateDOMBoard(myPlayer, searchQuery) {
     }
     return false;
   }
-  return { sendNextCollumn, checkForClass };
+  return {
+    sendNextCollumn, checkForClass, searchShip, searchMiss, searchHit,
+  };
 }
 module.exports = updateDOMBoard;
