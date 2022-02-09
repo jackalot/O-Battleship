@@ -55,7 +55,7 @@ function updateDOMBoard(myPlayer, searchQuery) {
   }
   function sendNextCollumn() {
     //  this funcions main purpose is to send a collumn to findInRow();
-    for (let i = 0; i < 10; i += 1) {
+    for (let i = 1; i < 10; i += 1) {
       findInRow(i);
     }
   }
