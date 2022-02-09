@@ -15,3 +15,4 @@ playerTwo.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
 playerOne.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
 playerTwo.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
 p1DomBoardManager.sendNextCollumn();
+console.log(p1DomBoardManager.searchShip({ x: 1, y: 1 }));

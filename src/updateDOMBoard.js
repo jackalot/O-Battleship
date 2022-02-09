@@ -43,7 +43,8 @@ function updateDOMBoard(myPlayer, searchQuery) {
       // applyClickEvent();
     } else if (hitResult === false && missResult === false && shipResult === false) {
       // applyClickEvent();
-      console.log('this would be a empty effect but there is nothing for it yet');
+      console.log('this would be a empty effect but there is nothing for it yet, coordinate:');
+      console.log(coordinate);
     }
   }
   function findInRow(collumn) {
