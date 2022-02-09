@@ -209,6 +209,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     checkAvailableCoord,
     findFirstShip,
     checkMissesAndHits,
+    myShips,
   };
 };
 module.exports = gameBoardFactory;
