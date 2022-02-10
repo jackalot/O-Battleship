@@ -25,8 +25,7 @@ const shipFactory = (coord1, coord2) => {
   this.coord1 = coord1;
   this.coord2 = coord2;
   // This is an object constructor for ship parts that makes each part for the ship
-  function Part(partName, partCoordinates) {
-    this.partName = partName;
+  function Part(partCoordinates) {
     this.partCoordinates = partCoordinates;
     this.hasSunk = false;
   }
@@ -41,7 +40,7 @@ const shipFactory = (coord1, coord2) => {
     console.log(length);
     const toReturn = [];
     for (let i = coord1.y; i < length; i += 1) {
-      const newPart = new Part(`part${i}`, { x: coord1.x, y: i });
+      const newPart = new Part({ x: coord1.x, y: i });
       toReturn.push(newPart);
     }
     return toReturn;
