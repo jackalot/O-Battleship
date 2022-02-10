@@ -37,20 +37,7 @@ const shipFactory = (coord1, coord2) => {
     const orientation = shipOrientation();
     const allParts = [];
     console.log(orientation);
-    if (orientation === 'horizontal') {
-      for (let i = coord1.x; i < length + 2; i += 1) {
-        const newPart = new Part(`part${i}`, { x: i, y: coord1.y });
-        allParts.push(newPart);
-      }
-      return allParts;
-    }
-    if (orientation === 'vertical') {
-      for (let i = coord1.y; i < length + 2; i += 1) {
-        const newPart = new Part(`part${i}`, { x: coord1.y, y: i });
-        allParts.push(newPart);
-      }
-      return allParts;
-    } return null;
+    return null;
   }
   const myParts = shipParts();
   // hit() Helper function
