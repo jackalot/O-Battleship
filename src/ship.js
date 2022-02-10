@@ -51,7 +51,6 @@ const shipFactory = (coord1, coord2) => {
   function shipParts() {
     const length = lengthMeasurer(coord1, coord2);
     const orientation = shipOrientation();
-    const allParts = [];
     console.log(orientation);
     if (orientation === 'horizontal') {
       getHorizontalParts(length);
