@@ -18,7 +18,13 @@ test("mockShip2 returns a length of 6", () => {
 test("mockShip will get hit at [1, 1]", () => {
     expect(mockShip.hit({x: 1, y: 1})).toBe(true);
 })
+test("mockShip2 will get hit at [9, 3]", () => {
+    expect(mockShip2.hit({x: 9, y: 3})).toBe(true);
+})
 test("mockShip will get hit at [1, 7]", () => {
+    expect(mockShip.hit({x: 1, y: 7})).toBe(true);
+})
+test("mockShip2 will get hit at [9, 9]", () => {
     expect(mockShip.hit({x: 1, y: 7})).toBe(true);
 })
 test("mockShip.shipParts will return every part", () => {
