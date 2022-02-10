@@ -30,6 +30,11 @@ const shipFactory = (coord1, coord2) => {
     this.partCoordinates = partCoordinates;
     this.hasSunk = false;
   }
+  // shipParts() helper function
+  // returns all the parts that are horizontal on this ship if its orientation is horizontal.
+  function getHorizontalParts(length) {
+
+  }
   // This gets the length, orientation, and then makes each part have its corresponding coordinate,
   //  then returns all of them in an array
   function shipParts() {
@@ -37,6 +42,9 @@ const shipFactory = (coord1, coord2) => {
     const orientation = shipOrientation();
     const allParts = [];
     console.log(orientation);
+    if (orientation === 'horizontal') {
+      getHorizontalParts();
+    }
     return null;
   }
   const myParts = shipParts();
