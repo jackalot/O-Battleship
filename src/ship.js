@@ -36,7 +36,7 @@ const shipFactory = (coord1, coord2) => {
     const length = lengthMeasurer(coord1, coord2);
     const orientation = shipOrientation();
     const allParts = [];
-    console.log(coord1.x);
+    console.log(orientation);
     if (orientation === 'horizontal') {
       for (let i = coord1.x; i < length + 2; i += 1) {
         const newPart = new Part(`part${i}`, { x: i, y: coord1.y });
