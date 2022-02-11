@@ -31,7 +31,7 @@ const shipFactory = (coord1, coord2) => {
   }
   // shipParts() helper function
   // returns all the parts that are horizontal on this ship if its orientation is horizontal.
-  function getHorizontalParts(length) {
+  function getHorizontalParts() {
 
   }
   // shipParts() helper function
