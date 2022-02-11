@@ -86,3 +86,9 @@ test("horizontalShip returns a length of 6", () => {
 test("horizontalShip will get hit at [6, 3]", () => {
     expect(horizontalShip.hit({x: 6, y: 3})).toBe(true);
 })
+test("horizontalShip will get hit at [3, 3]", () => {
+    expect(horizontalShip.hit({x: 3, y: 3})).toBe(true);
+})
+test("horizontalShip will get hit at [9, 3]", () => {
+    expect(horizontalShip.hit({x: 3, y: 3})).toBe(true);
+})
