@@ -80,6 +80,9 @@ const horizontalShip = shipFile(coord1 = {x: 3, y: 3}, coord2 = { x: 9, y: 3});
 test("horizontalShip returns an object", () => {
     expect(horizontalShip).toMatchObject({ coord1: {x: 3, y: 3}, coord2: {x: 9, y: 3} });
 })
-test("mockShip returns a length of 6", () => {
+test("horizontalShip returns a length of 6", () => {
     expect(horizontalShip.lengthMeasurer(coord1 = {x: 3, y: 3}, coord2 = {x: 9, y: 3})).toBe(6);
+})
+test("horizontalShip will get hit at [6, 3]", () => {
+    expect(horizontalShip.hit({x: 6, y: 3})).toBe(true);
 })
