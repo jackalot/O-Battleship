@@ -111,3 +111,11 @@ test("horizontalShip.shipParts will return every part", () => {
 test("horizontalShip will not sink", () => {
     expect(horizontalShip.sink()).toBe('I still have parts left');
 })
+test("horizontalShip will return all of its coordinates, including the parts", () => {
+    expect(horizontalShip.getAllCoordinates()).toMatchObject([
+        {x:3,y:3},{x:4,y:3},
+        {x:5,y:3},{x:6,y:3},
+        {x:7,y:3},{x:8,y:3},
+        {x:9,y:3}
+    ])
+})
