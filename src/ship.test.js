@@ -42,7 +42,7 @@ test("mockShip.shipParts will return every part", () => {
        {"hasSunk": false, "partCoordinates": {"x": 1, "y": 6}, "partName": "part6"}, 
        {"hasSunk": false, "partCoordinates": {"x": 1, "y": 7}, "partName": "part7"}]    );
 })
-test.only("mockShip2.shipParts will return every part", () => {
+test("mockShip2.shipParts will return every part", () => {
     expect(mockShip2.shipParts()).toEqual([
     {"hasSunk": false, "partCoordinates": {"x": 9, "y": 3}},
     {"hasSunk": false, "partCoordinates": {"x": 9, "y": 4}},
