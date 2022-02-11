@@ -64,5 +64,17 @@ test("mockShip will return all of its coordinates, including the parts", () => {
         {x:1,y:1},{x:1,y:2},
         {x:1,y:3},{x:1,y:4},
         {x:1,y:5},{x:1,y:6},
-        {x:1,y:7}])
+        {x:1,y:7}
+    ])
+})
+test("mockShip2 will return all of its coordinates, including the parts", ()=> {
+    expect(mockShip2.getAllCoordinates()).toMatchObject([
+        {x: 9, y: 3},
+        {x: 9, y: 4},
+        {x: 9, y: 5},
+        {x: 9, y: 6},
+        {x: 9, y: 7},
+        {x: 9, y: 8},
+        {x: 9, y: 9}
+    ])
 })
