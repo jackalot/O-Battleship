@@ -34,13 +34,14 @@ test("mockShip2 will get hit at [9, 9]", () => {
     expect(mockShip.hit({x: 1, y: 7})).toBe(true);
 })
 test("mockShip.shipParts will return every part", () => {
-    expect(mockShip.shipParts()).toEqual([{"hasSunk": false, "partCoordinates": {"x": 1, "y": 1},
-     "partName": "part1"}, {"hasSunk": false, "partCoordinates": {"x": 1, "y": 2}, "partName": "part2"},
-     {"hasSunk": false, "partCoordinates": {"x": 1, "y": 3}, "partName": "part3"},
-      {"hasSunk": false, "partCoordinates": {"x": 1, "y": 4}, "partName": "part4"},
-       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 5}, "partName": "part5"},
-       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 6}, "partName": "part6"}, 
-       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 7}, "partName": "part7"}]    );
+    expect(mockShip.shipParts()).toEqual([
+    {"hasSunk": false, "partCoordinates": {"x": 1, "y": 1}},
+     {"hasSunk": false, "partCoordinates": {"x": 1, "y": 2}},
+     {"hasSunk": false, "partCoordinates": {"x": 1, "y": 3}},
+      {"hasSunk": false, "partCoordinates": {"x": 1, "y": 4}},
+       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 5}},
+       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 6}}, 
+       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 7}}]    );
 })
 test("mockShip2.shipParts will return every part", () => {
     expect(mockShip2.shipParts()).toEqual([
