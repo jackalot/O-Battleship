@@ -83,12 +83,18 @@ test("horizontalShip returns an object", () => {
 test("horizontalShip returns a length of 6", () => {
     expect(horizontalShip.lengthMeasurer(coord1 = {x: 3, y: 3}, coord2 = {x: 9, y: 3})).toBe(6);
 })
+//mid point
 test("horizontalShip will get hit at [6, 3]", () => {
     expect(horizontalShip.hit({x: 6, y: 3})).toBe(true);
 })
+//start point
 test("horizontalShip will get hit at [3, 3]", () => {
     expect(horizontalShip.hit({x: 3, y: 3})).toBe(true);
 })
+// end point
 test("horizontalShip will get hit at [9, 3]", () => {
     expect(horizontalShip.hit({x: 3, y: 3})).toBe(true);
+})
+test("horizontalShip will not get hit at [9, 4]", () => {
+    expect(horizontalShip.hit({x: 9, y: 4})).toBe(false);
 })
