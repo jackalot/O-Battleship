@@ -93,7 +93,7 @@ test("horizontalShip will get hit at [3, 3]", () => {
 })
 // end point
 test("horizontalShip will get hit at [9, 3]", () => {
-    expect(horizontalShip.hit({x: 3, y: 3})).toBe(true);
+    expect(horizontalShip.hit({x: 9, y: 3})).toBe(true);
 })
 test("horizontalShip will not get hit at [9, 4]", () => {
     expect(horizontalShip.hit({x: 9, y: 4})).toBe(false);
