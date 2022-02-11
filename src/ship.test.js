@@ -1,5 +1,6 @@
 const shipFile = require('./ship');
 const { TestWatcher } = require("jest");
+// These two are vertical
 const mockShip = shipFile(coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7});
 const mockShip2 = shipFile(coord1 = {x: 9, y: 3}, coord2 = { x: 9, y: 9});
 //  this test is giving errors
