@@ -32,7 +32,14 @@ const shipFactory = (coord1, coord2) => {
   // shipParts() helper function
   // returns all the parts that are horizontal on this ship if its orientation is horizontal.
   function getHorizontalParts() {
-
+    const toReturn = [];
+    // add 1 to coord2.x
+    const limit = coord2.x + 1;
+    for (let i = coord1.x; i < limit; i += 1) {
+      const newPart = new Part({ x: i, y: coord1.y });
+      toReturn.push(newPart);
+    }
+    return toReturn;
   }
   // shipParts() helper function
   // returns all the parts that are Vertical on this ship if its orientation is Vertical.
@@ -58,7 +65,8 @@ const shipFactory = (coord1, coord2) => {
     const length = lengthMeasurer(coord1, coord2);
     const orientation = shipOrientation();
     if (orientation === 'horizontal') {
-      getHorizontalParts(length);
+      const result = getHorizontalParts(length);
+      return result;
     }
     if (orientation === 'vertical') {
       const result = getVerticalParts(length);
