@@ -76,3 +76,4 @@ test("mockShip2 will return all of its coordinates, including the parts", ()=> {
         {x: 9, y: 9}
     ])
 })
+const horizontalShip = shipFile(coord1 = {x: 3, y: 3}, coord2 = { x: 9, y: 3});
