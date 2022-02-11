@@ -77,3 +77,6 @@ test("mockShip2 will return all of its coordinates, including the parts", ()=> {
     ])
 })
 const horizontalShip = shipFile(coord1 = {x: 3, y: 3}, coord2 = { x: 9, y: 3});
+test("horizontalShip returns an object", () => {
+    expect(mockShip).toMatchObject({ coord1: {x: 1, y: 1}, coord2: {x: 1, y: 7} });
+})
