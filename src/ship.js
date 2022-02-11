@@ -41,7 +41,15 @@ const shipFactory = (coord1, coord2) => {
     console.log(length);
     console.log(coord1.y);
     console.log(coord2.y);
-    for (let i = coord1.y; i < length; i += 1) {
+    // add 1 to coord2.y
+    const limit = coord2.y + 1;
+    /*
+    Reasoning:
+    the for loop would go up create the following array elements if we didn't (say coord1.y is 3
+      and coord2.y is 9):
+    { x: 9, y: 3}, { x: 9, y: 4}, { x: 9, y: 5}, { x: 9, y: 6}, { x: 9, y: 7},{ x: 9, y: 8}
+    */
+    for (let i = coord1.y; i < limit; i += 1) {
       const newPart = new Part({ x: coord1.x, y: i });
       toReturn.push(newPart);
       console.log(newPart);
