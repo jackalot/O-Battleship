@@ -38,6 +38,9 @@ const shipFactory = (coord1, coord2) => {
   // returns all the parts that are Vertical on this ship if its orientation is Vertical.
   function getVerticalParts(length) {
     const toReturn = [];
+    console.log(length);
+    console.log(coord1.y);
+    console.log(coord2.y);
     for (let i = coord1.y; i < length; i += 1) {
       const newPart = new Part({ x: coord1.x, y: i });
       toReturn.push(newPart);
