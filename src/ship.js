@@ -39,10 +39,9 @@ const shipFactory = (coord1, coord2) => {
   function getVerticalParts(length) {
     const toReturn = [];
     for (let i = coord1.y; i < length; i += 1) {
-      const newPart = Part({ x: coord1.x, y: i });
+      const newPart = new Part({ x: coord1.x, y: i });
       toReturn.push(newPart);
       console.log(newPart);
-      console.log(i);
     }
     return toReturn;
   }
