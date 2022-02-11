@@ -81,5 +81,5 @@ test("horizontalShip returns an object", () => {
     expect(horizontalShip).toMatchObject({ coord1: {x: 3, y: 3}, coord2: {x: 9, y: 3} });
 })
 test("mockShip returns a length of 6", () => {
-    expect(horizontalShip.lengthMeasurer(coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7})).toBe(6);
+    expect(horizontalShip.lengthMeasurer(coord1 = {x: 3, y: 3}, coord2 = {x: 9, y: 3})).toBe(6);
 })
