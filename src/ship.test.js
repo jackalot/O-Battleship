@@ -60,5 +60,8 @@ test("mockShip2 will not sink", () => {
     expect(mockShip2.sink()).toBe('I still have parts left');
 })
 test("mockShip will return all of its coordinates, including the parts", () => {
-    expect(mockShip.getAllCoordinates()).toMatchObject([{x:1,y:1},{x:1,y:2},{x:1,y:3},{x:1,y:4},{x:1,y:5},{x:1,y:6},{x:1,y:7}])
+    expect(mockShip.getAllCoordinates()).toMatchObject([{x:1,y:1},{x:1,y:2},
+        {x:1,y:3},{x:1,y:4},
+        {x:1,y:5},{x:1,y:6},
+        {x:1,y:7}])
 })
