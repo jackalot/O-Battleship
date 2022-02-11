@@ -108,3 +108,6 @@ test("horizontalShip.shipParts will return every part", () => {
        {"hasSunk": false, "partCoordinates": {"x": 8, "y": 3}}, 
        {"hasSunk": false, "partCoordinates": {"x": 9, "y": 3}}]    );
 })
+test("horizontalShip will not sink", () => {
+    expect(horizontalShip.sink()).toBe('I still have parts left');
+})
