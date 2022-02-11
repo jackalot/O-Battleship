@@ -66,7 +66,7 @@ const shipFactory = (coord1, coord2) => {
     }
     return null;
   }
-  // const myParts = shipParts();
+  const myParts = shipParts();
   // hit() Helper function
   //  we know its the same x, but now check if the same Y
   function guessXMinusCoordXIsZero(guessCoord) {
