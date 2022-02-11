@@ -98,3 +98,13 @@ test("horizontalShip will get hit at [9, 3]", () => {
 test("horizontalShip will not get hit at [9, 4]", () => {
     expect(horizontalShip.hit({x: 9, y: 4})).toBe(false);
 })
+test("horizontalShip.shipParts will return every part", () => {
+    expect(horizontalShip.shipParts()).toEqual([
+    {"hasSunk": false, "partCoordinates": {"x": 3, "y": 3}},
+     {"hasSunk": false, "partCoordinates": {"x": 4, "y": 3}},
+     {"hasSunk": false, "partCoordinates": {"x": 5, "y": 3}},
+      {"hasSunk": false, "partCoordinates": {"x": 6, "y": 3}},
+       {"hasSunk": false, "partCoordinates": {"x": 7, "y": 3}},
+       {"hasSunk": false, "partCoordinates": {"x": 8, "y": 3}}, 
+       {"hasSunk": false, "partCoordinates": {"x": 9, "y": 3}}]    );
+})
