@@ -64,5 +64,8 @@ function attackDomManager(player1, p1DomBoardManager, player2, p2DomBoardManager
             p1DomBoardManager.sendNextCollumn();
         }
     }
+    return {
+        recieveDomAttack, 
+    }
 }
 module.exports = updateDOMBoard;
