@@ -67,7 +67,7 @@ function updateDOMBoard(myPlayer, searchQuery, attackDomManager) {
     return false;
   }
   return {
-    sendNextCollumn, checkForClass, searchShip, searchMiss, searchHit,
+    sendNextCollumn, checkForClass, searchShip, searchMiss, searchHit, attackDomManager,
   };
 }
 module.exports = updateDOMBoard;
