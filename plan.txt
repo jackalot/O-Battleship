@@ -18,6 +18,9 @@ Focus: Make the board allow attacks and misses:
         - then call p1DomBoardManager.sendNextCollumn();
     }
 }
+- return {
+    recieveDomAttack
+}
 }- export attackDomManager
 psuedo code: 
 function updateDOMBoard(attackDomManager)
