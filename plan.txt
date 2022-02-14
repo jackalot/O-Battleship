@@ -3,7 +3,7 @@ Focus: Make the board allow attacks and misses:
 - We will have a new function called attackDomManager ( parameters being player1, p1DomBoardManager, player2, p2DomBoardManager)
 {
 - inside, there will be a function called 'recieveAttack'(coordinate, attackingPlayer) {
-    - parameters being {coordinates, AttackingPlayer (this is the player that sent the attack)}
+    - parameters being {coordinates, attackingPlayer (this is the player that sent the attack)}
     - if else statement checking which player is attackingPlayer
     - if attackingPlayer is player1
     {
@@ -45,6 +45,18 @@ psuedo code:
   //    or player2 
 function attackDomManager(player1, p1DomBoardManager, player2, p2DomBoardManager)
 {
-
+    function recieveAttack( coordinate, attackingPlayer)
+    {
+        if(attackingPlayer === player1)
+        {
+            player2.ourboard.recieveAttack(coordinate);
+            p2DomBoardManager.sendNextCollumn();
+        }
+        else if(attackingPlayer === player2)
+        {
+            player1.ourboard.recieveAttack(coordinate);
+            p1DomBoardManager.sendNextCollumn();
+        }
+    }
 }
 module.exports = updateDOMBoard;
