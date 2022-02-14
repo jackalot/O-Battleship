@@ -1,4 +1,5 @@
 Focus: Make the board allow attacks and misses:
+- in updateDOMBoard, it will now have a new paramater called attackDomManager
 - in updateDomBoard.checkBox, each result will have the click event uncommented.
 - We will have a new function called attackDomManager ( parameters being player1, p1DomBoardManager, player2, p2DomBoardManager)
 {
@@ -18,6 +19,7 @@ Focus: Make the board allow attacks and misses:
 }
 }- export attackDomManager
 psuedo code: 
+function updateDOMBoard(attackDomManager)
  function checkBox(coordinate, temporaryBox) {
     const hitResult = searchHit(coordinate);
     const missResult = searchMiss(coordinate);
