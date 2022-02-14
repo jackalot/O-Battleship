@@ -3,8 +3,7 @@ Focus: Make the board allow attacks and misses:
 - We will have a new function called attackDomManager ( parameters being player1, p1DomBoardManager, player2, p2DomBoardManager)
 {
 
-- export attackDomManager
-}
+}- export attackDomManager
 psuedo code: 
  function checkBox(coordinate, temporaryBox) {
     const hitResult = searchHit(coordinate);
