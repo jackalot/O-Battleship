@@ -32,17 +32,17 @@ function updateDOMBoard(myPlayer, searchQuery, attackDomManager) {
     if (hitResult === true) {
       temporaryBox.classList.add('hit');
       //  The below function requires another function that may not be done yet
-      // removeClickEvent();
+      removeClickEvent(temporaryBox, attackDomManager.recieveDomAttack(coordinate, myPlayer));
     } else if (missResult === true) {
       temporaryBox.classList.add('miss');
       //  The below function requires another function that may not be done yet
-      //  removeClickEvent();
+      removeClickEvent(temporaryBox, attackDomManager.recieveDomAttack(coordinate, myPlayer));
     } else if (shipResult === true) {
       temporaryBox.classList.add('containsShip');
       //  The below function requires another function that may not be done yet
-      // applyClickEvent();
+      applyClickEvent(temporaryBox, attackDomManager.recieveDomAttack(coordinate, myPlayer));
     } else if (hitResult === false && missResult === false && shipResult === false) {
-      // applyClickEvent();
+      applyClickEvent(temporaryBox, attackDomManager.recieveDomAttack(coordinate, myPlayer));
       // console.log('this would be a empty effect but there is nothing for it yet, coordinate:');
       // console.log(coordinate);
     }
