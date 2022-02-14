@@ -27,3 +27,5 @@ psuedo code:
       // console.log(coordinate);
     }
   }
+  //This on is the attackManager psuedoCode
+  
