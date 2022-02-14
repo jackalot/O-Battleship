@@ -14,7 +14,7 @@ Focus: Make the board allow attacks and misses:
     }
     - else if attackingPlayer is player2
     {
-        - sned an attack at player1's ourboard with the coordinate variable
+        - send an attack at player1's ourboard with the coordinate variable
         - then call p1DomBoardManager.sendNextCollumn();
     }
 }
