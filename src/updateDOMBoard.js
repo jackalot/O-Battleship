@@ -1,4 +1,4 @@
-function updateDOMBoard(myPlayer, searchQuery) {
+function updateDOMBoard(myPlayer, searchQuery, attackDomManager) {
   //  Allows you to apply any click EventListener to any function
   function applyClickEvent(element, paramFunction) {
     element.addEventListener('click', paramFunction);
