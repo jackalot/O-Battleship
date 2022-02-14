@@ -1,6 +1,7 @@
 Focus: Make the board allow attacks and misses:
 - in updateDOMBoard, it will now have a new paramater called attackDomManager
 - in updateDomBoard.checkBox, each result will have the click event uncommented.
+- each applyClickEvent and removeClickEvent will apply the recieveAttack function of attackDomManager
 - We will have a new function called attackDomManager ( parameters being player1, p1DomBoardManager, player2, p2DomBoardManager)
 {
 - inside, there will be a function called 'recieveAttack'(coordinate, attackingPlayer) {
