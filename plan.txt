@@ -3,6 +3,7 @@ Focus: Make the board allow attacks and misses:
 - We will have a new function called attackDomManager ( parameters being player1, p1DomBoardManager, player2, p2DomBoardManager)
 {
 
+- export attackDomManager
 }
 psuedo code: 
  function checkBox(coordinate, temporaryBox) {
@@ -28,3 +29,8 @@ psuedo code:
     }
   }
   //This on is the attackDomManager psuedoCode
+function attackDomManager(player1, p1DomBoardManager, player2, p2DomBoardManager)
+{
+
+}
+module.exports = updateDOMBoard;
