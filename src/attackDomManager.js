@@ -4,10 +4,10 @@ function attackDomManager(player1, player2) {
   function recieveDomAttack(coordinate, attackingPlayer) {
     if (attackingPlayer === player1) {
       player2.ourboard.recieveAttack(coordinate);
-      p2DomBoardManager.sendNextCollumn();
+      callItAgain();
     } else if (attackingPlayer === player2) {
       player1.ourboard.recieveAttack(coordinate);
-      p1DomBoardManager.sendNextCollumn();
+      callItAgain();
     }
   }
   return {
