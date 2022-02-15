@@ -1,4 +1,4 @@
-function updateDOMBoard(myPlayer, searchQuery, attackDomManager) {
+function updateDOMBoard(myPlayer, searchQuery, attackDomManager, otherPlayer) {
   //  Allows you to apply any click EventListener to any function
   function applyClickEvent(element, paramFunction) {
     element.addEventListener('click', paramFunction);
@@ -32,17 +32,29 @@ function updateDOMBoard(myPlayer, searchQuery, attackDomManager) {
     if (hitResult === true) {
       temporaryBox.classList.add('hit');
       //  The below function requires another function that may not be done yet
-      removeClickEvent(temporaryBox, attackDomManager.recieveDomAttack(coordinate, myPlayer));
+      removeClickEvent(
+        temporaryBox,
+        attackDomManager.recieveDomAttack(coordinate, myPlayer, otherPlayer),
+      );
     } else if (missResult === true) {
       temporaryBox.classList.add('miss');
       //  The below function requires another function that may not be done yet
-      removeClickEvent(temporaryBox, attackDomManager.recieveDomAttack(coordinate, myPlayer));
+      removeClickEvent(
+        temporaryBox,
+        attackDomManager.recieveDomAttack(coordinate, myPlayer, otherPlayer),
+      );
     } else if (shipResult === true) {
       temporaryBox.classList.add('containsShip');
       //  The below function requires another function that may not be done yet
-      applyClickEvent(temporaryBox, attackDomManager.recieveDomAttack(coordinate, myPlayer));
+      applyClickEvent(
+        temporaryBox,
+        attackDomManager.recieveDomAttack(coordinate, myPlayer, otherPlayer),
+      );
     } else if (hitResult === false && missResult === false && shipResult === false) {
-      applyClickEvent(temporaryBox, attackDomManager.recieveDomAttack(coordinate, myPlayer));
+      applyClickEvent(
+        temporaryBox,
+        attackDomManager.recieveDomAttack(coordinate, myPlayer, otherPlayer),
+      );
       // console.log('this would be a empty effect but there is nothing for it yet, coordinate:');
       // console.log(coordinate);
     }
