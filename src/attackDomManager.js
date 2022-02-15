@@ -11,7 +11,7 @@ function attackDomManager(player1, p1DomBoardManager, player2, p2DomBoardManager
     }
   }
   return {
-    recieveDomAttack,
+    recieveDomAttack, p1DomBoardManager, p2DomBoardManager,
   };
 }
 module.exports = attackDomManager;
