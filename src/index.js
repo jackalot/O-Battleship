@@ -8,7 +8,7 @@ const attackDomFile = require('./attackDomManager');
 
 const playerOne = playerFile('player 1', 0);
 const playerTwo = playerFile('CPU', 1);
-const attackManager = attackDomFile(playerOne, null, playerTwo, null);
+const attackManager = attackDomFile(playerOne, playerTwo);
 const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', attackManager);
 const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', attackManager);
 attackManager.p1DomBoardManager = p1DomBoardManager;
