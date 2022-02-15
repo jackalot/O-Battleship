@@ -8,11 +8,11 @@ const attackDomFile = require('./attackDomManager');
 
 const playerOne = playerFile('player 1', 0);
 const playerTwo = playerFile('CPU', 1);
-const p1DomBoardManager = domBoardFile(playerOne, 'P1Box');
-const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box');
-const attackManager = attackDomFile(playerOne, p1DomBoardManager, playerTwo, p2DomBoardManager);
-p1DomBoardManager.attackDomManager = attackManager;
-p2DomBoardManager.attackManager = attackManager;
+const attackManager = attackDomFile(playerOne, null, playerTwo, null);
+const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', attackManager);
+const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', attackManager);
+attackManager.p1DomBoardManager = p1DomBoardManager;
+attackManager.p2DomBoardManager = p2DomBoardManager;
 playerOne.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
 playerTwo.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
 playerOne.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
