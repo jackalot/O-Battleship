@@ -2,12 +2,12 @@
 //    or player2
 function attackDomManager(player1, player2, callItAgain) {
   console.log(player1.ourboard);
-  function recieveDomAttack(coordinate, attackingPlayer) {
+  function recieveDomAttack(coordinate, attackingPlayer, defendingPlayer) {
     if (attackingPlayer === player1) {
-      player2.ourboard.recieveAttack(coordinate);
+      defendingPlayer.ourboard.recieveAttack(coordinate);
       callItAgain();
     } else if (attackingPlayer === player2) {
-      player1.ourboard.recieveAttack(coordinate);
+      defendingPlayer.ourboard.recieveAttack(coordinate);
       callItAgain();
     }
   }
