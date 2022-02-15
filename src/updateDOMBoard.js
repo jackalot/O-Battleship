@@ -26,6 +26,7 @@ function updateDOMBoard(myPlayer, searchQuery, attackDomManager, otherPlayer) {
     return false;
   }
   function checkBox(coordinate, temporaryBox) {
+    console.log(otherPlayer.ourBoard);
     const hitResult = searchHit(coordinate);
     const missResult = searchMiss(coordinate);
     const shipResult = searchShip(coordinate);
