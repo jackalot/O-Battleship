@@ -1,1 +1,5 @@
-Focus: 
+Focus:Fix the reference before defined bug:
+- in player.js, instantiate our own updateDomBoard.js called domBoardManager
+- in index.js, remove p1DomBoardManager and p2DomBoardManager
+- in index.js, attackDomManager will get the domBoardManager's from playerOne.domBoardManager
+and playerTwo.domBoardManager
