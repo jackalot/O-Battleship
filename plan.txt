@@ -3,3 +3,11 @@ Focus:Fix the reference before defined bug:
 - in index.js, remove p1DomBoardManager and p2DomBoardManager
 - in index.js, attackDomManager will get the domBoardManager's from playerOne.domBoardManager
 and playerTwo.domBoardManager
+
+psuedo Code:
+---- in player.js ----
+const playerFactory = (playerName, playerTurn) => {
+  const ourBoard = boardFile({ x: 1, y: 1 }, { x: 10, y: 10 });
+  const domBoardManager = domBoardFile(playerOne, 'P1Box', attackManager);
+  ///the rest of the script
+}
