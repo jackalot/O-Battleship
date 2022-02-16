@@ -1,6 +1,6 @@
 function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
-  function recieveDomAttack(coordinate) {
-    otherPlayer.ourboard.recieveAttack(coordinate);
+  function recieveDomAttack(coordinate, defendingPlayer) {
+    defendingPlayer.ourboard.recieveAttack(coordinate);
     callItAgain();
   }
   //  Allows you to apply any click EventListener to any function
@@ -39,26 +39,26 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
       //  The below function requires another function that may not be done yet
       removeClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate),
+        recieveDomAttack(coordinate, otherPlayer),
       );
     } else if (missResult === true) {
       temporaryBox.classList.add('miss');
       //  The below function requires another function that may not be done yet
       removeClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate),
+        recieveDomAttack(coordinate, otherPlayer),
       );
     } else if (shipResult === true) {
       temporaryBox.classList.add('containsShip');
       //  The below function requires another function that may not be done yet
       applyClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate),
+        recieveDomAttack(coordinate, otherPlayer),
       );
     } else if (hitResult === false && missResult === false && shipResult === false) {
       applyClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate),
+        recieveDomAttack(coordinate, otherPlayer),
       );
       // console.log('this would be a empty effect but there is nothing for it yet, coordinate:');
       // console.log(coordinate);
