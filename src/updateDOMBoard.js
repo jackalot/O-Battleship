@@ -42,26 +42,26 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
       //  The below function requires another function that may not be done yet
       removeClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate, otherPlayer),
+        recieveDomAttack(coordinate, clone),
       );
     } else if (missResult === true) {
       temporaryBox.classList.add('miss');
       //  The below function requires another function that may not be done yet
       removeClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate, otherPlayer),
+        recieveDomAttack(coordinate, clone),
       );
     } else if (shipResult === true) {
       temporaryBox.classList.add('containsShip');
       //  The below function requires another function that may not be done yet
       applyClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate, otherPlayer),
+        recieveDomAttack(coordinate, clone),
       );
     } else if (hitResult === false && missResult === false && shipResult === false) {
       applyClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate, otherPlayer),
+        recieveDomAttack(coordinate, clone),
       );
       // console.log('this would be a empty effect but there is nothing for it yet, coordinate:');
       // console.log(coordinate);
