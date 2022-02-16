@@ -31,6 +31,7 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
   }
   function checkBox(coordinate, temporaryBox) {
     console.log(otherPlayer.ourBoard);
+    localStorage.setItem(otherPlayer.playerName, otherPlayer);
     //  After this function, Other player becomes undefined
     const hitResult = searchHit(coordinate);
     const missResult = searchMiss(coordinate);
