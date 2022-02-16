@@ -38,31 +38,19 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
     const shipResult = searchShip(coordinate);
     if (hitResult === true) {
       temporaryBox.classList.add('hit');
-      // remove Event Listener as a function
-      removeClickEvent(
-        temporaryBox,
-        recieveDomAttack(coordinate, otherPlayer.ourboard),
-      );
+      // remove the click event
+      temporaryBox.removeEventListener('click', recieveDomAttack(coordinate, otherPlayer));
     } else if (missResult === true) {
       temporaryBox.classList.add('miss');
-      //  remove Event Listener as a function
-      removeClickEvent(
-        temporaryBox,
-        recieveDomAttack(coordinate, otherPlayer),
-      );
+      //  remove the click event
+      temporaryBox.removeEventListener('click', recieveDomAttack(coordinate, otherPlayer));
     } else if (shipResult === true) {
       temporaryBox.classList.add('containsShip');
-      //  Add event listener as a function
-      applyClickEvent(
-        temporaryBox,
-        recieveDomAttack(coordinate, otherPlayer),
-      );
+      //  Add recieveDomAttack
+      temporaryBox.addEventListener('click', recieveDomAttack(coordinate, otherPlayer));
     } else if (hitResult === false && missResult === false && shipResult === false) {
-      //  Add event listener as a function
-      applyClickEvent(
-        temporaryBox,
-        recieveDomAttack(coordinate, otherPlayer),
-      );
+      //  Add recieveDomAttack
+      temporaryBox.addEventListener('click', recieveDomAttack(coordinate, otherPlayer));
       // console.log('this would be a empty effect but there is nothing for it yet, coordinate:');
       // console.log(coordinate);
     }
