@@ -16,8 +16,8 @@ const playerTwo = playerFile('CPU', 1);
 //  console.log(playerTwo.ourBoard);
 const attackManager = attackDomFile(playerOne, playerTwo, callItAgain);
 
-const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', attackManager, playerTwo);
-const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', attackManager, playerOne);
+const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', callItAgain, playerTwo);
+const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', callItAgain, playerOne);
 playerOne.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
 playerTwo.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
 playerOne.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
