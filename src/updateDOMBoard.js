@@ -1,5 +1,5 @@
 function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
-  function recieveDomAttack(coordinate, defendingPlayer) {
+  function recieveDomAttack(coordinate, defendingPlayerKey) {
     defendingPlayer.ourboard.recieveAttack(coordinate);
     callItAgain();
   }
@@ -41,21 +41,21 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
       // remove Event Listener as a function
       removeClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate, otherPlayer),
+        recieveDomAttack(coordinate, otherPlayer.playerName),
       );
     } else if (missResult === true) {
       temporaryBox.classList.add('miss');
       //  remove Event Listener as a function
       removeClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate, otherPlayer),
+        recieveDomAttack(coordinate, otherPlayer.playerName),
       );
     } else if (shipResult === true) {
       temporaryBox.classList.add('containsShip');
       //  Add event listener as a function
       applyClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate, otherPlayer),
+        recieveDomAttack(coordinate, otherPlayer.playerName),
       );
     } else if (hitResult === false && missResult === false && shipResult === false) {
       //  Add event listener as a function
