@@ -2,6 +2,7 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
   function recieveDomAttack(coordinate, defendingPlayerKey) {
     const retrieved = localStorage.getItem(defendingPlayerKey);
     const defendingPlayer = JSON.parse(retrieved);
+    console.log(defendingPlayer);
     defendingPlayer.ourboard.recieveAttack(coordinate);
     callItAgain();
   }
@@ -33,7 +34,7 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
   }
   function checkBox(coordinate, temporaryBox) {
     console.log(otherPlayer.ourBoard);
-    localStorage.setItem(otherPlayer.playerName, otherPlayer);
+    localStorage.setItem(otherPlayer.playerName, JSON.stringify(otherPlayer));
     //  After this function, Other player becomes undefined
     const hitResult = searchHit(coordinate);
     const missResult = searchMiss(coordinate);
