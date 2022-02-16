@@ -1,7 +1,7 @@
 function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
   function recieveDomAttack(coordinate, defendingPlayer) {
-    console.log(defendingPlayer);
-    defendingPlayer.ourboard.recieveAttack(coordinate);
+    console.log(otherPlayer);
+    otherPlayer.ourBoard.recieveAttack(coordinate);
     callItAgain();
   }
   //  Allows you to apply any click EventListener to any function
@@ -31,7 +31,7 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
     return false;
   }
   function checkBox(coordinate, temporaryBox) {
-    console.log(otherPlayer.ourBoard);
+    //  console.log(otherPlayer.ourBoard);
     //  After this function, Other player becomes undefined
     const hitResult = searchHit(coordinate);
     const missResult = searchMiss(coordinate);
@@ -41,7 +41,7 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
       // remove Event Listener as a function
       removeClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate, otherPlayer),
+        recieveDomAttack(coordinate, otherPlayer.ourboard),
       );
     } else if (missResult === true) {
       temporaryBox.classList.add('miss');
