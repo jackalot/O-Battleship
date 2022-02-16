@@ -1,4 +1,8 @@
-function updateDOMBoard(myPlayer, searchQuery, attackDomManager, otherPlayer) {
+function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
+  function recieveDomAttack(coordinate) {
+    otherPlayer.ourboard.recieveAttack(coordinate);
+    callItAgain();
+  }
   //  Allows you to apply any click EventListener to any function
   function applyClickEvent(element, paramFunction) {
     element.addEventListener('click', paramFunction);
@@ -80,7 +84,7 @@ function updateDOMBoard(myPlayer, searchQuery, attackDomManager, otherPlayer) {
     return false;
   }
   return {
-    sendNextCollumn, checkForClass, searchShip, searchMiss, searchHit, attackDomManager,
+    sendNextCollumn, checkForClass, searchShip, searchMiss, searchHit,
   };
 }
 module.exports = updateDOMBoard;
