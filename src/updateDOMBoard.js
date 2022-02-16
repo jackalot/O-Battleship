@@ -50,6 +50,8 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
       //  Add recieveDomAttack
       console.log('Hit result is false, miss result false, ship result false, coordinates:');
       console.log(coordinate);
+      console.log('my box:');
+      console.log(temporaryBox);
       temporaryBox.addEventListener('click', recieveDomAttack(coordinate, otherPlayer));
     }
   }
