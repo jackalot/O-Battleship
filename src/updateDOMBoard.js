@@ -31,6 +31,9 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
   }
   function checkBox(coordinate, temporaryBox) {
     console.log(otherPlayer.ourBoard);
+    //  After this function, Other player becomes undefined
+    const clone = JSON.parse(JSON.stringify(otherPlayer));
+    console.log(clone);
     const hitResult = searchHit(coordinate);
     const missResult = searchMiss(coordinate);
     const shipResult = searchShip(coordinate);
