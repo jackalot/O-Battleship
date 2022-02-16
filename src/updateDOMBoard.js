@@ -1,5 +1,6 @@
 function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
   function recieveDomAttack(coordinate, defendingPlayerKey) {
+    const defendingPlayer = localStorage.getItem(defendingPlayerKey);
     defendingPlayer.ourboard.recieveAttack(coordinate);
     callItAgain();
   }
