@@ -50,9 +50,9 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
       temporaryBox.addEventListener('click', recieveDomAttack(coordinate, otherPlayer));
     } else if (hitResult === false && missResult === false && shipResult === false) {
       //  Add recieveDomAttack
+      console.log('Hit result is false, miss result false, ship result false, coordinates:');
+      console.log(coordinate);
       temporaryBox.addEventListener('click', recieveDomAttack(coordinate, otherPlayer));
-      // console.log('this would be a empty effect but there is nothing for it yet, coordinate:');
-      // console.log(coordinate);
     }
   }
   function findInRow(collumn) {
