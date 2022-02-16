@@ -39,26 +39,27 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
     const shipResult = searchShip(coordinate);
     if (hitResult === true) {
       temporaryBox.classList.add('hit');
-      //  The below function requires another function that may not be done yet
+      // remove Event Listener as a function
       removeClickEvent(
         temporaryBox,
         recieveDomAttack(coordinate, clone),
       );
     } else if (missResult === true) {
       temporaryBox.classList.add('miss');
-      //  The below function requires another function that may not be done yet
+      //  remove Event Listener as a function
       removeClickEvent(
         temporaryBox,
         recieveDomAttack(coordinate, clone),
       );
     } else if (shipResult === true) {
       temporaryBox.classList.add('containsShip');
-      //  The below function requires another function that may not be done yet
+      //  Add event listener as a function
       applyClickEvent(
         temporaryBox,
         recieveDomAttack(coordinate, clone),
       );
     } else if (hitResult === false && missResult === false && shipResult === false) {
+      //  Add event listener as a function
       applyClickEvent(
         temporaryBox,
         recieveDomAttack(coordinate, clone),
