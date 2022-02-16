@@ -32,8 +32,6 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
   function checkBox(coordinate, temporaryBox) {
     console.log(otherPlayer.ourBoard);
     //  After this function, Other player becomes undefined
-    const clone = JSON.parse(JSON.stringify(otherPlayer));
-    console.log(clone);
     const hitResult = searchHit(coordinate);
     const missResult = searchMiss(coordinate);
     const shipResult = searchShip(coordinate);
@@ -42,27 +40,27 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
       // remove Event Listener as a function
       removeClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate, clone),
+        recieveDomAttack(coordinate, otherPlayer),
       );
     } else if (missResult === true) {
       temporaryBox.classList.add('miss');
       //  remove Event Listener as a function
       removeClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate, clone),
+        recieveDomAttack(coordinate, otherPlayer),
       );
     } else if (shipResult === true) {
       temporaryBox.classList.add('containsShip');
       //  Add event listener as a function
       applyClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate, clone),
+        recieveDomAttack(coordinate, otherPlayer),
       );
     } else if (hitResult === false && missResult === false && shipResult === false) {
       //  Add event listener as a function
       applyClickEvent(
         temporaryBox,
-        recieveDomAttack(coordinate, clone),
+        recieveDomAttack(coordinate, otherPlayer),
       );
       // console.log('this would be a empty effect but there is nothing for it yet, coordinate:');
       // console.log(coordinate);
