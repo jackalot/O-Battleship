@@ -1,6 +1,5 @@
 function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
   function recieveDomAttack(coordinate, defendingPlayer) {
-    console.log(otherPlayer);
     otherPlayer.ourBoard.recieveAttack(coordinate);
     // callItAgain(otherPlayer);
   }
@@ -31,7 +30,6 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
     return false;
   }
   function checkBox(coordinate, temporaryBox) {
-    //  console.log(otherPlayer.ourBoard);
     //  After this function, Other player becomes undefined
     const hitResult = searchHit(coordinate);
     const missResult = searchMiss(coordinate);
