@@ -52,9 +52,10 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
       temporaryBox.addEventListener('click', () => {
         recieveDomAttack(coordinate, myPlayer);
       });
-      console.log(temporaryBox);
     } else if (hitResult === false && missResult === false && shipResult === false) {
       //  Add recieveDomAttack
+      console.log('hitResult = false & missResult = false & shipResult = false:');
+      console.log(temporaryBox);
       temporaryBox.addEventListener('click', () => {
         recieveDomAttack(coordinate, myPlayer);
       });
