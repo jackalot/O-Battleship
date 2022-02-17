@@ -37,19 +37,27 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
     if (hitResult === true) {
       temporaryBox.classList.add('hit');
       // remove the click event
-      temporaryBox.removeEventListener('click', recieveDomAttack(coordinate, myPlayer));
+      temporaryBox.removeEventListener('click', () => {
+        recieveDomAttack(coordinate, myPlayer);
+      });
     } else if (missResult === true) {
       temporaryBox.classList.add('miss');
       //  remove the click event
-      temporaryBox.removeEventListener('click', recieveDomAttack(coordinate, myPlayer));
+      temporaryBox.removeEventListener('click', () => {
+        recieveDomAttack(coordinate, myPlayer);
+      });
     } else if (shipResult === true) {
       temporaryBox.classList.add('containsShip');
       //  Add recieveDomAttack
-      temporaryBox.addEventListener('click', recieveDomAttack(coordinate, myPlayer));
+      temporaryBox.addEventListener('click', () => {
+        recieveDomAttack(coordinate, myPlayer);
+      });
       console.log(temporaryBox);
     } else if (hitResult === false && missResult === false && shipResult === false) {
       //  Add recieveDomAttack
-      temporaryBox.addEventListener('click', recieveDomAttack(coordinate, myPlayer));
+      temporaryBox.addEventListener('click', () => {
+        recieveDomAttack(coordinate, myPlayer);
+      });
     }
   }
   function findInRow(collumn) {
