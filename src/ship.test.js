@@ -164,3 +164,16 @@ test("mockShip3 will not get hit at [2, 5]", () => {
 test("mockShip4 will not get hit at [2, 5]", () => {
     expect(mockShip4.hit({x: 2, y: 5})).toBe(false);
 })
+test("mockShip3.shipParts will return every part", () => {
+    expect(mockShip3.shipParts()).toEqual([
+    {"hasSunk": false, "partCoordinates": {"x": 1, "y": 10}},
+     {"hasSunk": false, "partCoordinates": {"x": 2, "y": 10}},
+     {"hasSunk": false, "partCoordinates": {"x": 3, "y": 10}},
+      {"hasSunk": false, "partCoordinates": {"x": 4, "y": 10}},
+       {"hasSunk": false, "partCoordinates": {"x": 5, "y": 10}},
+       {"hasSunk": false, "partCoordinates": {"x": 6, "y": 10}}, 
+       {"hasSunk": false, "partCoordinates": {"x": 7, "y": 10}},
+       {"hasSunk": false, "partCoordinates": {"x": 8, "y": 10}},
+       {"hasSunk": false, "partCoordinates": {"x": 9, "y": 10}},
+       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 10}}]    );
+})
