@@ -196,3 +196,12 @@ test("mockShip3 will not sink", () => {
 test("mockShip4 will not sink", () => {
     expect(mockShip4.sink()).toBe('I still have parts left');
 })
+test("mockShip3 will return all of its coordinates, including the parts", () => {
+    expect(mockShip3.getAllCoordinates()).toMatchObject([
+        {x:1,y:10}, {x:2,y:10},
+        {x:3,y:10}, {x:4,y:10},
+        {x:5,y:10}, {x:6,y:10},
+        {x:7,y:10}, {x:8,y:10},
+        {x:9,y:10}, {x:10,y:10},
+    ])
+})
