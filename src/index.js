@@ -29,6 +29,6 @@ playerOne.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
 playerTwo.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
 
 p1DomBoardManager.sendNextCollumn();
-//  p2DomBoardManager.sendNextCollumn();
+p2DomBoardManager.sendNextCollumn();
 console.log(p1DomBoardManager.searchShip({ x: 9, y: 3 }));
 console.log(playerOne.ourBoard.myShips);
