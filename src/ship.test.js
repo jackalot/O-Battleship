@@ -177,3 +177,16 @@ test("mockShip3.shipParts will return every part", () => {
        {"hasSunk": false, "partCoordinates": {"x": 9, "y": 10}},
        {"hasSunk": false, "partCoordinates": {"x": 10, "y": 10}}]    );
 })
+test("mockShip4.shipParts will return every part", () => {
+    expect(mockShip4.shipParts()).toEqual([
+    {"hasSunk": false, "partCoordinates": {"x": 10, "y": 1}},
+     {"hasSunk": false, "partCoordinates": {"x": 10, "y": 2}},
+     {"hasSunk": false, "partCoordinates": {"x": 10, "y": 3}},
+      {"hasSunk": false, "partCoordinates": {"x": 10, "y": 4}},
+       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 5}},
+       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 6}}, 
+       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 7}},
+       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 8}},
+       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 9}},
+       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 10}}]    );
+})
