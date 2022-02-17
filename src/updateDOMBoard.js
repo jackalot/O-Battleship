@@ -1,6 +1,6 @@
 function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
   function recieveDomAttack(coordinate, defendingPlayer) {
-    otherPlayer.ourBoard.recieveAttack(coordinate);
+    defendingPlayer.ourBoard.recieveAttack(coordinate);
     // callItAgain(otherPlayer);
   }
   //  Allows you to apply any click EventListener to any function
@@ -37,18 +37,19 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
     if (hitResult === true) {
       temporaryBox.classList.add('hit');
       // remove the click event
-      temporaryBox.removeEventListener('click', recieveDomAttack(coordinate, otherPlayer));
+      temporaryBox.removeEventListener('click', recieveDomAttack(coordinate, myPlayer));
     } else if (missResult === true) {
       temporaryBox.classList.add('miss');
       //  remove the click event
-      temporaryBox.removeEventListener('click', recieveDomAttack(coordinate, otherPlayer));
+      temporaryBox.removeEventListener('click', recieveDomAttack(coordinate, myPlayer));
     } else if (shipResult === true) {
       temporaryBox.classList.add('containsShip');
       //  Add recieveDomAttack
-      temporaryBox.addEventListener('click', recieveDomAttack(coordinate, otherPlayer));
+      temporaryBox.addEventListener('click', recieveDomAttack(coordinate, myPlayer));
+      console.log(temporaryBox);
     } else if (hitResult === false && missResult === false && shipResult === false) {
       //  Add recieveDomAttack
-      temporaryBox.addEventListener('click', recieveDomAttack(coordinate, otherPlayer));
+      temporaryBox.addEventListener('click', recieveDomAttack(coordinate, myPlayer));
     }
   }
   function findInRow(collumn) {
