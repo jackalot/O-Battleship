@@ -49,11 +49,9 @@ test("[1,7] is a valid coordinate on the game board", () => {
     expect(mockBoard.checkValidCoord({x: 1, y: 7})).toBe(true);
 })
 test("gameBoard has placed a ship from [1,1] to [1,7]", () => {
-    //so if game board has a function called placeShip, and it places a ship that will have a return function, it will return its coordinates?
     expect(mockBoard.placeShip({x: 1, y: 1}, {x: 1, y: 7})).toMatchObject({ coord1: {x: 1, y: 1}, coord2: {x: 1, y: 7} });
 })
 test("gameBoard has placed a ship from [9,3] to [9,9]", () => {
-    //so if game board has a function called placeShip, and it places a ship that will have a return function, it will return its coordinates?
     expect(mockBoard.placeShip({x: 9, y: 3}, {x: 9, y: 3})).toMatchObject({ coord1: {x: 9, y: 3}, coord2: {x: 9, y: 3} });
 })
 //it also sends the hit() function to the corresponding ship
