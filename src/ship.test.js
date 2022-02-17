@@ -119,3 +119,6 @@ test("horizontalShip will return all of its coordinates, including the parts", (
         {x:9,y:3}
     ])
 })
+// These are to test the outmost limits of the board
+const mockShip3 = shipFile(coord1 = {x: 1, y: 10}, coord2 = { x: 10, y: 10});
+const mockShip4 = shipFile(coord1 = {x: 10, y: 1}, coord2 = { x: 10, y: 1});
