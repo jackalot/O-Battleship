@@ -1,7 +1,7 @@
 function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
   function recieveDomAttack(coordinate, defendingPlayer) {
     defendingPlayer.ourBoard.recieveAttack(coordinate);
-    // callItAgain(otherPlayer);
+    callItAgain(otherPlayer);
   }
   //  Allows you to apply any click EventListener to any function
   function applyClickEvent(element, paramFunction) {
