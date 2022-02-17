@@ -87,3 +87,6 @@ test.skip("gameBoard has placed a ship from [10,1] to [10,10]", () => {
 test("[10,10] is a valid coordinate on the game board", () => {
     expect(mockBoard.checkValidCoord({x: 10, y: 10})).toBe(true);
 })
+test("[10,1] is a valid coordinate on the game board", () => {
+    expect(mockBoard.checkValidCoord({x: 10, y: 1})).toBe(true);
+})
