@@ -128,3 +128,6 @@ test("mockShip3 returns an object", () => {
 test("mockShip4 returns an object", () => {
     expect(mockShip4).toMatchObject({ coord1: {x: 10, y: 1}, coord2: { x: 10, y: 10} });
 })
+test("mockShip3 returns a length of 9", () => {
+    expect(mockShip3.lengthMeasurer(coord1 = {x: 1, y: 10}, coord2 = { x: 10, y: 10})).toBe(9);
+})
