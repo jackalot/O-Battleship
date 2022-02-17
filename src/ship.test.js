@@ -193,3 +193,6 @@ test("mockShip4.shipParts will return every part", () => {
 test("mockShip3 will not sink", () => {
     expect(horizontalShip.sink()).toBe('I still have parts left');
 })
+test("mockShip4 will not sink", () => {
+    expect(mockShip4.sink()).toBe('I still have parts left');
+})
