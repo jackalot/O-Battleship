@@ -134,3 +134,7 @@ test("mockShip3 returns a length of 9", () => {
 test("mockShip4 returns a length of 9", () => {
     expect(mockShip3.lengthMeasurer(coord1 = {x: 10, y: 1}, coord2 = { x: 10, y: 10})).toBe(9);
 })
+//mid point
+test("mockShip3 will get hit at [5, 10]", () => {
+    expect(mockShip3.hit({x: 5, y: 10})).toBe(true);
+})
