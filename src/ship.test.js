@@ -150,3 +150,7 @@ test("mockShip3 will get hit at [1, 10]", () => {
 test("mockShip4 will get hit at [10, 1]", () => {
     expect(mockShip4.hit({x: 10, y: 1})).toBe(true);
 })
+// end point
+test("mockShip3 will get hit at [10, 10]", () => {
+    expect(mockShip3.hit({x: 10, y: 10})).toBe(true);
+})
