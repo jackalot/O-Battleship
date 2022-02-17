@@ -54,6 +54,9 @@ test("gameBoard has placed a ship from [1,1] to [1,7]", () => {
 test("gameBoard has placed a ship from [9,3] to [9,9]", () => {
     expect(mockBoard.placeShip({x: 9, y: 3}, {x: 9, y: 3})).toMatchObject({ coord1: {x: 9, y: 3}, coord2: {x: 9, y: 3} });
 })
+test("gameBoard has placed a ship from [9,3] to [9,9]", () => {
+    expect(mockBoard.placeShip({x: 10, y: 1}, {x: 10, y: 10})).toMatchObject({ coord1: {x: 10, y: 1}, coord2: {x: 10, y: 1} });
+})
 //it also sends the hit() function to the corresponding ship
 test("gameBoard recieves an attack at [1, 1] and it hits due to the ship there", () => {
     expect(mockBoard.recieveAttack({x: 1, y: 1})).toBe(true);
