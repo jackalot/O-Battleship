@@ -118,6 +118,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return index;
   }
+  // recieveAttack Helper function()
   //  find the first ship according to the coordinate that is sent
   function findFirstShip(coordinate) {
     for (let i = 0; i < myShips.length; i += 1) {
@@ -126,7 +127,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
       // call coordinateIndex(its like indexOf but for our coordinate objects)
       const index = coordinateIndex(shipCoordinates, coordinate);
       if (index > -1) {
-        return true;
+        return myShips[i];
       }
     }
     return false;
