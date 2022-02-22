@@ -96,3 +96,6 @@ test("[10,1] is not out of bounds of the bottom left corner", () => {
 test("[10,1] is not out of bounds of the top right corner", () => {
     expect(mockBoard.checkTopRightCorner({x: 10, y: 1})).toBe(true);
 })
+test("[10,1] is on the line of the top right corner", () => {
+    expect(mockBoard.checkEqualToTRC({x: 10, y: 1})).toBe(true);
+})
