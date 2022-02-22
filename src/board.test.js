@@ -77,7 +77,7 @@ test("gameBoard checks if a ship is at 9,3 and returns true as there is a ship t
 })
 /*
 The following test is tests for testing the limits of the board, like seeing if we could
-place ships there for example
+place ships there for example, these will be for placing
 */
 test("gameBoard has placed a ship from [10,1] to [10,10]", () => {
     expect(mockBoard.placeShip({x: 10, y: 1}, {x: 10, y: 10})).toMatchObject({ coord1: {x: 10, y: 1}, coord2: {x: 10, y: 10} });
@@ -97,3 +97,7 @@ test("[10,1] is not out of bounds of the top right corner", () => {
 test("[10,1] is on the line of the top right corner", () => {
     expect(mockBoard.checkEqualToTRC({x: 10, y: 1})).toBe(true);
 })
+/*
+The following tests will test the limits of the board and if we can recieve an attack there.
+
+*/
