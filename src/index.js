@@ -7,6 +7,7 @@ const domBoardFile = require('./updateDOMBoard');
 const attackDomFile = require('./attackDomManager');
 
 function callItAgain(defendingPlayer) {
+  console.log(defendingPlayer);
   if (defendingPlayer === playerOne) {
     p1DomBoardManager.sendNextCollumn();
   } else if (defendingPlayer === playerTwo) {
