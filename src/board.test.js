@@ -81,7 +81,7 @@ test("gameBoard checks if a ship is at 9,3 and returns true as there is a ship t
 The following test is tests for testing the limits of the board, like seeing if we could
 place ships there foer example
 */
-test.skip("gameBoard has placed a ship from [10,1] to [10,10]", () => {
+test("gameBoard has placed a ship from [10,1] to [10,10]", () => {
     expect(mockBoard.placeShip({x: 10, y: 1}, {x: 10, y: 10})).toMatchObject({ coord1: {x: 10, y: 1}, coord2: {x: 10, y: 10} });
 })
 test("[10,10] is a valid coordinate on the game board", () => {
