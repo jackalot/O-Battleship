@@ -163,10 +163,12 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
           console.log(hitOrMissedCoords);
           return true;
         }
-        hitOrMissedCoords.push({
-          ourCoordinates: coordinate,
-          coordType: 'Miss',
-        });
+        if (result === false) {
+          hitOrMissedCoords.push({
+            ourCoordinates: coordinate,
+            coordType: 'Miss',
+          });
+        }
       }
     }
     return false;
