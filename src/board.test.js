@@ -119,7 +119,7 @@ test("[10,3] will return a hit as there is a ship there", () => {
         { ourCoordinates: { x: 10, y: 2 }, coordType: 'Hit' },
         { ourCoordinates: { x: 10, y: 3 }, coordType: 'Miss' },
         { ourCoordinates: { x: 10, y: 3 }, coordType: 'Hit' }
-
+    The mix of misses and hits causes the checkMissAndHits test to fail
 */
 test("[10,3] will return a hit as there is a hit there", () => {
     expect(mockBoard.checkMissesAndHits({x: 10, y: 3})).toBe("Hit");
