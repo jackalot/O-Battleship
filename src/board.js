@@ -47,13 +47,17 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   // checkTopRightCorner() helper function
   // checks if the coord is equal to the top right corner
   function checkEqualToTRC(coord) {
+    //  if the coordinate is on the border of the board its ok
     if (coord.x === topRightCorner.x) {
+      // if its greater than the y though, than its out of bounds
       if (coord.y > topRightCorner.y) {
         return false;
       }
       return true;
     }
+    //  if the coordinate is on the border of the board its ok
     if (coord.y === topRightCorner.y) {
+      // if its greater than the x though, than its out of bounds
       if (coord.x > topRightCorner.x) {
         return false;
       }
