@@ -110,6 +110,17 @@ test("[10,2] will return a hit as there is a ship there", () => {
 test("[10,3] will return a hit as there is a ship there", () => {
     expect(mockBoard.recieveAttack({x: 10, y: 3})).toBe(true);
 })
+// in the 10, 3 recieveAttack test, multiple attacks are given to the same coordinate
+//  causing this:
+/*
+   { ourCoordinates: { x: 10, y: 1 }, coordType: 'Hit' },
+        { ourCoordinates: { x: 10, y: 2 }, coordType: 'Miss' },
+        { ourCoordinates: { x: 10, y: 2 }, coordType: 'Miss' },
+        { ourCoordinates: { x: 10, y: 2 }, coordType: 'Hit' },
+        { ourCoordinates: { x: 10, y: 3 }, coordType: 'Miss' },
+        { ourCoordinates: { x: 10, y: 3 }, coordType: 'Hit' }
+
+*/
 test("[10,3] will return a hit as there is a hit there", () => {
     expect(mockBoard.checkMissesAndHits({x: 10, y: 3})).toBe("Hit");
 })
