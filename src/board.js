@@ -160,6 +160,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
             ourCoordinates: coordinate,
             coordType: 'Hit',
           });
+          console.log(hitOrMissedCoords);
           return true;
         }
         hitOrMissedCoords.push({
