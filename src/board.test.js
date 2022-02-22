@@ -104,3 +104,9 @@ The following tests will test the limits of the board and if we can recieve an a
 test("[10,1] will return a hit as there is a ship there", () => {
     expect(mockBoard.recieveAttack({x: 10, y: 1})).toBe(true);
 })
+test("[10,2] will return a hit as there is a ship there", () => {
+    expect(mockBoard.recieveAttack({x: 10, y: 2})).toBe(true);
+})
+test("[10,3] will return a hit as there is a ship there", () => {
+    expect(mockBoard.recieveAttack({x: 10, y: 3})).toBe(true);
+})
