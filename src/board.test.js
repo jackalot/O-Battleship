@@ -90,3 +90,6 @@ test("[10,10] is a valid coordinate on the game board", () => {
 test("[10,1] is a valid coordinate on the game board", () => {
     expect(mockBoard.checkValidCoord({x: 10, y: 1})).toBe(true);
 })
+test("[10,1] is not out of bounds of the bottom left corner", () => {
+    expect(mockBoard.checkBottomLeftCorner({x: 10, y: 1})).toBe(true);
+})
