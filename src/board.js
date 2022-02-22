@@ -151,26 +151,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   function recieveAttack(coordinate) {
     const checkCoord = checkValidCoord(coordinate);
     if (checkCoord === true) {
-      for (let i = 0; i < myShips.length; i += 1) {
-        const result = myShips[i].hit(coordinate);
-        if (result === true) {
-          hitOrMissedCoords.push({
-            ourCoordinates: coordinate,
-            coordType: 'Hit',
-          });
-          console.log(hitOrMissedCoords);
-          return true;
-        }
-        if (result === false) {
-          const possibleNewCoord = checkMissesAndHits(coordinate);
-          if (possibleNewCoord === 'none') {
-            hitOrMissedCoords.push({
-              ourCoordinates: coordinate,
-              coordType: 'Miss',
-            });
-          }
-        }
-      }
+
     }
     return false;
   }
