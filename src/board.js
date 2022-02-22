@@ -1,8 +1,6 @@
 const shipFactory = require('./ship');
 
 const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
-  // checkBottomLeftCorner() helper function
-  // checks if the coord is greater than the bottemLeftCorner
   const myShips = [];
   //  stores all the coords for hits and misses
   const hitOrMissedCoords = [];
