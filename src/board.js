@@ -53,6 +53,12 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
       }
       return true;
     }
+    if (coord.y === topRightCorner.y) {
+      if (coord.x > topRightCorner.x) {
+        return false;
+      }
+      return true;
+    }
     return false;
   }
   // checkTopRightCorner() helper function
