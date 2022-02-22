@@ -48,10 +48,10 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   // checks if the coord is equal to the top right corner
   function checkEqualToTRC(coord) {
     if (coord.x === topRightCorner.x) {
-      if (coord.y === topRightCorner.y) {
-        return true;
+      if (coord.y > topRightCorner.y) {
+        return false;
       }
-      return false;
+      return true;
     }
     return false;
   }
