@@ -36,7 +36,6 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
     return false;
   }
   function checkBox(coordinate, temporaryBox) {
-    //  After this function, Other player becomes undefined
     const hitResult = searchHit(coordinate);
     const missResult = searchMiss(coordinate);
     const shipResult = searchShip(coordinate);
