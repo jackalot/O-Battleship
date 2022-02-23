@@ -152,7 +152,8 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   function recieveAttack(coordinate) {
     const checkCoord = checkValidCoord(coordinate);
     if (checkCoord === true) {
-      // use findFirst ship
+      const ship = findFirstShip(coordinate);
+      console.log(ship);
     }
     return false;
   }
