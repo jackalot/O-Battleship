@@ -153,9 +153,9 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   // finds the matching coordinate sent to it
   function findMatchingCoordinate(coord1, coord2) {
     for (let i = 0; i < myShips.length; i += 1) {
-      if (myShips.coord1 === coord1) {
-        if (myShips.coord2 === coord2) {
-
+      if (myShips[i].coord1 === coord1) {
+        if (myShips[i].coord2 === coord2) {
+          return i;
         }
       }
     }
