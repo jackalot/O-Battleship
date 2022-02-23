@@ -31,5 +31,3 @@ playerTwo.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
 playerOne.ourBoard.placeShip({ x: 1, y: 10 }, { x: 10, y: 10 });
 p1DomBoardManager.sendNextCollumn();
 p2DomBoardManager.sendNextCollumn();
-console.log(p1DomBoardManager.searchShip({ x: 10, y: 10 }));
-console.log(playerOne.ourBoard.myShips);
