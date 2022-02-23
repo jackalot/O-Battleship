@@ -171,6 +171,9 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
       // and can't be called
       const returned = findFirstShip(coordinate);
       const index = findMatchingCoordinate(returned.coord1, returned.coord2);
+      if (index > -1) {
+        const ourShip = myShips.slice(index, index + index);
+      }
     }
     return false;
   }
