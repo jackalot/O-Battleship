@@ -73,7 +73,7 @@ test("gameBoard checks if a ship is at 1,1 and returns its coordinates as there 
     expect(mockBoard.findFirstShip({x:1, y:1})).toMatchObject({coord1: {x: 1, y: 1}, coord2: {x: 1, y: 7}});
 })
 test("gameBoard checks if a ship is at 9,3 and returns true as there is a ship there", () => {
-    expect(mockBoard.findFirstShip({x:9, y:3})).toBe({ coord1: {x: 9, y: 3}, coord2: {x: 9, y: 9}});
+    expect(mockBoard.findFirstShip({x:9, y:3})).toMatchObject({ coord1: {x: 9, y: 3}, coord2: {x: 9, y: 9}});
 })
 /*
 The following test is tests for testing the limits of the board, like seeing if we could
