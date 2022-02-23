@@ -166,7 +166,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   // recieveAttack() helper function
   // after recieve attack finishes, it will call this function
   //  to store either hits or misses to the array
-  function storeHitOrMiss(cooridnate, results) {
+  function storeHitOrMiss(coordinate, results) {
 
   }
   function recieveAttack(coordinate) {
