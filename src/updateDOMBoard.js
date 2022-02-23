@@ -23,6 +23,7 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
   }
   function searchMiss(coordinate) {
     const result = myPlayer.ourBoard.checkMissesAndHits(coordinate);
+    console.log(result);
     if (result === 'Miss') {
       return true;
     }
