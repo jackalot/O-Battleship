@@ -167,6 +167,10 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   // after recieve attack finishes, it will call this function
   //  to store either hits or misses to the array hitOrMissedCoords
   function storeHitOrMiss(coordinate, results) {
+    //  even in tests where misses happen, and the misses test "passes"
+    // (it passes when the hit() function is false)
+    //  this logs true each time
+    console.log(results);
     if (results === true) {
       hitOrMissedCoords.push({
         ourCoordinates: coordinate,
@@ -177,6 +181,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
         ourCoordinates: coordinate,
         coordType: 'Miss',
       });
+      console.log('taco');
     }
   }
   function recieveAttack(coordinate) {
