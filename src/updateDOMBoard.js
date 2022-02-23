@@ -14,7 +14,12 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
   }
   function searchShip(coordinate) {
     const result = myPlayer.ourBoard.findFirstShip(coordinate);
-    return result;
+    //  due to changes made to findFirstShip, now that the findFirst ship function no longer returns
+    // true but returns coordinates, doing this is a simple work around.
+    if (result !== false) {
+      return true;
+    }
+    return false;
   }
   function searchMiss(coordinate) {
     const result = myPlayer.ourBoard.checkMissesAndHits(coordinate);
