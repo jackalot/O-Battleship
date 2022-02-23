@@ -165,9 +165,13 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   }
   // recieveAttack() helper function
   // after recieve attack finishes, it will call this function
-  //  to store either hits or misses to the array
+  //  to store either hits or misses to the array hitOrMissedCoords
   function storeHitOrMiss(coordinate, results) {
+    if (results === true) {
 
+    } else if (results === false) {
+
+    }
   }
   function recieveAttack(coordinate) {
     const checkCoord = checkValidCoord(coordinate);
