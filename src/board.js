@@ -152,6 +152,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   // recieveAttack() helper function
   // finds the matching coordinate sent to it
   function findMatchingCoordinate(coord1, coord2) {
+    const failCase = -1;
     for (let i = 0; i < myShips.length; i += 1) {
       if (myShips[i].coord1 === coord1) {
         if (myShips[i].coord2 === coord2) {
@@ -159,6 +160,8 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
         }
       }
     }
+    // if myships doesn't find a matcher, return failcase instead
+    return failCase;
   }
   function recieveAttack(coordinate) {
     const checkCoord = checkValidCoord(coordinate);
