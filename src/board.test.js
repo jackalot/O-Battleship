@@ -125,6 +125,9 @@ test("[5,5] will return a miss as there is not a ship there", () => {
     The mix of misses and hits causes the checkMissAndHits test to fail
 */
 //  working on
-test("[10,3] will return a hit as there is a hit there", () => {
+test("[10,3] will return a Hit as there is a hit there", () => {
     expect(mockBoard.checkMissesAndHits({x: 10, y: 3})).toBe("Hit");
+})
+test("[5, 5] will return a Miss as there is a Miss there", () => {
+    expect(mockBoard.checkMissesAndHits({x: 5, y: 5})).toBe("Miss");
 })
