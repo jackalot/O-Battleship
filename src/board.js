@@ -168,9 +168,15 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   //  to store either hits or misses to the array hitOrMissedCoords
   function storeHitOrMiss(coordinate, results) {
     if (results === true) {
-
+      hitOrMissedCoords.push({
+        ourCoordinates: coordinate,
+        coordType: 'Hit',
+      });
     } else if (results === false) {
-
+      hitOrMissedCoords.push({
+        ourCoordinates: coordinate,
+        coordType: 'Miss',
+      });
     }
   }
   function recieveAttack(coordinate) {
