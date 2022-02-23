@@ -149,6 +149,8 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return true;
   }
+  // recieveAttack() helper function
+  // finds the matching coordinate sent to it
   function findMatchingCoordinate(coord1, coord2) {
 
   }
