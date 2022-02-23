@@ -101,13 +101,13 @@ test("[10,1] is on the line of the top right corner", () => {
 The following tests will test the limits of the board and if we can recieve an attack there.
 
 */
-test.skip("[10,1] will return a hit as there is a ship there", () => {
+test("[10,1] will return a hit as there is a ship there", () => {
     expect(mockBoard.recieveAttack({x: 10, y: 1})).toBe(true);
 })
-test.skip("[10,2] will return a hit as there is a ship there", () => {
+test("[10,2] will return a hit as there is a ship there", () => {
     expect(mockBoard.recieveAttack({x: 10, y: 2})).toBe(true);
 })
-test.skip("[10,3] will return a hit as there is a ship there", () => {
+test("[10,3] will return a hit as there is a ship there", () => {
     expect(mockBoard.recieveAttack({x: 10, y: 3})).toBe(true);
 })
 // in the 10, 3 recieveAttack test, multiple attacks are given to the same coordinate
@@ -122,6 +122,6 @@ test.skip("[10,3] will return a hit as there is a ship there", () => {
     The mix of misses and hits causes the checkMissAndHits test to fail
 */
 //  working on
-test.skip("[10,3] will return a hit as there is a hit there", () => {
+test("[10,3] will return a hit as there is a hit there", () => {
     expect(mockBoard.checkMissesAndHits({x: 10, y: 3})).toBe("Hit");
 })
