@@ -163,6 +163,12 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     // if myships doesn't find a matcher, return failcase instead
     return failCase;
   }
+  // recieveAttack() helper function
+  // after recieve attack finishes, it will call this function
+  //  to apply either hits or misses to the array
+  function applyHitOrMiss(cooridnate, results) {
+
+  }
   function recieveAttack(coordinate) {
     const checkCoord = checkValidCoord(coordinate);
     if (checkCoord === true) {
