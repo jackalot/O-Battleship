@@ -69,8 +69,8 @@ test("gameBoard checks if all ships have sunk, and returns false as theres still
 test("gameBoard checks if 2, 5 has a hit or miss on it already", () => {
     expect(mockBoard.checkAvailableCoord({x: 2, y: 5})).toBe(true);
 })
-test("gameBoard checks if a ship is at 1,1 and returns true as there is a ship there", () => {
-    expect(mockBoard.findFirstShip({x:1, y:1})).toBe(true);
+test("gameBoard checks if a ship is at 1,1 and returns its coordinates as there is a ship there", () => {
+    expect(mockBoard.findFirstShip({x:1, y:1})).toMatchObject({coord1: {x: 1, y: 1}, coord2: {x: 1, y: 7}});
 })
 test("gameBoard checks if a ship is at 9,3 and returns true as there is a ship there", () => {
     expect(mockBoard.findFirstShip({x:9, y:3})).toBe(true);
