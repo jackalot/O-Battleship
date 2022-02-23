@@ -161,8 +161,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
       //  hit [ Function: hit ]
       // and can't be called
       const returned = findFirstShip(coordinate);
-      console.log(returned);
-      console.log(myShips);
+      const index = findMatchingCoordinate(returned.coord1, returned.coord2);
     }
     return false;
   }
