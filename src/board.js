@@ -149,6 +149,9 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     }
     return true;
   }
+  function findMatchingCoordinate(coord1, coord2) {
+
+  }
   function recieveAttack(coordinate) {
     const checkCoord = checkValidCoord(coordinate);
     if (checkCoord === true) {
@@ -157,6 +160,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
       // and can't be called
       const returned = findFirstShip(coordinate);
       console.log(returned);
+      console.log(myShips);
     }
     return false;
   }
