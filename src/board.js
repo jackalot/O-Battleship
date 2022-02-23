@@ -154,6 +154,8 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     if (checkCoord === true) {
       const ship = findFirstShip(coordinate);
       console.log(ship);
+      const attackResult = ship.hit(coordinate);
+      return attackResult;
     }
     return false;
   }
