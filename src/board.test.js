@@ -128,6 +128,6 @@ test.skip("[5,5] will return a miss as there is not a ship there", () => {
 test("[10,3] will return a Hit as there is a hit there", () => {
     expect(mockBoard.checkMissesAndHits({x: 10, y: 3})).toBe("Hit");
 })
-test.skip("[5, 5] will return a Miss as there is a Miss there", () => {
+test("[5, 5] will return a Miss as there is a Miss there", () => {
     expect(mockBoard.checkMissesAndHits({x: 5, y: 5})).toBe("Miss");
 })
