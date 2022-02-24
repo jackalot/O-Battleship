@@ -223,6 +223,8 @@ Coordinates of ships
 - mockShip3: coord1 = {x: 1, y: 10}, coord2 = { x: 10, y: 10}
 - mockShip4: coord1 = {x: 10, y: 1}, coord2 = { x: 10, y: 10}
 */
+// mockShip miss tests \\
+// Random coordinate
 test("mockShip will not get hit at [9, 6]", () => {
     expect(mockShip.hit({x: 9, y: 6})).toBe(false);
 })
