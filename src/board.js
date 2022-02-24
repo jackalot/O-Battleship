@@ -190,6 +190,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
       if (index > -1) {
         const ourShip = myShips.slice(index, index + 1);
         const attackResult = ourShip[0].hit(coordinate);
+        console.log(attackResult);
         if (attackResult === true) {
           storeHits(coordinate);
         } else {
