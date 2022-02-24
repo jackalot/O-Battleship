@@ -22,9 +22,6 @@ test("mockShip will get hit at [1, 4]", () => {
 test("mockShip2 will get hit at [9, 6]", () => {
     expect(mockShip2.hit({x: 9, y: 6})).toBe(true);
 })
-test("mockShip will not get hit at [9, 6]", () => {
-    expect(mockShip.hit({x: 9, y: 6})).toBe(false);
-})
 test("mockShip will get hit at [1, 1]", () => {
     expect(mockShip.hit({x: 1, y: 1})).toBe(true);
 })
@@ -216,4 +213,10 @@ test("mockShip4 will return all of its coordinates, including the parts", () => 
         {x:10,y:7}, {x:10,y:8},
         {x:10,y:9}, {x:10,y:10},
     ])
+})
+/*
+Misses tests
+*/
+test("mockShip will not get hit at [9, 6]", () => {
+    expect(mockShip.hit({x: 9, y: 6})).toBe(false);
 })
