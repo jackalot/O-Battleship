@@ -244,6 +244,6 @@ test("mockShip2 will not get hit at [1, 8]", () => {
 })
 // close to ship
 //!fails
-test.skip("mockShip2 will not get hit at [10, 3]", () => {
+test("mockShip2 will not get hit at [10, 3]", () => {
     expect(mockShip2.hit({x: 10, y: 3})).toBe(false);
 })
