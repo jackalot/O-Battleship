@@ -216,6 +216,12 @@ test("mockShip4 will return all of its coordinates, including the parts", () => 
 })
 /*
 Misses tests
+Coordinates of ships
+- mockShip: coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7}
+- mockShip2: coord1 = {x: 9, y: 3}, coord2 = { x: 9, y: 9}
+- horizontalShip: coord1 = {x: 3, y: 3}, coord2 = { x: 9, y: 3}
+- mockShip3: coord1 = {x: 1, y: 10}, coord2 = { x: 10, y: 10}
+- mockShip4: coord1 = {x: 10, y: 1}, coord2 = { x: 10, y: 10}
 */
 test("mockShip will not get hit at [9, 6]", () => {
     expect(mockShip.hit({x: 9, y: 6})).toBe(false);
