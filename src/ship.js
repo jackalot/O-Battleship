@@ -75,6 +75,14 @@ const shipFactory = (coord1, coord2) => {
     return null;
   }
   const myParts = shipParts();
+  // Helper function for anything that requires coordinates
+  function getAllCoordinates() {
+    const coordinateArray = [];
+    for (let i = 0; i < myParts.length; i += 1) {
+      coordinateArray.push(myParts[i].partCoordinates);
+    }
+    return coordinateArray;
+  }
   // hit() Helper function
   //  we know its the same x, but now check if the same Y
   function guessXMinusCoordXIsZero(guessCoord) {
@@ -140,14 +148,6 @@ const shipFactory = (coord1, coord2) => {
       return 'I still have parts left';
     }
     return 'error';
-  }
-  // Helper function for anything that requires coordinates
-  function getAllCoordinates() {
-    const coordinateArray = [];
-    for (let i = 0; i < myParts.length; i += 1) {
-      coordinateArray.push(myParts[i].partCoordinates);
-    }
-    return coordinateArray;
   }
   return {
     coord1, coord2, lengthMeasurer, hit, sink, getAllCoordinates, shipParts,
