@@ -100,7 +100,7 @@ const shipFactory = (coord1, coord2) => {
   }
   //  hit() helper function
   // since we know this coordinate belongs to a part, find the part and add "has sunk" to it
-  function damagePart(partCoordinate) {
+  function damagePart(inputCoordinate) {
     for (let i = 0; i < myParts.length; i += 1) {
 
     }
