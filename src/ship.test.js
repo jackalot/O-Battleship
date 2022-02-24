@@ -233,7 +233,6 @@ test("mockShip will not get hit at [2, 2]", () => {
     expect(mockShip.hit({x: 2, y: 2})).toBe(false);
 })
 // one off the ship
-//!fails
 test("mockShip will not get hit at [1, 8]", () => {
     expect(mockShip.hit({x: 1, y: 8})).toBe(false);
 })
@@ -243,7 +242,6 @@ test("mockShip2 will not get hit at [1, 8]", () => {
     expect(mockShip2.hit({x: 1, y: 8})).toBe(false);
 })
 // close to ship
-//!fails
 test("mockShip2 will not get hit at [10, 3]", () => {
     expect(mockShip2.hit({x: 10, y: 3})).toBe(false);
 })
