@@ -83,42 +83,9 @@ const shipFactory = (coord1, coord2) => {
     }
     return coordinateArray;
   }
-  // hit() Helper function
-  //  we know its the same x, but now check if the same Y
-  function guessXMinusCoordXIsZero(guessCoord) {
-    if (guessCoord.y >= coord1.y || guessCoord.y <= coord2.y) {
-      for (let i = 0; i < myParts; i += 1) {
-        if (guessCoord.y === myParts[i].partCoordinates.y) {
-          myParts[i].hasSunk = true;
-        }
-      }
-      return true;
-    }
-    return false;
-  }
-  // hit() Helper function
-  //  we know its the same y, but now check if the same X
-  function guessYMinusCoordYIsZero(guessCoord) {
-    if (guessCoord.x >= coord1.x || guessCoord.x <= coord2.x) {
-      for (let i = 0; i < myParts; i += 1) {
-        if (guessCoord.x === myParts[i].partCoordinates.x) {
-          myParts[i].hasSunk = true;
-        }
-      }
-      return true;
-    }
-    return false;
-  }
+
   function hit(guessCoord) {
-    if (guessCoord.x - coord1.x === 0) {
-      const resultY = guessXMinusCoordXIsZero(guessCoord);
-      return resultY;
-    }
-    if (guessCoord.y - coord1.y === 0) {
-      const resultX = guessYMinusCoordYIsZero(guessCoord);
-      return resultX;
-    }
-    return false;
+
   }
   function sink() {
     const length = lengthMeasurer(coord1, coord2);
