@@ -228,3 +228,11 @@ Coordinates of ships
 test("mockShip will not get hit at [9, 6]", () => {
     expect(mockShip.hit({x: 9, y: 6})).toBe(false);
 })
+// close to ship
+test("mockShip will not get hit at [2, 2]", () => {
+    expect(mockShip.hit({x: 2, y: 2})).toBe(false);
+})
+// one off the ship
+test("mockShip will not get hit at [1, 8]", () => {
+    expect(mockShip.hit({x: 1, y: 8})).toBe(false);
+})
