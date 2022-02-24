@@ -116,9 +116,10 @@ const shipFactory = (coord1, coord2) => {
     const result = findCoordinate(guessCoord);
     if (result > -1) {
       // We got hit, now we hit the part directly
-    } else {
-      return false;
+      damagePart(guessCoord);
+      return true;
     }
+    return false;
   }
   function sink() {
     const length = lengthMeasurer(coord1, coord2);
