@@ -100,6 +100,11 @@ const shipFactory = (coord1, coord2) => {
   }
   function hit(guessCoord) {
     const result = findCoordinate(guessCoord);
+    if (result > -1) {
+
+    } else {
+      return false;
+    }
   }
   function sink() {
     const length = lengthMeasurer(coord1, coord2);
