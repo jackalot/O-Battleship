@@ -89,7 +89,7 @@ const shipFactory = (coord1, coord2) => {
   function findCoordinate(guessCoord) {
     const coordinateArray = getAllCoordinates();
     const failCase = -1;
-    for (let i = 0; i < coordinateArray.length; i += i) {
+    for (let i = 0; i < coordinateArray.length; i += 1) {
       if (coordinateArray[i].x === guessCoord.x) {
         if (coordinateArray[i].y === guessCoord.y) {
           return i;
