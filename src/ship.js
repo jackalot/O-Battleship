@@ -101,7 +101,7 @@ const shipFactory = (coord1, coord2) => {
   function hit(guessCoord) {
     const result = findCoordinate(guessCoord);
     if (result > -1) {
-
+      // We got hit, now we hit the part directly
     } else {
       return false;
     }
