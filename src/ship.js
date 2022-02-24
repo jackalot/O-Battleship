@@ -86,11 +86,11 @@ const shipFactory = (coord1, coord2) => {
   // hit() helper function
   // finds a given coordinate and see's if its in the coordinate Array from
   // getAllCoordinates
-  function findCoordinate() {
+  function findCoordinate(guessCoord) {
 
   }
   function hit(guessCoord) {
-
+    const result = findCoordinate(guessCoord);
   }
   function sink() {
     const length = lengthMeasurer(coord1, coord2);
