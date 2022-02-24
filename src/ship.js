@@ -102,7 +102,14 @@ const shipFactory = (coord1, coord2) => {
   // since we know this coordinate belongs to a part, find the part and add "has sunk" to it
   function damagePart(inputCoordinate) {
     for (let i = 0; i < myParts.length; i += 1) {
-
+      if (myParts[i].partCoordinates.x === inputCoordinate.x) {
+        if (myParts[i].partCoordinates.y === inputCoordinate.y) {
+          if (myParts[i].hasSunk === false) {
+            myParts[i].hasSunk = true;
+            return;
+          }
+        }
+      }
     }
   }
   function hit(guessCoord) {
