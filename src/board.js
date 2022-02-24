@@ -181,7 +181,6 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
         ourCoordinates: coordinate,
         coordType: 'Miss',
       });
-      console.log('taco');
     }
   }
   function recieveAttack(coordinate) {
