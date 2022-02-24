@@ -83,7 +83,12 @@ const shipFactory = (coord1, coord2) => {
     }
     return coordinateArray;
   }
+  // hit() helper function
+  // finds a given coordinate and see's if its in the coordinate Array from
+  // getAllCoordinates
+  function findCoordinate() {
 
+  }
   function hit(guessCoord) {
 
   }
