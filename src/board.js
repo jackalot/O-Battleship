@@ -189,6 +189,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
       const index = findMatchingCoordinate(returned.coord1, returned.coord2);
       if (index > -1) {
         const ourShip = myShips[index];
+        console.log(coordinate);
         const attackResult = ourShip.hit(coordinate); // always returns true
         console.log(attackResult);
         if (attackResult === true) {
