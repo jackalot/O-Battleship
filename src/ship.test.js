@@ -275,3 +275,16 @@ test("mockShip3 will not get hit at [8, 9]", () => {
 test("mockShip3 will not get hit at [9, 9]", () => {
     expect(mockShip3.hit({x: 9, y: 9})).toBe(false);
 })
+// mockShip4 miss tests \\
+// random coordinate \\
+test("mockShip4 will not get hit at [4, 6]", () => {
+    expect(mockShip4.hit({x: 4, y: 6})).toBe(false);
+})
+// close to the ship \\
+test("mockShip4 will not get hit at [8, 9]", () => {
+    expect(mockShip4.hit({x: 8, y: 9})).toBe(false);
+})
+// one off the ship \\
+test("mockShip4 will not get hit at [9, 9]", () => {
+    expect(mockShip4.hit({x: 9, y: 9})).toBe(false);
+})
