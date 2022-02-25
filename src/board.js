@@ -226,7 +226,6 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   }
   // Checks if theres a miss or hit on this coordinate
   function checkMissesAndHits(coordinate) {
-    console.log(hitOrMissedCoords);
     // loop through misses and hits and sort through each
     // to see if this coordinate has a miss or a hit
     for (let i = 0; i < hitOrMissedCoords.length; i += 1) {
