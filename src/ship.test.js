@@ -250,3 +250,7 @@ test("mockShip2 will not get hit at [10, 3]", () => {
 test("horizontalShip will not get hit at [7, 2]", () => {
     expect(horizontalShip.hit({x: 7, y: 2})).toBe(false);
 })
+// close to ship
+test("horizontalShip will not get hit at [8, 5]", () => {
+    expect(mockShip.hit({x: 8, y: 5})).toBe(false);
+})
