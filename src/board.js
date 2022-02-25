@@ -200,6 +200,10 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
         }
         return attackResult; // the tests for misses return false
       }
+      if (index === -1) {
+        storeMisses(coordinate);
+        return false;
+      }
     }
     return false;
   }
