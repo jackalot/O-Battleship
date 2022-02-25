@@ -245,3 +245,8 @@ test("mockShip2 will not get hit at [1, 8]", () => {
 test("mockShip2 will not get hit at [10, 3]", () => {
     expect(mockShip2.hit({x: 10, y: 3})).toBe(false);
 })
+// horizontalShip miss tests \\
+// random coordinate \\
+test("horizontalShip will not get hit at [7, 2]", () => {
+    expect(horizontalShip.hit({x: 7, y: 2})).toBe(false);
+})
