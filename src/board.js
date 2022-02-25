@@ -193,10 +193,11 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
         console.log(attackResult);
         if (attackResult === true) {
           storeHits(coordinate);
-        } else {
+        } else { // when it returns false, it should go down to this segment
+          console.log('calling storeMisses');
           storeMisses(coordinate);
         }
-        return attackResult;
+        return attackResult; // the tests for misses return false
       }
     }
     return false;
