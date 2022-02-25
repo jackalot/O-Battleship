@@ -1,7 +1,2 @@
-Focus:Fix the reference before defined bug:
-- eliminate the p1DomBoardManager and p2DomBoardManager paramaters from attackDomManager
-- create a new function from index.js called, "callItAgain()"
-{
-  -this will call each managers sendNextCollumn();
-}
-- replace the p1DomBoardManager and p2DomBoardManager in attackDomManager with callItAgain
+Focus: change the approach of how we make the players take turns attacking eachother:
+reason: the current approach lags the page each time
