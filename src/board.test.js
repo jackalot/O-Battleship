@@ -115,16 +115,6 @@ test("[5,5] will return a miss as there is not a ship there", () => {
 })
 // in the 10, 3 recieveAttack test, multiple attacks are given to the same coordinate
 //  causing this:
-/*
-   { ourCoordinates: { x: 10, y: 1 }, coordType: 'Hit' },
-        { ourCoordinates: { x: 10, y: 2 }, coordType: 'Miss' },
-        { ourCoordinates: { x: 10, y: 2 }, coordType: 'Miss' },
-        { ourCoordinates: { x: 10, y: 2 }, coordType: 'Hit' },
-        { ourCoordinates: { x: 10, y: 3 }, coordType: 'Miss' },
-        { ourCoordinates: { x: 10, y: 3 }, coordType: 'Hit' }
-    The mix of misses and hits causes the checkMissAndHits test to fail
-*/
-//  working on
 test.skip("[10,3] will return a Hit as there is a hit there", () => {
     expect(mockBoard.checkMissesAndHits({x: 10, y: 3})).toBe("Hit");
 })
