@@ -55,11 +55,11 @@ test("gameBoard has placed a ship from [9,3] to [9,9]", () => {
     expect(mockBoard.placeShip({x: 9, y: 3}, {x: 9, y: 9})).toMatchObject({ coord1: {x: 9, y: 3}, coord2: {x: 9, y: 9} });
 })
 //it also sends the hit() function to the corresponding ship
-test("gameBoard recieves an attack at [1, 1] and it hits due to the ship there", () => {
+test.skip("gameBoard recieves an attack at [1, 1] and it hits due to the ship there", () => {
     expect(mockBoard.recieveAttack({x: 1, y: 1})).toBe(true);
 })
 //it also keeps track of the missed attacks
-test("gameBoard recieves an attack at [2, 6] and it misses due to no ship there", () => {
+test.skip("gameBoard recieves an attack at [2, 6] and it misses due to no ship there", () => {
     expect(mockBoard.recieveAttack({x: 2, y: 6})).toBe(false);
 })
 test("gameBoard checks if all ships have sunk, and returns false as theres still one ship up", () => {
