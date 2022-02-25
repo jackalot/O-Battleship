@@ -88,6 +88,7 @@ const shipFactory = (coord1, coord2) => {
   // getAllCoordinates
   function findCoordinate(guessCoord) {
     const coordinateArray = getAllCoordinates();
+    console.log(coordinateArray);
     const failCase = -1;
     for (let i = 0; i < coordinateArray.length; i += 1) {
       if (coordinateArray[i].x === guessCoord.x) {
@@ -115,6 +116,7 @@ const shipFactory = (coord1, coord2) => {
   function hit(guessCoord) {
     const result = findCoordinate(guessCoord);
     console.log(result);
+    console.log(myParts);
     if (result === -1) {
       return false;
     }
