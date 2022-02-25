@@ -181,7 +181,6 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   }
   function recieveAttack(coordinate) {
     const checkCoord = checkValidCoord(coordinate);
-    console.log(coordinate);
     if (checkCoord === true) {
       // returns the coordinates but the functions returns as
       //  hit [ Function: hit ]
