@@ -114,10 +114,14 @@ const shipFactory = (coord1, coord2) => {
   }
   function hit(guessCoord) {
     const result = findCoordinate(guessCoord);
+    console.log(result);
     if (result > -1) {
       // We got hit, now we hit the part directly
       damagePart(guessCoord);
       return true;
+    }
+    if (result === -1) {
+      return false;
     }
     return false;
   }
