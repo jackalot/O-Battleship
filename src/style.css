@@ -25,6 +25,9 @@ table, th, td {
 .miss {
     background-color: gray;
 }
+.unconfirmed-Attack {
+    background-color: yellow
+}
 body {
     background-color: green;
 }
