@@ -36,6 +36,14 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
     }
     return false;
   }
+  function unconfirmedAttack(temporaryBox, coordinate) {
+    const anyPreviousAttacks = document.querySelectorAll('.unconfirmed-Attack');
+    if (anyPreviousAttacks.length === 0) {
+      temporaryBox.classList.add('.unconfirmed-Attack');
+      const gameStatus = document.querySelector('.gameStatus');
+      gameStatus.textContent = `${otherPlayer.playerName} please confirm attack`;
+    }
+  }
   function checkBox(coordinate, temporaryBox) {
     const hitResult = searchHit(coordinate);
     const missResult = searchMiss(coordinate);
@@ -44,24 +52,24 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
       temporaryBox.classList.add('hit');
       // remove the click event
       temporaryBox.removeEventListener('click', () => {
-        recieveDomAttack(coordinate, myPlayer);
+        unconfirmedAttack(temporaryBox, coordinate);
       });
     } else if (missResult === true) {
       temporaryBox.classList.add('miss');
       //  remove the click event
       temporaryBox.removeEventListener('click', () => {
-        recieveDomAttack(coordinate, myPlayer);
+        unconfirmedAttack(temporaryBox, coordinate);
       });
     } else if (shipResult === true) {
       temporaryBox.classList.add('containsShip');
-      //  Add recieveDomAttack
+      //  Add unconfirmedAttack
       temporaryBox.addEventListener('click', () => {
-        recieveDomAttack(coordinate, myPlayer);
+        unconfirmedAttack(temporaryBox, coordinate);
       });
     } else if (hitResult === false && missResult === false && shipResult === false) {
-      //  Add recieveDomAttack
+      //  Add unconfirmedAttack
       temporaryBox.addEventListener('click', () => {
-        recieveDomAttack(coordinate, myPlayer);
+        unconfirmedAttack(temporaryBox, coordinate);
       });
     }
   }
