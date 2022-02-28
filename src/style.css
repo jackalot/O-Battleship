@@ -10,7 +10,7 @@ table, th, td {
     padding: 10px;
     text-align: center;
 }
-.unconfirmedAttack {
+.confirmAttack {
     background-color: yellow;
 }
 .box:hover {
