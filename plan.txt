@@ -15,7 +15,7 @@ reason: the current approach lags the page each time
        - then change the gameStatus text content to be along the lines of "myPlayer.playerName confirm attack"
     }
     - in the function checkBox {
-
+    - change each recieveAttack to unconfirmedAttack
     }
 }
 psuedo code:
