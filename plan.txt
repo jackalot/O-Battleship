@@ -9,7 +9,7 @@ reason: the current approach lags the page each time
 {
     - inside updateDomBoard, a new function called unconfirmedAttack()
     {
-
+       - its parameters are: { temporaryBox }
     }
     - in the function checkBox {
 
