@@ -10,6 +10,7 @@ reason: the current approach lags the page each time
     - inside updateDomBoard, a new function called unconfirmedAttack()
     {
        - its parameters are: { temporaryBox }
+       - temporaryBox will then have the class "unconfirmed-Attack" added to it.
     }
     - in the function checkBox {
 
