@@ -12,6 +12,7 @@ reason: the current approach lags the page each time
        - its parameters are: { temporaryBox }
        - temporaryBox will then have the class "unconfirmed-Attack" added to it.
        - we then query select the class ".gameStatus" and set it to a variable
+       - then change the gameStatus text content to be along the lines of "myPlayer.playerName confirm attack"
     }
     - in the function checkBox {
 
