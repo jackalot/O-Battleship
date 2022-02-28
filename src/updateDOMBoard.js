@@ -37,10 +37,10 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
     return false;
   }
   function unconfirmedAttack(temporaryBox, coordinate) {
-    const anyPreviousAttacks = document.querySelectorAll('.confirmAttack');
+    const anyPreviousAttacks = document.querySelectorAll('.unconfirmedAttack');
     if (anyPreviousAttacks.length === 0) {
       console.log(temporaryBox);
-      temporaryBox.classList.add('.confirmAttack');
+      temporaryBox.classList.add('.unconfirmedAttack');
       const gameStatus = document.querySelector('.gameStatus');
       gameStatus.textContent = `${otherPlayer.playerName} please confirm attack`;
     }
