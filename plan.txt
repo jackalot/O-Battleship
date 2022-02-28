@@ -28,7 +28,7 @@ psuedo code:
 }
 
 // updateDomBoard.js \\
-function unconfirmedAttack(temporaryBox) {
+function unconfirmedAttack(temporaryBox, coordinate) {
     const anyPreviousAttacks = document.querySelectorAll('.unconfirmed-Attack');
     if(anyPreviousAttacks.length === 0)
     {
