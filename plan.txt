@@ -9,7 +9,7 @@ reason: the current approach lags the page each time
 {
     - inside updateDomBoard, a new function called unconfirmedAttack()
     {
-          - its parameters are: { temporaryBox }
+          - its parameters are: { temporaryBox, coordinate }
         - first, querySelectorAll the class called ."unconfirmed-Attack"
         - if its length is 0, continue {
        - temporaryBox will then have the class "unconfirmed-Attack" added to it.
