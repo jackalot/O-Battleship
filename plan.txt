@@ -28,5 +28,5 @@ psuedo code:
 function unconfirmedAttack(temporaryBox) {
     temporaryBox.classList.add('.unconfirmed-Attack');
     const gameStatus = document.querySelector('.gameStatus');
-    gameStatus.textContent = `${myPlayer.playerName} please confirm attack`
+    gameStatus.textContent = `${OtherPlayer.playerName} please confirm attack`
 }
