@@ -5,6 +5,7 @@ reason: the current approach lags the page each time
 {
     - it will have the background yellow
 }
+* in updateDomBoard.js
 
 psuedo code:
 // style.css \\
