@@ -24,7 +24,7 @@ reason: the current approach lags the page each time
 * in attackDomManager.js
 psuedo code:
 // style.css \\
-.undconfirmed-Attack {
+.unconfirmed-Attack {
     background-color: yellow
 }
 
