@@ -11,6 +11,7 @@ reason: the current approach lags the page each time
     {
        - its parameters are: { temporaryBox }
        - temporaryBox will then have the class "unconfirmed-Attack" added to it.
+       - we then query select the class ".gameStatus" and set it to a variable
     }
     - in the function checkBox {
 
