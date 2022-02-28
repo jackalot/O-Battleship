@@ -1,2 +1,7 @@
 Focus: change the approach of how we make the players take turns attacking eachother:
 reason: the current approach lags the page each time
+* in style.css, 
+- add a class named unconfirmedAttack
+{
+    - it will have the background yellow
+}
