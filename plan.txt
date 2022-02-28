@@ -7,8 +7,12 @@ reason: the current approach lags the page each time
 }
 * in updateDomBoard.js
 {
+    - inside updateDomBoard, a new function called unconfirmedAttack()
+    {
+
+    }
     - in the function checkBox {
-        
+
     }
 }
 psuedo code:
