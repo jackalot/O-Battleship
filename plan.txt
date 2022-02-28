@@ -23,3 +23,10 @@ psuedo code:
 .undconfirmed-Attack {
     background-color: yellow
 }
+
+// updateDomBoard.js \\
+function unconfirmedAttack(temporaryBox) {
+    temporaryBox.classList.add('.unconfirmed-Attack');
+    const gameStatus = document.querySelector('.gameStatus');
+    gameStatus.textContent = `${myPlayer.playerName} please confirm attack`
+}
