@@ -10,6 +10,9 @@ table, th, td {
     padding: 10px;
     text-align: center;
 }
+.unconfirmed-Attack {
+    background-color: yellow;
+}
 .box:hover {
     background-color: orange;
 }
@@ -24,9 +27,6 @@ table, th, td {
 }
 .miss {
     background-color: gray;
-}
-.unconfirmed-Attack {
-    background-color: yellow;
 }
 body {
     background-color: green;
