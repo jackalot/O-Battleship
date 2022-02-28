@@ -21,6 +21,7 @@ reason: the current approach lags the page each time
     - change each recieveAttack to unconfirmedAttack
     }
 }
+* in attackDomManager.js
 psuedo code:
 // style.css \\
 .undconfirmed-Attack {
