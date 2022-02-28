@@ -39,6 +39,7 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
   function unconfirmedAttack(temporaryBox, coordinate) {
     const anyPreviousAttacks = document.querySelectorAll('.unconfirmed-Attack');
     if (anyPreviousAttacks.length === 0) {
+      console.log(temporaryBox);
       temporaryBox.classList.add('.unconfirmed-Attack');
       const gameStatus = document.querySelector('.gameStatus');
       gameStatus.textContent = `${otherPlayer.playerName} please confirm attack`;
