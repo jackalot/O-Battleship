@@ -1,2 +1,4 @@
-Focus: adding a button that submits the attack onto the board
+Focus: adding a button that submits the attack onto the board:
+* in attackDomManager
+// most of this is basically updateDomBoard's recieveAttack function
 psuedo code:
