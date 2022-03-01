@@ -45,3 +45,6 @@ function findUnconfirmedAttacks() {
     recieveAttack(coordinate, playerTwo);
   }
 }
+function recieveAttack(coordinate, defendingPlayer) {
+
+}
