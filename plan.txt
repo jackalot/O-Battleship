@@ -31,4 +31,5 @@ function findUnconfirmedAttacks() {
   const attackBox = document.querySelector('.unconfirmedAttack');
   const playerString = attackBox.id[1];
   const xString = attackBox.id[6];
+  const yString = attackBox.id[8];
 }
