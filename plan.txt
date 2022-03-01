@@ -38,10 +38,10 @@ function findUnconfirmedAttacks() {
   const coordinate = { x: xInt, y: yInt};
   if(playerInt === 1)
   {
-
+    recieveAttack(coordinate, playerOne);
   }
   else if(playerInt === 2)
   {
-    
+    recieveAttack(coordinate, playerTwo);
   }
 }
