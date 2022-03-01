@@ -6,8 +6,8 @@ Focus: adding a button that submits the attack onto the board:
   - query select a class with the name unconfirmedAttack
   - find the box that was found and store its id
   - store the 1 or 2 in the boxes id in where it says "P1Box" or "P2Box" as a variable
-  - store the seperate coordinate from the boxes id where it says "-3-5" as two seperate variables
-  - the above two variables will be strings, so then make them integers
+  - store the seperate coordinates from the boxes id where it says "-3-5" as two seperate variables
+  - the above two variables will be strings, so then make them integers using parseInt
 }
 // most of this is basically updateDomBoard's recieveAttack function
 - in recieveAttack()
