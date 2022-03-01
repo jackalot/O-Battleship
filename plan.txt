@@ -35,6 +35,7 @@ function findUnconfirmedAttacks() {
   const playerInt = parseInt(playerString);
   const xInt = parseInt(xString);
   const yInt = parseInt(yString);
+  const coordinate = { x: xInt, y: yInt};
   if(playerInt === 1)
   {
 
