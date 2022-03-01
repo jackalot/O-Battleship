@@ -30,4 +30,5 @@ psuedo code:
 function findUnconfirmedAttacks() {
   const attackBox = document.querySelector('.unconfirmedAttack');
   const playerString = attackBox.id[1];
+  const xString = attackBox.id[6];
 }
