@@ -40,7 +40,7 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
     const anyPreviousAttacks = document.querySelectorAll('.unconfirmedAttack');
     if (anyPreviousAttacks.length === 0) {
       console.log(temporaryBox);
-      temporaryBox.classList.add('.unconfirmedAttack');
+      temporaryBox.classList.add('unconfirmedAttack');
       const gameStatus = document.querySelector('.gameStatus');
       gameStatus.textContent = `${otherPlayer.playerName} please confirm attack`;
     }
