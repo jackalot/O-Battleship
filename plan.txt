@@ -5,6 +5,8 @@ Focus: adding a button that submits the attack onto the board:
   // this will find the unconfirmed attack and it will get the coordinates from that unconfirmed attack
   - query select a class with the name unconfirmedAttack
   - find the box that was found and store its id
+  - slice the first portion of the name of the boxes id and check which player the box belongs too
+  - create a coordinate object that has the coordinates from the boxes id sliced
 }
 // most of this is basically updateDomBoard's recieveAttack function
 - in recieveAttack()
