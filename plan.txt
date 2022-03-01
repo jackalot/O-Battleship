@@ -9,6 +9,14 @@ Focus: adding a button that submits the attack onto the board:
   - store the seperate coordinates from the boxes id where it says "-3-5" as two seperate variables
   - the above two variables will be strings, so then make them integers using parseInt
   - after the seperate coordinates have been parsed, store them into one coordinate object
+  - if box id is a 1
+  {
+    -call recieveAttack with the coordinates and the defending player is player One
+  }
+  else, if the player is a 2
+  {
+    -call recieveAttack with the coordinates and the defending player is player two
+  }
 }
 // most of this is basically updateDomBoard's recieveAttack function
 - in recieveAttack()
