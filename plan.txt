@@ -34,5 +34,5 @@ function findUnconfirmedAttacks() {
   const yString = attackBox.id[8];
   const playerInt = parseInt(playerString);
   const xInt = parseInt(xString);
-  const yInt = parseInt(yString);
+  const yInt = parseInt(yString); 
 }
