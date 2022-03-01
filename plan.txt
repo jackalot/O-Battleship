@@ -29,5 +29,5 @@ Focus: adding a button that submits the attack onto the board:
 psuedo code:
 function findUnconfirmedAttacks() {
   const attackBox = document.querySelector('.unconfirmedAttack');
-  const boxId = attackBox.id;
+  const playerString = attackBox.id[1];
 }
