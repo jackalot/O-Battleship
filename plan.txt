@@ -3,6 +3,8 @@ Focus: adding a button that submits the attack onto the board:
 {
 - inside attackDomManager, a function called findUnconfirmedAttacks() {
   // this will find the unconfirmed attack and it will get the coordinates from that unconfirmed attack
+  - query select a class with the name unconfirmedAttack
+  - find the box that was found and store its id
 }
 // most of this is basically updateDomBoard's recieveAttack function
 - in recieveAttack()
