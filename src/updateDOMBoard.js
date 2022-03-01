@@ -47,6 +47,9 @@ function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
       anyPreviousAttacks.forEach((element) => {
         element.classList.remove('unconfirmedAttack');
       });
+      temporaryBox.classList.add('unconfirmedAttack');
+      const gameStatus = document.querySelector('.gameStatus');
+      gameStatus.textContent = `${otherPlayer.playerName} please confirm attack`;
     }
   }
   function checkBox(coordinate, temporaryBox) {
