@@ -74,6 +74,7 @@ function attackDomManager(player1, player2, callItAgain) {
       playerNumber,
       coordinate: {
         x: xCoordinate,
+        y: yCoordinate,
       },
     };
   }
