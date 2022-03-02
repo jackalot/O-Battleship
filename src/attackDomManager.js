@@ -69,6 +69,7 @@ function attackDomManager(player1, player2, callItAgain) {
   function seperateIds(nonSeperatedId) {
     const playerNumber = findPlayerNumber(nonSeperatedId);
     const xCoordinate = findXcoordinate(nonSeperatedId);
+    const yCoordinate = findYcoordinate(nonSeperatedId);
     return {
       playerNumber,
       coordinate: {
