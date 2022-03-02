@@ -23,6 +23,8 @@ function attackDomManager(player1, player2, callItAgain) {
     // out of id: P2Box-4-3, xString gets 4, yString gets 3
     const xString = attackBox.id[6];
     const yString = attackBox.id[8];
+    // parses all the strings and turns them into integers
+    // as they are currently strins and not integers
     const playerInt = parseInt(playerString);
     const xInt = parseInt(xString);
     const yInt = parseInt(yString);
