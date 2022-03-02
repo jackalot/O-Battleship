@@ -25,6 +25,26 @@ function attackDomManager(player1, player2, callItAgain) {
     return false;
   }
   // seperateIds() helper function
+  // finds the y coordinate in the id
+  function findYcoordinate(nonSeperatedId) {
+    // sort through the loop, if this is 1,
+    let hyphenCount = 0;
+    // then add the numbers we find this string
+    let stringifiedNumbers = '';
+    for (let i = 0; i < nonSeperatedId.length; i += 1) {
+      // example id: P1Box-10-10
+      // when a hyphen is found, add one to hyphen count
+      if (nonSeperatedId[i] === '-') {
+        hyphenCount += 1;
+      } else if (hyphenCount === 2) {
+        stringifiedNumbers += nonSeperatedId[i];
+      }
+    }
+    // eslint-disable-next-line radix
+    const resultParsed = parseInt(stringifiedNumbers);
+    return resultParsed;
+  }
+  // seperateIds() helper function
   // finds the x coordinate in the id
   function findXcoordinate(nonSeperatedId) {
     // sort through the loop, if this is 1,
