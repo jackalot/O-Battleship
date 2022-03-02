@@ -26,6 +26,14 @@ Focus: adding a button that submits the attack onto the board:
     - parameters { coordinate, defendingPlayer, domBox}
     - first, store a reference to [ a function we need to plan out inside attackDomManager]
     - then store a reference to the defendingPlayer, their board, and their recieveAttack function
+    - if the result of the defendingPlayer's recieveAttack function resulted in a hit, 
+    {
+      
+    }
+    - else, if it resulted in a miss, 
+    {
+      
+    }
   }
 }
 psuedo code:
