@@ -31,6 +31,13 @@ function attackDomManager(player1, player2, callItAgain) {
     const hyphenCount = 0;
     // then add the numbers we find this string
     const stringifiedNumbers = '';
+    for (let i = 0; i < nonSeperatedId.length; i += 1) {
+      // example id: P1Box-10-10
+      // when the - after the x is found, add 1 to hyphen count
+      if (nonSeperatedId[i] === '-') {
+
+      }
+    }
   }
   // findUnconfirmedAttacks() helper function
   // will seperate the id into an object and will give each item
