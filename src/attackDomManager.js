@@ -23,9 +23,9 @@ function attackDomManager(player1, player2, callItAgain) {
     const yInt = parseInt(yString);
     const coordinate = { x: xInt, y: yInt };
     if (playerInt === 1) {
-      recieveDomAttack(coordinate, playerOne, attackBox);
+      recieveDomAttack(coordinate, player1, attackBox);
     } else if (playerInt === 2) {
-      recieveDomAttack(coordinate, playerTwo, attackBox);
+      recieveDomAttack(coordinate, player2, attackBox);
     }
   }
   return {
