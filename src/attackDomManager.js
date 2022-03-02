@@ -15,7 +15,7 @@ function attackDomManager(player1, player2, callItAgain) {
   }
   // findUnconfirmedAttacks() helper function
   // will seperate the id into an object and will give each item
-  function seperateIds() {
+  function seperateIds(nonSeperatedId) {
 
   }
   function findUnconfirmedAttacks() {
