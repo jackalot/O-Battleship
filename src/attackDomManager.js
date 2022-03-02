@@ -13,10 +13,15 @@ function attackDomManager(player1, player2, callItAgain) {
       domBox.classList.add('miss');
     }
   }
+  // seperateIds() helper function
+  // finds the player number in the id
+  function findPlayerNumber(nonSeperatedId) {
+
+  }
   // findUnconfirmedAttacks() helper function
   // will seperate the id into an object and will give each item
   function seperateIds(nonSeperatedId) {
-
+    const playerNumber = findPlayerNumber(nonSeperatedId);
   }
   function findUnconfirmedAttacks() {
     const attackBox = document.querySelector('.unconfirmedAttack');
