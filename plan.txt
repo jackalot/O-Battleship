@@ -38,6 +38,10 @@ Focus: adding a button that submits the attack onto the board:
     }
   }
 }
+attackDomManager will now return: 
+{
+  findUnconfirmedAttacks()
+}
 psuedo code:
 function findUnconfirmedAttacks() {
   const attackBox = document.querySelector('.unconfirmedAttack');
