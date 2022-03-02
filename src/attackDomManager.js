@@ -18,9 +18,11 @@ function attackDomManager(player1, player2, callItAgain) {
     //  gets the 1 or 2 in the player id, example:
     // out of id: P1Box-6-7, it gets 1 after the P
     const playerString = attackBox.id[1];
+    //  xString and y string get the coordinates from the id, example:
+    // out of id: P2Box-4-3, xString gets 4, yString gets 3
     const xString = attackBox.id[6];
     const yString = attackBox.id[8];
-    //! this doesn't account for 10s, IE P1Box 10
+    //! Warning, this doesn't account for 10s, IE P1Box 10
     const playerInt = parseInt(playerString);
     const xInt = parseInt(xString);
     const yInt = parseInt(yString);
