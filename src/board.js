@@ -188,14 +188,11 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
       const returned = findFirstShip(coordinate);
       const index = findMatchingCoordinate(returned.coord1, returned.coord2);
       if (index > -1) {
-        console.log(coordinate);
         const ourShip = myShips[index];
         const attackResult = ourShip.hit(coordinate); // always returns true
-        console.log(attackResult);
         if (attackResult === true) {
           storeHits(coordinate);
         } else { // when it returns false, it should go down to this segment
-          console.log('calling storeMisses');
           storeMisses(coordinate);
         }
         return attackResult; // the tests for misses return false
