@@ -14,20 +14,20 @@ test("seperateIds will seperate the Id 'P1Box-10-10' into an object", () => {
     })
 })
 // testing if single digit axis works on the x axis, and if player 2 returns
-test.skip("seperateIds will seperate the Id 'P2Box-5-10' into an object", () => {
+test("seperateIds will seperate the Id 'P2Box-5-10' into an object", () => {
     expect(mockAttackDomManager.seperateIds("P2Box-5-10")).toMatchObject({
         playerNumber: 2,
-        coordinates: {
+        coordinate: {
             x: 5,
             y: 10,
         }
     })
 })
-// testing if single digit axis works on the y axis, and if player 1 returns
-test.skip("seperateIds will seperate the Id 'P1Box-10-5' into an object", () => {
+// testing if single digit axis works on the y axis, and if player 2 returns
+test("seperateIds will seperate the Id 'P2Box-10-5' into an object", () => {
     expect(mockAttackDomManager.seperateIds("P2Box-10-5")).toMatchObject({
-        playerNumber: 1,
-        coordinates: {
+        playerNumber: 2,
+        coordinate: {
             x: 10,
             y: 5,
         }
