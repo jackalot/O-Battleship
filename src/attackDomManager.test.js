@@ -7,7 +7,7 @@ const mockAttackDomManager = attackDomManagerFile(player1, player2);
 test("seperateIds will seperate the Id 'P1Box-10-10' into an object", () => {
     expect(mockAttackDomManager.seperateIds("P1Box-10-10")).toMatchObject({
         playerNumber: 1,
-        coordinates: {
+        coordinate: {
             x: 10,
             y: 10,
         }
