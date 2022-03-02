@@ -27,7 +27,10 @@ function attackDomManager(player1, player2, callItAgain) {
   // seperateIds() helper function
   // finds the x coordinate in the id
   function findXcoordinate(nonSeperatedId) {
-
+    // sort through the loop, if this is 1,
+    const hyphenCount = 0;
+    // then add the numbers we find this string
+    const stringifiedNumbers = '';
   }
   // findUnconfirmedAttacks() helper function
   // will seperate the id into an object and will give each item
