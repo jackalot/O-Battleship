@@ -15,6 +15,8 @@ function attackDomManager(player1, player2, callItAgain) {
   }
   function findUnconfirmedAttacks() {
     const attackBox = document.querySelector('.unconfirmedAttack');
+    //  gets the 1 or 2 in the player id, example:
+    // out of id: P1Box-6-7, it gets 1 after the P
     const playerString = attackBox.id[1];
     const xString = attackBox.id[6];
     const yString = attackBox.id[8];
