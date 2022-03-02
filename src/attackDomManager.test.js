@@ -13,3 +13,21 @@ test("seperateIds will seperate the Id 'P1Box-10-10' into an object", () => {
         }
     })
 })
+test("seperateIds will seperate the Id 'P2Box-5-10' into an object", () => {
+    mockAttackDomManager.seperateIds("P2Box-5-10").toMatchObject({
+        playerNumber: 2,
+        coordinates: {
+            x: 5,
+            y: 10,
+        }
+    })
+})
+test("seperateIds will seperate the Id 'P1Box-10-5' into an object", () => {
+    mockAttackDomManager.seperateIds("P2Box-10-5").toMatchObject({
+        playerNumber: 1,
+        coordinates: {
+            x: 10,
+            y: 5,
+        }
+    })
+})
