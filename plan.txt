@@ -11,17 +11,17 @@ Focus: adding a button that submits the attack onto the board:
   - after the seperate coordinates have been parsed, store them into one coordinate object
   - if box id is a 1
   {
-    -call recieveAttack with the coordinates and the defending player is player One,
+    -call recieveDomAttack with the coordinates and the defending player is player One,
     also send the box we query selected
   }
   else, if the player is a 2
   {
-    -call recieveAttack with the coordinates and the defending player is player two,
+    -call recieveDomAttack with the coordinates and the defending player is player two,
     also send the box we query selected
   }
 }
-// most of this is basically updateDomBoard's recieveAttack function
-- in recieveAttack()
+// most of this is basically updateDomBoard's recieveDomAttack function
+- in recieveDomAttack()
   {
     - parameters { coordinate, defendingPlayer, domBox}
     - first, store a reference to [ a function we need to plan out inside attackDomManager]
@@ -54,14 +54,14 @@ function findUnconfirmedAttacks() {
   const coordinate = { x: xInt, y: yInt};
   if(playerInt === 1)
   {
-    recieveAttack(coordinate, playerOne, attackBox);
+    recieveDomAttack(coordinate, playerOne, attackBox);
   }
   else if(playerInt === 2)
   {
-    recieveAttack(coordinate, playerTwo, attackBox);
+    recieveDomAttack(coordinate, playerTwo, attackBox);
   }
 }
-function recieveAttack(coordinate, defendingPlayer, domBox) {
+function recieveDomAttack(coordinate, defendingPlayer, domBox) {
 const result = defendingPlayer.ourBoard.recieveAttack(coordinate);
 console.log(result);
   if(result === true)
