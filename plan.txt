@@ -33,7 +33,8 @@ Focus: adding a button that submits the attack onto the board:
     }
     - else, if it resulted in a miss, 
     {
-
+      - domBox will have the class name unconfirmedAttack removed
+      - domBox will have the class name miss added
     }
   }
 }
