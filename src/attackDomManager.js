@@ -40,7 +40,9 @@ function attackDomManager(player1, player2, callItAgain) {
         stringifiedNumbers += nonSeperatedId[i];
       }
     }
-    return stringifiedNumbers;
+    // eslint-disable-next-line radix
+    const resultParsed = parseInt(stringifiedNumbers);
+    return resultParsed;
   }
   // findUnconfirmedAttacks() helper function
   // will seperate the id into an object and will give each item
