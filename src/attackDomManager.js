@@ -18,6 +18,7 @@ function attackDomManager(player1, player2, callItAgain) {
     const playerString = attackBox.id[1];
     const xString = attackBox.id[6];
     const yString = attackBox.id[8];
+    //! this doesn't account for 10s, IE P1Box 10
     const playerInt = parseInt(playerString);
     const xInt = parseInt(xString);
     const yInt = parseInt(yString);
