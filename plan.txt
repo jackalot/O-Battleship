@@ -62,6 +62,12 @@ const result = defendingPlayer.ourBoard.recieveAttack(coordinate);
 console.log(result);
   if(result === true)
   {
-    
+    domBox.classList.remove('unconfirmedAttack');
+    domBox.classList.add('hit');
+  }
+  else if(result === false)
+  {
+    domBox.classList.remove('unconfirmedAttack');
+    domBox.classList.add('miss');
   }
 }
