@@ -75,3 +75,6 @@ console.log(result);
     domBox.classList.add('miss');
   }
 }
+return {
+  findUnconfirmedAttacks,
+}
