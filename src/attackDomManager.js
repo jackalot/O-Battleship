@@ -28,14 +28,16 @@ function attackDomManager(player1, player2, callItAgain) {
   // finds the x coordinate in the id
   function findXcoordinate(nonSeperatedId) {
     // sort through the loop, if this is 1,
-    const hyphenCount = 0;
+    let hyphenCount = 0;
     // then add the numbers we find this string
     const stringifiedNumbers = '';
     for (let i = 0; i < nonSeperatedId.length; i += 1) {
       // example id: P1Box-10-10
       // when the - after the x is found, add 1 to hyphen count
       if (nonSeperatedId[i] === '-') {
-
+        hyphenCount += 1;
+      } else if (hyphenCount === 1) {
+        stringifiedNumbers.push(nonSeperatedId[i]);
       }
     }
   }
