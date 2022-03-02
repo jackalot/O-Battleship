@@ -2,6 +2,17 @@
 //    or player2
 function attackDomManager(player1, player2, callItAgain) {
   //  console.log(player1.ourboard);
+  function recieveDomAttack(coordinate, defendingPlayer, domBox) {
+    const result = defendingPlayer.ourBoard.recieveAttack(coordinate);
+    console.log(result);
+    if (result === true) {
+      domBox.classList.remove('unconfirmedAttack');
+      domBox.classList.add('hit');
+    } else if (result === false) {
+      domBox.classList.remove('unconfirmedAttack');
+      domBox.classList.add('miss');
+    }
+  }
   function findUnconfirmedAttacks() {
     const attackBox = document.querySelector('.unconfirmedAttack');
     const playerString = attackBox.id[1];
@@ -15,17 +26,6 @@ function attackDomManager(player1, player2, callItAgain) {
       recieveDomAttack(coordinate, playerOne, attackBox);
     } else if (playerInt === 2) {
       recieveDomAttack(coordinate, playerTwo, attackBox);
-    }
-  }
-  function recieveDomAttack(coordinate, defendingPlayer, domBox) {
-    const result = defendingPlayer.ourBoard.recieveAttack(coordinate);
-    console.log(result);
-    if (result === true) {
-      domBox.classList.remove('unconfirmedAttack');
-      domBox.classList.add('hit');
-    } else if (result === false) {
-      domBox.classList.remove('unconfirmedAttack');
-      domBox.classList.add('miss');
     }
   }
   return {
