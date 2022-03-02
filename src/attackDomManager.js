@@ -13,6 +13,11 @@ function attackDomManager(player1, player2, callItAgain) {
       domBox.classList.add('miss');
     }
   }
+  // findUnconfirmedAttacks() helper function
+  // will seperate the id into an object and will give each item
+  function seperateIds() {
+
+  }
   function findUnconfirmedAttacks() {
     const attackBox = document.querySelector('.unconfirmedAttack');
     //! Warning, this doesn't account for 10s, IE P1Box 10
