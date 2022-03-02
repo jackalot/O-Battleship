@@ -42,6 +42,7 @@ function attackDomManager(player1, player2, callItAgain) {
   }
   return {
     findUnconfirmedAttacks,
+    seperateIds,
   };
 }
 module.exports = attackDomManager;
