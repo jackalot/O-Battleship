@@ -28,6 +28,9 @@ function attackDomManager(player1, player2, callItAgain) {
   // will seperate the id into an object and will give each item
   function seperateIds(nonSeperatedId) {
     const playerNumber = findPlayerNumber(nonSeperatedId);
+    return {
+      playerNumber,
+    };
   }
   function findUnconfirmedAttacks() {
     const attackBox = document.querySelector('.unconfirmedAttack');
