@@ -11,17 +11,19 @@ Focus: adding a button that submits the attack onto the board:
   - after the seperate coordinates have been parsed, store them into one coordinate object
   - if box id is a 1
   {
-    -call recieveAttack with the coordinates and the defending player is player One
+    -call recieveAttack with the coordinates and the defending player is player One,
+    also send the box we query selected
   }
   else, if the player is a 2
   {
-    -call recieveAttack with the coordinates and the defending player is player two
+    -call recieveAttack with the coordinates and the defending player is player two,
+    also send the box we query selected
   }
 }
 // most of this is basically updateDomBoard's recieveAttack function
 - in recieveAttack()
   {
-    - parameters { coordinate, defendingPlayer}
+    - parameters { coordinate, defendingPlayer, domBox}
     - first, store a reference to [ a function we need to plan out inside attackDomManager]
     - then store a reference to the defendingPlayer, their board, and their recieveAttack function
   }
