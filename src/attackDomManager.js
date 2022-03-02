@@ -16,7 +16,13 @@ function attackDomManager(player1, player2, callItAgain) {
   // seperateIds() helper function
   // finds the player number in the id
   function findPlayerNumber(nonSeperatedId) {
-
+    const numberAsAString = nonSeperatedId[1];
+    if (numberAsAString === '1') {
+      return 1;
+    } if (numberAsAString === '2') {
+      return 2;
+    }
+    return false;
   }
   // findUnconfirmedAttacks() helper function
   // will seperate the id into an object and will give each item
