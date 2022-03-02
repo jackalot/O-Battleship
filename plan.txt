@@ -60,4 +60,8 @@ function findUnconfirmedAttacks() {
 function recieveAttack(coordinate, defendingPlayer, domBox) {
 const result = defendingPlayer.ourBoard.recieveAttack(coordinate);
 console.log(result);
+  if(result === true)
+  {
+    
+  }
 }
