@@ -1,3 +1,3 @@
 Focus: visually clean up elements before continuing:
-
+* in index.html
 psuedo code: 
