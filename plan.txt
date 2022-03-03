@@ -1,7 +1,7 @@
 Focus: adding the button to confirm the attack:
 * in index.html
-- create a status div where the gameStatus element is
+- create a gameInfo div where the gameStatus element is
 <>
-- move the gameStatus inside that status div 
+- move the gameStatus inside that gameInfo div 
 </>
 psuedo code: 
