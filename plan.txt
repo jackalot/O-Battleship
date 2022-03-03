@@ -1,2 +1,2 @@
-Focus: 
+Focus: make the button confirm the attack:
 psuedo code: 
