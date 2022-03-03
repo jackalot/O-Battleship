@@ -3,4 +3,6 @@ Focus: make the button confirm the attack:
 - after the attackManager is instantiated, querySelect the confirm Attack Button (its class is
 confirmAttackBtn)
 - add an event listener to the button where click is what the button will listen for.
+- the function the button will call when clicked is the attackDomManagers findUnconfirmedAttacks()
+function.
 psuedo code: 
