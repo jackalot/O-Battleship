@@ -81,10 +81,10 @@ function attackDomManager(player1, player2, callItAgain) {
   function findUnconfirmedAttacks() {
     const attackBox = document.querySelector('.unconfirmedAttack');
     const idSeperated = seperateIds(attackBox.id);
-    if (playerInt === 1) {
-      recieveDomAttack(coordinate, player1, attackBox);
-    } else if (playerInt === 2) {
-      recieveDomAttack(coordinate, player2, attackBox);
+    if (idSeperated.playerNumber === 1) {
+      recieveDomAttack(idSeperated.coordinate, player1, attackBox);
+    } else if (idSeperated.playerNumber === 2) {
+      recieveDomAttack(idSeperated.coordinate, player2, attackBox);
     }
   }
   return {
