@@ -80,11 +80,13 @@ function attackDomManager(player1, player2, callItAgain) {
   }
   function findUnconfirmedAttacks() {
     const attackBox = document.querySelector('.unconfirmedAttack');
-    const idSeperated = seperateIds(attackBox.id);
-    if (idSeperated.playerNumber === 1) {
-      recieveDomAttack(idSeperated.coordinate, player1, attackBox);
-    } else if (idSeperated.playerNumber === 2) {
-      recieveDomAttack(idSeperated.coordinate, player2, attackBox);
+    if (attackBox) {
+      const idSeperated = seperateIds(attackBox.id);
+      if (idSeperated.playerNumber === 1) {
+        recieveDomAttack(idSeperated.coordinate, player1, attackBox);
+      } else if (idSeperated.playerNumber === 2) {
+        recieveDomAttack(idSeperated.coordinate, player2, attackBox);
+      }
     }
   }
   return {
