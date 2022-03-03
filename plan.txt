@@ -12,6 +12,7 @@ const playerTwo = playerFile('CPU', 1);
 //  console.log(playerOne.ourBoard);
 //  console.log(playerTwo.ourBoard);
 const attackManager = attackDomFile(playerOne, playerTwo, callItAgain);
+const confirmAttackBtn = document.querySelector('.confirmAttackBtn');
 
 const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', callItAgain, playerTwo);
 const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', callItAgain, playerOne);
