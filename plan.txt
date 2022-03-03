@@ -1,20 +1,3 @@
-Focus: make the button confirm the attack:
-* in index.js 
-- after the attackManager is instantiated, querySelect the confirm Attack Button (its class is
-confirmAttackBtn)
-- add an event listener to the button where click is what the button will listen for.
-- the function the button will call when clicked is the attackDomManagers findUnconfirmedAttacks()
-function.
+Focus: 
+
 psuedo code: 
-// index.js \\
-const playerOne = playerFile('player 1', 0);
-const playerTwo = playerFile('CPU', 1);
-//  console.log(playerOne.ourBoard);
-//  console.log(playerTwo.ourBoard);
-const attackManager = attackDomFile(playerOne, playerTwo, callItAgain);
-const confirmAttackBtn = document.querySelector('.confirmAttackBtn');
-confirmAttackBtn.addEventListener('click', () => {
-  attackManager.findUnconfirmedAttacks()
-});
-const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', callItAgain, playerTwo);
-const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', callItAgain, playerOne);
