@@ -1,14 +1,2 @@
-Focus: adding the button to confirm the attack:
-* in index.html
-- create a gameInfo div where the gameStatus element is
-<>
-- move the gameStatus inside that gameInfo div
-- create a button element with the class name "confirmAttackBtn"
-</>
+Focus: 
 psuedo code: 
-<p><strong>in index.HTML</strong></p>
-<div class="gameInfo">
- <p class="gameStatus">Game Status: </p>
- <label for="confirmAttackBtn">confirm attack</label>
- <button class="confirmAttackBtn"></button>
-</div>
