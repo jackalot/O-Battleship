@@ -2,4 +2,5 @@ Focus: make the button confirm the attack:
 * in index.js 
 - after the attackManager is instantiated, querySelect the confirm Attack Button (its class is
 confirmAttackBtn)
+- add an event listener where click is what the button will listen for.
 psuedo code: 
