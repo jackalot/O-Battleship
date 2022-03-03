@@ -5,3 +5,4 @@ Focus: adding the button to confirm the attack:
 - move the gameStatus inside that gameInfo div 
 </>
 psuedo code: 
+<p><strong>in index.HTML</strong></p>
