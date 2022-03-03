@@ -1,3 +1,6 @@
 Focus: visually clean up elements before continuing:
 * in index.html
+- the default text of gameStatus should not say game gameStatus and instead say:
+"Click on a square to attack that board, then click below to confirm you're attack!"
+? Reason: Right now, it just says "Game status: " which provides 0 feed back until you click a board icon.
 psuedo code: 
