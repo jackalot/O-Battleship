@@ -1,2 +1,3 @@
 Focus: make the button confirm the attack:
+* in index.js 
 psuedo code: 
