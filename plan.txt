@@ -6,3 +6,6 @@ Focus: adding the button to confirm the attack:
 </>
 psuedo code: 
 <p><strong>in index.HTML</strong></p>
+<div class="gameInfo">
+ <p class="gameStatus">Game Status: </p>
+</div>
