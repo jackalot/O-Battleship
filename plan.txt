@@ -6,6 +6,7 @@ confirmAttackBtn)
 - the function the button will call when clicked is the attackDomManagers findUnconfirmedAttacks()
 function.
 psuedo code: 
+// index.js \\
 const playerOne = playerFile('player 1', 0);
 const playerTwo = playerFile('CPU', 1);
 //  console.log(playerOne.ourBoard);
