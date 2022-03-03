@@ -4,4 +4,5 @@ Focus: visually clean up elements before continuing:
 "Click on a square to attack that board, then click below to confirm you're attack!"
 ? Reason: Right now, it just says "Game status: " which provides 0 feed back until you click a board icon.
 psuedo code: 
+<!-- index.html -->
  <p class="gameStatus">Click on a square to attack that board, then click below to confirm you're attack! </p>
