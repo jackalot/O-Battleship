@@ -12,6 +12,8 @@ function attackDomManager(player1, player2, callItAgain) {
       domBox.classList.remove('unconfirmedAttack');
       domBox.classList.add('miss');
     }
+    const gameStatus = document.querySelector('.gameStatus');
+    gameStatus.textContent = "Click on a square to attack that board, then click below to confirm you're attack! ";
   }
   // seperateIds() helper function
   // finds the player number in the id
