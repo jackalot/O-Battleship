@@ -55,17 +55,21 @@ function updateDOMBoard(myPlayer, searchQuery, otherPlayer, hideShips) {
         unconfirmedAttack(temporaryBox, coordinate);
       });
     } else if (shipResult === true && hideShips === false) {
+      //  its our turn, display the ships
       temporaryBox.classList.add('containsShip');
       //  Add unconfirmedAttack
       temporaryBox.addEventListener('click', () => {
         unconfirmedAttack(temporaryBox, coordinate);
       });
     } else if (shipResult === true && hideShips === true) {
+      //  Its the other players turn, hide our ships
       temporaryBox.classList.remove('containsShip');
+      // thanks to this event listener, unconfirmed attacks should still work
       temporaryBox.addEventListener('click', () => {
         unconfirmedAttack(temporaryBox, coordinate);
       });
     } else if (hitResult === false && missResult === false && shipResult === false) {
+      //  This is an empty spot, the other player wouldn't know that
       //  Add unconfirmedAttack
       temporaryBox.addEventListener('click', () => {
         unconfirmedAttack(temporaryBox, coordinate);
