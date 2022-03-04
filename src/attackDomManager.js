@@ -1,6 +1,6 @@
 //    Manages all the attacks sent via clicking on the boards, whether that be player1
 //    or player2
-function attackDomManager(player1, player2) {
+function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager) {
   //  console.log(player1.ourboard);
   function recieveDomAttack(coordinate, defendingPlayer, domBox) {
     const result = defendingPlayer.ourBoard.recieveAttack(coordinate);
