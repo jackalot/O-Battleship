@@ -3,3 +3,4 @@ Focus: visually clean up elements before continuing:
 - update game status to say its default text:
  "Click on a square to attack that board, then click below to confirm you're attack! "
 psuedo code: 
+// attackDomManager.js \\
