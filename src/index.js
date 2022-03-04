@@ -10,11 +10,7 @@ const playerOne = playerFile('player 1', 0);
 const playerTwo = playerFile('CPU', 1);
 //  console.log(playerOne.ourBoard);
 //  console.log(playerTwo.ourBoard);
-const attackManager = attackDomFile(playerOne, playerTwo);
-const confirmAttackBtn = document.querySelector('.confirmAttackBtn');
-confirmAttackBtn.addEventListener('click', () => {
-  attackManager.findUnconfirmedAttacks();
-});
+
 const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', playerTwo, false);
 const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', playerOne, true);
 playerOne.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
@@ -27,3 +23,8 @@ playerOne.ourBoard.placeShip({ x: 1, y: 10 }, { x: 10, y: 10 });
 playerTwo.ourBoard.placeShip({ x: 1, y: 10 }, { x: 10, y: 10 });
 p1DomBoardManager.sendNextCollumn();
 p2DomBoardManager.sendNextCollumn();
+const attackManager = attackDomFile(playerOne, playerTwo);
+const confirmAttackBtn = document.querySelector('.confirmAttackBtn');
+confirmAttackBtn.addEventListener('click', () => {
+  attackManager.findUnconfirmedAttacks();
+});
