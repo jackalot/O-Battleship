@@ -23,8 +23,8 @@ const confirmAttackBtn = document.querySelector('.confirmAttackBtn');
 confirmAttackBtn.addEventListener('click', () => {
   attackManager.findUnconfirmedAttacks();
 });
-const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', callItAgain, playerTwo);
-const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', callItAgain, playerOne);
+const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', playerTwo);
+const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', playerOne);
 playerOne.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
 playerTwo.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
 playerOne.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
