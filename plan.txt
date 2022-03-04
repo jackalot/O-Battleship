@@ -1,5 +1,8 @@
 Focus: make opponent player's board only display hit's, misses, and white spaces, aka hide ships:
 * in updateDomBoard.js
-- in checkBox() {
-    
+{
+    - in checkBox() {
+       - on the if statement of shipResult, add an and statement that also checks that new variable
+       hideShips is false
+    }
 }
