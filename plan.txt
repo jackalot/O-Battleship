@@ -1,3 +1,4 @@
 Focus: visually clean up elements before continuing:
-
+- after the attack is recieved, query select game status
+- update game status to say its default text
 psuedo code: 
