@@ -10,7 +10,6 @@ function updateDOMBoard(myPlayer, searchQuery, otherPlayer, hideShips) {
   }
   function searchMiss(coordinate) {
     const result = myPlayer.ourBoard.checkMissesAndHits(coordinate);
-    console.log(result);
     if (result === 'Miss') {
       return true;
     }
