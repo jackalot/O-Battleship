@@ -1,4 +1,4 @@
 Focus: after an attack is confirmed, the visible boards will swap:
 * attackDomManager.js
-- remove the lines from the console.log() to the second if statement.
+- remove the lines from the console.log() to the second if statement in the recieveDomAttack function.
 psuedo code:
