@@ -37,6 +37,11 @@ psuedo code:
       temporaryBox.addEventListener('click', () => {
         unconfirmedAttack(temporaryBox, coordinate);
       });
+    } else if(shipResult === true && hideShips === true) {
+        temporaryBox.classList.remove('containsShip');
+        temporaryBox.addEventListener('click', () => {
+        unconfirmedAttack(temporaryBox, coordinate);
+      });
     } else if (hitResult === false && missResult === false && shipResult === false) {
       //  Add unconfirmedAttack
       temporaryBox.addEventListener('click', () => {
