@@ -1,1 +1,1 @@
-Focus: 
+Focus: make opponent player's board only display hit's, misses, and white spaces, aka hide ships:
