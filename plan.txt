@@ -11,3 +11,5 @@ Focus: make opponent player's board only display hit's, misses, and white spaces
     }
 }
 * in index.js
+- the p1DomBoardManager will use the argument "false" for hideShips
+- the p2DomBoardManager will use the argument "true" for hideShips
