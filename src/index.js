@@ -6,14 +6,6 @@ const playerFile = require('./player');
 const domBoardFile = require('./updateDOMBoard');
 const attackDomFile = require('./attackDomManager');
 
-function callItAgain(defendingPlayer) {
-  console.log(defendingPlayer);
-  if (defendingPlayer === playerOne) {
-    p1DomBoardManager.sendNextCollumn();
-  } else if (defendingPlayer === playerTwo) {
-    p2DomBoardManager.sendNextCollumn();
-  }
-}
 const playerOne = playerFile('player 1', 0);
 const playerTwo = playerFile('CPU', 1);
 //  console.log(playerOne.ourBoard);
