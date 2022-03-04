@@ -18,7 +18,7 @@ const playerOne = playerFile('player 1', 0);
 const playerTwo = playerFile('CPU', 1);
 //  console.log(playerOne.ourBoard);
 //  console.log(playerTwo.ourBoard);
-const attackManager = attackDomFile(playerOne, playerTwo, callItAgain);
+const attackManager = attackDomFile(playerOne, playerTwo);
 const confirmAttackBtn = document.querySelector('.confirmAttackBtn');
 confirmAttackBtn.addEventListener('click', () => {
   attackManager.findUnconfirmedAttacks();
