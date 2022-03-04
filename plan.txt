@@ -1,4 +1,5 @@
 Focus: visually clean up elements before continuing:
 - after the attack is recieved, query select game status
-- update game status to say its default text
+- update game status to say its default text:
+ "Click on a square to attack that board, then click below to confirm you're attack! "
 psuedo code: 
