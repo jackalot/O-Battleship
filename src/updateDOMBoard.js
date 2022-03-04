@@ -55,9 +55,14 @@ function updateDOMBoard(myPlayer, searchQuery, otherPlayer, hideShips) {
       temporaryBox.removeEventListener('click', () => {
         unconfirmedAttack(temporaryBox, coordinate);
       });
-    } else if (shipResult === true) {
+    } else if (shipResult === true && hideShips === false) {
       temporaryBox.classList.add('containsShip');
       //  Add unconfirmedAttack
+      temporaryBox.addEventListener('click', () => {
+        unconfirmedAttack(temporaryBox, coordinate);
+      });
+    } else if (shipResult === true && hideShips === true) {
+      temporaryBox.classList.remove('containsShip');
       temporaryBox.addEventListener('click', () => {
         unconfirmedAttack(temporaryBox, coordinate);
       });
