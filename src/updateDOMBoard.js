@@ -1,4 +1,4 @@
-function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
+function updateDOMBoard(myPlayer, searchQuery, otherPlayer) {
   function searchShip(coordinate) {
     const result = myPlayer.ourBoard.findFirstShip(coordinate);
     //  due to changes made to findFirstShip, now that the findFirst ship function no longer returns
