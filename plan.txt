@@ -50,5 +50,5 @@ psuedo code:
     }
   }
   // index.js \\
-  const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', playerTwo);
-const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', playerOne);
+  const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', playerTwo, false);
+const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', playerOne, true);
