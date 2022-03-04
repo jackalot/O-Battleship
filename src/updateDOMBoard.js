@@ -1,17 +1,4 @@
 function updateDOMBoard(myPlayer, searchQuery, callItAgain, otherPlayer) {
-  function recieveDomAttack(coordinate, defendingPlayer) {
-    const result = defendingPlayer.ourBoard.recieveAttack(coordinate);
-    console.log(result);
-    callItAgain(defendingPlayer);
-  }
-  //  Allows you to apply any click EventListener to any function
-  function applyClickEvent(element, paramFunction) {
-    element.addEventListener('click', paramFunction);
-  }
-  //  Allows you to remove any Click EventListener from any element
-  function removeClickEvent(element, paramFunction) {
-    element.removeEventListener('click', paramFunction);
-  }
   function searchShip(coordinate) {
     const result = myPlayer.ourBoard.findFirstShip(coordinate);
     //  due to changes made to findFirstShip, now that the findFirst ship function no longer returns
