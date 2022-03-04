@@ -5,7 +5,8 @@ Focus: make opponent player's board only display hit's, misses, and white spaces
        - on the if statement of shipResult, add an and statement that also checks that new variable
        hideShips is false
        - a new if statement that checks if shipResult === true and hideShips === true {
-
+           - remove the containsShip class from the box at this coordinat (since we want to hide the ships)
+           - apply event listeners
        }
     }
 }
