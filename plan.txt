@@ -31,7 +31,7 @@ psuedo code:
       temporaryBox.removeEventListener('click', () => {
         unconfirmedAttack(temporaryBox, coordinate);
       });
-    } else if (shipResult === true) {
+    } else if (shipResult === true && hideShips === false) {
       temporaryBox.classList.add('containsShip');
       //  Add unconfirmedAttack
       temporaryBox.addEventListener('click', () => {
