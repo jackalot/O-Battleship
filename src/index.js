@@ -23,7 +23,9 @@ playerOne.ourBoard.placeShip({ x: 1, y: 10 }, { x: 10, y: 10 });
 playerTwo.ourBoard.placeShip({ x: 1, y: 10 }, { x: 10, y: 10 });
 p1DomBoardManager.sendNextCollumn();
 p2DomBoardManager.sendNextCollumn();
+// Manages every attack and calls sendNextCollumn again after an attackIs confirmed
 const attackManager = attackDomFile(playerOne, playerTwo, p1DomBoardManager, p2DomBoardManager);
+// Confirms attacks when clicked
 const confirmAttackBtn = document.querySelector('.confirmAttackBtn');
 confirmAttackBtn.addEventListener('click', () => {
   attackManager.findUnconfirmedAttacks();
