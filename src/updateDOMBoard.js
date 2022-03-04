@@ -23,7 +23,7 @@ function updateDOMBoard(myPlayer, searchQuery, otherPlayer, hideShips) {
     }
     return false;
   }
-  function unconfirmedAttack(temporaryBox, coordinate) {
+  function unconfirmedAttack(temporaryBox) {
     const anyPreviousAttacks = document.querySelectorAll('.unconfirmedAttack');
     if (anyPreviousAttacks.length === 0) {
       console.log(temporaryBox);
