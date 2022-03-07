@@ -7,5 +7,9 @@ Focus: change the function that causes the board.js to recieve an attack:
   + call player1.swapTurn()
   + call player2.swapTurn()
 }
+if the defendingPlayer is player2
+{
+
+}
 psuedo code:
 // attackDomManager \\
