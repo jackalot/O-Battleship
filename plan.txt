@@ -30,6 +30,8 @@ Focus: after an attack is confirmed, the visible boards will swap:
 }
 psuedo code:
 // updateDomBoard \\
+//  attackDomManager.swapVisibility() helperFunction()
+//  changes the hideShips variable
 function swapHideShips() {
     if(hideShips === true)
     {
@@ -41,6 +43,8 @@ function swapHideShips() {
     }
 }
 // attackDomManager \\
+// recieveDomAttack() helperFunction
+// calls p1DomBoardManager and p2DomBoardManager functions
 function swapVisibility(defendingPlayer)
 {
     if(defendingPlayer === player1)
