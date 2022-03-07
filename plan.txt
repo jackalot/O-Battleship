@@ -1,7 +1,7 @@
 Focus: after an attack is confirmed, the visible boards will swap:
 * updateDomBoard.js
 // attackDomManager.swapVisibility() helperFunction()
-- inside updateDomBoard, a new fucntion called swapHideShips()
+- inside updateDomBoard, a new function called swapHideShips()
 {
    - if hideShips is true, make it false
    - if its false make it true
@@ -11,10 +11,13 @@ Focus: after an attack is confirmed, the visible boards will swap:
 {
     - parameters { defendingPlayer }
     - first, it checks if defendingPlayer is player1 {
+        - call p1DomBoardManager.swapHideShips();
+        - call p2DomBoardManager.swapHideShips();
 
     }
     - if its not player1 then it checks if its player 2 {
-        
+        - call p2DomBoardManager.swapHideShips();
+        - call p1DomBoardManager.swapHideShips();
     }
 }
 - in the recieveDomAttack () {
