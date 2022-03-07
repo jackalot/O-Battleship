@@ -26,6 +26,7 @@ Focus: after an attack is confirmed, the visible boards will swap:
 - in the recieveDomAttack () {
 - remove the variable result but don't remove the function call to the defending player
 - remove the lines from the console.log() to the second if statement.
+- call swapVisibility with the argument of defendingPlayer
 }
 psuedo code:
 // updateDomBoard \\
