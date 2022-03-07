@@ -1,6 +1,9 @@
 Focus: Stop the player from attacking if its not their turn:
 * in updateDomBoard.js
 - in unconfirmedAttack (){
-
+ - before any other previous attacks are queryselected, check if player.playerTurn equals 0
+ {
+     - then continue the function.
+ }
 }
 psuedo code:
