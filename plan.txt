@@ -1,5 +1,9 @@
 Focus: after an attack is confirmed, the visible boards will swap:
 * updateDomBoard.js
+- inside updateDomBoard, a new fucntion called swapHideShips()
+{
+    
+}
 * attackDomManager.js
 - inside attackDomManager, a new function called swapVisibility()
 {
