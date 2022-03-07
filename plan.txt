@@ -1,2 +1,5 @@
 Focus: change the function that causes the board.js to recieve an attack:
+* attackDomManager.js 
+
 psuedo code:
+// attackDomManager \\
