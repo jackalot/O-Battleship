@@ -45,4 +45,5 @@ function recieveDomAttack(coordinate, defendingPlayer, domBox) {
     defendingPlayer.ourBoard.recieveAttack(coordinate);
     const gameStatus = document.querySelector('.gameStatus');
     gameStatus.textContent = "Click on a square to attack that board, then click below to confirm you're attack! ";
+    swapVisibility(defendingPlayer);
   }
