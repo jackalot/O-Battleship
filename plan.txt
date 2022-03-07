@@ -13,3 +13,9 @@ if the defendingPlayer is player2
 }
 psuedo code:
 // attackDomManager \\
+
+notes:
+notes about playerTurn, the variable
+at the end of swapVisibility, despite the swapTurn function calls, currently, player1 remains as turn 0
+player 2 remains as turn 1 when after player1 attacks, the turn is supposed to swap, so this means
+possibly rewriting the player functions so that they both swap AND recieveAttacks. 
