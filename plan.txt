@@ -3,6 +3,12 @@ Focus: after an attack is confirmed, the visible boards will swap:
 - inside attackDomManager, a new function called swapVisibility()
 {
     - parameters { defendingPlayer }
+    - first, it checks if defendingPlayer is player1 {
+
+    }
+    - if its not player1 then it checks if its player 2 {
+        
+    }
 }
 - in the recieveDomAttack () {
 - remove the variable result but don't remove the function call to the defending player
