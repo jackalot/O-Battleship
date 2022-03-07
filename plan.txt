@@ -43,7 +43,14 @@ function swapHideShips() {
 // attackDomManager \\
 function swapVisibility(defendingPlayer)
 {
-    
+    if(defendingPlayer === player1)
+    {
+
+    }
+    else if(defendingPlayer === player2)
+    {
+        
+    }
 }
 function recieveDomAttack(coordinate, defendingPlayer, domBox) {
     defendingPlayer.ourBoard.recieveAttack(coordinate);
