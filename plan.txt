@@ -41,7 +41,8 @@ psuedo code:
         }
      }
   }
-  function swapVisibility(defendingPlayer) {
+/// attackDomManager.js \\\
+function swapVisibility(defendingPlayer) {
     if (defendingPlayer === player1) {
       player1.swapTurn();
       player2.swapTurn();
@@ -58,4 +59,3 @@ psuedo code:
       p1DomBoardManager.sendNextCollumn();
     }
   }
-/// attackDomManager.js \\\
