@@ -19,6 +19,7 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
       p1DomBoardManager.swapHideShips();
       p2DomBoardManager.sendNextCollumn();
       p1DomBoardManager.sendNextCollumn();
+      console.log(player2.playerTurn);
     }
   }
   function recieveDomAttack(coordinate, defendingPlayer) {
