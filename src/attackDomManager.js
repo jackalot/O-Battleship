@@ -17,7 +17,7 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
       p1DomBoardManager.sendNextCollumn();
     }
   }
-  function recieveDomAttack(coordinate, defendingPlayer, domBox) {
+  function recieveDomAttack(coordinate, defendingPlayer) {
     defendingPlayer.ourBoard.recieveAttack(coordinate);
     const gameStatus = document.querySelector('.gameStatus');
     gameStatus.textContent = "Click on a square to attack that board, then click below to confirm you're attack! ";
