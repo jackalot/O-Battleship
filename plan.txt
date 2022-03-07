@@ -13,5 +13,9 @@ Focus: Stop the player from attacking if its not their turn:
         -call the player1.swapTurn() function
         -call the player2.swapTurn() function
     }
+    - if defendingPlayer is equal to player2 {
+        -call the player2.swapTurn() function
+        -call the player1.swapTurn() function
+    }
 }
 psuedo code:
