@@ -15,6 +15,7 @@ Focus: after an attack is confirmed, the visible boards will swap:
 - remove the lines from the console.log() to the second if statement.
 }
 psuedo code:
+// attackDomManager \\
 function recieveDomAttack(coordinate, defendingPlayer, domBox) {
     defendingPlayer.ourBoard.recieveAttack(coordinate);
     const gameStatus = document.querySelector('.gameStatus');
