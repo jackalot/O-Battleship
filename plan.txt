@@ -1,3 +1,6 @@
 Focus: Stop the player from attacking if its not their turn:
 * in updateDomBoard.js
+- in unconfirmedAttack (){
+
+}
 psuedo code:
