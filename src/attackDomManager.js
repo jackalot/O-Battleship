@@ -93,9 +93,9 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
     if (attackBox) {
       const idSeperated = seperateIds(attackBox.id);
       if (idSeperated.playerNumber === 1) {
-        recieveDomAttack(idSeperated.coordinate, player1, attackBox);
+        recieveDomAttack(idSeperated.coordinate, player1);
       } else if (idSeperated.playerNumber === 2) {
-        recieveDomAttack(idSeperated.coordinate, player2, attackBox);
+        recieveDomAttack(idSeperated.coordinate, player2);
       }
     }
   }
