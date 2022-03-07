@@ -14,11 +14,13 @@ Focus: after an attack is confirmed, the visible boards will swap:
         - call p1DomBoardManager.swapHideShips();
         - call p2DomBoardManager.swapHideShips();
         - update the board by then calling p1DomBoardManager.sendNextCollumn();
+        - update the other players board by finally calling p2DomBoardManager.sendNextCollumn();
     }
     - if its not player1 then it checks if its player 2 {
         - call p2DomBoardManager.swapHideShips();
         - call p1DomBoardManager.swapHideShips();
         - update the board by then calling p2DomBoardManager.sendNextCollumn();
+        - update the other players board by finally calling p1DomBoardManager.sendNextCollumn();
     }
 }
 - in the recieveDomAttack () {
