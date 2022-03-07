@@ -45,11 +45,13 @@ function swapVisibility(defendingPlayer)
 {
     if(defendingPlayer === player1)
     {
-
+        p1DomBoardManager.swapHideShips();
+        p2DomBoardManager.swapHideShips();
     }
     else if(defendingPlayer === player2)
     {
-        
+        p2DomBoardManager.swapHideShips();
+        p1DomBoardManager.swapHideShips();
     }
 }
 function recieveDomAttack(coordinate, defendingPlayer, domBox) {
