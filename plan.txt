@@ -47,11 +47,15 @@ function swapVisibility(defendingPlayer)
     {
         p1DomBoardManager.swapHideShips();
         p2DomBoardManager.swapHideShips();
+        p1DomBoardManager.sendNextCollumn();
+        p2DomBoardManager.sendNextCollumn();
     }
     else if(defendingPlayer === player2)
     {
         p2DomBoardManager.swapHideShips();
         p1DomBoardManager.swapHideShips();
+        p2DomBoardManager.sendNextCollumn();
+        p1DomBoardManager.sendNextCollumn();
     }
 }
 function recieveDomAttack(coordinate, defendingPlayer, domBox) {
