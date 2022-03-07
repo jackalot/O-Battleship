@@ -18,17 +18,10 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
     }
   }
   function recieveDomAttack(coordinate, defendingPlayer, domBox) {
-    const result = defendingPlayer.ourBoard.recieveAttack(coordinate);
-    console.log(result);
-    if (result === true) {
-      domBox.classList.remove('unconfirmedAttack');
-      domBox.classList.add('hit');
-    } else if (result === false) {
-      domBox.classList.remove('unconfirmedAttack');
-      domBox.classList.add('miss');
-    }
+    defendingPlayer.ourBoard.recieveAttack(coordinate);
     const gameStatus = document.querySelector('.gameStatus');
     gameStatus.textContent = "Click on a square to attack that board, then click below to confirm you're attack! ";
+    swapVisibility(defendingPlayer);
   }
   // seperateIds() helper function
   // finds the player number in the id
