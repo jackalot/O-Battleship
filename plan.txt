@@ -41,6 +41,10 @@ function swapHideShips() {
     }
 }
 // attackDomManager \\
+function swapVisibility(defendingPlayer)
+{
+    
+}
 function recieveDomAttack(coordinate, defendingPlayer, domBox) {
     defendingPlayer.ourBoard.recieveAttack(coordinate);
     const gameStatus = document.querySelector('.gameStatus');
