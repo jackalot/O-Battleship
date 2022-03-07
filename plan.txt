@@ -1,5 +1,9 @@
 Focus: change the function that causes the board.js to recieve an attack:
 * attackDomManager.js 
 - delete the line defendingPlayer.ourBoard.recieveAttack 
++ if the defendingPlayer is player1
+{
+  
+}
 psuedo code:
 // attackDomManager \\
