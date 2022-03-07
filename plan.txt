@@ -5,3 +5,16 @@ Focus: after an attack is confirmed, the visible boards will swap:
 - remove the lines from the console.log() to the second if statement.
 }
 psuedo code:
+function recieveDomAttack(coordinate, defendingPlayer, domBox) {
+    const result = defendingPlayer.ourBoard.recieveAttack(coordinate);
+    console.log(result);
+    if (result === true) {
+      domBox.classList.remove('unconfirmedAttack');
+      domBox.classList.add('hit');
+    } else if (result === false) {
+      domBox.classList.remove('unconfirmedAttack');
+      domBox.classList.add('miss');
+    }
+    const gameStatus = document.querySelector('.gameStatus');
+    gameStatus.textContent = "Click on a square to attack that board, then click below to confirm you're attack! ";
+  }
