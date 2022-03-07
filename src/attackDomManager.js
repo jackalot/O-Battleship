@@ -3,7 +3,7 @@
 function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager) {
   //  console.log(player1.ourboard);
   // recieveDomAttack() helperFunction
-  // calls p1DomBoardManager and p2DomBoardManager functions
+// calls p1DomBoardManager and p2DomBoardManager functions
   function swapVisibility(defendingPlayer) {
     if (defendingPlayer === player1) {
       p1DomBoardManager.swapHideShips();
