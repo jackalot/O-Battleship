@@ -24,7 +24,7 @@ function updateDOMBoard(myPlayer, searchQuery, otherPlayer, hideShips) {
     return false;
   }
   function unconfirmedAttack(temporaryBox) {
-    console.log(otherPlayer.playerTurn);
+    // console.log(otherPlayer.playerTurn);
     // if the other players board is 0 (which means its their turn),
     // then continue on
     if (otherPlayer.playerTurn === 0) {
