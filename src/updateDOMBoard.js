@@ -24,21 +24,23 @@ function updateDOMBoard(myPlayer, searchQuery, otherPlayer, hideShips) {
     return false;
   }
   function unconfirmedAttack(temporaryBox) {
-    // in the case this function is called more than once, get all cases of the class
-    const anyPreviousAttacks = document.querySelectorAll('.unconfirmedAttack');
-    // if there isn't any, move on
-    if (anyPreviousAttacks.length === 0) {
-      console.log(temporaryBox);
-      temporaryBox.classList.add('unconfirmedAttack');
-      const gameStatus = document.querySelector('.gameStatus');
-      gameStatus.textContent = `${otherPlayer.playerName}, please confirm attack`;
-    } else { // remove the last unconfirmed attacks, then continue out
-      anyPreviousAttacks.forEach((element) => {
-        element.classList.remove('unconfirmedAttack');
-      });
-      temporaryBox.classList.add('unconfirmedAttack');
-      const gameStatus = document.querySelector('.gameStatus');
-      gameStatus.textContent = `${otherPlayer.playerName}, please confirm attack`;
+    if (myPlayer.playerTurn === 0) {
+      // in the case this function is called more than once, get all cases of the class
+      const anyPreviousAttacks = document.querySelectorAll('.unconfirmedAttack');
+      // if there isn't any, move on
+      if (anyPreviousAttacks.length === 0) {
+        console.log(temporaryBox);
+        temporaryBox.classList.add('unconfirmedAttack');
+        const gameStatus = document.querySelector('.gameStatus');
+        gameStatus.textContent = `${otherPlayer.playerName}, please confirm attack`;
+      } else { // remove the last unconfirmed attacks, then continue out
+        anyPreviousAttacks.forEach((element) => {
+          element.classList.remove('unconfirmedAttack');
+        });
+        temporaryBox.classList.add('unconfirmedAttack');
+        const gameStatus = document.querySelector('.gameStatus');
+        gameStatus.textContent = `${otherPlayer.playerName}, please confirm attack`;
+      }
     }
   }
   function checkBox(coordinate, temporaryBox) {
