@@ -6,4 +6,5 @@ Focus: Stop the player from attacking if its not their turn:
      - then continue the function.
  }
 }
+* in attackDomManager.js
 psuedo code:
