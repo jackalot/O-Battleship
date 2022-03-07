@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 function updateDOMBoard(myPlayer, searchQuery, otherPlayer, hideShips) {
   function searchShip(coordinate) {
     const result = myPlayer.ourBoard.findFirstShip(coordinate);
@@ -88,6 +89,15 @@ function updateDOMBoard(myPlayer, searchQuery, otherPlayer, hideShips) {
     //  this funcions main purpose is to send a collumn to findInRow();
     for (let i = 1; i < 11; i += 1) {
       findInRow(i);
+    }
+  }
+  //  attackDomManager.swapVisibility() helperFunction()
+  //  changes the hideShips variable
+  function swapHideShips() {
+    if (hideShips === true) {
+      hideShips = false;
+    } else if (hideShips === false) {
+      hideShips = true;
     }
   }
   //  These are tests
