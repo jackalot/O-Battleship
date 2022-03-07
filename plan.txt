@@ -7,4 +7,8 @@ Focus: Stop the player from attacking if its not their turn:
  }
 }
 * in attackDomManager.js
+- in swapVisibility()
+{
+
+}
 psuedo code:
