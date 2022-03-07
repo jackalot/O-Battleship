@@ -29,6 +29,16 @@ Focus: after an attack is confirmed, the visible boards will swap:
 }
 psuedo code:
 // updateDomBoard \\
+function swapHideShips() {
+    if(hideShips === true)
+    {
+        hideShips = false;
+    }
+    else if(hideShips === false)
+    {
+        hideShips = true;
+    }
+}
 // attackDomManager \\
 function recieveDomAttack(coordinate, defendingPlayer, domBox) {
     defendingPlayer.ourBoard.recieveAttack(coordinate);
