@@ -4,7 +4,9 @@ const playerFactory = (playerName, playerTurn) => {
   const ourBoard = boardFile({ x: 1, y: 1 }, { x: 10, y: 10 });
   function callBoardRecieveAttack(coordinates) {
     const result = ourBoard.recieveAttack(coordinates);
-    swapTurn();
+    console.log(playerName, playerTurn);
+    if (playerTurn === 1) { swapTurn(); }
+    console.log(playerName, playerTurn);
     return result;
   }
   //  this is for the AI to attack randomly, also helps check we didnt hit
@@ -39,7 +41,9 @@ const playerFactory = (playerName, playerTurn) => {
   }
   function sendAttack(playerAttacking, coordinates) {
     const result = playerAttacking.callBoardRecieveAttack(coordinates);
-    swapTurn();
+    console.log(playerName, playerTurn);
+    if (playerTurn === 0) { swapTurn(); }
+    console.log(playerName, playerTurn);
     return result;
   }
   // calls the players board to place a ship at the desired coordinates
