@@ -5,6 +5,9 @@ Focus: change the function that causes the board.js to recieve an attack:
   + call swapTurn();
   + return the result of the attack
 }
++ in sendAttack () {
+
+}
 * attackDomManager.js 
 - delete the line defendingPlayer.ourBoard.recieveAttack 
 + if the defendingPlayer is player1
