@@ -25,6 +25,11 @@ if the defendingPlayer is player2
 }
 psuedo code:
 // player.js \\ 
+function callBoardRecieveAttack(coordinates) {
+ const result = ourBoard.recieveAttack(coordinates);
+ swapTurn();
+ return result;
+}
 // attackDomManager \\
 
 notes:
