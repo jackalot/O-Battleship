@@ -3,6 +3,7 @@ Focus: change the function that causes the board.js to recieve an attack:
 + inside player.js, a function called callBoardRecieveAttack() {
   + call ourBoard.recieveAttack() with a stored reference to it;
   + call swapTurn();
+  + return the result of the attack
 }
 * attackDomManager.js 
 - delete the line defendingPlayer.ourBoard.recieveAttack 
