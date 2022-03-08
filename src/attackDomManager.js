@@ -1,7 +1,6 @@
 //    Manages all the attacks sent via clicking on the boards, whether that be player1
 //    or player2
 function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager) {
-  //  console.log(player1.ourboard);
   // recieveDomAttack() helperFunction
 // calls p1DomBoardManager and p2DomBoardManager functions
   function swapVisibility(defendingPlayer) {
@@ -24,7 +23,6 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
     if (defendingPlayer === player2) {
       player1.sendAttack(player2, coordinate);
     }
-    console.log(player1.playerTurn);
     const gameStatus = document.querySelector('.gameStatus');
     gameStatus.textContent = "Click on a square to attack that board, then click below to confirm you're attack! ";
     swapVisibility(defendingPlayer);

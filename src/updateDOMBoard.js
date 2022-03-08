@@ -24,7 +24,6 @@ function updateDOMBoard(myPlayer, searchQuery, otherPlayer, hideShips) {
     return false;
   }
   function unconfirmedAttack(temporaryBox) {
-    // console.log(otherPlayer.playerTurn);
     // if hideShips is true, then this board can be attacked. Other wise, nothing will happen.
     if (hideShips === true) {
       // in the case this function is called more than once, get all cases of the class
