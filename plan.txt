@@ -6,7 +6,7 @@ Focus: change the function that causes the board.js to recieve an attack:
   + return the result of the attack
 }
 + in sendAttack () {
-
+ - remove the stored result of attackingPlayer's board's recieveAttack function
 }
 * attackDomManager.js 
 - delete the line defendingPlayer.ourBoard.recieveAttack 
