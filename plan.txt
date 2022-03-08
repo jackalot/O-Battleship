@@ -8,6 +8,7 @@ Focus: change the function that causes the board.js to recieve an attack:
 + in sendAttack () {
  - remove the stored result of attackingPlayer's board's recieveAttack function
  + instead, store the result of attackingPlayer's callBoardRecieveAttack() function
+ - remove the function call that calls attackingPlayer's swapTurn function
 }
 * attackDomManager.js 
 - delete the line defendingPlayer.ourBoard.recieveAttack 
