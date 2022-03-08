@@ -48,7 +48,14 @@ const playerFactory = (playerName, playerTurn) => {
     return result;
   }
   return {
-    playerName, playerTurn, ourBoard, sendAttack, placeShip, swapTurn, sendRandomAttack,
+    playerName,
+    playerTurn,
+    ourBoard,
+    sendAttack,
+    placeShip,
+    swapTurn,
+    sendRandomAttack,
+    callBoardRecieveAttack,
   };
 };
 module.exports = playerFactory;
