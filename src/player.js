@@ -4,9 +4,6 @@ const playerFactory = (playerName, playerTurn) => {
   const ourBoard = boardFile({ x: 1, y: 1 }, { x: 10, y: 10 });
   function callBoardRecieveAttack(coordinates) {
     const result = ourBoard.recieveAttack(coordinates);
-    console.log(playerName, playerTurn);
-    if (playerTurn === 1) { swapTurn(); }
-    console.log(playerName, playerTurn);
     return result;
   }
   //  this is for the AI to attack randomly, also helps check we didnt hit
