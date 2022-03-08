@@ -36,7 +36,12 @@ function callBoardRecieveAttack(coordinates) {
     return result;
   }
 // attackDomManager \\
-
+function recieveDomAttack(coordinate, defendingPlayer) {
+    defendingPlayer.ourBoard.recieveAttack(coordinate);
+    const gameStatus = document.querySelector('.gameStatus');
+    gameStatus.textContent = "Click on a square to attack that board, then click below to confirm you're attack! ";
+    swapVisibility(defendingPlayer);
+  }
 notes:
 notes about playerTurn, the variable
 at the end of swapVisibility, despite the swapTurn function calls, currently, player1 remains as turn 0
