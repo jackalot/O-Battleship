@@ -24,6 +24,7 @@ if the defendingPlayer is player2
  + player2  will then call sendAttack with the arguments(player1, coordinates)
 }
 psuedo code:
+// player.js \\ 
 // attackDomManager \\
 
 notes:
