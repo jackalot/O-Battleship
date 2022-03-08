@@ -27,7 +27,9 @@ function updateDOMBoard(myPlayer, searchQuery, otherPlayer, hideShips) {
     // console.log(otherPlayer.playerTurn);
     // if the other players board is 0 (which means its their turn),
     // then continue on
-    if (otherPlayer.playerTurn === 0) {
+    console.log(myPlayer.playerName, myPlayer.playerTurn);
+    console.log(otherPlayer.playerName, otherPlayer.playerTurn);
+    if (otherPlayer.playerTurn === 0 && myPlayer.playerTurn === 1) {
       // in the case this function is called more than once, get all cases of the class
       const anyPreviousAttacks = document.querySelectorAll('.unconfirmedAttack');
       // if there isn't any, move on
