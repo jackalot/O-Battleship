@@ -44,6 +44,8 @@ const playerFactory = (playerName, playerTurn) => {
     console.log(playerName, playerTurn);
     if (playerTurn === 0) { swapTurn(); }
     console.log(playerName, playerTurn);
+
+    console.log(`${playerAttacking.playerName} is now turn ${playerAttacking.playerTurn} and our turn is: ${playerTurn}`);
     return result;
   }
   // calls the players board to place a ship at the desired coordinates
