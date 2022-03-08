@@ -17,9 +17,7 @@ Focus: change the function that causes the board.js to recieve an attack:
 - delete the line defendingPlayer.ourBoard.recieveAttack 
 + if the defendingPlayer is player1
 {
-  + call defendingPlayer board's recieveAttack function
-  + call player1.swapTurn()
-  + call player2.swapTurn()
+  
 }
 if the defendingPlayer is player2
 {
