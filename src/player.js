@@ -38,10 +38,9 @@ const playerFactory = (playerName, playerTurn) => {
   }
   function sendAttack(playerAttacking, coordinates) {
     const result = playerAttacking.callBoardRecieveAttack(coordinates);
-    console.log(playerName, playerTurn);
-    if (playerTurn === 0) { swapTurn(); }
-    console.log(playerName, playerTurn);
 
+    if (playerTurn === 0) { swapTurn(); }
+    if (playerAttacking.playerTurn === 1) { playerAttacking.swapTurn(); }
     console.log(`${playerAttacking.playerName} is now turn ${playerAttacking.playerTurn} and our turn is: ${playerTurn}`);
     return result;
   }
