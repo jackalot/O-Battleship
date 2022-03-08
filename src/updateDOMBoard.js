@@ -25,11 +25,8 @@ function updateDOMBoard(myPlayer, searchQuery, otherPlayer, hideShips) {
   }
   function unconfirmedAttack(temporaryBox) {
     // console.log(otherPlayer.playerTurn);
-    // if the other players board is 0 (which means its their turn),
-    // then continue on
-    console.log(myPlayer.playerName, myPlayer.playerTurn);
-    console.log(otherPlayer.playerName, otherPlayer.playerTurn);
-    if (otherPlayer.playerTurn === 0 && myPlayer.playerTurn === 1) {
+    // if hideShips is true, then this board can be attacked. Other wise, nothing will happen.
+    if (hideShips === true) {
       // in the case this function is called more than once, get all cases of the class
       const anyPreviousAttacks = document.querySelectorAll('.unconfirmedAttack');
       // if there isn't any, move on
