@@ -21,7 +21,7 @@ Focus: change the function that causes the board.js to recieve an attack:
 }
 if the defendingPlayer is player2
 {
-
+ + player2  will then call sendAttack with the arguments(player1, coordinates)
 }
 psuedo code:
 // attackDomManager \\
