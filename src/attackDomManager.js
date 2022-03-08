@@ -6,20 +6,15 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
 // calls p1DomBoardManager and p2DomBoardManager functions
   function swapVisibility(defendingPlayer) {
     if (defendingPlayer === player1) {
-      player1.swapTurn();
-      player2.swapTurn();
       p1DomBoardManager.swapHideShips();
       p2DomBoardManager.swapHideShips();
       p1DomBoardManager.sendNextCollumn();
       p2DomBoardManager.sendNextCollumn();
     } else if (defendingPlayer === player2) {
-      player2.swapTurn();
-      player1.swapTurn();
       p2DomBoardManager.swapHideShips();
       p1DomBoardManager.swapHideShips();
       p2DomBoardManager.sendNextCollumn();
       p1DomBoardManager.sendNextCollumn();
-      console.log(player2.playerTurn);
     }
   }
   function recieveDomAttack(coordinate, defendingPlayer) {
@@ -29,6 +24,7 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
     if (defendingPlayer === player2) {
       player1.sendAttack(player2, coordinate);
     }
+    console.log(player1.playerTurn);
     const gameStatus = document.querySelector('.gameStatus');
     gameStatus.textContent = "Click on a square to attack that board, then click below to confirm you're attack! ";
     swapVisibility(defendingPlayer);
