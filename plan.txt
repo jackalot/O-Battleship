@@ -17,7 +17,7 @@ Focus: change the function that causes the board.js to recieve an attack:
 - delete the line defendingPlayer.ourBoard.recieveAttack 
 + if the defendingPlayer is player1
 {
-  
+  + player1 will then call sendAttack with the arguments(player2, coordinates)
 }
 if the defendingPlayer is player2
 {
