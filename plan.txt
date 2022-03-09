@@ -27,7 +27,6 @@ const mockShip4 = shipFile(coord1 = {x: 10, y: 1}, coord2 = { x: 10, y: 10});
     they will return the ship's coordinates, and it's functions.
     For the test's, they only test the coordinate's returning.
 */
-//  this test is giving errors
 test("mockShip returns an object", () => {
     expect(mockShip).toMatchObject({ coord1: {x: 1, y: 1}, coord2: {x: 1, y: 7} });
 })
