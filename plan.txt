@@ -72,6 +72,9 @@ test("mockShip4 returns a length of 9", () => {
 test("mockShip will get hit at [1, 1]", () => {
     expect(mockShip.hit({x: 1, y: 1})).toBe(true);
 })
+test("mockShip2 will get hit at [9, 3]", () => {
+    expect(mockShip2.hit({x: 9, y: 3})).toBe(true);
+})
 /*
     The following tests are hit() tests but at the mid point or 
     somewhere between the end points of the ship, like at 9, 6
@@ -91,9 +94,6 @@ test("mockShip2 will get hit at [9, 6]", () => {
 */
 test("mockShip will get hit at [1, 7]", () => {
     expect(mockShip.hit({x: 1, y: 7})).toBe(true);
-})
-test("mockShip2 will get hit at [9, 3]", () => {
-    expect(mockShip2.hit({x: 9, y: 3})).toBe(true);
 })
 test("mockShip2 will get hit at [9, 9]", () => {
     expect(mockShip2.hit({x: 9, y: 9})).toBe(true);
