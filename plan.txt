@@ -7,3 +7,4 @@ this group is going to be the 'toMatchObject' group where ships just return them
 - paste all the toMatchObject tests where the ships return an toMatchObject
 - add a comment as a divider to state the next group of tests which will be,
 this group will be the length Measurer group
+/ repeat this for each test
