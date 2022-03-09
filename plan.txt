@@ -281,6 +281,12 @@ test("mockShip3 will not sink", () => {
 test("mockShip4 will not sink", () => {
     expect(mockShip4.sink()).toBe('I still have parts left');
 })
+/*
+    The following tests are the getAllCoordinates tests. They will
+    all return coordinate objects in an array. The coordinates they
+    return are the coordinates to each part of the the ship and
+    each part.
+*/
 test("mockShip will return all of its coordinates, including the parts", () => {
     expect(mockShip.getAllCoordinates()).toMatchObject([
         {x:1,y:1},{x:1,y:2},
