@@ -180,6 +180,24 @@ test("mockShip4 will not get hit at [8, 9]", () => {
     off the ship, this is to check if just one number
     off could break the entire function.
 */
+test("mockShip will not get hit at [1, 8]", () => {
+    expect(mockShip.hit({x: 1, y: 8})).toBe(false);
+})
+test("mockShip2 will not get hit at [9, 10]", () => {
+    expect(mockShip2.hit({x: 9, y: 10})).toBe(false);
+})
+test("horizontalShip will not get hit at [8, 5]", () => {
+    expect(mockShip.hit({x: 8, y: 5})).toBe(false);
+})
+test("horizontalShip will not get hit at [9, 4]", () => {
+    expect(mockShip.hit({x: 9, y: 4})).toBe(false);
+})
+test("mockShip3 will not get hit at [9, 9]", () => {
+    expect(mockShip3.hit({x: 9, y: 9})).toBe(false);
+})
+test("mockShip4 will not get hit at [9, 9]", () => {
+    expect(mockShip4.hit({x: 9, y: 9})).toBe(false);
+})
 test("mockShip.shipParts will return every part", () => {
     expect(mockShip.shipParts()).toEqual([
     {"hasSunk": false, "partCoordinates": {"x": 1, "y": 1}},
