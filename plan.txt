@@ -130,6 +130,12 @@ test("mockShip4 will get hit at [10, 10]", () => {
     if it misses, no real direction or place, just a
     general coordinate.
 */
+/*
+    This section will be misses specifically made to
+    be made close to the ship, this is to test if the
+    hit function would confuse our ships coordinate's 
+    axis with close by coordinates.
+*/
 test("mockShip.shipParts will return every part", () => {
     expect(mockShip.shipParts()).toEqual([
     {"hasSunk": false, "partCoordinates": {"x": 1, "y": 1}},
