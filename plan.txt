@@ -180,10 +180,6 @@ test("horizontalShip will return all of its coordinates, including the parts", (
     ])
 })
 //mid point
-test("mockShip3 will get hit at [5, 10]", () => {
-    expect(mockShip3.hit({x: 5, y: 10})).toBe(true);
-})
-//mid point
 test("mockShip4 will get hit at [10, 5]", () => {
     expect(mockShip4.hit({x: 10, y: 5})).toBe(true);
 })
