@@ -125,6 +125,11 @@ test("mockShip3 will get hit at [10, 10]", () => {
 test("mockShip4 will get hit at [10, 10]", () => {
     expect(mockShip4.hit({x: 10, y: 10})).toBe(true);
 })
+/*
+    This section will be general hit tests, but to test 
+    if it misses, no real direction or place, just a
+    general coordinate.
+*/
 test("mockShip.shipParts will return every part", () => {
     expect(mockShip.shipParts()).toEqual([
     {"hasSunk": false, "partCoordinates": {"x": 1, "y": 1}},
