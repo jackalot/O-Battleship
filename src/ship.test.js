@@ -4,7 +4,7 @@ const { TestWatcher } = require("jest");
 const mockShip = shipFile(coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7});
 // vertical
 const mockShip2 = shipFile(coord1 = {x: 9, y: 3}, coord2 = { x: 9, y: 9});
-// horiztonal
+// horizontal
 const horizontalShip = shipFile(coord1 = {x: 3, y: 3}, coord2 = { x: 9, y: 3});
 // horizontal
 // Made to test the outer limit of the board
