@@ -60,6 +60,12 @@ test("mockShip will get hit at [1, 1]", () => {
     expect(mockShip.hit({x: 1, y: 1})).toBe(true);
 })
 /*
+    The following tests are hit() tests but at the mid point or 
+    somewhere between the end points of the ship, like at 9, 6
+    of mockShip2 for example. This is if to see if, at any point
+    on the ship, we can get hit.
+*/
+/*
     The following tests are hit() tests but at the end of the ship,
     for example, like at 9, 9 of mockShip2. This is if to see if,
     at the very end, we can get hit.
