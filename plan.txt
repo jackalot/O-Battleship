@@ -166,6 +166,12 @@ test("mockShip2 will not get hit at [10, 3]", () => {
 test("horizontalShip will not get hit at [8, 5]", () => {
     expect(horizontalShip.hit({x: 8, y: 5})).toBe(false);
 })
+test("mockShip3 will not get hit at [8, 9]", () => {
+    expect(mockShip3.hit({x: 8, y: 9})).toBe(false);
+})
+test("mockShip4 will not get hit at [8, 9]", () => {
+    expect(mockShip4.hit({x: 8, y: 9})).toBe(false);
+})
 /*
     This section will be misses made to be 1 coordinate
     off the ship, this is to check if just one number
@@ -316,11 +322,6 @@ test("horizontalShip will not get hit at [9, 4]", () => {
     expect(mockShip.hit({x: 9, y: 4})).toBe(false);
 })
 // mockShip3 miss tests \\
-// random coordinate \\
-// close to the ship \\
-test("mockShip3 will not get hit at [8, 9]", () => {
-    expect(mockShip3.hit({x: 8, y: 9})).toBe(false);
-})
 // one off the ship \\
 test("mockShip3 will not get hit at [9, 9]", () => {
     expect(mockShip3.hit({x: 9, y: 9})).toBe(false);
@@ -329,10 +330,6 @@ test("mockShip3 will not get hit at [9, 9]", () => {
 // random coordinate \\
 test("mockShip4 will not get hit at [4, 6]", () => {
     expect(mockShip4.hit({x: 4, y: 6})).toBe(false);
-})
-// close to the ship \\
-test("mockShip4 will not get hit at [8, 9]", () => {
-    expect(mockShip4.hit({x: 8, y: 9})).toBe(false);
 })
 // one off the ship \\
 test("mockShip4 will not get hit at [9, 9]", () => {
