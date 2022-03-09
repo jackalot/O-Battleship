@@ -1,1 +1,2 @@
 Focus: test the sinking function of ship.js and similar:
+* first re-arrange all the tests in ship.js so that they are organize
