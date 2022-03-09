@@ -33,6 +33,15 @@ test("mockShip returns an object", () => {
 test("mockShip2 returns an object", () => {
     expect(mockShip2).toMatchObject({ coord1: {x: 9, y: 3}, coord2: {x: 9, y: 9} })
 })
+test("horizontalShip returns an object", () => {
+    expect(horizontalShip).toMatchObject({ coord1: {x: 3, y: 3}, coord2: {x: 9, y: 3} });
+})
+test("mockShip3 returns an object", () => {
+    expect(mockShip3).toMatchObject({ coord1: {x: 1, y: 10}, coord2: { x: 10, y: 10} });
+})
+test("mockShip4 returns an object", () => {
+    expect(mockShip4).toMatchObject({ coord1: {x: 10, y: 1}, coord2: { x: 10, y: 10} });
+})
 /*
     The following tests are tests that check to see how long the ship
     is, it's the lengthMeasurer test. It will only return the length
@@ -119,9 +128,6 @@ test("mockShip2 will return all of its coordinates, including the parts", ()=> {
         {x: 9, y: 7}, {x: 9, y: 8},
         {x: 9, y: 9}
     ])
-})
-test("horizontalShip returns an object", () => {
-    expect(horizontalShip).toMatchObject({ coord1: {x: 3, y: 3}, coord2: {x: 9, y: 3} });
 })
 test("horizontalShip returns a length of 6", () => {
     expect(horizontalShip.lengthMeasurer(coord1 = {x: 3, y: 3}, coord2 = {x: 9, y: 3})).toBe(6);
