@@ -34,6 +34,11 @@ test("mockShip returns an object", () => {
 test("mockShip2 returns an object", () => {
     expect(mockShip2).toMatchObject({ coord1: {x: 9, y: 3}, coord2: {x: 9, y: 9} })
 })
+/*
+    The following tests are tests that check to see how long the ship
+    is, it's the lengthMeasurer test. It will only return the length
+    according to the orientation of the ship.
+*/
 test("mockShip returns a length of 6", () => {
     expect(mockShip.lengthMeasurer(coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7})).toBe(6);
 })
