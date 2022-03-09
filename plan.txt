@@ -136,6 +136,11 @@ test("mockShip4 will get hit at [10, 10]", () => {
     hit function would confuse our ships coordinate's 
     axis with close by coordinates.
 */
+/*
+    This section will be misses made to be 1 coordinate
+    off the ship, this is to check if just one number
+    off could break the entire function.
+*/
 test("mockShip.shipParts will return every part", () => {
     expect(mockShip.shipParts()).toEqual([
     {"hasSunk": false, "partCoordinates": {"x": 1, "y": 1}},
