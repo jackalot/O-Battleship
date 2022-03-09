@@ -198,6 +198,13 @@ test("mockShip3 will not get hit at [9, 9]", () => {
 test("mockShip4 will not get hit at [9, 9]", () => {
     expect(mockShip4.hit({x: 9, y: 9})).toBe(false);
 })
+/*
+    These tests will return every part of the ship
+    and every coordinate of the ship, they will
+    also return if that part has sunk yet or not.
+    After the above hit tests, some of these parts
+    should be sunken.
+*/
 test("mockShip.shipParts will return every part", () => {
     expect(mockShip.shipParts()).toEqual([
     {"hasSunk": false, "partCoordinates": {"x": 1, "y": 1}},
