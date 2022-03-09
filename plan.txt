@@ -55,6 +55,15 @@ test("mockShip returns a length of 6", () => {
 test("mockShip2 returns a length of 6", () => {
     expect(mockShip2.lengthMeasurer(coord1 = {x: 9, y: 3}, coord2 = { x: 9, y: 9})).toBe(6);
 })
+test("horizontalShip returns a length of 6", () => {
+    expect(horizontalShip.lengthMeasurer(coord1 = {x: 3, y: 3}, coord2 = {x: 9, y: 3})).toBe(6);
+})
+test("mockShip3 returns a length of 9", () => {
+    expect(mockShip3.lengthMeasurer(coord1 = {x: 1, y: 10}, coord2 = { x: 10, y: 10})).toBe(9);
+})
+test("mockShip4 returns a length of 9", () => {
+    expect(mockShip3.lengthMeasurer(coord1 = {x: 10, y: 1}, coord2 = { x: 10, y: 10})).toBe(9);
+})
 /*
     The following tests are hit() tests but at the beginning of the
     ship, for example, like at 9, 3 for mockShip2. This is to see if,
@@ -131,9 +140,6 @@ test("mockShip2 will return all of its coordinates, including the parts", ()=> {
         {x: 9, y: 9}
     ])
 })
-test("horizontalShip returns a length of 6", () => {
-    expect(horizontalShip.lengthMeasurer(coord1 = {x: 3, y: 3}, coord2 = {x: 9, y: 3})).toBe(6);
-})
 //mid point
 test("horizontalShip will get hit at [6, 3]", () => {
     expect(horizontalShip.hit({x: 6, y: 3})).toBe(true);
@@ -169,12 +175,6 @@ test("horizontalShip will return all of its coordinates, including the parts", (
         {x:7,y:3},{x:8,y:3},
         {x:9,y:3}
     ])
-})
-test("mockShip3 returns a length of 9", () => {
-    expect(mockShip3.lengthMeasurer(coord1 = {x: 1, y: 10}, coord2 = { x: 10, y: 10})).toBe(9);
-})
-test("mockShip4 returns a length of 9", () => {
-    expect(mockShip3.lengthMeasurer(coord1 = {x: 10, y: 1}, coord2 = { x: 10, y: 10})).toBe(9);
 })
 //mid point
 test("mockShip3 will get hit at [5, 10]", () => {
