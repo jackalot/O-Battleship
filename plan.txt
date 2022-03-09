@@ -3,4 +3,5 @@ Focus: test the sinking function of ship.js and similar:
 - put all mock ships at the top of the file
 - mention each mock ships orientation 
 - add a comment as a divider to state the next group of tests which will be,
-this group is going to be the 'toMatchObject'
+this group is going to be the 'toMatchObject' group where ships just return themselves
+- paste all the toMatchObject tests where the ships return an toMatchObject
