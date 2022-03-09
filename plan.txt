@@ -78,6 +78,9 @@ test("mockShip2 will get hit at [9, 3]", () => {
 test("mockShip3 will get hit at [1, 10]", () => {
     expect(mockShip3.hit({x: 1, y: 10})).toBe(true);
 })
+test("mockShip4 will get hit at [10, 1]", () => {
+    expect(mockShip4.hit({x: 10, y: 1})).toBe(true);
+})
 /*
     The following tests are hit() tests but at the mid point or 
     somewhere between the end points of the ship, like at 9, 6
@@ -93,6 +96,9 @@ test("mockShip2 will get hit at [9, 6]", () => {
 test("mockShip3 will get hit at [5, 10]", () => {
     expect(mockShip3.hit({x: 5, y: 10})).toBe(true);
 })
+test("mockShip4 will get hit at [10, 5]", () => {
+    expect(mockShip4.hit({x: 10, y: 5})).toBe(true);
+})
 /*
     The following tests are hit() tests but at the end of the ship,
     for example, like at 9, 9 of mockShip2. This is if to see if,
@@ -106,6 +112,9 @@ test("mockShip2 will get hit at [9, 9]", () => {
 })
 test("mockShip3 will get hit at [10, 10]", () => {
     expect(mockShip3.hit({x: 10, y: 10})).toBe(true);
+})
+test("mockShip4 will get hit at [10, 10]", () => {
+    expect(mockShip4.hit({x: 10, y: 10})).toBe(true);
 })
 test("mockShip.shipParts will return every part", () => {
     expect(mockShip.shipParts()).toEqual([
@@ -185,18 +194,7 @@ test("horizontalShip will return all of its coordinates, including the parts", (
         {x:9,y:3}
     ])
 })
-//mid point
-test("mockShip4 will get hit at [10, 5]", () => {
-    expect(mockShip4.hit({x: 10, y: 5})).toBe(true);
-})
-//start point
-test("mockShip4 will get hit at [10, 1]", () => {
-    expect(mockShip4.hit({x: 10, y: 1})).toBe(true);
-})
-// end point
-test("mockShip4 will get hit at [10, 10]", () => {
-    expect(mockShip4.hit({x: 10, y: 10})).toBe(true);
-})
+
 test("mockShip3 will not get hit at [2, 5]", () => {
     expect(mockShip3.hit({x: 2, y: 5})).toBe(false);
 })
