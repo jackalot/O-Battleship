@@ -193,6 +193,7 @@ test("mockShip4 will not get hit at [9, 9]", () => {
     After the above hit tests, some of these parts
     should be sunken.
 */
+//--! the first part returns that hasSunk is false, even though we hit that coordinate earlier
 test("mockShip.shipParts will return every part", () => {
     expect(mockShip.shipParts()).toEqual([
     {"hasSunk": false, "partCoordinates": {"x": 1, "y": 1}},
