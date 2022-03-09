@@ -139,6 +139,9 @@ test("mockShip2 will not get hit at [1, 8]", () => {
 test("horizontalShip will not get hit at [9, 4]", () => {
     expect(horizontalShip.hit({x: 9, y: 4})).toBe(false);
 })
+test("horizontalShip will not get hit at [7, 2]", () => {
+    expect(horizontalShip.hit({x: 7, y: 2})).toBe(false);
+})
 test("mockShip3 will not get hit at [2, 5]", () => {
     expect(mockShip3.hit({x: 2, y: 5})).toBe(false);
 })
@@ -304,10 +307,6 @@ test("mockShip2 will not get hit at [9, 10]", () => {
     expect(mockShip2.hit({x: 9, y: 10})).toBe(false);
 })
 // horizontalShip miss tests \\
-// random coordinate \\
-test("horizontalShip will not get hit at [7, 2]", () => {
-    expect(horizontalShip.hit({x: 7, y: 2})).toBe(false);
-})
 // close to ship
 test("horizontalShip will not get hit at [8, 5]", () => {
     expect(mockShip.hit({x: 8, y: 5})).toBe(false);
