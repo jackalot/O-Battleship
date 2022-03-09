@@ -261,6 +261,11 @@ test("mockShip4.shipParts will return every part", () => {
        {"hasSunk": false, "partCoordinates": {"x": 10, "y": 9}},
        {"hasSunk": false, "partCoordinates": {"x": 10, "y": 10}}]    );
 })
+/*
+    These are the sink tests that make sure, at this point, none
+    of the ships have completely sunken and they still have parts
+    left.
+*/
 test("mockShip will not sink", () => {
     expect(mockShip.sink()).toBe('I still have parts left');
 })
