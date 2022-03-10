@@ -441,3 +441,6 @@ test("mockShip4 will get hit at [10, 9]", () => {
     After the above hit tests, each part should be damaged, so the sink
     function should return 'you sunk my battle ship!'.
 */
+test("mockShip will sink and return 'you sunk my battle ship'", () => {
+    expect(mockShip.sink()).toBe('you sunk my battle ship!')
+})
