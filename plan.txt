@@ -1,3 +1,4 @@
 Focus: test the sinking function of ship.js and similar:
+* ship.js
 
 psuedo code:
