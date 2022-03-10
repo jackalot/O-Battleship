@@ -1,4 +1,4 @@
 Focus: test the sinking function of ship.js and similar:
 * ship.js
-
+// ship.js currently only returns 'I still have parts left'
 psuedo code:
