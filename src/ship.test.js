@@ -340,6 +340,7 @@ Already hit at: {10, 1}, {10, 5}, {10, 10};
 */
 /*
 Tests to hit mockShip
+Already hit at: {1, 1}, {1, 4}, {1, 7};
 */
 test("mockShip will get hit at [1, 2]", () => {
   expect(mockShip.hit({x: 1, y: 2})).toBe(true);
@@ -355,6 +356,7 @@ test("mockShip will get hit at [1, 6]", () => {
 })
 /*
 Tests to hit mockShip2
+Already hit at: {9, 3}, {9, 6}, {9, 9};
 */
 test("mockShip2 will get hit at [9, 4]", () => {
     expect(mockShip2.hit({x: 9, y: 4})).toBe(true);
