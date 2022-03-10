@@ -342,5 +342,5 @@ Already hit at: {10, 1}, {10, 5}, {10, 10};
 Tests to hit mockShip
 */
 test("mockShip will get hit at [1, 2]", () => {
-    mockShip.hit({x: 1, y: 2}).expect(true);
+   expect(mockShip.hit({x: 1, y: 2})).toBe(true);
 })
