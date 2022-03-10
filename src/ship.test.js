@@ -337,5 +337,10 @@ Already hit at: {1, 10}, {5, 10}, {10, 10};
 
 const mockShip4 = shipFile(coord1 = {x: 10, y: 1}, coord2 = { x: 10, y: 10});
 Already hit at: {10, 1}, {10, 5}, {10, 10};
-
 */
+/*
+Tests to hit mockShip
+*/
+test("mockShip will get hit at [1, 2]", () => {
+    mockShip.hit({x: 1, y: 2}).expect(true);
+})
