@@ -1,3 +1,3 @@
 Focus: reorganize board.test.js, similar to how ship.js was organized:
-
+ 
 psuedo code:
