@@ -125,7 +125,7 @@ const shipFactory = (coord1, coord2) => {
     return false;
   }
   // sink() helper function
-  function findVerticalParts() {
+  function findDamagedParts() {
     let sunkParts = 0;
     for (let i = 0; i < myParts.length; i += 1) {
       if (myParts[i].hasSunk === true) {
@@ -141,23 +141,8 @@ const shipFactory = (coord1, coord2) => {
     const length = lengthMeasurer(coord1, coord2);
     const orientation = shipOrientation();
     console.log(myParts);
-    if (orientation === 'horizontal') {
-      let sunkParts = 0;
-      for (let i = coord1.x; i < length - 1; i += 1) {
-        if (myParts[i].hasSunk === true) {
-          sunkParts += 1;
-        }
-      }
-      if (sunkParts === length) {
-        return 'you sunk my battle ship!';
-      }
-      return 'I still have parts left';
-    }
-    if (orientation === 'vertical') {
-      const result = findVerticalParts();
-      return result;
-    }
-    return 'error';
+    const result = findDamagedParts();
+    return 'result';
   }
   return {
     coord1, coord2, lengthMeasurer, hit, sink, getAllCoordinates, shipParts,
