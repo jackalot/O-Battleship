@@ -359,3 +359,6 @@ Tests to hit mockShip2
 test("mockShip2 will get hit at [9, 4]", () => {
     expect(mockShip2.hit({x: 9, y: 4})).toBe(true);
 })
+test("mockShip2 will get hit at [9, 5]", () => {
+    expect(mockShip2.hit({x: 9, y: 5})).toBe(true);
+})
