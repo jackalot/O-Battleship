@@ -129,28 +129,9 @@ const shipFactory = (coord1, coord2) => {
     const orientation = shipOrientation();
     console.log(myParts);
     if (orientation === 'horizontal') {
-      let sunkParts = 0;
-      for (let i = coord1.x; i < length - 1; i += 1) {
-        if (myParts[i].hasSunk === true) {
-          sunkParts += 1;
-        }
-      }
-      if (sunkParts === length) {
-        return 'you sunk my battle ship!';
-      }
-      return 'I still have parts left';
-    }
+    
     if (orientation === 'vertical') {
-      let sunkParts = 0;
-      for (let i = coord1.y; i < length - 1; i += 1) {
-        if (myParts[i].hasSunk === true) {
-          sunkParts += 1;
-        }
-      }
-      if (sunkParts === length) {
-        return 'you sunk my battle ship!';
-      }
-      return 'I still have parts left';
+ 
     }
     return 'error';
   }
