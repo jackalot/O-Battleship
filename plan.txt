@@ -5,6 +5,10 @@ const { TestWatcher } = require("jest");
 const boardFile = require('./board');
 const shipFile = require('./ship');
 const mockBoard = boardFile(coord1 = {x: 1, y: 1}, coord2 = {x: 10, y: 10})
+/*
+    The following tests will be tests to see if the coordinate
+    is equal to the bottom left corner.
+*/
 // checkValidCoord() helper functions marked with ![
 // checkBottomLeftCorner() helper functions marked with ?[
 test("[1,1] is equal to the bottom left corner, [1, 1]", () => {
