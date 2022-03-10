@@ -377,3 +377,12 @@ Already hit at: {3, 3}, {6, 3}, {9, 3};
 test("horizontalShip will get hit at [4, 3]", () => {
     expect(horizontalShip.hit({x: 4, y: 3})).toBe(true);
 })
+test("horizontalShip will get hit at [5, 3]", () => {
+    expect(horizontalShip.hit({x: 5, y: 3})).toBe(true);
+})
+test("horizontalShip will get hit at [7, 3]", () => {
+    expect(horizontalShip.hit({x: 7, y: 3})).toBe(true);
+})
+test("horizontalShip will get hit at [8, 3]", () => {
+    expect(horizontalShip.hit({x: 8, y: 3})).toBe(true);
+})
