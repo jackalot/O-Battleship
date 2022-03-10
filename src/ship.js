@@ -138,11 +138,9 @@ const shipFactory = (coord1, coord2) => {
     return 'I still have parts left';
   }
   function sink() {
-    const length = lengthMeasurer(coord1, coord2);
-    const orientation = shipOrientation();
     console.log(myParts);
     const result = findDamagedParts();
-    return 'result';
+    return result;
   }
   return {
     coord1, coord2, lengthMeasurer, hit, sink, getAllCoordinates, shipParts,
