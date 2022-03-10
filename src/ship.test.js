@@ -318,3 +318,8 @@ test("mockShip4 will return all of its coordinates, including the parts", () => 
         {x:10,y:9}, {x:10,y:10},
     ])
 })
+/*
+    These tests are just hit functions that are here to make the ships sink.
+    This is so, at a later comment divider, we can test if sinking a ship
+    works.
+*/
