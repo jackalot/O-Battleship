@@ -13,6 +13,70 @@ const mockShip3 = shipFile(coord1 = {x: 1, y: 10}, coord2 = { x: 10, y: 10});
 // Made to test the outer limit of the board
 const mockShip4 = shipFile(coord1 = {x: 10, y: 1}, coord2 = { x: 10, y: 10});
 /*
+    These tests will return every part of the ship and every coordinate 
+    of the ship, they will also return if that part has sunk yet or not.
+    These tests appear first due to the fact that, after each time the 
+    function is called, it returns new parts, so even if the part has
+    been hit before, it will still return 'hasSunk' === false.
+*/
+//--! the first part returns that hasSunk is false, even though we hit that coordinate earlier
+test("mockShip.shipParts will return every part", () => {
+    expect(mockShip.shipParts()).toEqual([
+    {"hasSunk": false, "partCoordinates": {"x": 1, "y": 1}},
+     {"hasSunk": false, "partCoordinates": {"x": 1, "y": 2}},
+     {"hasSunk": false, "partCoordinates": {"x": 1, "y": 3}},
+      {"hasSunk": false, "partCoordinates": {"x": 1, "y": 4}},
+       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 5}},
+       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 6}}, 
+       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 7}}]    );
+})
+test("mockShip2.shipParts will return every part", () => {
+    expect(mockShip2.shipParts()).toEqual([
+    {"hasSunk": false, "partCoordinates": {"x": 9, "y": 3}},
+    {"hasSunk": false, "partCoordinates": {"x": 9, "y": 4}},
+    {"hasSunk": false, "partCoordinates": {"x": 9, "y": 5}},
+    {"hasSunk": false, "partCoordinates": {"x": 9, "y": 6}},
+    {"hasSunk": false, "partCoordinates": {"x": 9, "y": 7}},
+    {"hasSunk": false, "partCoordinates": {"x": 9, "y": 8}},
+    {"hasSunk": false, "partCoordinates": {"x": 9, "y": 9}}]    );
+})
+test("horizontalShip.shipParts will return every part", () => {
+    expect(horizontalShip.shipParts()).toEqual([
+    {"hasSunk": false, "partCoordinates": {"x": 3, "y": 3}},
+     {"hasSunk": false, "partCoordinates": {"x": 4, "y": 3}},
+     {"hasSunk": false, "partCoordinates": {"x": 5, "y": 3}},
+      {"hasSunk": false, "partCoordinates": {"x": 6, "y": 3}},
+       {"hasSunk": false, "partCoordinates": {"x": 7, "y": 3}},
+       {"hasSunk": false, "partCoordinates": {"x": 8, "y": 3}}, 
+       {"hasSunk": false, "partCoordinates": {"x": 9, "y": 3}}]    );
+})
+test("mockShip3.shipParts will return every part", () => {
+    expect(mockShip3.shipParts()).toEqual([
+    {"hasSunk": false, "partCoordinates": {"x": 1, "y": 10}},
+     {"hasSunk": false, "partCoordinates": {"x": 2, "y": 10}},
+     {"hasSunk": false, "partCoordinates": {"x": 3, "y": 10}},
+      {"hasSunk": false, "partCoordinates": {"x": 4, "y": 10}},
+       {"hasSunk": false, "partCoordinates": {"x": 5, "y": 10}},
+       {"hasSunk": false, "partCoordinates": {"x": 6, "y": 10}}, 
+       {"hasSunk": false, "partCoordinates": {"x": 7, "y": 10}},
+       {"hasSunk": false, "partCoordinates": {"x": 8, "y": 10}},
+       {"hasSunk": false, "partCoordinates": {"x": 9, "y": 10}},
+       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 10}}]    );
+})
+test("mockShip4.shipParts will return every part", () => {
+    expect(mockShip4.shipParts()).toEqual([
+    {"hasSunk": false, "partCoordinates": {"x": 10, "y": 1}},
+     {"hasSunk": false, "partCoordinates": {"x": 10, "y": 2}},
+     {"hasSunk": false, "partCoordinates": {"x": 10, "y": 3}},
+      {"hasSunk": false, "partCoordinates": {"x": 10, "y": 4}},
+       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 5}},
+       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 6}}, 
+       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 7}},
+       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 8}},
+       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 9}},
+       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 10}}]    );
+})
+/*
     The following tests are tests that return the ship as an object,
     they will return the ship's coordinates, and it's functions.
     For the test's, they only test the coordinate's returning.
@@ -185,70 +249,6 @@ test("mockShip3 will not get hit at [9, 9]", () => {
 })
 test("mockShip4 will not get hit at [9, 9]", () => {
     expect(mockShip4.hit({x: 9, y: 9})).toBe(false);
-})
-/*
-    These tests will return every part of the ship
-    and every coordinate of the ship, they will
-    also return if that part has sunk yet or not.
-    After the above hit tests, some of these parts
-    should be sunken.
-*/
-//--! the first part returns that hasSunk is false, even though we hit that coordinate earlier
-test("mockShip.shipParts will return every part", () => {
-    expect(mockShip.shipParts()).toEqual([
-    {"hasSunk": false, "partCoordinates": {"x": 1, "y": 1}},
-     {"hasSunk": false, "partCoordinates": {"x": 1, "y": 2}},
-     {"hasSunk": false, "partCoordinates": {"x": 1, "y": 3}},
-      {"hasSunk": false, "partCoordinates": {"x": 1, "y": 4}},
-       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 5}},
-       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 6}}, 
-       {"hasSunk": false, "partCoordinates": {"x": 1, "y": 7}}]    );
-})
-test("mockShip2.shipParts will return every part", () => {
-    expect(mockShip2.shipParts()).toEqual([
-    {"hasSunk": false, "partCoordinates": {"x": 9, "y": 3}},
-    {"hasSunk": false, "partCoordinates": {"x": 9, "y": 4}},
-    {"hasSunk": false, "partCoordinates": {"x": 9, "y": 5}},
-    {"hasSunk": false, "partCoordinates": {"x": 9, "y": 6}},
-    {"hasSunk": false, "partCoordinates": {"x": 9, "y": 7}},
-    {"hasSunk": false, "partCoordinates": {"x": 9, "y": 8}},
-    {"hasSunk": false, "partCoordinates": {"x": 9, "y": 9}}]    );
-})
-test("horizontalShip.shipParts will return every part", () => {
-    expect(horizontalShip.shipParts()).toEqual([
-    {"hasSunk": false, "partCoordinates": {"x": 3, "y": 3}},
-     {"hasSunk": false, "partCoordinates": {"x": 4, "y": 3}},
-     {"hasSunk": false, "partCoordinates": {"x": 5, "y": 3}},
-      {"hasSunk": false, "partCoordinates": {"x": 6, "y": 3}},
-       {"hasSunk": false, "partCoordinates": {"x": 7, "y": 3}},
-       {"hasSunk": false, "partCoordinates": {"x": 8, "y": 3}}, 
-       {"hasSunk": false, "partCoordinates": {"x": 9, "y": 3}}]    );
-})
-test("mockShip3.shipParts will return every part", () => {
-    expect(mockShip3.shipParts()).toEqual([
-    {"hasSunk": false, "partCoordinates": {"x": 1, "y": 10}},
-     {"hasSunk": false, "partCoordinates": {"x": 2, "y": 10}},
-     {"hasSunk": false, "partCoordinates": {"x": 3, "y": 10}},
-      {"hasSunk": false, "partCoordinates": {"x": 4, "y": 10}},
-       {"hasSunk": false, "partCoordinates": {"x": 5, "y": 10}},
-       {"hasSunk": false, "partCoordinates": {"x": 6, "y": 10}}, 
-       {"hasSunk": false, "partCoordinates": {"x": 7, "y": 10}},
-       {"hasSunk": false, "partCoordinates": {"x": 8, "y": 10}},
-       {"hasSunk": false, "partCoordinates": {"x": 9, "y": 10}},
-       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 10}}]    );
-})
-test("mockShip4.shipParts will return every part", () => {
-    expect(mockShip4.shipParts()).toEqual([
-    {"hasSunk": false, "partCoordinates": {"x": 10, "y": 1}},
-     {"hasSunk": false, "partCoordinates": {"x": 10, "y": 2}},
-     {"hasSunk": false, "partCoordinates": {"x": 10, "y": 3}},
-      {"hasSunk": false, "partCoordinates": {"x": 10, "y": 4}},
-       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 5}},
-       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 6}}, 
-       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 7}},
-       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 8}},
-       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 9}},
-       {"hasSunk": false, "partCoordinates": {"x": 10, "y": 10}}]    );
 })
 /*
     These are the sink tests that make sure, at this point, none
