@@ -386,3 +386,28 @@ test("horizontalShip will get hit at [7, 3]", () => {
 test("horizontalShip will get hit at [8, 3]", () => {
     expect(horizontalShip.hit({x: 8, y: 3})).toBe(true);
 })
+/*
+tests to hit mockShip3
+Already hit at: {1, 10}, {5, 10}, {10, 10};
+*/
+test("mockShip3 will get hit at [2, 10]", () => {
+    expect(mockShip3.hit({x: 2, y: 10})).toBe(true);
+})
+test("mockShip3 will get hit at [3, 10]", () => {
+    expect(mockShip3.hit({x: 3, y: 10})).toBe(true);
+})
+test("mockShip3 will get hit at [4, 10]", () => {
+    expect(mockShip3.hit({x: 4, y: 10})).toBe(true);
+})
+test("mockShip3 will get hit at [6, 10]", () => {
+    expect(mockShip3.hit({x: 6, y: 10})).toBe(true);
+})
+test("mockShip3 will get hit at [7, 10]", () => {
+    expect(mockShip3.hit({x: 7, y: 10})).toBe(true);
+})
+test("mockShip3 will get hit at [8, 10]", () => {
+    expect(mockShip3.hit({x: 8, y: 10})).toBe(true);
+})
+test("mockShip3 will get hit at [9, 10]", () => {
+    expect(mockShip3.hit({x: 9, y: 10})).toBe(true);
+})
