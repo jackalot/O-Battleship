@@ -125,14 +125,17 @@ const shipFactory = (coord1, coord2) => {
     return false;
   }
   // sink() helper function
-  function findVerticalParts(length) {
+  function findVerticalParts() {
     let sunkParts = 0;
     for (let i = 0; i < myParts.length; i += 1) {
       if (myParts[i].hasSunk === true) {
         sunkParts += 1;
       }
     }
-    console.log(sunkParts);
+    if (sunkParts === myParts.length) {
+      return 'you sunk my battle ship!';
+    }
+    return 'I still have parts left';
   }
   function sink() {
     const length = lengthMeasurer(coord1, coord2);
@@ -151,7 +154,7 @@ const shipFactory = (coord1, coord2) => {
       return 'I still have parts left';
     }
     if (orientation === 'vertical') {
-      const result = findVerticalParts(length);
+      const result = findVerticalParts();
       return result;
     }
     return 'error';
