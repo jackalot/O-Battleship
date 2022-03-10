@@ -127,15 +127,12 @@ const shipFactory = (coord1, coord2) => {
   // sink() helper function
   function findVerticalParts(length) {
     let sunkParts = 0;
-    for (let i = coord1.y; i < length - 1; i += 1) {
+    for (let i = 0; i < myParts.length; i += 1) {
       if (myParts[i].hasSunk === true) {
         sunkParts += 1;
       }
     }
-    if (sunkParts === length) {
-      return 'you sunk my battle ship!';
-    }
-    return 'I still have parts left';
+    console.log(sunkParts);
   }
   function sink() {
     const length = lengthMeasurer(coord1, coord2);
