@@ -444,3 +444,15 @@ test("mockShip4 will get hit at [10, 9]", () => {
 test("mockShip will sink and return 'you sunk my battle ship'", () => {
     expect(mockShip.sink()).toBe('you sunk my battle ship!')
 })
+test("mockShip2 will sink and return 'you sunk my battle ship'", () => {
+    expect(mockShip2.sink()).toBe('you sunk my battle ship!')
+})
+test("horizontalShip will sink and return 'you sunk my battle ship'", () => {
+    expect(horizontalShip.sink()).toBe('you sunk my battle ship!')
+})
+test("mockShip3 will sink and return 'you sunk my battle ship'", () => {
+    expect(mockShip3.sink()).toBe('you sunk my battle ship!')
+})
+test("mockShip4 will sink and return 'you sunk my battle ship'", () => {
+    expect(mockShip4.sink()).toBe('you sunk my battle ship!')
+})
