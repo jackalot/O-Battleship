@@ -1,4 +1,7 @@
 Focus: test the sinking function of ship.js and similar:
 * ship.js
 // ship.js currently only returns 'I still have parts left'
+Due to that this function can be tested, it may be best to use
+the test suite to see if any attempts work, rather than plan
+ahead in this particular scenario.
 psuedo code:
