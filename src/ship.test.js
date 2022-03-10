@@ -419,7 +419,7 @@ test("mockShip4 will get hit at [10, 2]", () => {
     expect(mockShip4.hit({x: 10, y: 2})).toBe(true);
 })
 test("mockShip4 will get hit at [10, 3]", () => {
-    expect(mockShip3.hit({x: 10, y: 3})).toBe(true);
+    expect(mockShip4.hit({x: 10, y: 3})).toBe(true);
 })
 test("mockShip4 will get hit at [10, 4]", () => {
     expect(mockShip4.hit({x: 10, y: 4})).toBe(true);
