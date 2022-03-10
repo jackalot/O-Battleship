@@ -138,7 +138,6 @@ const shipFactory = (coord1, coord2) => {
     return 'I still have parts left';
   }
   function sink() {
-    console.log(myParts);
     const result = findDamagedParts();
     return result;
   }
