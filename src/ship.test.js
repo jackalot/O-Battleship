@@ -436,3 +436,8 @@ test("mockShip4 will get hit at [10, 8]", () => {
 test("mockShip4 will get hit at [10, 9]", () => {
     expect(mockShip4.hit({x: 10, y: 9})).toBe(true);
 })
+/*
+    The following tests will check that the ships above have been sunken.
+    After the above hit tests, each part should be damaged, so the sink
+    function should return 'you sunk my battle ship!'.
+*/
