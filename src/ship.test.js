@@ -325,9 +325,17 @@ test("mockShip4 will return all of its coordinates, including the parts", () => 
     Each ship so far:
 const mockShip = shipFile(coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7});
 Already hit at: {1, 1}, {1, 4}, {1, 7};
+
 const mockShip2 = shipFile(coord1 = {x: 9, y: 3}, coord2 = { x: 9, y: 9});
 Already hit at: {9, 3}, {9, 6}, {9, 9};
+
 const horizontalShip = shipFile(coord1 = {x: 3, y: 3}, coord2 = { x: 9, y: 3});
+Already hit at: {3, 3}, {6, 3}, {9, 3};
+
 const mockShip3 = shipFile(coord1 = {x: 1, y: 10}, coord2 = { x: 10, y: 10});
+Already hit at: {1, 10}, {5, 10}, {10, 10};
+
 const mockShip4 = shipFile(coord1 = {x: 10, y: 1}, coord2 = { x: 10, y: 10});
+Already hit at: {10, 1}, {10, 5}, {10, 10};
+
 */
