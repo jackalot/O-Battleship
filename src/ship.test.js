@@ -411,3 +411,28 @@ test("mockShip3 will get hit at [8, 10]", () => {
 test("mockShip3 will get hit at [9, 10]", () => {
     expect(mockShip3.hit({x: 9, y: 10})).toBe(true);
 })
+/*
+tests to hit mockShip4
+Already hit at: {10, 1}, {10, 5}, {10, 10};
+*/
+test("mockShip4 will get hit at [10, 2]", () => {
+    expect(mockShip4.hit({x: 10, y: 2})).toBe(true);
+})
+test("mockShip4 will get hit at [10, 3]", () => {
+    expect(mockShip3.hit({x: 10, y: 3})).toBe(true);
+})
+test("mockShip4 will get hit at [10, 4]", () => {
+    expect(mockShip4.hit({x: 10, y: 4})).toBe(true);
+})
+test("mockShip4 will get hit at [10, 6]", () => {
+    expect(mockShip4.hit({x: 10, y: 6})).toBe(true);
+})
+test("mockShip4 will get hit at [10, 7]", () => {
+    expect(mockShip4.hit({x: 10, y: 7})).toBe(true);
+})
+test("mockShip4 will get hit at [10, 8]", () => {
+    expect(mockShip4.hit({x: 10, y: 8})).toBe(true);
+})
+test("mockShip4 will get hit at [10, 9]", () => {
+    expect(mockShip4.hit({x: 10, y: 9})).toBe(true);
+})
