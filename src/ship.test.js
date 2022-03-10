@@ -374,3 +374,6 @@ test("mockShip2 will get hit at [9, 8]", () => {
 tests to hit horizontalShip
 Already hit at: {3, 3}, {6, 3}, {9, 3};
 */
+test("horizontalShip will get hit at [4, 3]", () => {
+    expect(horizontalShip.hit({x: 4, y: 3})).toBe(true);
+})
