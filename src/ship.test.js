@@ -322,4 +322,10 @@ test("mockShip4 will return all of its coordinates, including the parts", () => 
     These tests are just hit functions that are here to make the ships sink.
     This is so, at a later comment divider, we can test if sinking a ship
     works.
+    Each ship so far:
+const mockShip = shipFile(coord1 = {x: 1, y: 1}, coord2 = {x: 1, y: 7});
+const mockShip2 = shipFile(coord1 = {x: 9, y: 3}, coord2 = { x: 9, y: 9});
+const horizontalShip = shipFile(coord1 = {x: 3, y: 3}, coord2 = { x: 9, y: 3});
+const mockShip3 = shipFile(coord1 = {x: 1, y: 10}, coord2 = { x: 10, y: 10});
+const mockShip4 = shipFile(coord1 = {x: 10, y: 1}, coord2 = { x: 10, y: 10});
 */
