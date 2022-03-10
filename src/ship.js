@@ -127,6 +127,7 @@ const shipFactory = (coord1, coord2) => {
   function sink() {
     const length = lengthMeasurer(coord1, coord2);
     const orientation = shipOrientation();
+    console.log(myParts);
     if (orientation === 'horizontal') {
       let sunkParts = 0;
       for (let i = coord1.x; i < length - 1; i += 1) {
