@@ -353,3 +353,6 @@ test("mockShip will get hit at [1, 3]", () => {
 test("mockShip will get hit at [1, 6]", () => {
  expect(mockShip.hit({x: 1, y: 6})).toBe(true);
 })
+/*
+Tests to hit mockShip2
+*/
