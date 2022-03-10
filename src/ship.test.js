@@ -255,19 +255,19 @@ test("mockShip4 will not get hit at [9, 9]", () => {
     of the ships have completely sunken and they still have parts
     left.
 */
-test("mockShip will not sink", () => {
+test.skip("mockShip will not sink", () => {
     expect(mockShip.sink()).toBe('I still have parts left');
 })
-test("mockShip2 will not sink", () => {
+test.skip("mockShip2 will not sink", () => {
     expect(mockShip2.sink()).toBe('I still have parts left');
 })
-test("horizontalShip will not sink", () => {
+test.skip("horizontalShip will not sink", () => {
     expect(horizontalShip.sink()).toBe('I still have parts left');
 })
-test("mockShip3 will not sink", () => {
+test.skip("mockShip3 will not sink", () => {
     expect(mockShip3.sink()).toBe('I still have parts left');
 })
-test("mockShip4 will not sink", () => {
+test.skip("mockShip4 will not sink", () => {
     expect(mockShip4.sink()).toBe('I still have parts left');
 })
 /*
