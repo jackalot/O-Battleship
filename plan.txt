@@ -9,18 +9,18 @@ const mockBoard = boardFile(coord1 = {x: 1, y: 1}, coord2 = {x: 10, y: 10})
     The following tests will be tests to see if the coordinate
     is equal to the bottom left corner. function: checkEqualToBLC(coordinates)
 */
-/*
-    The following tests will be tests to see if the coordinate
-    is greater than the bottom left Corner. function: checkGreaterThanBLC(coordindates)
-*/
-// checkValidCoord() helper functions marked with ![
-// checkBottomLeftCorner() helper functions marked with ?[
 test("[1,1] is equal to the bottom left corner, [1, 1]", () => {
     expect(mockBoard.checkEqualToBLC({x: 1, y: 1})).toBe(true);
 })
 test("[1,7] is equal to the bottom left corner, [1, 1]", () => {
     expect(mockBoard.checkEqualToBLC({x: 1, y: 7})).toBe(false);
 })
+/*
+    The following tests will be tests to see if the coordinate
+    is greater than the bottom left Corner. function: checkGreaterThanBLC(coordindates)
+*/
+// checkValidCoord() helper functions marked with ![
+// checkBottomLeftCorner() helper functions marked with ?[
 test("[1,1] is greater than the bottom left corner, [1, 1]", () => {
     expect(mockBoard.checkGreaterThanBLC({x: 1, y: 1})).toBe(false);
 })
