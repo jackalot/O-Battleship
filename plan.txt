@@ -118,6 +118,18 @@ test("gameBoard recieves an attack at [1, 1] and it hits due to the ship there",
 test("gameBoard recieves an attack at [2, 6] and it misses due to no ship there", () => {
     expect(mockBoard.recieveAttack({x: 2, y: 6})).toBe(false);
 })
+test("[10,1] will return a hit as there is a ship there", () => {
+    expect(mockBoard.recieveAttack({x: 10, y: 1})).toBe(true);
+})
+test("[10,2] will return a hit as there is a ship there", () => {
+    expect(mockBoard.recieveAttack({x: 10, y: 2})).toBe(true);
+})
+test("[10,3] will return a hit as there is a ship there", () => {
+    expect(mockBoard.recieveAttack({x: 10, y: 3})).toBe(true);
+})
+test("[5,5] will return a miss as there is not a ship there", () => {
+    expect(mockBoard.recieveAttack({x: 5, y: 5})).toBe(false);
+})
 test("gameBoard checks if all ships have sunk, and returns false as theres still one ship up", () => {
     expect(mockBoard.allShipsSunk()).toBe(false);
 })
@@ -135,18 +147,6 @@ test("gameBoard checks if a ship is at 9,3 and returns true as there is a ship t
 The following tests will test the limits of the board and if we can recieve an attack there.
 
 */
-test("[10,1] will return a hit as there is a ship there", () => {
-    expect(mockBoard.recieveAttack({x: 10, y: 1})).toBe(true);
-})
-test("[10,2] will return a hit as there is a ship there", () => {
-    expect(mockBoard.recieveAttack({x: 10, y: 2})).toBe(true);
-})
-test("[10,3] will return a hit as there is a ship there", () => {
-    expect(mockBoard.recieveAttack({x: 10, y: 3})).toBe(true);
-})
-test("[5,5] will return a miss as there is not a ship there", () => {
-    expect(mockBoard.recieveAttack({x: 5, y: 5})).toBe(false);
-})
 test("[10,3] will return a Hit as there is a hit there", () => {
     expect(mockBoard.checkMissesAndHits({x: 10, y: 3})).toBe("Hit");
 })
