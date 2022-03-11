@@ -277,3 +277,7 @@ test("gameBoard recieves an attack at [10, 9] and it hits due to the ship there"
 test("gameBoard recieves an attack at [10, 10] and it hits due to the ship there", () => {
     expect(mockBoard.recieveAttack({x: 10, y: 10})).toBe(true);
 })
+/*
+    With all ships sunken, the sink function should now return true as each ship is now sunken.
+    The following test is the ship function. function: sink()
+*/
