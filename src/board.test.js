@@ -248,3 +248,6 @@ test("gameBoard recieves an attack at [9, 9] and it hits due to the ship there",
     This test is here to insure that sink() won't return true before
     all the ships are actually sunk. function: sink()
 */
+test("gameBoard checks if all ships have sunk, and returns false as theres at least still one ship up", () => {
+    expect(mockBoard.allShipsSunk()).toBe(false);
+})
