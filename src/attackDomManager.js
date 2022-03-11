@@ -23,9 +23,15 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
     if (defendingPlayer === player2) {
       player1.sendAttack(player2, coordinate);
     }
-    const gameStatus = document.querySelector('.gameStatus');
-    gameStatus.textContent = "Click on a square to attack that board, then click below to confirm you're attack! ";
-    swapVisibility(defendingPlayer);
+    const sunkenResult = defendingPlayer.ourBoard.allShipsSunk();
+    if (sunkenResult === false) {
+      const gameStatus = document.querySelector('.gameStatus');
+      gameStatus.textContent = "Click on a square to attack that board, then click below to confirm you're attack! ";
+      swapVisibility(defendingPlayer);
+    } else {
+      const gameStatus = document.querySelector('.gameStatus');
+      gameStatus.textContent = `${defendingPlayer.playerName}, you lose! All your battleships have been sunk!`;
+    }
   }
   // seperateIds() helper function
   // finds the player number in the id
