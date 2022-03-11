@@ -159,8 +159,9 @@ test("gameBoard checks if a ship is at 9,3 and returns true as there is a ship t
     expect(mockBoard.findFirstShip({x:9, y:3})).toMatchObject({ coord1: {x: 9, y: 3}, coord2: {x: 9, y: 9}});
 })
 /*
-The following tests will test the limits of the board and if we can recieve an attack there.
-
+    These tests check if whether the given coordinate has a hit or a miss.
+    Whichever it finds it returns, if none is found it returns 'none'
+    function checkMissesAndHits(coordinates)
 */
 test("[10,3] will return a Hit as there is a hit there", () => {
     expect(mockBoard.checkMissesAndHits({x: 10, y: 3})).toBe("Hit");
