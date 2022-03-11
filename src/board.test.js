@@ -171,6 +171,8 @@ test("[5, 5] will return a Miss as there is a Miss there", () => {
     Theses tests will sink each ship, heres the coordinates to each ship
     and where they've been hit thus far:
     ship1: { coord1: {x: 1, y: 1}, coord2: {x: 1, y: 7} }
+    hits: {x: 1, y: 1}, 
     ship2: { coord1: {x: 9, y: 3}, coord2: {x: 9, y: 9} }
     ship3: { coord1: {x: 10, y: 1}, coord2: {x: 10, y: 10} }
+    hits: {x: 10, y: 1}, {x: 10, y: 2}, {x: 10, y: 3}
 */
