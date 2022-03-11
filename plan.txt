@@ -130,6 +130,12 @@ test("[10,3] will return a hit as there is a ship there", () => {
 test("[5,5] will return a miss as there is not a ship there", () => {
     expect(mockBoard.recieveAttack({x: 5, y: 5})).toBe(false);
 })
+/*
+    This allShipsSunk test will return false as none of the ships
+    have sunken yet. At a later point in the test suite, we will
+    hit each ship's point and then sink them one by one, to then
+    test this function and see if it returns true. function: allShipsSunk()
+*/
 test("gameBoard checks if all ships have sunk, and returns false as theres still one ship up", () => {
     expect(mockBoard.allShipsSunk()).toBe(false);
 })
