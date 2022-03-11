@@ -120,9 +120,6 @@ test("[10,10] is a valid coordinate on the game board", () => {
 test("[10,1] is a valid coordinate on the game board", () => {
     expect(mockBoard.checkValidCoord({x: 10, y: 1})).toBe(true);
 })
-test("[10,1] is not out of bounds of the top right corner", () => {
-    expect(mockBoard.checkTopRightCorner({x: 10, y: 1})).toBe(true);
-})
 /*
 The following tests will test the limits of the board and if we can recieve an attack there.
 
