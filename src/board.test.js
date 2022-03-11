@@ -186,3 +186,28 @@ test("gameBoard recieves an attack at [1, 2] and it hits due to the ship there",
 test("gameBoard recieves an attack at [1, 3] and it hits due to the ship there", () => {
     expect(mockBoard.recieveAttack({x: 1, y: 3})).toBe(true);
 })
+//  This now makes it,
+// ship1 hits: {x: 1, y: 1}, {x: 1, y: 2},
+//  {x: 1, y: 3}, {x: 1, y: 4}
+test("gameBoard recieves an attack at [1, 4] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 1, y: 4})).toBe(true);
+})
+//  This now makes it,
+// ship1 hits: {x: 1, y: 1}, {x: 1, y: 2},
+//  {x: 1, y: 3}, {x: 1, y: 4}, {x: 1, y: 5}
+test("gameBoard recieves an attack at [1, 5] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 1, y: 5})).toBe(true);
+})
+//  This now makes it,
+// ship1 hits: {x: 1, y: 1}, {x: 1, y: 2},
+//  {x: 1, y: 3}, {x: 1, y: 4}, {x: 1, y: 5}, {x: 1, y: 6}
+test("gameBoard recieves an attack at [1, 6] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 1, y: 6})).toBe(true);
+})
+//  This now makes it,
+// ship1 hits: {x: 1, y: 1}, {x: 1, y: 2},
+//  {x: 1, y: 3}, {x: 1, y: 4}, {x: 1, y: 5},
+//   {x: 1, y: 6}, {x: 1, y: 6}, {x: 1, y: 7}, its now sunken 
+test("gameBoard recieves an attack at [1, 7] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 1, y: 7})).toBe(true);
+})
