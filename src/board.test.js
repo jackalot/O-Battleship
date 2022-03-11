@@ -212,3 +212,8 @@ test("gameBoard recieves an attack at [1, 6] and it hits due to the ship there",
 test("gameBoard recieves an attack at [1, 7] and it hits due to the ship there", () => {
     expect(mockBoard.recieveAttack({x: 1, y: 7})).toBe(true);
 })
+/*
+These next tests will be for ship2, coordinates again to reduce scrolling:
+ ship2 placed: { coord1: {x: 9, y: 3}, coord2: {x: 9, y: 9} }
+ no hits.
+*/
