@@ -17,7 +17,7 @@ test("[1,7] is equal to the bottom left corner, [1, 1]", () => {
 })
 /*
     The following tests will be tests to see if the coordinate
-    is greater than the bottom left Corner. function: checkGreaterThanBLC(coordindates)
+    is greater than the bottom left Corner. function: checkGreaterThanBLC(coordinates)
 */
 // checkValidCoord() helper functions marked with ![
 // checkBottomLeftCorner() helper functions marked with ?[
@@ -27,7 +27,10 @@ test("[1,1] is greater than the bottom left corner, [1, 1]", () => {
 test("[1,7] is greater than the bottom left corner, [1, 1]", () => {
     expect(mockBoard.checkGreaterThanBLC({x: 1, y: 7})).toBe(true);
 })
-// ]?
+/*
+    The following tests will be tests to see if the coordinate
+    is equal to the top right corner. function: checkEqualToTRC(coordinates)
+*/
 test("[1,1] is not equal to the top right corner, [10, 10]", () => {
     expect(mockBoard.checkEqualToTRC({x:1, y: 1})).toBe(false);
 })
