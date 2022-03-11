@@ -175,4 +175,5 @@ test("[5, 5] will return a Miss as there is a Miss there", () => {
     ship2 placed: { coord1: {x: 9, y: 3}, coord2: {x: 9, y: 9} }
     ship3 placed: { coord1: {x: 10, y: 1}, coord2: {x: 10, y: 10} }
     ship3 hits: {x: 10, y: 1}, {x: 10, y: 2}, {x: 10, y: 3}
+    firstShip to sink is ship1, here are those tests
 */
