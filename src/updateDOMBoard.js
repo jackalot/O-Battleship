@@ -45,6 +45,9 @@ function updateDOMBoard(myPlayer, searchQuery, otherPlayer, hideShips) {
           const gameStatus = document.querySelector('.gameStatus');
           gameStatus.textContent = `${otherPlayer.playerName}, please confirm attack`;
         }
+      } else {
+        const gameStatus = document.querySelector('.gameStatus');
+        gameStatus.textContent = `${otherPlayer.playerName}, please choose another square to attack`;
       }
     }
   }
