@@ -256,3 +256,24 @@ test("gameBoard checks if all ships have sunk, and returns false as theres at le
     ship3 placed: { coord1: {x: 10, y: 1}, coord2: {x: 10, y: 10} }
     ship3 hits: {x: 10, y: 1}, {x: 10, y: 2}, {x: 10, y: 3}
 */
+test("gameBoard recieves an attack at [10, 4] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 10, y: 4})).toBe(true);
+})
+test("gameBoard recieves an attack at [10, 5] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 10, y: 5})).toBe(true);
+})
+test("gameBoard recieves an attack at [10, 6] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 10, y: 6})).toBe(true);
+})
+test("gameBoard recieves an attack at [10, 7] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 10, y: 7})).toBe(true);
+})
+test("gameBoard recieves an attack at [10, 8] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 10, y: 8})).toBe(true);
+})
+test("gameBoard recieves an attack at [10, 9] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 10, y: 9})).toBe(true);
+})
+test("gameBoard recieves an attack at [10, 10] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 10, y: 10})).toBe(true);
+})
