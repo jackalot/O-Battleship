@@ -166,3 +166,8 @@ test("[10,3] will return a Hit as there is a hit there", () => {
 test("[5, 5] will return a Miss as there is a Miss there", () => {
     expect(mockBoard.checkMissesAndHits({x: 5, y: 5})).toBe("Miss");
 })
+/*
+    function: recieveAttack(coordinates)
+    Theses tests will sink each ship, heres the coordinates to each ship
+    and where they've been hit thus far:
+*/
