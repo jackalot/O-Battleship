@@ -226,6 +226,12 @@ test("gameBoard recieves an attack at [9, 4] and it hits due to the ship there",
 test("gameBoard recieves an attack at [9, 5] and it hits due to the ship there", () => {
     expect(mockBoard.recieveAttack({x: 9, y: 5})).toBe(true);
 })
+/*
+At this test, the ship has these hits:
+{x: 9, y: 3}, {x: 9, y: 4}, {x: 9, y: 5}, {x: 9, y: 6}
+These parts are remaining:
+{x: 9, y: 7}, {x: 9, y: 8}, {x: 9, y: 9}
+*/
 test("gameBoard recieves an attack at [9, 6] and it hits due to the ship there", () => {
     expect(mockBoard.recieveAttack({x: 9, y: 6})).toBe(true);
 })
