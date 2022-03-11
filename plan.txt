@@ -91,6 +91,10 @@ test("[10,10] is a valid coordinate on the game board", () => {
 test("[10,1] is a valid coordinate on the game board", () => {
     expect(mockBoard.checkValidCoord({x: 10, y: 1})).toBe(true);
 })
+/*
+    The following tests will check if the ship we placed has the proper
+    coordinates. function: placeShip(firstCoord, secondCoord)
+*/
 test("gameBoard has placed a ship from [1,1] to [1,7]", () => {
     expect(mockBoard.placeShip({x: 1, y: 1}, {x: 1, y: 7})).toMatchObject({ coord1: {x: 1, y: 1}, coord2: {x: 1, y: 7} });
 })
