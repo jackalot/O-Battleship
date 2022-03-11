@@ -177,3 +177,7 @@ test("[5, 5] will return a Miss as there is a Miss there", () => {
     ship3 hits: {x: 10, y: 1}, {x: 10, y: 2}, {x: 10, y: 3}
     firstShip to sink is ship1, here are those tests
 */
+//  This now makes it, ship1 hits: {x: 1, y: 1}, {x: 1, y: 2}
+test("gameBoard recieves an attack at [1, 2] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 1, y: 2})).toBe(true);
+})
