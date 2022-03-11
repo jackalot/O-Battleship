@@ -217,3 +217,24 @@ These next tests will be for ship2, coordinates again to reduce scrolling:
  ship2 placed: { coord1: {x: 9, y: 3}, coord2: {x: 9, y: 9} }
  no hits.
 */
+test("gameBoard recieves an attack at [9, 3] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 9, y: 3})).toBe(true);
+})
+test("gameBoard recieves an attack at [9, 4] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 9, y: 4})).toBe(true);
+})
+test("gameBoard recieves an attack at [9, 5] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 9, y: 5})).toBe(true);
+})
+test("gameBoard recieves an attack at [9, 6] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 9, y: 6})).toBe(true);
+})
+test("gameBoard recieves an attack at [9, 7] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 9, y: 7})).toBe(true);
+})
+test("gameBoard recieves an attack at [9, 8] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 9, y: 8})).toBe(true);
+})
+test("gameBoard recieves an attack at [9, 9] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 9, y: 9})).toBe(true);
+})
