@@ -139,7 +139,11 @@ test("[5,5] will return a miss as there is not a ship there", () => {
 test("gameBoard checks if all ships have sunk, and returns false as theres still one ship up", () => {
     expect(mockBoard.allShipsSunk()).toBe(false);
 })
-// checks if the specified coord has been hit or missed already
+/*
+    This test is to see if theres a hit or miss in this specifice coordinate
+    so that we can place a ship, hit, or miss in that coordinate.
+    function: checkAvailableCoord(coordinates);
+*/
 test("gameBoard checks if 2, 5 has a hit or miss on it already", () => {
     expect(mockBoard.checkAvailableCoord({x: 2, y: 5})).toBe(true);
 })
