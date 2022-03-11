@@ -1,3 +1,2 @@
-Focus: making the game stop when a player's ships are all sunk:
-
+Focus: add a helper function to recieveDomAttack to make restarting the game easier:
 psuedo code:
