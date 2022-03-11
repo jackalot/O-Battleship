@@ -1,2 +1,3 @@
-Focus: 
+Focus: making the game stop when a player's ships are all sunk:
+
 psuedo code:
