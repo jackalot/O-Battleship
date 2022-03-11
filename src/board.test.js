@@ -181,3 +181,8 @@ test("[5, 5] will return a Miss as there is a Miss there", () => {
 test("gameBoard recieves an attack at [1, 2] and it hits due to the ship there", () => {
     expect(mockBoard.recieveAttack({x: 1, y: 2})).toBe(true);
 })
+//  This now makes it,
+// ship1 hits: {x: 1, y: 1}, {x: 1, y: 2}, {x: 1, y: 3}
+test("gameBoard recieves an attack at [1, 3] and it hits due to the ship there", () => {
+    expect(mockBoard.recieveAttack({x: 1, y: 3})).toBe(true);
+})
