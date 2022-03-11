@@ -22,8 +22,8 @@ playerTwo.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
 playerOne.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
 playerTwo.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
 */
-playerOne.ourBoard.placeShip({ x: 1, y: 10 }, { x: 10, y: 10 });
-playerTwo.ourBoard.placeShip({ x: 1, y: 10 }, { x: 10, y: 10 });
+playerOne.ourBoard.placeShip({ x: 9, y: 10 }, { x: 10, y: 10 });
+playerTwo.ourBoard.placeShip({ x: 9, y: 10 }, { x: 10, y: 10 });
 p1DomBoardManager.sendNextCollumn();
 p2DomBoardManager.sendNextCollumn();
 // Manages every attack and calls sendNextCollumn again after an attackIs confirmed
