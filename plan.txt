@@ -45,12 +45,11 @@ test("[10,1] is on the line of the top right corner", () => {
     is less than the top right corner. function: checkLessThanTRC(coordinates)
 */
 test("[1,1] is not greater than the top right corner, [10, 10]", () => {
-    expect(mockBoard.checkLessThanTRC({x:10, y: 10})).toBe(true);
+    expect(mockBoard.checkLessThanTRC({x:1, y: 1})).toBe(true);
 })
 test("[1,7] is not greater than the top right corner, [10, 10]", () => {
     expect(mockBoard.checkLessThanTRC({x:1, y: 7})).toBe(true);
 })
-// ]!
 test("[1,1] is a valid according to the Bottom Left Corner", () => {
     expect(mockBoard.checkBottomLeftCorner({x: 1, y: 1})).toBe(true);
 })
