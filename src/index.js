@@ -13,12 +13,15 @@ const playerTwo = playerFile('CPU', 1);
 
 const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', playerTwo, false);
 const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', playerOne, true);
+/*
+
 playerOne.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
 playerTwo.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
 playerOne.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
 playerTwo.ourBoard.placeShip({ x: 2, y: 1 }, { x: 8, y: 1 });
 playerOne.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
 playerTwo.ourBoard.placeShip({ x: 9, y: 3 }, { x: 9, y: 9 });
+*/
 playerOne.ourBoard.placeShip({ x: 1, y: 10 }, { x: 10, y: 10 });
 playerTwo.ourBoard.placeShip({ x: 1, y: 10 }, { x: 10, y: 10 });
 p1DomBoardManager.sendNextCollumn();
