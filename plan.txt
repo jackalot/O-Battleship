@@ -1,4 +1,8 @@
 Focus: add a helper function to recieveDomAttack to make restarting the game easier:
+* in attackDomManager.js
+- in the recieveDomAttack function (){
+    
+}
 psuedo code:
  function recieveDomAttack(coordinate, defendingPlayer) {
     if (defendingPlayer === player1) {
