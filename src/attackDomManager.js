@@ -113,7 +113,7 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
   }
   function findUnconfirmedAttacks() {
     const attackBox = document.querySelector('.unconfirmedAttack');
-    if (attackBox) {
+    if (attackBox !== null) {
       const idSeperated = seperateIds(attackBox.id);
       if (idSeperated.playerNumber === 1) {
         recieveDomAttack(idSeperated.coordinate, player1);
