@@ -25,7 +25,6 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
       p1DomBoardManager.swapHideShips();
       p1DomBoardManager.sendNextCollumn();
     }
-    console.log(p2DomBoardManager);
     if (p2DomBoardManager.hideShips === true) {
       p2DomBoardManager.swapHideShips();
       p2DomBoardManager.sendNextCollumn();
