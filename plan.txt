@@ -9,7 +9,7 @@ Focus: allowing players to place their own ships:
     {
       + querySelect the playerOne board 
       + then get each element inside the playerOne board with the class name 'box'
-      + a a for loop that goes through thel ength of the box array
+      + a forEach loop that goes through the box array
       {
         
       }
