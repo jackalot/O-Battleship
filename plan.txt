@@ -25,6 +25,9 @@ function dropShip() {
         const playerOneBoard = document.querySelector('#playerOneBoard');
         const allBoxes = playerOneBoard.findElementsByClassName('.box');
         console.log(allBoxes)
+        allBoxes.forEach((box) => {
+          box.replaceWith(box.cloneNode(true));
+        })
       }
    }
 }
