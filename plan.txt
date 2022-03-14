@@ -7,7 +7,8 @@ Focus: allowing players to place their own ships:
     + parameters { playerCount }
     + if playerCount is one
     {
-      
+      + querySelect the playerOne board 
+      + then get each element inside the playerOne board with the class name 'box'
     }
   }
   + inside dropShip(), a new function called askPlayerCount() {
