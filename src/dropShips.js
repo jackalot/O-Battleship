@@ -3,8 +3,6 @@ function dropShip() {
     if (playerCount === 1) {
       const playerOneBoard = document.querySelector('#playerOneBoard');
       const allBoxes = document.querySelectorAll('.box');
-      console.log(typeof (allBoxes));
-      console.log(allBoxes);
       allBoxes.forEach((box) => {
         //  This will clone the box with itself, thus removing every event listener
         box.replaceWith(box.cloneNode(true));
