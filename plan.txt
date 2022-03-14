@@ -11,14 +11,6 @@ Focus: allowing players to place their own ships:
       + then get each element inside the playerOne board with the class name 'box'
     }
   }
-  + inside dropShip(), a new function called askPlayerCount() {
-    + prompt the user how many player's will be playing, (for now we only have 1 player)
-    + then parse the prompt as it will be a string
-    + if the result of the prompt is 1
-    {
-
-    }
-  }
 }
 psuedo code:
 
@@ -31,13 +23,5 @@ function dropShip() {
         console.log(allBoxes)
       }
    }
- function askPlayerCount() {
-   const windowResult = Number(window.prompt('How many players will be playing? For one player, please type 1, for two players, please type 2', ''));
-   const result = parseInt(windowResult);
-   if(result === 1)
-   {
-     clearBoards(result);
-   }
- }
 }
 module.exports = dropShip;
