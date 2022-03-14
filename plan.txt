@@ -1,3 +1,3 @@
-Focus: add a play again button that will refresh the game without refreshing the page:
+Focus: 
 
 psuedo code:
