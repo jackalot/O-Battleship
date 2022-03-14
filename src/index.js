@@ -5,12 +5,15 @@ const playerTwoDomBoard = document.querySelector('#playerTwoBoard');
 const playerFile = require('./player');
 const domBoardFile = require('./updateDOMBoard');
 const attackDomFile = require('./attackDomManager');
+const dropShipFile = require('./dropShips');
 
+const dropShip = dropShipFile();
 const playerOne = playerFile('player 1', 0);
 const playerTwo = playerFile('CPU', 1);
 //  console.log(playerOne.ourBoard);
 //  console.log(playerTwo.ourBoard);
 
+dropShip.askPlayerCount();
 const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', playerTwo, false);
 const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', playerOne, true);
 /*
