@@ -19,7 +19,7 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
   function endGame(defendingPlayer) {
     const gameStatus = document.querySelector('.gameStatus');
     gameStatus.textContent = `${defendingPlayer.playerName}, you lose! 
-  All your battleships have been sunk! Play Again? Click the Play Again Button!`;
+  All your battleships have been sunk! Refresh the page to play again!`;
 
     if (p1DomBoardManager.hideShips === true) {
       p1DomBoardManager.swapHideShips();
