@@ -14,6 +14,12 @@ Focus: add a helper function to recieveDomAttack to make restarting the game eas
   + replace it with calling endGame();
 }
 psuedo code:
+function endGame(defendingPlayer)
+{
+  const gameStatus = document.querySelector('.gameStatus');
+  gameStatus.textContent = `${defendingPlayer.playerName}, you lose! 
+  All your battleships have been sunk! Play Again? Click the Play Again Button!`;
+}
  function recieveDomAttack(coordinate, defendingPlayer) {
     if (defendingPlayer === player1) {
       player2.sendAttack(player1, coordinate);
