@@ -1,8 +1,11 @@
 Focus: add a helper function to recieveDomAttack to make restarting the game easier:
 * in attackDomManager.js
-- inside attackDomManager, there will be a function called endGame()
++ inside attackDomManager, there will be a function called endGame()
 {
-  
+  + parameters{defendingPlayer}
+  + add a querySelector to gameStatus
+  + change the gameStatus textContent to `${defendingPlayer.playerName}, you lose! 
+  All your battleships have been sunk! Play Again? Click the Play Again Button!`
 }
 - in the recieveDomAttack function (){
     
