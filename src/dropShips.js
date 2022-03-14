@@ -10,7 +10,7 @@ function dropShip() {
     const windowResult = Number(window.prompt('How many players will be playing? For one player, please type 1, for two players, please type 2', ''));
     const result = parseInt(windowResult);
     if (result === 1) {
-      console.log(result);
+      clearBoards(playerCount);
     }
   }
   return { askPlayerCount };
