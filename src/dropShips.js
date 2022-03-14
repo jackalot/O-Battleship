@@ -2,7 +2,7 @@ function dropShip() {
   function clearBoards(playerCount) {
     if (playerCount === 1) {
       const playerOneBoard = document.querySelector('#playerOneBoard');
-      const allBoxes = playerOneBoard.querySelectorAll('box');
+      const allBoxes = document.querySelectorAll('.box');
       console.log(typeof (allBoxes));
       console.log(allBoxes);
       allBoxes.forEach((box) => {
