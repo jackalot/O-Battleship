@@ -16,6 +16,19 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
       p1DomBoardManager.sendNextCollumn();
     }
   }
+  function endGame(defendingPlayer) {
+    const gameStatus = document.querySelector('.gameStatus');
+    gameStatus.textContent = `${defendingPlayer.playerName}, you lose! 
+  All your battleships have been sunk! Play Again? Click the Play Again Button!`;
+    if (player1.hideShips === true) {
+      player1.swapHideShips();
+      player1.sendNextCollumn();
+    }
+    if (player2.hideShips === true) {
+      player2.swapHideShips();
+      player2.sendNextCollumn();
+    }
+  }
   function recieveDomAttack(coordinate, defendingPlayer) {
     if (defendingPlayer === player1) {
       player2.sendAttack(player1, coordinate);
@@ -29,8 +42,7 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
       gameStatus.textContent = "Click on a square to attack that board, then click below to confirm you're attack! ";
       swapVisibility(defendingPlayer);
     } else {
-      const gameStatus = document.querySelector('.gameStatus');
-      gameStatus.textContent = `${defendingPlayer.playerName}, you lose! All your battleships have been sunk!`;
+      endGame(defendingPlayer);
     }
   }
   // seperateIds() helper function
