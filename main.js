@@ -145,7 +145,7 @@ eval("const shipFactory = __webpack_require__(/*! ./ship */ \"./src/ship.js\");\
   \**************************/
 /***/ ((module) => {
 
-eval("function dropShip() {\n  function askPlayerCount() {\n    const windowResult = Number(window.prompt('How many players will be playing? For one player, please type 1, for two players, please type 2', ''));\n    const result = parseInt(windowResult);\n    if (result === 1) {\n      console.log(result);\n    }\n  }\n  return { askPlayerCount };\n}\nmodule.exports = dropShip;\n\n\n//# sourceURL=webpack://O-Forms-Practice/./src/dropShips.js?");
+eval("function dropShip() {\n  function clearBoards(playerCount) {\n    if (playerCount === 1) {\n      const playerOneBoard = document.querySelector('#playerOneBoard');\n      const allBoxes = playerOneBoard.getElementsByClassName('box');\n      console.log(allBoxes);\n    }\n  }\n  function askPlayerCount() {\n    const windowResult = Number(window.prompt('How many players will be playing? For one player, please type 1, for two players, please type 2', ''));\n    const result = parseInt(windowResult);\n    if (result === 1) {\n      clearBoards(1);\n    }\n  }\n  return { askPlayerCount };\n}\nmodule.exports = dropShip;\n\n\n//# sourceURL=webpack://O-Forms-Practice/./src/dropShips.js?");
 
 /***/ }),
 
