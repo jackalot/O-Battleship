@@ -20,13 +20,15 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
     const gameStatus = document.querySelector('.gameStatus');
     gameStatus.textContent = `${defendingPlayer.playerName}, you lose! 
   All your battleships have been sunk! Play Again? Click the Play Again Button!`;
-    if (player1.hideShips === true) {
-      player1.swapHideShips();
-      player1.sendNextCollumn();
+
+    if (p1DomBoardManager.hideShips === true) {
+      p1DomBoardManager.swapHideShips();
+      p1DomBoardManager.sendNextCollumn();
     }
-    if (player2.hideShips === true) {
-      player2.swapHideShips();
-      player2.sendNextCollumn();
+    console.log(p2DomBoardManager);
+    if (p2DomBoardManager.hideShips === true) {
+      p2DomBoardManager.swapHideShips();
+      p2DomBoardManager.sendNextCollumn();
     }
   }
   function recieveDomAttack(coordinate, defendingPlayer) {
