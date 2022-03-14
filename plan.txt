@@ -1,5 +1,9 @@
 Focus: add a helper function to recieveDomAttack to make restarting the game easier:
 * in attackDomManager.js
+- inside attackDomManager, there will be a function called endGame()
+{
+  
+}
 - in the recieveDomAttack function (){
     
 }
