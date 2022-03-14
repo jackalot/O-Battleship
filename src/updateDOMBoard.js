@@ -118,7 +118,7 @@ function updateDOMBoard(myPlayer, searchQuery, otherPlayer, hideShips) {
     return false;
   }
   return {
-    sendNextCollumn, checkForClass, searchShip, searchMiss, searchHit, swapHideShips,
+    sendNextCollumn, checkForClass, searchShip, searchMiss, searchHit, swapHideShips, hideShips,
   };
 }
 module.exports = updateDOMBoard;
