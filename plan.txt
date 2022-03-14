@@ -1,3 +1,7 @@
 Focus: allowing players to place their own ships:
 * make a new file, call it dropShips.js:
++ make it a factory function with an export modules like updateDomBoard.js
+{
+  
+}
 psuedo code:
