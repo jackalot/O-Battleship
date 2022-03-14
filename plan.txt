@@ -10,7 +10,8 @@ Focus: add a helper function to recieveDomAttack to make restarting the game eas
   + if player2 has their ships hidden, call their swapHideShips function.
 }
 - in the recieveDomAttack function (){
-    
+  - in the else section of sunkenResult, remove gameStatus and the textContent
+  + replace it with calling endGame();
 }
 psuedo code:
  function recieveDomAttack(coordinate, defendingPlayer) {
