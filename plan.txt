@@ -27,7 +27,6 @@ psuedo code:
       gameStatus.textContent = "Click on a square to attack that board, then click below to confirm you're attack! ";
       swapVisibility(defendingPlayer);
     } else {
-      const gameStatus = document.querySelector('.gameStatus');
-      gameStatus.textContent = `${defendingPlayer.playerName}, you lose! All your battleships have been sunk!`;
+     endGame(defendingPlayer);
     }
   }
