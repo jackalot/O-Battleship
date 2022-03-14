@@ -4,6 +4,9 @@ function dropShip() {
       const playerOneBoard = document.querySelector('#playerOneBoard');
       const allBoxes = playerOneBoard.getElementsByClassName('box');
       console.log(allBoxes);
+      allBoxes.forEach((box) => {
+        box.replaceWith(box.cloneNode(true));
+      });
     }
   }
   function askPlayerCount() {
