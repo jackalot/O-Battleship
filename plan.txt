@@ -4,7 +4,10 @@ Focus: allowing players to place their own ships:
 {
   + inside dropShip(), a new function called askPlayerCount() {
     + prompt the user how many player's will be playing, (for now we only have 1 player)
-    
+    + if the result of the prompt is 1
+    {
+      
+    }
   }
 }
 psuedo code:
