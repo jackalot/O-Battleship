@@ -2,7 +2,7 @@ function dropShip() {
   function clearBoards(playerCount) {
     if (playerCount === 1) {
       const playerOneBoard = document.querySelector('#playerOneBoard');
-      const allBoxes = playerOneBoard.findElementsByClassName('.box');
+      const allBoxes = playerOneBoard.getElementsByClassName('box');
       console.log(allBoxes);
     }
   }
