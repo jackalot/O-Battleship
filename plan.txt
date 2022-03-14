@@ -22,10 +22,12 @@ function endGame(defendingPlayer)
   if(player1.hideShips === true)
   {
     player1.swapHideShips();
+    player1.sendNextCollumn();
   }
   if(player2.hideShips === true)
   {
     player2.swapHideShips();
+    player2.sendNextCollumn();
   }
 }
  function recieveDomAttack(coordinate, defendingPlayer) {
