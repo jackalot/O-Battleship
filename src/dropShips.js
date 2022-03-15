@@ -16,7 +16,11 @@ function dropShip() {
   }
   const playerCount = askPlayerCount();
   const ourPlayers = createPlayers(playerCount);
-  function placeAShip(myPlayerNumber) {
+  function placeAShip(myPlayerNumber, boxID) {
+    if (myPlayerNumber === 1) {
+      const box = document.querySelect(`#${boxID}`);
+      box.classList.add('confirmShip');
+    }
     console.log(ourPlayers);
     console.log(myPlayerNumber);
   }
@@ -36,7 +40,7 @@ function dropShip() {
     allBoxes.forEach((box) => {
       const result = findPlayerNumber(box.id);
       box.addEventListener('click', () => {
-        placeAShip(result);
+        placeAShip(result, box.id);
       });
     });
   }
