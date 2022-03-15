@@ -11,8 +11,10 @@ Focus: let players confirm the ship placements:
   {
     + parameters { allUnconfirmedShips }
     + make an empty array named unconfirmedCoordinates
-    + add a reference to findXCoordinate
-    + add a reference to findYCoordinate
+    + make a forEach loop using the allUnconfirmedShips array {
+          + add a reference to findXCoordinate
+          + add a reference to findYCoordinate
+    }
   }
 }
 psuedo code:
