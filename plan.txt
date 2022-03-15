@@ -35,7 +35,10 @@ function dropShip() {
   function addToEachBox() {
     const allBoxes = document.querySelectorAll('.box');
     allBoxes.forEach((box) => {
-      // some sort of event listener here
+      const result = findPlayerNumber(box.id);
+      box.addEventLisener('click', () => {
+        placeAShip(result);
+      })
     })
   }
   function clearBoards(playerCount) {
