@@ -1,4 +1,4 @@
-Focus: allowing players to place their own ships:
+Focus: let players confirm the ship placements:
 + in placeAShip() {
   + add the parameter { boxCoordinate }
 + check if our player is player 1
