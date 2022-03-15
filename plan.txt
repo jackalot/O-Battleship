@@ -8,7 +8,8 @@ Focus: let players confirm the ship placements:
 {
   //confirmPlacedShips() helper function
   + inside dropShip.js, a new function called findUnconfirmedShips() {
-
+    + querySelect all ships with the class '.confirmShip'
+    + return all the ships
   }
   + inside dropShip.js, a new function called confirmPlacedShips() {
     + store a reference to findUnconfirmedShips()
