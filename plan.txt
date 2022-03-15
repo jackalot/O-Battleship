@@ -14,6 +14,7 @@ Focus: let players confirm the ship placements:
     + make a forEach loop using the allUnconfirmedShips array {
           + add a reference to findXCoordinate with the ship boxes id as an argument
           + add a reference to findYCoordinate with the ship boxes id as an argument
+          + make a coordinate object with a x y key pair using the above references.
     }
   }
 }
