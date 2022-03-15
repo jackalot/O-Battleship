@@ -1,5 +1,7 @@
 Focus: allowing players to place their own ships:
++ inside dropShip, a new function called addToEachBox() {
 
+}
 + in the clearBoard function() {
   }
 psuedo code:
