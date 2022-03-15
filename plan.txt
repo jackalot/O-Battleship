@@ -1,6 +1,10 @@
 Focus: allowing players to place their own ships:
 + inside dropShip, a new function called createPlayers() {
-
+ + parameters { playerCount }
+ + if playerCount is 1 {
+    + make the first player name be player1 and the second playerName
+    be CPU
+ }
 }
 + inside dropShip, a new function called placeAShip() {
    + parameters{ myPlayerNumber}
