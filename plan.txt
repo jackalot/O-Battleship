@@ -1,5 +1,7 @@
 Focus: allowing players to place their own ships:
-+ after each
+
++ in the clearBoard function() {
+  }
 psuedo code:
 
 function dropShip() {
