@@ -5,19 +5,6 @@ Focus: allowing players to place their own ships:
       +
     }
 }
-+ inside dropShip, a new function called addToEachBox() {
-  parameters{ playerCount }
-  + first it will query select every box
-  + then it will call a forEach loop
-  {
-    + it will then call findPlayerNumber and the value it sends it is the boxes id
-    + then an event listener will be added to the box, the function will be
-    placeAShip with findPlayerNumber's result as the 'myPlayerNumber'
-  }
-}
-+ in the clearBoard function() {
-  + after the board is cleared call addToEachBox and call it with the playerCount
-  }
 psuedo code:
 function dropShip() {
   function placeAShip(myPlayerNumber) {
