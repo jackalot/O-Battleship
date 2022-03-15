@@ -9,7 +9,12 @@ Focus: allowing players to place their own ships:
 }
 
 psuedo code:
-  function placeAShip(myPlayerNumber) {
+  function placeAShip(myPlayerNumber, boxID) {
+    if(myPlayerNumber === 1)
+    {
+      const box = document.querySelect(`#${boxID}`);
+      box.classList.add('confirmShip');
+    }
     console.log(ourPlayers);
     console.log(myPlayerNumber);
   }
