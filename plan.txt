@@ -1,28 +1,5 @@
 Focus: allowing players to place their own ships:
-+ inside dropShip, a new function called createPlayers() {
- + parameters { playerCount }
- + if playerCount is 1 {
-    + make the first player name be player1 and the second playerName
-    be CPU
-    + return the two players
- }
- + if playerCount is 2 {
-   + make the first playerName be player2 and the second playerName
-   be player2
-   + return the two players
- }
-}
-+ a playerCount variable that stores askPlayerCount();
 
-+ inside dropShip, a new function called placeAShip() {
-   + parameters{ myPlayerNumber}
-   + if myPlayerNumber is 1 {
-      +
-    }
-}
-- in askPlayerCount() {
-  - removing the result if statement, and just return the result;
-}
 psuedo code:
   function placeAShip(myPlayerNumber) {
     console.log(ourPlayers);
