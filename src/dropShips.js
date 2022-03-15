@@ -1,5 +1,22 @@
+const playerFile = require('./player');
+
 function dropShip() {
+  function createPlayers(playerCount) {
+    if (playerCount === 1) {
+      const playerOne = playerFile('player 1', 0);
+      const playerTwo = playerFile('CPU', 1);
+      return { playerOne, playerTwo };
+    }
+    if (playerCount === 2) {
+      const playerOne = playerFile('player 1', 0);
+      const playerTwo = playerFile('player 2', 1);
+      return { playerOne, playerTwo };
+    }
+  }
+  const playerCount = askPlayerCount();
+  const ourPlayers = createPlayers(playerCount);
   function placeAShip(myPlayerNumber) {
+    console.log(ourPlayers);
     console.log(myPlayerNumber);
   }
   // addToEachBox() helper function
@@ -17,12 +34,12 @@ function dropShip() {
     const allBoxes = document.querySelectorAll('.box');
     allBoxes.forEach((box) => {
       const result = findPlayerNumber(box.id);
-      box.addEventListener('click', () => {
+      box.addEventLisener('click', () => {
         placeAShip(result);
       });
     });
   }
-  function clearBoards(playerCount) {
+  function clearBoards() {
     if (playerCount === 1) {
       const allBoxes = document.querySelectorAll('.box');
       allBoxes.forEach((box) => {
@@ -32,13 +49,12 @@ function dropShip() {
     }
     addToEachBox(playerCount);
   }
+  clearBoards(playerCount);
   function askPlayerCount() {
     const windowResult = Number(window.prompt('How many players will be playing? For one player, please type 1, for two players, please type 2', ''));
     // eslint-disable-next-line radix
     const result = parseInt(windowResult);
-    if (result === 1) {
-      clearBoards(1);
-    }
+    return result;
   }
   return { askPlayerCount };
 }
