@@ -34,7 +34,7 @@ psuedo code:
     allBoxes.forEach((box) => {
       const result = findPlayerNumber(box.id);
       box.addEventListener('click', () => {
-        placeAShip(result);
+        placeAShip(result, box.id);
       });
     });
   }
