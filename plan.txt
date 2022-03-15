@@ -20,3 +20,6 @@ psuedo code:
 const confirmPlaceShipsBtn = document.querySelect('.confirm-place-ships');
 confirmPlaceShipsBtn.addEventListener('click', dropShip.confirmPlacedShips());
 // dropShip.js \\
+function findUnconfirmedShips() {
+  const allUnconfirmedShips = document.querySelect('.confirmShip');
+}
