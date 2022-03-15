@@ -8,7 +8,7 @@ const attackDomFile = require('./attackDomManager');
 const dropShipFile = require('./dropShips');
 
 const dropShip = dropShipFile();
-const confirmPlaceShipsBtn = document.querySelect('.confirm-place-ships');
+const confirmPlaceShipsBtn = document.querySelector('.confirm-place-ships');
 confirmPlaceShipsBtn.addEventListener('click', dropShip.confirmPlacedShips());
 
 const playerOne = playerFile('player 1', 0);

@@ -2,11 +2,12 @@ const playerFile = require('./player');
 
 function dropShip() {
   function findUnconfirmedShips() {
-    const allUnconfirmedShips = document.querySelect('.confirmShip');
+    const allUnconfirmedShips = document.querySelectorAll('.confirmShip');
     return allUnconfirmedShips;
   }
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
+    console.log(allUnconfirmedShips);
   }
   function createPlayers(playerCount) {
     if (playerCount === 1) {
