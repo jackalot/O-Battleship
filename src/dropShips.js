@@ -12,6 +12,7 @@ function dropShip() {
       const playerTwo = playerFile('player 2', 1);
       return { playerOne, playerTwo };
     }
+    return null;
   }
   const playerCount = askPlayerCount();
   const ourPlayers = createPlayers(playerCount);
@@ -34,7 +35,7 @@ function dropShip() {
     const allBoxes = document.querySelectorAll('.box');
     allBoxes.forEach((box) => {
       const result = findPlayerNumber(box.id);
-      box.addEventLisener('click', () => {
+      box.addEventListener('click', () => {
         placeAShip(result);
       });
     });
