@@ -1,6 +1,13 @@
 const playerFile = require('./player');
 
 function dropShip() {
+  function findUnconfirmedShips() {
+    const allUnconfirmedShips = document.querySelect('.confirmShip');
+    return allUnconfirmedShips;
+  }
+  function confirmPlacedShips() {
+    const allUnconfirmedShips = findUnconfirmedShips();
+  }
   function createPlayers(playerCount) {
     if (playerCount === 1) {
       const playerOne = playerFile('player 1', 0);
@@ -62,6 +69,6 @@ function dropShip() {
     addToEachBox(playerCount);
   }
   clearBoards(playerCount);
-  return { askPlayerCount };
+  return { askPlayerCount, confirmPlacedShips };
 }
 module.exports = dropShip;
