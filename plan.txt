@@ -5,9 +5,12 @@ Focus: let players confirm the ship placements:
   {
     // work on this later
   }
+  + import findXCoordinate and findYCoordinate from attackDomManager.js,
+  make them labeled as helper functions for getShipCoordinates
   + inside dropShip.js, a new function named getShipCoordinates()
   {
     + parameters { allUnconfirmedShips }
+    
   }
 }
 psuedo code:
