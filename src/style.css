@@ -10,6 +10,9 @@ table, th, td {
     padding: 10px;
     text-align: center;
 }
+.confirmShip {
+    background-color: purple;
+}
 .containsShip {
     background-color: blue;
 }
