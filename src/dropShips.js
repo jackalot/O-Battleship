@@ -36,8 +36,6 @@ function dropShip() {
       const box = document.querySelector(`#${boxID}`);
       box.classList.add('confirmShip');
     }
-    console.log(ourPlayers);
-    console.log(myPlayerNumber);
   }
   // addToEachBox() helper function
   // finds the player number in the id
