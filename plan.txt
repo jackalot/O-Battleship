@@ -3,6 +3,10 @@ Focus: let players confirm the ship placements:
 { 
   + inside dropShip.js, a new function named findAdjoiningShips()
   {
+    // work on this later
+  }
+  + inside dropShip.js, a new function named getShipCoordinates()
+  {
     
   }
 }
