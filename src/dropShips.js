@@ -14,6 +14,12 @@ function dropShip() {
     }
     return null;
   }
+  function askPlayerCount() {
+    const windowResult = Number(window.prompt('How many players will be playing? For one player, please type 1, for two players, please type 2', ''));
+    // eslint-disable-next-line radix
+    const result = parseInt(windowResult);
+    return result;
+  }
   const playerCount = askPlayerCount();
   const ourPlayers = createPlayers(playerCount);
   function placeAShip(myPlayerNumber, boxID) {
@@ -55,12 +61,6 @@ function dropShip() {
     addToEachBox(playerCount);
   }
   clearBoards(playerCount);
-  function askPlayerCount() {
-    const windowResult = Number(window.prompt('How many players will be playing? For one player, please type 1, for two players, please type 2', ''));
-    // eslint-disable-next-line radix
-    const result = parseInt(windowResult);
-    return result;
-  }
   return { askPlayerCount };
 }
 module.exports = dropShip;
