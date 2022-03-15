@@ -1,12 +1,5 @@
 Focus: let players confirm the ship placements:
-+ in placeAShip() {
-  + add the parameter { boxCoordinate }
-+ check if our player is player 1
-  {
-    + querySelect our box with the boxCoordinate
-    + add the class (confirmShip) 
-  }
-}
+
 
 psuedo code:
   const playerFile = require('./player');
