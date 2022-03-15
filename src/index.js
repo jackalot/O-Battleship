@@ -9,7 +9,7 @@ const dropShipFile = require('./dropShips');
 
 const dropShip = dropShipFile();
 const confirmPlaceShipsBtn = document.querySelector('.confirm-place-ships');
-confirmPlaceShipsBtn.addEventListener('click', dropShip.confirmPlacedShips());
+confirmPlaceShipsBtn.addEventListener('click', dropShip.confirmPlacedShips);
 
 const playerOne = playerFile('player 1', 0);
 const playerTwo = playerFile('CPU', 1);
