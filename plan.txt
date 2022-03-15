@@ -11,7 +11,7 @@ Focus: let players confirm the ship placements:
 
   }
   + inside dropShip.js, a new function called confirmPlacedShips() {
-
+    + store a reference to findUnconfirmedShips()
   }
 }
 psuedo code:
