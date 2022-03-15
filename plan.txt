@@ -3,7 +3,8 @@ Focus: allowing players to place their own ships:
   + add the parameter { boxCoordinate }
 + check if our player is player 1
   {
-
+    + querySelect our box with the boxCoordinate
+    + add the class (confirmShip) 
   }
 }
 
