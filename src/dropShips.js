@@ -1,6 +1,7 @@
 const playerFile = require('./player');
 
 function dropShip() {
+  // confirmPlacedShips() helper function()
   function findUnconfirmedShips() {
     const allUnconfirmedShips = document.querySelectorAll('.confirmShip');
     return allUnconfirmedShips;
