@@ -13,11 +13,15 @@ Focus: allowing players to place their own ships:
  }
 }
 + a playerCount variable that stores askPlayerCount();
+
 + inside dropShip, a new function called placeAShip() {
    + parameters{ myPlayerNumber}
    + if myPlayerNumber is 1 {
       +
     }
+}
+- in askPlayerCount() {
+  - removing the result if statement, and just return the result;
 }
 psuedo code:
 function dropShip() {
