@@ -1,4 +1,27 @@
 function dropShip() {
+  function placeAShip(myPlayerNumber) {
+    console.log(myPlayerNumber);
+  }
+  // addToEachBox() helper function
+  // finds the player number in the id
+  function findPlayerNumber(nonSeperatedId) {
+    const numberAsAString = nonSeperatedId[1];
+    if (numberAsAString === '1') {
+      return 1;
+    } if (numberAsAString === '2') {
+      return 2;
+    }
+    return false;
+  }
+  function addToEachBox() {
+    const allBoxes = document.querySelectorAll('.box');
+    allBoxes.forEach((box) => {
+      const result = findPlayerNumber(box.id);
+      box.addEventLisener('click', () => {
+        placeAShip(result);
+      });
+    });
+  }
   function clearBoards(playerCount) {
     if (playerCount === 1) {
       const allBoxes = document.querySelectorAll('.box');
@@ -7,6 +30,7 @@ function dropShip() {
         box.replaceWith(box.cloneNode(true));
       });
     }
+    addToEachBox(playerCount);
   }
   function askPlayerCount() {
     const windowResult = Number(window.prompt('How many players will be playing? For one player, please type 1, for two players, please type 2', ''));
