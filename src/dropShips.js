@@ -1,7 +1,6 @@
 function dropShip() {
   function clearBoards(playerCount) {
     if (playerCount === 1) {
-      const playerOneBoard = document.querySelector('#playerOneBoard');
       const allBoxes = document.querySelectorAll('.box');
       allBoxes.forEach((box) => {
         //  This will clone the box with itself, thus removing every event listener
