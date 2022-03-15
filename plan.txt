@@ -10,7 +10,8 @@ Focus: let players confirm the ship placements:
   + inside dropShip.js, a new function named getShipCoordinates()
   {
     + parameters { allUnconfirmedShips }
-    
+    + add a reference to findXCoordinate
+    + add a reference to findYCoordinate
   }
 }
 psuedo code:
