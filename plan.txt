@@ -13,10 +13,11 @@ Focus: allowing players to place their own ships:
   + after the board is cleared call addToEachBox and call it with the playerCount
   }
 psuedo code:
-function placeAShip(myPlayerNumber) {
+
+function dropShip() {
+  function placeAShip(myPlayerNumber) {
 
 }
-function dropShip() {
   function addToEachBox() {
     const allBoxes = document.querySelectorAll('.box');
     allBoxes.forEach((box) => {
