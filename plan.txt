@@ -12,7 +12,16 @@ Focus: allowing players to place their own ships:
   + after the board is cleared call addToEachBox and call it with the playerCount
   }
 psuedo code:
+function placeAShip(myPlayerNumber) {
+
+}
 function dropShip() {
+  function addToEachBox() {
+    const allBoxes = document.querySelectorAll('.box');
+    allBoxes.forEach((box) => {
+      // some sort of event listener here
+    })
+  }
   function clearBoards(playerCount) {
     if (playerCount === 1) {
       const allBoxes = document.querySelectorAll('.box');
@@ -21,6 +30,7 @@ function dropShip() {
         box.replaceWith(box.cloneNode(true));
       });
     }
+    addToEachBox(playerCount);
   }
   function askPlayerCount() {
     const windowResult = Number(window.prompt('How many players will be playing? For one player, please type 1, for two players, please type 2', ''));
