@@ -24,7 +24,22 @@ Focus: allowing players to place their own ships:
   - removing the result if statement, and just return the result;
 }
 psuedo code:
+const playerFile = require('./player');
 function dropShip() {
+  function createPlayers (playerCount) {
+    if(playerCount === 1)
+    {
+      const playerOne = playerFile('player 1', 0);
+      const playerTwo = playerFile('CPU', 1);
+      return { playerOne, playerTwo}
+    }
+    if(playerCount === 2)
+    {
+      const playerOne = playerFile('player 1', 0);
+      const playerTwo = playerFile('player 2', 1);
+      return { playerOne, playerTwo}
+    }
+  }
   function placeAShip(myPlayerNumber) {
 
 }
@@ -62,9 +77,7 @@ function dropShip() {
     const windowResult = Number(window.prompt('How many players will be playing? For one player, please type 1, for two players, please type 2', ''));
     // eslint-disable-next-line radix
     const result = parseInt(windowResult);
-    if (result === 1) {
-      clearBoards(1);
-    }
+    return result;
   }
   return { askPlayerCount };
 }
