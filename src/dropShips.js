@@ -17,7 +17,7 @@ function dropShip() {
     const allBoxes = document.querySelectorAll('.box');
     allBoxes.forEach((box) => {
       const result = findPlayerNumber(box.id);
-      box.addEventLisener('click', () => {
+      box.addEventListener('click', () => {
         placeAShip(result);
       });
     });
