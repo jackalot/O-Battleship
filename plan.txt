@@ -1,4 +1,10 @@
 Focus: allowing players to place their own ships:
++ in placeAShip() {
++ check if our player is player 1
+  {
+
+  }
+}
 
 psuedo code:
   function placeAShip(myPlayerNumber) {
