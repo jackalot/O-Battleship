@@ -40,6 +40,8 @@ function dropShip() {
       return { playerOne, playerTwo}
     }
   }
+  const playerCount = askPlayerCount();
+  const ourPlayers = createPlayers(playerCount);
   function placeAShip(myPlayerNumber) {
 
 }
@@ -73,6 +75,7 @@ function dropShip() {
     }
     addToEachBox(playerCount);
   }
+  clearBoards(playerCount)
   function askPlayerCount() {
     const windowResult = Number(window.prompt('How many players will be playing? For one player, please type 1, for two players, please type 2', ''));
     // eslint-disable-next-line radix
