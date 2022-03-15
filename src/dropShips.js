@@ -22,9 +22,10 @@ function dropShip() {
   }
   const playerCount = askPlayerCount();
   const ourPlayers = createPlayers(playerCount);
+
   function placeAShip(myPlayerNumber, boxID) {
     if (myPlayerNumber === 1) {
-      const box = document.querySelect(`#${boxID}`);
+      const box = document.querySelector(`#${boxID}`);
       box.classList.add('confirmShip');
     }
     console.log(ourPlayers);
