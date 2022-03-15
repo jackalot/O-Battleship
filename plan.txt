@@ -22,4 +22,8 @@ confirmPlaceShipsBtn.addEventListener('click', dropShip.confirmPlacedShips());
 // dropShip.js \\
 function findUnconfirmedShips() {
   const allUnconfirmedShips = document.querySelect('.confirmShip');
+  return;
+}
+function confirmPlacedShips() {
+  const allUnconfirmedShips = findUnconfirmedShips();
 }
