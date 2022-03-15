@@ -1,4 +1,8 @@
 Focus: allowing players to place their own ships:
++ inside dropShip, a new function called placeAShip() {
+  + parameters{ myPlayerNumber}
+
+}
 + inside dropShip, a new function called addToEachBox() {
   + first it will query select every box
   + then it will call a forEach loop
