@@ -1,4 +1,5 @@
 Focus: allowing players to place their own ships:
+* outside dropShip, make a reference to attackDomManager's file 
 + inside dropShip, a new function called placeAShip() {
   + parameters{ myPlayerNumber}
 
