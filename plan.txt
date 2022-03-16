@@ -27,6 +27,9 @@ Focus: make the coordinates to the ships that we now have into ship objects
   + parameters { allUnconfirmedCoords }
 }
 psuedo code:
+function createShipObject(allUnconfirmedCoords) {
+
+}
  function getShipCoordinates(allUnconfirmedShips) {
     const unconfirmedCoords = [];
     allUnconfirmedShips.forEach((ship) => {
