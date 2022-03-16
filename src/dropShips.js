@@ -59,6 +59,7 @@ function dropShip() {
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
     const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
+    const shipObject = createShipObject(unconfirmedCoordinates);
   }
   function createPlayers(playerCount) {
     if (playerCount === 1) {
