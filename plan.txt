@@ -3,6 +3,9 @@ Focus: make the coordinates to the ships that we now have into ship objects
 //createShipObject() helper function
 + inside dropShip.js, a new function named findOrientation() {
  + parameters { allUnconfirmedCoords }
+ + first it will create a variable named: yMatches and it will start with 0
+ + then we will have a variable called: yMatcher which will be the first y value in the loop.
+ + same thing above with x.
 }
 + inside dropShip.js, a new function named createShipObject() {
   + parameters { allUnconfirmedCoords }
