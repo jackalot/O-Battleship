@@ -7,7 +7,9 @@ Focus: make the coordinates to the ships that we now have into ship objects
  + then we will have a variable called: yMatcher which will be the first y value in the loop.
  + same thing above with x.
  + then a for loop going through allUnconfirmedCoords {
-   
+   + if the x value of this coordinate matches our xMatcher {
+
+   }
  }
 }
 + inside dropShip.js, a new function named createShipObject() {
