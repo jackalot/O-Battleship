@@ -67,6 +67,10 @@ function getShipCoordinates(allUnconfirmedShips) {
   allUnconfirmedShips.forEach((ship) => {
     const xResult = findXCoordinate(ship.id);
     const yResult = findYCoordinate(ship.id);
+    const ourCoordinate = {
+      x: xResult,
+      y: yResult,
+    }
   })
 }
 function findUnconfirmedShips() {
