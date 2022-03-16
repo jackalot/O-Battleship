@@ -27,6 +27,9 @@ Focus: make the coordinates to the ships that we now have into ship objects
   + parameters { allUnconfirmedCoords }
 }
 psuedo code:
+function findOrientation(allUnconfirmedCoords) {
+  
+}
 function createShipObject(allUnconfirmedCoords) {
 
 }
