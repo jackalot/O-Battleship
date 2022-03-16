@@ -39,7 +39,7 @@ function findOrientation(allUnconfirmedCoords) {
   {
     if(allunconfirmedCoords[i].x === xMatcher)
     {
-      
+      xMatches += 1;
     }
   }
 }
