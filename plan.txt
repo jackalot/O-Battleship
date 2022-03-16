@@ -65,7 +65,8 @@ function findXcoordinate(nonSeperatedId) {
 function getShipCoordinates(allUnconfirmedShips) {
   const unconfirmedCoords = [];
   allUnconfirmedShips.forEach((ship) => {
-
+    const xResult = findXCoordinate(ship.id);
+    const yResult = findYCoordinate(ship.id);
   })
 }
 function findUnconfirmedShips() {
