@@ -26,6 +26,9 @@ confirmPlaceShipsBtn.addEventListener('click', dropShip.confirmPlacedShips());
 // dropShip.js \\
 function getShipCoordinates(allUnconfirmedShips) {
   const unconfirmedCoords = [];
+  allUnconfirmedShips.forEach((ship) => {
+
+  })
 }
 function findUnconfirmedShips() {
   const allUnconfirmedShips = document.querySelect('.confirmShip');
