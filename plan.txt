@@ -8,10 +8,10 @@ Focus: make the coordinates to the ships that we now have into ship objects
  + same thing above with x.
  + then a for loop going through allUnconfirmedCoords {
    + if the x value of this coordinate matches our xMatcher {
-
+     +  add one to xMatches
    }
    + if the y value of this coordinate matches our yMatcher {
-
+     + add one to yMatches
    }
  }
 }
