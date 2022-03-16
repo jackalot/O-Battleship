@@ -54,6 +54,7 @@ function findOrientation(allUnconfirmedCoords) {
   {
     return 'vertical'
   }
+  return 'none'
 }
 function createShipObject(allUnconfirmedCoords) {
 
