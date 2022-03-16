@@ -1,7 +1,35 @@
 const playerFile = require('./player');
 
 function dropShip() {
-// getShipCoordinates() helper function
+  // createShipObject() helper function
+  function findOrientation(allUnconfirmedCoords) {
+    let yMatches = 0;
+    // when looping, if something matches this y coordinate,
+    // add 1 to yMatches
+    const yMatcher = allUnconfirmedCoords[0].y;
+    let xMatches = 0;
+    const xMatcher = allUnconfirmedCoords[0].x;
+    for (let i = 1; i < allUnconfirmedCoords.length; i += 1) {
+      if (allUnconfirmedCoords[i].x === xMatcher) {
+        xMatches += 1;
+      }
+      if (allUnconfirmedCoords[i].y === yMatcher) {
+        yMatches += 1;
+      }
+    }
+    if (xMatches === allUnconfirmedCoords.length) {
+      return 'horizontal';
+    }
+    if (yMatches === allUnconfirmedCoords.length) {
+      return 'vertical';
+    }
+    return 'none';
+  }
+  // confirmPlacedShips() helper function
+  function createShipObject(allUnconfirmedCoords) {
+    const shipOrietation = findOrientation(allUnconfirmedCoords);
+  }
+  // getShipCoordinates() helper function
   function findXcoordinate(nonSeperatedId) {
   // sort through the loop, if this is 1,
     let hyphenCount = 0;
