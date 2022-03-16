@@ -1,3 +1,3 @@
-Focus: let players confirm the ship placements:
+Focus: make the coordinates to the ships that we now have into ship objects
 
 psuedo code:
