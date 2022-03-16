@@ -74,10 +74,10 @@ function getShipCoordinates(allUnconfirmedShips) {
     unconfirmedCoords.push(ourCoordinate);
   })
 }
-function findUnconfirmedShips() {
-  const allUnconfirmedShips = document.querySelect('.confirmShip');
-  return allUnconfirmedShips;
-}
+ function findUnconfirmedShips() {
+    const allUnconfirmedShips = document.querySelectorAll('.confirmShip');
+    return allUnconfirmedShips;
+  }
 function confirmPlacedShips() {
   const allUnconfirmedShips = findUnconfirmedShips();
   const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
