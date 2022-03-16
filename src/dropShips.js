@@ -50,6 +50,7 @@ function dropShip() {
       };
       unconfirmedCoords.push(ourCoordinate);
     });
+    return unconfirmedCoords;
   }
   function findUnconfirmedShips() {
     const allUnconfirmedShips = document.querySelectorAll('.confirmShip');
@@ -57,7 +58,9 @@ function dropShip() {
   }
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
+    console.log(allUnconfirmedShips);
     const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
+    console.log(unconfirmedCoordinates);
   }
   function createPlayers(playerCount) {
     if (playerCount === 1) {
