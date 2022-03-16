@@ -14,6 +14,14 @@ Focus: make the coordinates to the ships that we now have into ship objects
      + add one to yMatches
    }
  }
+ + when the loop finishes, if the xMatches are equal to allUnconfirmedCoords length
+ {
+   + return 'horizontal'
+ }
+ + when the loop finishes, if the yMatches are equal to allUnconfirmedCoords length
+ {
+   + return 'vertical'
+ }
 }
 + inside dropShip.js, a new function named createShipObject() {
   + parameters { allUnconfirmedCoords }
