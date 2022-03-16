@@ -28,7 +28,10 @@ Focus: make the coordinates to the ships that we now have into ship objects
 }
 psuedo code:
 function findOrientation(allUnconfirmedCoords) {
-  
+  let yMatches = 0;
+  // when looping, if something matches this y coordinate,
+  // add 1 to yMatches
+  let yMatcher = allUnconfirmedCoords[0].y;
 }
 function createShipObject(allUnconfirmedCoords) {
 
