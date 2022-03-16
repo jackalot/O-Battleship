@@ -79,4 +79,5 @@ function createShipObject(allUnconfirmedCoords) {
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
     const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
+    const shipObject = createShipObject(unconfirmedCoordinates);
   }
