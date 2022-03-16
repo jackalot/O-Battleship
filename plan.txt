@@ -1,3 +1,24 @@
 Focus: make the coordinates to the ships that we now have into ship objects
 
 psuedo code:
+ function getShipCoordinates(allUnconfirmedShips) {
+    const unconfirmedCoords = [];
+    allUnconfirmedShips.forEach((ship) => {
+      const xResult = findXcoordinate(ship.id);
+      const yResult = findYcoordinate(ship.id);
+      const ourCoordinate = {
+        x: xResult,
+        y: yResult,
+      };
+      unconfirmedCoords.push(ourCoordinate);
+    });
+    return unconfirmedCoords;
+  }
+  function findUnconfirmedShips() {
+    const allUnconfirmedShips = document.querySelectorAll('.confirmShip');
+    return allUnconfirmedShips;
+  }
+  function confirmPlacedShips() {
+    const allUnconfirmedShips = findUnconfirmedShips();
+    const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
+  }
