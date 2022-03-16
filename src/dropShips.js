@@ -1,14 +1,63 @@
 const playerFile = require('./player');
 
 function dropShip() {
-  // confirmPlacedShips() helper function()
+// getShipCoordinates() helper function
+  function findXcoordinate(nonSeperatedId) {
+  // sort through the loop, if this is 1,
+    let hyphenCount = 0;
+    // then add the numbers we find this string
+    let stringifiedNumbers = '';
+    for (let i = 0; i < nonSeperatedId.length; i += 1) {
+    // example id: P1Box-10-10
+    // when the - after the x is found, add 1 to hyphen count
+      if (nonSeperatedId[i] === '-') {
+        hyphenCount += 1;
+      } else if (hyphenCount === 1) {
+        stringifiedNumbers += nonSeperatedId[i];
+      }
+    }
+    // eslint-disable-next-line radix
+    const resultParsed = parseInt(stringifiedNumbers);
+    return resultParsed;
+  }
+  //  getShipCoordinates() helper function
+  function findYcoordinate(nonSeperatedId) {
+  // sort through the loop, if this is 1,
+    let hyphenCount = 0;
+    // then add the numbers we find this string
+    let stringifiedNumbers = '';
+    for (let i = 0; i < nonSeperatedId.length; i += 1) {
+    // example id: P1Box-10-10
+    // when a hyphen is found, add one to hyphen count
+      if (nonSeperatedId[i] === '-') {
+        hyphenCount += 1;
+      } else if (hyphenCount === 2) {
+        stringifiedNumbers += nonSeperatedId[i];
+      }
+    }
+    // eslint-disable-next-line radix
+    const resultParsed = parseInt(stringifiedNumbers);
+    return resultParsed;
+  }
+  function getShipCoordinates(allUnconfirmedShips) {
+    const unconfirmedCoords = [];
+    allUnconfirmedShips.forEach((ship) => {
+      const xResult = findXcoordinate(ship.id);
+      const yResult = findYcoordinate(ship.id);
+      const ourCoordinate = {
+        x: xResult,
+        y: yResult,
+      };
+      unconfirmedCoords.push(ourCoordinate);
+    });
+  }
   function findUnconfirmedShips() {
     const allUnconfirmedShips = document.querySelectorAll('.confirmShip');
     return allUnconfirmedShips;
   }
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
-    console.log(allUnconfirmedShips);
+    const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
   }
   function createPlayers(playerCount) {
     if (playerCount === 1) {
