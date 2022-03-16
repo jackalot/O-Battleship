@@ -57,7 +57,7 @@ function findOrientation(allUnconfirmedCoords) {
   return 'none'
 }
 function createShipObject(allUnconfirmedCoords) {
-
+  const shipOrietation = findOrientation(allUnconfirmedCoords);
 }
  function getShipCoordinates(allUnconfirmedShips) {
     const unconfirmedCoords = [];
