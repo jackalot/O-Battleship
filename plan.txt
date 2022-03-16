@@ -48,11 +48,11 @@ function findOrientation(allUnconfirmedCoords) {
   }
   if(xMatches === allUnconfirmedCoords.length)
   {
-
+    return 'horizontal'
   }
   if(yMatches === allUnconfirmedCoords.length)
   {
-
+    return 'vertical'
   }
 }
 function createShipObject(allUnconfirmedCoords) {
