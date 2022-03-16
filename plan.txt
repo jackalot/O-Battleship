@@ -35,6 +35,10 @@ function findOrientation(allUnconfirmedCoords) {
   let yMatcher = allUnconfirmedCoords[0].y;
   let xMatches = 0;
   let xMatcher = allunconfirmedCoords[0].x;
+  for(let i = 1; i < allunconfirmedCoords.length; i += 1)
+  {
+    
+  }
 }
 function createShipObject(allUnconfirmedCoords) {
 
