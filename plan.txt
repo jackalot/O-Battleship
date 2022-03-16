@@ -46,6 +46,14 @@ function findOrientation(allUnconfirmedCoords) {
       yMatches += 1;
     }
   }
+  if(xMatches === allunconfirmedCoords.length)
+  {
+
+  }
+  if(yMatches === allunconfirmedCoords.length)
+  {
+    
+  }
 }
 function createShipObject(allUnconfirmedCoords) {
 
