@@ -71,6 +71,7 @@ function getShipCoordinates(allUnconfirmedShips) {
       x: xResult,
       y: yResult,
     }
+    unconfirmedCoords.push(ourCoordinate);
   })
 }
 function findUnconfirmedShips() {
