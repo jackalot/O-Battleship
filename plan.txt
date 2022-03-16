@@ -80,4 +80,5 @@ function findUnconfirmedShips() {
 }
 function confirmPlacedShips() {
   const allUnconfirmedShips = findUnconfirmedShips();
+  const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
 }
