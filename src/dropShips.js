@@ -1,6 +1,27 @@
 const playerFile = require('./player');
 
 function dropShip() {
+  function findStartPoint(orientation, allUnconfirmedCoords) {
+    if (orientation === 'horizontal') {
+      let smallHNum = 10;
+      for (let i = 0; i < allUnconfirmedCoords; i += 1) {
+        if (allUnconfirmedCoords[i].x > smallHNum) {
+          smallHNum = allUnconfirmedCoords[i].x;
+        }
+      }
+      return coordinates = { x: smallHNum, y: allUnconfirmedCoords[0].y };
+    }
+    if (orientation === 'vertical') {
+      let smallVNum = 10;
+      for (let i = 0; i < allUnconfirmedCoords; i += 1) {
+        if (allUnconfirmedCoords[i].y > smallVNum) {
+          smallVNum = allUnconfirmedCoords[i].y;
+        }
+      }
+      return coordinates = { x: allUnconfirmedCoords[0].x, y: smallVNum };
+    }
+    return coordinates = { x: -1, y: -1 };
+  }
   // createShipObject() helper function
   function findOrientation(allUnconfirmedCoords) {
     let yMatches = 0;
@@ -28,7 +49,8 @@ function dropShip() {
   // confirmPlacedShips() helper function
   function createShipObject(allUnconfirmedCoords) {
     const shipOrietation = findOrientation(allUnconfirmedCoords);
-    console.log(shipOrietation);
+    const startPoint = findStartPoint(shipOrietation, allUnconfirmedCoords);
+    console.log(startPoint);
   }
   // getShipCoordinates() helper function
   function findXcoordinate(nonSeperatedId) {
