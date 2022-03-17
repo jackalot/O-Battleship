@@ -31,7 +31,10 @@ Focus: make the coordinates to the ships that we now have into ship objects
   + now call findStartPoint() using the value from findOrientation and allUnconfirmedCoords
 }
 psuedo code:
-
+function findStartPoint(orientation, allUnconfirmedCoords)
+{{
+  
+}}
 function createShipObject(allUnconfirmedCoords) {
   const shipOrietation = findOrientation(allUnconfirmedCoords);
   const startPoint = findStartPoint(shipOrietation, allUnconfirmedCoords);
