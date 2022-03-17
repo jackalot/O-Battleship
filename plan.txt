@@ -34,6 +34,7 @@ psuedo code:
 
 function createShipObject(allUnconfirmedCoords) {
   const shipOrietation = findOrientation(allUnconfirmedCoords);
+  const startPoint = findStartPoint(shipOrietation, allUnconfirmedCoords);
 }
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
