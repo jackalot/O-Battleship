@@ -9,7 +9,7 @@ function dropShip() {
           smallHNum = allUnconfirmedCoords[i].x;
         }
       }
-      return coordinates = { x: smallHNum, y: allUnconfirmedCoords[0].y };
+      return { x: smallHNum, y: allUnconfirmedCoords[0].y };
     }
     if (orientation === 'vertical') {
       let smallVNum = 10;
@@ -18,9 +18,9 @@ function dropShip() {
           smallVNum = allUnconfirmedCoords[i].y;
         }
       }
-      return coordinates = { x: allUnconfirmedCoords[0].x, y: smallVNum };
+      return { x: allUnconfirmedCoords[0].x, y: smallVNum };
     }
-    return coordinates = { x: -1, y: -1 };
+    return { x: -1, y: -1 };
   }
   // createShipObject() helper function
   function findOrientation(allUnconfirmedCoords) {
