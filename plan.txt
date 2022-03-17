@@ -2,6 +2,12 @@ Focus: make the coordinates to the ships that we now have into ship objects
 + import the ship.js file
 + inside dropShip.js, a new function named findStartPoint() {
   + parameters { orientation, allUnconfirmedCoords }
+  + if the orientation is horizontal {
+
+  }
+  + if the orientation is vertical {
+    
+  }
 }
 + inside dropShip.js, a new function named createShipObject() {
   + parameters { allUnconfirmedCoords }
