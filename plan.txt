@@ -46,9 +46,17 @@ function findStartPoint(orientation, allUnconfirmedCoords)
     return coordinates = { x: smallHNum, y: allUnconfirmedCoords[0].y};
   }
   if(orientation === 'vertical')
-  [
-
-  ]
+  {
+    let smallVNum = 10;
+    for(let i = 0; i <  allUnconfirmedCoords; i += 1)
+    {
+      if(allUnconfirmedCoords[i].y > smallVNum)
+      {
+        smallVNum = allUnconfirmedCoords[i].y;
+      }
+    }
+    return coordinates = { x: allUnconfirmedCoords[0].x, y: smallVNum};
+  }
 }
 function createShipObject(allUnconfirmedCoords) {
   const shipOrietation = findOrientation(allUnconfirmedCoords);
