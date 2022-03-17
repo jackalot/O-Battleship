@@ -70,8 +70,11 @@ function dropShip() {
   }
   // confirmPlacedShips() helper function
   function createShipObject(allUnconfirmedCoords) {
+    //  This orientation helps the startPoint and endPoint
     const shipOrietation = findOrientation(allUnconfirmedCoords);
+    // gets the start of the ship's coordinates
     const startPoint = findStartPoint(shipOrietation, allUnconfirmedCoords);
+    // gets the end of the ship's coordinates
     const endPoint = findEndPoint(shipOrietation, allUnconfirmedCoords);
     console.log(startPoint, endPoint);
   }
