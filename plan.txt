@@ -14,7 +14,15 @@ Focus: make the coordinates to the ships that we now have into ship objects
     + return smallHNum;
   }
   + if the orientation is vertical {
-
+    + create a variable named smallVNum and set it to 10
+    + make a for loop that loops through allUnconfirmedCoords
+    {
+      + if this coordinates y value is lower than smallVNum
+      {
+        smallVNum now equals y
+      }
+    }
+    + return smallVNum;
   }
 }
 + inside dropShip.js, a new function named createShipObject() {
