@@ -3,14 +3,15 @@ Focus: make the coordinates to the ships that we now have into ship objects
 + inside dropShip.js, a new function named findStartPoint() {
   + parameters { orientation, allUnconfirmedCoords }
   + if the orientation is horizontal {
-    + create a variable named smallestHorizontalNum and set it to 10
+    + create a variable named smallHNum and set it to 10
     + make a for loop that loops through allUnconfirmedCoords
     {
-      + if this coordinates x value is lower than smallestHorizontalNum
+      + if this coordinates x value is lower than smallHNum
       {
-        smallestHorizontalNum now equals x
+        smallHNum now equals x
       }
     }
+    return;
   }
   + if the orientation is vertical {
 
