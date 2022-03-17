@@ -40,7 +40,7 @@ function findStartPoint(orientation, allUnconfirmedCoords)
     {
       if(allUnconfirmedCoords[i].x > smallHNum)
       {
-
+        smallHNum = allUnconfirmedCoords[i].x;
       }
     }
   }
