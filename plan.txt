@@ -43,6 +43,7 @@ function findStartPoint(orientation, allUnconfirmedCoords)
         smallHNum = allUnconfirmedCoords[i].x;
       }
     }
+    return coordinates = { x: smallHNum, y: allUnconfirmedCoords[0].y};
   }
   if(orientation === 'vertical')
   [
