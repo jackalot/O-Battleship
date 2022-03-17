@@ -35,11 +35,11 @@ function findStartPoint(orientation, allUnconfirmedCoords)
 {
   if(orientation === 'horizontal')
   {
-
+    let smallHNum = 10;
   }
   if(orientation === 'vertical')
   [
-    
+
   ]
 }
 function createShipObject(allUnconfirmedCoords) {
