@@ -23,6 +23,27 @@ function dropShip() {
     }
     return { x: -1, y: -1 };
   }
+  function findEndPoint(orientation, allUnconfirmedCoords) {
+    if (orientation === 'horizontal') {
+      let smallHNum = 0;
+      for (let i = 0; i < allUnconfirmedCoords.length; i += 1) {
+        if (allUnconfirmedCoords[i].x >= smallHNum) {
+          smallHNum = allUnconfirmedCoords[i].x;
+        }
+      }
+      return { x: smallHNum, y: allUnconfirmedCoords[0].y };
+    }
+    if (orientation === 'vertical') {
+      let smallVNum = 0;
+      for (let i = 0; i < allUnconfirmedCoords.length; i += 1) {
+        if (allUnconfirmedCoords[i].y >= smallVNum) {
+          smallVNum = allUnconfirmedCoords[i].y;
+        }
+      }
+      return { x: allUnconfirmedCoords[0].x, y: smallVNum };
+    }
+    return { x: -1, y: -1 };
+  }
   // createShipObject() helper function
   function findOrientation(allUnconfirmedCoords) {
     let yMatches = 0;
