@@ -28,6 +28,7 @@ Focus: make the coordinates to the ships that we now have into ship objects
 + inside dropShip.js, a new function named createShipObject() {
   + parameters { allUnconfirmedCoords }
   + with a variable referencing findOrientation()
+  + now call findStartPoint() using the value from findOrientation and allUnconfirmedCoords
 }
 psuedo code:
 
