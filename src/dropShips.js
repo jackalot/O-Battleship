@@ -1,4 +1,5 @@
 const playerFile = require('./player');
+const shipFile = require('./ship');
 
 function dropShip() {
   // createShipObject() helper function
