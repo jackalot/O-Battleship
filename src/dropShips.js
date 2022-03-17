@@ -117,7 +117,11 @@ function dropShip() {
   function placeAShip(myPlayerNumber, boxID) {
     if (myPlayerNumber === 1) {
       const box = document.querySelector(`#${boxID}`);
-      box.classList.add('confirmShip');
+      if (box.classList.contains('confirmShip')) {
+        box.classList.remove('confirmShip');
+      } else {
+        box.classList.add('confirmShip');
+      }
     }
   }
   // addToEachBox() helper function
