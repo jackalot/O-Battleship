@@ -1,6 +1,7 @@
 const playerFile = require('./player');
 
 function dropShip() {
+  // createShipObject() helper function
   function findStartPoint(orientation, allUnconfirmedCoords) {
     if (orientation === 'horizontal') {
       let smallHNum = 10;
