@@ -5,10 +5,8 @@ function dropShip() {
     if (orientation === 'horizontal') {
       let smallHNum = 10;
       for (let i = 0; i < allUnconfirmedCoords.length; i += 1) {
-        if (allUnconfirmedCoords[i].x > smallHNum) {
+        if (allUnconfirmedCoords[i].x <= smallHNum) {
           smallHNum = allUnconfirmedCoords[i].x;
-          console.log(smallHNum);
-          console.log(allUnconfirmedCoords[i].x);
         }
       }
       return { x: smallHNum, y: allUnconfirmedCoords[0].y };
@@ -16,7 +14,7 @@ function dropShip() {
     if (orientation === 'vertical') {
       let smallVNum = 10;
       for (let i = 0; i < allUnconfirmedCoords.length; i += 1) {
-        if (allUnconfirmedCoords[i].y > smallVNum) {
+        if (allUnconfirmedCoords[i].y <= smallVNum) {
           smallVNum = allUnconfirmedCoords[i].y;
         }
       }
