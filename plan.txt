@@ -11,7 +11,7 @@ Focus: make the coordinates to the ships that we now have into ship objects
         smallHNum now equals x
       }
     }
-    return;
+    + return smallHNum;
   }
   + if the orientation is vertical {
 
