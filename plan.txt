@@ -38,9 +38,9 @@ function findStartPoint(orientation, allUnconfirmedCoords)
     let smallHNum = 10;
     for(let i = 0; i <  allUnconfirmedCoords; i += 1)
     {
-      if(allUnconfirmedCoords.x > smallHNum)
+      if(allUnconfirmedCoords[i].x > smallHNum)
       {
-        
+
       }
     }
   }
