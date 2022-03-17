@@ -72,6 +72,7 @@ function dropShip() {
   function createShipObject(allUnconfirmedCoords) {
     const shipOrietation = findOrientation(allUnconfirmedCoords);
     const startPoint = findStartPoint(shipOrietation, allUnconfirmedCoords);
+    const endPoint = findEndPoint(shipOrietation, allUnconfirmedCoords);
     console.log(startPoint);
   }
   // getShipCoordinates() helper function
