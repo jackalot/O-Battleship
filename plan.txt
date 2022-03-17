@@ -6,7 +6,10 @@ Focus: make the coordinates to the ships that we now have into ship objects
     + create a variable named smallestHorizontalNum and set it to 0
     + make a for loop that loops through allUnconfirmedCoords
     {
-      
+      + if this coordinates x value is lower than smallestHorizontalNum
+      {
+        smallestHorizontalNum now equals x
+      }
     }
   }
   + if the orientation is vertical {
