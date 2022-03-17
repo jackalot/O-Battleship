@@ -7,7 +7,6 @@ function dropShip() {
     // when looping, if something matches this y coordinate,
     // add 1 to yMatches
     const yMatcher = allUnconfirmedCoords[0].y;
-    console.log(yMatcher);
     let xMatches = 0;
     const xMatcher = allUnconfirmedCoords[0].x;
     for (let i = 1; i < allUnconfirmedCoords.length; i += 1) {
@@ -16,7 +15,6 @@ function dropShip() {
       }
       if (allUnconfirmedCoords[i].y === yMatcher) {
         yMatches += 1;
-        console.log(allUnconfirmedCoords[i].y);
       }
     }
     if (xMatches === allUnconfirmedCoords.length - 1) {
