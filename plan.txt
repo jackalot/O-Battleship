@@ -1,64 +1,13 @@
 Focus: make the coordinates to the ships that we now have into ship objects
 + import the ship.js file
-+ inside dropShip.js, a new function named findStartPoint() {
-  + parameters { orientation, allUnconfirmedCoords }
-  + if the orientation is horizontal {
-    + create a variable named smallHNum and set it to 10
-    + make a for loop that loops through allUnconfirmedCoords
-    {
-      + if this coordinates x value is lower than smallHNum
-      {
-        smallHNum now equals x
-      }
-    }
-    + return smallHNum;
-  }
-  + if the orientation is vertical {
-    + create a variable named smallVNum and set it to 10
-    + make a for loop that loops through allUnconfirmedCoords
-    {
-      + if this coordinates y value is lower than smallVNum
-      {
-        smallVNum now equals y
-      }
-    }
-    + return smallVNum;
-  }
-}
+
 + inside dropShip.js, a new function named createShipObject() {
   + parameters { allUnconfirmedCoords }
   + with a variable referencing findOrientation()
   + now call findStartPoint() using the value from findOrientation and allUnconfirmedCoords
 }
 psuedo code:
-function findStartPoint(orientation, allUnconfirmedCoords)
-{
-  if(orientation === 'horizontal')
-  {
-    let smallHNum = 10;
-    for(let i = 0; i <  allUnconfirmedCoords; i += 1)
-    {
-      if(allUnconfirmedCoords[i].x > smallHNum)
-      {
-        smallHNum = allUnconfirmedCoords[i].x;
-      }
-    }
-    return coordinates = { x: smallHNum, y: allUnconfirmedCoords[0].y};
-  }
-  if(orientation === 'vertical')
-  {
-    let smallVNum = 10;
-    for(let i = 0; i <  allUnconfirmedCoords; i += 1)
-    {
-      if(allUnconfirmedCoords[i].y > smallVNum)
-      {
-        smallVNum = allUnconfirmedCoords[i].y;
-      }
-    }
-    return coordinates = { x: allUnconfirmedCoords[0].x, y: smallVNum};
-  }
-  return coordinates = { x: -1, y: -1};
-}
+
 function createShipObject(allUnconfirmedCoords) {
   const shipOrietation = findOrientation(allUnconfirmedCoords);
   const startPoint = findStartPoint(shipOrietation, allUnconfirmedCoords);
