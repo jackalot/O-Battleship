@@ -182,6 +182,7 @@ function dropShip() {
     }
     return false;
   }
+  // adds an event listener to each box
   function addToEachBox() {
     const allBoxes = document.querySelectorAll('.box');
     allBoxes.forEach((box) => {
@@ -191,6 +192,7 @@ function dropShip() {
       });
     });
   }
+  // clears the board of all event listeners
   function clearBoards() {
     if (playerCount === 1) {
       const allBoxes = document.querySelectorAll('.box');
