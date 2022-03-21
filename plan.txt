@@ -22,6 +22,9 @@ psuedo code:
     const allUnconfirmedShips = findUnconfirmedShips();
     const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
     const shipObject = createShipObject(unconfirmedCoordinates);
-    ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
-    revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
+    if(playerCount === 1)
+    {
+      ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
+      revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
+    }
   }
