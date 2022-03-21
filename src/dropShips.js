@@ -178,13 +178,18 @@ function dropShip() {
     }
     return false;
   }
+  function revealBoard(currentPlayer, otherPlayer) {
+    const domBoardManager = domBoardFile(currentPlayer, 'P1Box', otherPlayer, false);
+    domBoardManager.sendNextCollumn();
+    clearBoard(true);
+  }
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
     const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
     const shipObject = createShipObject(unconfirmedCoordinates);
     if (playerCount === 1) {
       ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
-      console.log(ourPlayers.playerOne.ourBoard.myShips);
+      revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
     }
   }
   // adds an event listener to each box
