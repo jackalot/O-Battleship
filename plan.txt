@@ -9,7 +9,7 @@ Focus: after the ship has been placed, allow the ship to be displayed and more s
   + then call clearBoard with an argument of true
 }
 + in confirmPlacedShips(){
-
+  + call revealBoard with the argument of playerOne, and playerTwo
 }
 psuedo code:
   function confirmPlacedShips() {
