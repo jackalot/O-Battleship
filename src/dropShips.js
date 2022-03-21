@@ -135,15 +135,6 @@ function dropShip() {
     const allUnconfirmedShips = document.querySelectorAll('.confirmShip');
     return allUnconfirmedShips;
   }
-  function confirmPlacedShips() {
-    const allUnconfirmedShips = findUnconfirmedShips();
-    const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
-    const shipObject = createShipObject(unconfirmedCoordinates);
-    if (playerCount === 1) {
-      ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
-      console.log(ourPlayers.playerOne.ourBoard.myShips);
-    }
-  }
   function createPlayers(playerCount) {
     if (playerCount === 1) {
       const playerOne = playerFile('player 1', 0);
@@ -186,6 +177,15 @@ function dropShip() {
       return 2;
     }
     return false;
+  }
+  function confirmPlacedShips() {
+    const allUnconfirmedShips = findUnconfirmedShips();
+    const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
+    const shipObject = createShipObject(unconfirmedCoordinates);
+    if (playerCount === 1) {
+      ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
+      console.log(ourPlayers.playerOne.ourBoard.myShips);
+    }
   }
   // adds an event listener to each box
   function addToEachBox() {
