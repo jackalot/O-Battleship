@@ -14,7 +14,7 @@ Focus: after the ship has been placed, allow the ship to be displayed and more s
 psuedo code:
   const domBoardFile = require('./updateDOMBoard');
   function clearBoard(currentPlayer, otherPlayer) {
-    
+    const domBoardManager = domBoardFile(currentPlayer, 'P1Box', otherPlayer, false);
   }
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
