@@ -1,16 +1,5 @@
-Focus: after the ship has been placed, allow the ship to be displayed and more ships to be placed
-* in dropships
-+ import the file updateDOMBoard
-+ inside dropship, a new function named revealBoard(){
-  // helper function to confirmPlacedShips
-  + parameters { currentPlayer, otherPlayer }
-  + make an instance of updateDOMBoard from the file that was imported
-  + call sendNextCollumn(); from updateDOMBoard
-  + then call clearBoard with an argument of true
-}
-+ in confirmPlacedShips(){
-  + call revealBoard with the argument of playerOne, and playerTwo
-}
+Focus: after the ships are placed, make the cpu get a random assortment of coordinates:
+
 psuedo code:
   const domBoardFile = require('./updateDOMBoard');
   function revealBoard(currentPlayer, otherPlayer) {
