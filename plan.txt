@@ -5,6 +5,7 @@ Focus: after the ship has been placed, allow the ship to be displayed and more s
   // helper function to confirmPlacedShips
   + parameters { currentPlayer, otherPlayer }
   + make an instance of updateDOMBoard from the file that was imported
+  + call sendNextCollumn(); from updateDOMBoard
 }
 psuedo code:
   function confirmPlacedShips() {
