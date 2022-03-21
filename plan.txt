@@ -16,6 +16,7 @@ psuedo code:
   function clearBoard(currentPlayer, otherPlayer) {
     const domBoardManager = domBoardFile(currentPlayer, 'P1Box', otherPlayer, false);
     domBoardManager.sendNextCollumn();
+    clearBoard(true);
   }
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
