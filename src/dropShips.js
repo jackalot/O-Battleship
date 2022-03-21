@@ -190,6 +190,8 @@ function dropShip() {
   // adds an event listener to each box
   function addToEachBox() {
     const allBoxes = document.querySelectorAll('.box');
+    const gameStatus = document.querySelector('.gameStatus');
+    gameStatus.textContent = 'Click a vertical or horizontal line for where you want your ship to be, you can click a square again to remove it. When you like that ship, click "Confirm Ship PlaceMent" to confirm that ship.';
     allBoxes.forEach((box) => {
       const result = findPlayerNumber(box.id);
       box.addEventListener('click', () => {
