@@ -8,6 +8,9 @@ Focus: after the ship has been placed, allow the ship to be displayed and more s
   + call sendNextCollumn(); from updateDOMBoard
   + then call clearBoard with an argument of true
 }
++ in confirmPlacedShips(){
+
+}
 psuedo code:
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
