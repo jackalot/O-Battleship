@@ -12,7 +12,7 @@ Focus: after the ship has been placed, allow the ship to be displayed and more s
   + call revealBoard with the argument of playerOne, and playerTwo
 }
 psuedo code:
-
+  const domBoardFile = require('./updateDOMBoard');
   function clearBoard(currentPlayer, otherPlayer) {
     
   }
