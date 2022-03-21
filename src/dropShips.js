@@ -139,8 +139,10 @@ function dropShip() {
     const allUnconfirmedShips = findUnconfirmedShips();
     const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
     const shipObject = createShipObject(unconfirmedCoordinates);
-    ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
-    console.log(ourPlayers.playerOne.ourBoard.myShips);
+    if (playerCount === 1) {
+      ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
+      console.log(ourPlayers.playerOne.ourBoard.myShips);
+    }
   }
   function createPlayers(playerCount) {
     if (playerCount === 1) {
