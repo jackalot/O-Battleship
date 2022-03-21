@@ -179,6 +179,11 @@ function dropShip() {
     return false;
   }
   function revealBoard(currentPlayer, otherPlayer) {
+    const allBoxes = document.querySelectorAll('.confirmShip');
+    //  The ship has been confirmed, remove the confirmShip class
+    allBoxes.forEach((box) => {
+      box.classList.remove('confirmShip');
+    });
     const domBoardManager = domBoardFile(currentPlayer, 'P1Box', otherPlayer, false);
     domBoardManager.sendNextCollumn();
     clearBoards(true);
