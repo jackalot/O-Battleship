@@ -12,6 +12,10 @@ Focus: after the ship has been placed, allow the ship to be displayed and more s
   + call revealBoard with the argument of playerOne, and playerTwo
 }
 psuedo code:
+
+  function clearBoard(currentPlayer, otherPlayer) {
+    
+  }
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
     const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
