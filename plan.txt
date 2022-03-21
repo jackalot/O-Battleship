@@ -5,7 +5,8 @@ Focus: make the coordinates to the ships that we now have into ship objects
   + parameters { allUnconfirmedCoords }
   + with a variable referencing findOrientation()
   + now call findStartPoint() using the value from findOrientation and allUnconfirmedCoords
-  + call the endPoint();
+  + call the findEndPoint();
+  + create a new ship using the result of findStartPoint and findEndPoint
 }
 psuedo code:
 
