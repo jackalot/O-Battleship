@@ -1,5 +1,4 @@
 const playerFile = require('./player');
-const shipFile = require('./ship');
 const domBoardFile = require('./updateDOMBoard');
 
 function dropShip() {
