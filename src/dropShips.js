@@ -77,7 +77,8 @@ function dropShip() {
     const startPoint = findStartPoint(shipOrietation, allUnconfirmedCoords);
     // gets the end of the ship's coordinates
     const endPoint = findEndPoint(shipOrietation, allUnconfirmedCoords);
-    console.log(startPoint, endPoint);
+    const shipCoordinates = { startPoint, endPoint };
+    return shipCoordinates;
   }
   // getShipCoordinates() helper function
   function findXcoordinate(nonSeperatedId) {
@@ -138,6 +139,7 @@ function dropShip() {
     const allUnconfirmedShips = findUnconfirmedShips();
     const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
     const shipObject = createShipObject(unconfirmedCoordinates);
+    ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
   }
   function createPlayers(playerCount) {
     if (playerCount === 1) {
