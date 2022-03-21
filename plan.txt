@@ -3,7 +3,7 @@ Focus: after the ship has been placed, allow the ship to be displayed and more s
 + import the file updateDOMBoard
 + inside dropship, a new function named revealBoard(){
   // helper function to confirmPlacedShips
-  + parameters { currentPlayer }
+  + parameters { currentPlayer, otherPlayer }
 }
 psuedo code:
   function confirmPlacedShips() {
