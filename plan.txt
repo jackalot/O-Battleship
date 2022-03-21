@@ -19,7 +19,8 @@ psuedo code:
     // gets the end of the ship's coordinates
     const endPoint = findEndPoint(shipOrietation, allUnconfirmedCoords);
     console.log(startPoint, endPoint);
-    const shipObject = { startPoint, endPoint }
+    const shipCoordinates = { startPoint, endPoint }
+    return shipCoordinates
   }
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
