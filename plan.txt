@@ -1,5 +1,5 @@
 Focus: after the ship has been placed, allow the ship to be displayed and more ships to be placed
-
+* in dropships
 psuedo code:
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
