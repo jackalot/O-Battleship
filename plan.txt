@@ -13,7 +13,7 @@ Focus: after the ship has been placed, allow the ship to be displayed and more s
 }
 psuedo code:
   const domBoardFile = require('./updateDOMBoard');
-  function clearBoard(currentPlayer, otherPlayer) {
+  function revealBoard(currentPlayer, otherPlayer) {
     const domBoardManager = domBoardFile(currentPlayer, 'P1Box', otherPlayer, false);
     domBoardManager.sendNextCollumn();
     clearBoard(true);
@@ -23,5 +23,5 @@ psuedo code:
     const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
     const shipObject = createShipObject(unconfirmedCoordinates);
     ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
-    clearBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
+    revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
   }
