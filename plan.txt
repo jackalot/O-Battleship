@@ -1,27 +1,6 @@
-Focus: make the coordinates to the ships that we now have into ship objects
-+ import the ship.js file
+Focus: 
 
-+ inside dropShip.js, a new function named createShipObject() {
-  + parameters { allUnconfirmedCoords }
-  + with a variable referencing findOrientation()
-  + now call findStartPoint() using the value from findOrientation and allUnconfirmedCoords
-  + call the findEndPoint();
-  + create a ship coordinates variable with the findStartPoint and findEndPoint
-  + return the ship coordinates
-}
 psuedo code:
-
- function createShipObject(allUnconfirmedCoords) {
-    //  This orientation helps the startPoint and endPoint
-    const shipOrietation = findOrientation(allUnconfirmedCoords);
-    // gets the start of the ship's coordinates
-    const startPoint = findStartPoint(shipOrietation, allUnconfirmedCoords);
-    // gets the end of the ship's coordinates
-    const endPoint = findEndPoint(shipOrietation, allUnconfirmedCoords);
-    console.log(startPoint, endPoint);
-    const shipCoordinates = { startPoint, endPoint }
-    return shipCoordinates
-  }
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
     const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
