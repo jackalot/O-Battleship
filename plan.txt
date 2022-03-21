@@ -1,4 +1,4 @@
-Focus: 
+Focus: after the ship has been placed, allow the ship to be displayed and more ships to be placed
 
 psuedo code:
   function confirmPlacedShips() {
