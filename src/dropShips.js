@@ -196,7 +196,7 @@ function dropShip() {
     });
   }
   // clears the board of all event listeners
-  function clearBoards() {
+  function clearBoards(callNextFunction) {
     if (playerCount === 1) {
       const allBoxes = document.querySelectorAll('.box');
       allBoxes.forEach((box) => {
@@ -204,9 +204,13 @@ function dropShip() {
         box.replaceWith(box.cloneNode(true));
       });
     }
-    addToEachBox(playerCount);
+    // this is so we can use the clear boards function multiple times
+    // without rewriting it.
+    if (callNextFunction === true) {
+      addToEachBox(playerCount);
+    }
   }
-  clearBoards(playerCount);
+  clearBoards(true);
   return { askPlayerCount, confirmPlacedShips };
 }
 module.exports = dropShip;
