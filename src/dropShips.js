@@ -181,7 +181,7 @@ function dropShip() {
   function revealBoard(currentPlayer, otherPlayer) {
     const domBoardManager = domBoardFile(currentPlayer, 'P1Box', otherPlayer, false);
     domBoardManager.sendNextCollumn();
-    clearBoard(true);
+    clearBoards(true);
   }
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
