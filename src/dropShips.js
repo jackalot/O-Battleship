@@ -205,7 +205,7 @@ function dropShip() {
       ourPlayers.playerTwo.ourBoard.placeShip(shipArray[i].coord1, shipArray[i].coord2);
     }
     clearBoards(false);
-    const domBoardManager = domBoardFile(ourPlayers.playerTwo, 'P2Box', ourPlayers.playerOne, false);
+    const domBoardManager = domBoardFile(ourPlayers.playerTwo, 'P2Box', ourPlayers.playerOne, true);
     domBoardManager.sendNextCollumn();
   }
   function getAShipLayout() {
