@@ -18,7 +18,9 @@ Focus: after the ships are placed, make the cpu get a random assortment of coord
 }
 psuedo code:
   const domBoardFile = require('./updateDOMBoard');
-  
+  function getAShipLayout() {
+    
+  }
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
     const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
