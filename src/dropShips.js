@@ -200,6 +200,43 @@ function dropShip() {
     domBoardManager.sendNextCollumn();
     clearBoards(true);
   }
+  function fillCPUShips(shipArray) {
+    for (let i = 0; i < shipArray.length; i += 1) {
+      ourPlayers.playerTwo.ourBoard.placeShip(shipArray[i].coord1, shipArray[i].coord2);
+    }
+    clearBoards(false);
+    const domBoardManager = domBoardFile(ourPlayers.playerTwo, 'P2Box', ourPlayers.playerOne, false);
+    domBoardManager.sendNextCollumn();
+  }
+  function getAShipLayout() {
+    // at max, 5 layouts for the sake of memory, as well as time consumption
+    // this is the layout of the ships and the coordinates of each ship for the cpu
+    const layout1 = [{ coord1: { x: 10, y: 6 }, coord2: { x: 10, y: 10 } },
+      { coord1: { x: 1, y: 7 }, coord2: { x: 6, y: 7 } },
+      { coord1: { x: 4, y: 2 }, coord2: { x: 4, y: 5 } },
+      { coord1: { x: 7, y: 3 }, coord2: { x: 10, y: 3 } },
+      { coord1: { x: 2, y: 10 }, coord2: { x: 7, y: 10 } }];
+    const randomNumber = Math.floor(Math.random() * 5);
+    if (randomNumber === 0) {
+      fillCPUShips(layout1);
+    }
+    if (randomNumber === 1) {
+      // when we have more layouts change the layout sent
+      fillCPUShips(layout1);
+    }
+    if (randomNumber === 2) {
+      // when we have more layouts change the layout sent
+      fillCPUShips(layout1);
+    }
+    if (randomNumber === 3) {
+      // when we have more layouts change the layout sent
+      fillCPUShips(layout1);
+    }
+    if (randomNumber === 4) {
+      // when we have more layouts change the layout sent
+      fillCPUShips(layout1);
+    }
+  }
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
     const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
@@ -207,6 +244,8 @@ function dropShip() {
     if (playerCount === 1) {
       ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
       revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
+      // this is for the cpu, temporarily
+      getAShipLayout();
     }
   }
   // adds an event listener to each box
