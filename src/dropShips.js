@@ -86,6 +86,8 @@ function dropShip() {
     // gets the end of the ship's coordinates
     const endPoint = findEndPoint(shipOrietation, allUnconfirmedCoords);
     const shipCoordinates = { startPoint, endPoint };
+    console.log(shipCoordinates.startPoint);
+    console.log(shipCoordinates.endPoint);
     return shipCoordinates;
   }
   // getShipCoordinates() helper function
