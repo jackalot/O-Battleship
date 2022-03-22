@@ -29,23 +29,27 @@ psuedo code:
     const randomNumber = Math.floor(Math.random() * 5);
     if(randomNumber === 0)
     {
-
+      fillCPUShips(layout1);
     }
     if(randomNumber === 1)
     {
-      
+      // when we have more layouts change the layout sent
+      fillCPUShips(layout1);
     }
     if(randomNumber === 2)
     {
-      
+       // when we have more layouts change the layout sent
+      fillCPUShips(layout1);
     }
     if(randomNumber === 3)
     {
-      
+       // when we have more layouts change the layout sent
+      fillCPUShips(layout1);
     }
     if(randomNumber === 4)
     {
-      
+       // when we have more layouts change the layout sent
+      fillCPUShips(layout1);
     }
   }
   function confirmPlacedShips() {
