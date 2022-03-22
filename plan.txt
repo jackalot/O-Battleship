@@ -21,7 +21,7 @@ psuedo code:
   function fillCPUShips(shipArray) {
     for(let i = 0; i < shipArray.length; i += 1)
     {
-      
+      ourPlayers.playerTwo.ourBoard.placeShip(shipArray[i].coord1, shipArray[i].coord2);
     }
   }
   function getAShipLayout() {
