@@ -19,7 +19,11 @@ Focus: after the ships are placed, make the cpu get a random assortment of coord
 psuedo code:
   const domBoardFile = require('./updateDOMBoard');
   function getAShipLayout() {
-    
+    const layout1 = [{ coord1: {x: 10, y: 6}, coord2: {x: 10, y: 10}},
+     { coord1: {x: 1, y: 7}, coord2: {x: 6, y: 7} },
+     { coord1: {x: 4, y: 2}, coord2: {x: 4, y: 5}},
+     { coord1: {x: 7, y: 3}, coord2: {x: 10, y: 3}},
+     { coord1: {x: 2, y: 10}, coord2: {x: 7, y: 10}}];
   }
   function confirmPlacedShips() {
     const allUnconfirmedShips = findUnconfirmedShips();
