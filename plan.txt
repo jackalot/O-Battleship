@@ -3,7 +3,7 @@ Focus: after the ships are placed, make the cpu get a random assortment of coord
 + inside dropship, a new function called fillCPUShips() {
   + parameters { shipArray }
   + a for loop that loops through the shipArray {
-    
+    + on each loop iteration, shipArray's coord1 and coord 2 will be placed on ourPlayers.playerTwo.ourBoard.placeShip()
   }
 }
 + inside dropship, a new function called getAShipLayout () {
