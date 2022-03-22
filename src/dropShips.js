@@ -4,6 +4,7 @@ const domBoardFile = require('./updateDOMBoard');
 function dropShip() {
   function hideButton(buttonClass) {
     const button = document.querySelector(`.${buttonClass}`);
+    button.style.visibility = 'hidden';
   }
   // createShipObject() helper function
   function findStartPoint(orientation, allUnconfirmedCoords) {
