@@ -1,7 +1,7 @@
 Focus: after the ships are placed, make the cpu get a random assortment of coordinates:
 * inside dropship.js
 + inside dropship, a new function called fillCpuShips () {
-  
+  + make 5 arrays that the cpu could use, here are their coordinates for these arrays:
 }
 psuedo code:
   const domBoardFile = require('./updateDOMBoard');
