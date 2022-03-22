@@ -1,7 +1,7 @@
 Focus: after the ships are placed, make the cpu get a random assortment of coordinates:
 * inside dropship.js
 + inside dropship, a new function called fillCPUShips() {
-  
+  + parameters { shipArray }
 }
 + inside dropship, a new function called getAShipLayout () {
   + make 5 arrays that the cpu could use, here is how the general look will be:
