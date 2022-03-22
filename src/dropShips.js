@@ -3,7 +3,7 @@ const domBoardFile = require('./updateDOMBoard');
 
 function dropShip() {
   function hideButton(buttonClass) {
-
+    const button = document.querySelector(`.${buttonClass}`);
   }
   // createShipObject() helper function
   function findStartPoint(orientation, allUnconfirmedCoords) {
