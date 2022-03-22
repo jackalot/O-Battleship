@@ -4,6 +4,10 @@ Focus: after the ships are placed, make the cpu get a random assortment of coord
   + make 5 arrays that the cpu could use, here is how the general look will be:
   1.[{ coord1: {x: 1, y: 1}, coord2: {x: 3, y: 3}},]
   + after the arrays, choose a random number between 1 and 5 and store the result
+  + several if statements that check if the result was their corresponding number,
+  ie. if it was 1{
+    
+  }
 }
 psuedo code:
   const domBoardFile = require('./updateDOMBoard');
