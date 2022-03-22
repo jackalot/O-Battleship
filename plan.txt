@@ -23,6 +23,9 @@ psuedo code:
     {
       ourPlayers.playerTwo.ourBoard.placeShip(shipArray[i].coord1, shipArray[i].coord2);
     }
+    clearBoards(false);
+    const domBoardManager = domBoardFile(ourPlayers.playerTwo, 'P2Box', ourPlayers.playerOne, false);
+    domBoardManager.sendNextCollumn();
   }
   function getAShipLayout() {
     // at max, 5 layouts for the sake of memory, as well as time consumption
