@@ -6,6 +6,10 @@ function dropShip() {
     const button = document.querySelector(`.${buttonClass}`);
     button.style.visibility = 'hidden';
   }
+  function displayButton(buttonClass) {
+    const button = document.querySelector(`.${buttonClass}`);
+    button.style.visibility = 'visible';
+  }
   // createShipObject() helper function
   function findStartPoint(orientation, allUnconfirmedCoords) {
     if (orientation === 'horizontal') {
