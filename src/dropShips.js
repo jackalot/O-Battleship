@@ -2,6 +2,9 @@ const playerFile = require('./player');
 const domBoardFile = require('./updateDOMBoard');
 
 function dropShip() {
+  function hideButton(buttonClass) {
+
+  }
   // createShipObject() helper function
   function findStartPoint(orientation, allUnconfirmedCoords) {
     if (orientation === 'horizontal') {
