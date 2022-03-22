@@ -219,6 +219,9 @@ function dropShip() {
   function clearBoards(callNextFunction) {
     if (playerCount === 1) {
       const allBoxes = document.querySelectorAll('.box');
+      hideButton('confirmAttackBtn');
+      // since this is against the computer, starting the game will give a random attack
+      hideButton('Pass-Turn');
       allBoxes.forEach((box) => {
         //  This will clone the box with itself, thus removing every event listener
         box.replaceWith(box.cloneNode(true));
