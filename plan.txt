@@ -1,5 +1,5 @@
 Focus: after the ships are placed, make the cpu get a random assortment of coordinates:
-
+* inside dropship.js
 psuedo code:
   const domBoardFile = require('./updateDOMBoard');
   function revealBoard(currentPlayer, otherPlayer) {
