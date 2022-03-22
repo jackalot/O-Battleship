@@ -19,6 +19,8 @@ Focus: after the ships are placed, make the cpu get a random assortment of coord
 psuedo code:
   const domBoardFile = require('./updateDOMBoard');
   function getAShipLayout() {
+    // at max, 5 layouts for the sake of memory, as well as time consumption
+    // this is the layout of the ships and the coordinates of each ship for the cpu
     const layout1 = [{ coord1: {x: 10, y: 6}, coord2: {x: 10, y: 10}},
      { coord1: {x: 1, y: 7}, coord2: {x: 6, y: 7} },
      { coord1: {x: 4, y: 2}, coord2: {x: 4, y: 5}},
