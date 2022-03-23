@@ -234,6 +234,9 @@ function dropShip() {
       { coord1: { x: 1, y: 2 }, coord2: { x: 5, y: 2 } },
       { coord1: { x: 4, y: 10 }, coord2: { x: 8, y: 10 } }];
     let randomNumber = Math.floor(Math.random() * 5);
+    console.log(randomNumber);
+    // adding one makes it so its never 0
+    // this also makes the if statements match the layout number
     randomNumber += 1;
     console.log(randomNumber);
     if (randomNumber === 1) {
