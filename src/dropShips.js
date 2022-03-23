@@ -251,8 +251,6 @@ function dropShip() {
     if (playerCount === 1) {
       ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
       revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
-      // this is for the cpu, temporarily
-      getAShipLayout();
     }
   }
   // adds an event listener to each box
