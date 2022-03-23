@@ -233,7 +233,8 @@ function dropShip() {
       { coord1: { x: 8, y: 5 }, coord2: { x: 8, y: 8 } },
       { coord1: { x: 1, y: 2 }, coord2: { x: 5, y: 2 } },
       { coord1: { x: 4, y: 10 }, coord2: { x: 8, y: 10 } }];
-    const randomNumber = Math.floor(Math.random() * 5) + 1;
+    let randomNumber = Math.floor(Math.random() * 5);
+    randomNumber += 1;
     console.log(randomNumber);
     if (randomNumber === 1) {
       fillCPUShips(layout1);
