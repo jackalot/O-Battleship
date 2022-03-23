@@ -223,14 +223,18 @@ function dropShip() {
       { coord1: { x: 4, y: 2 }, coord2: { x: 4, y: 5 } },
       { coord1: { x: 7, y: 3 }, coord2: { x: 10, y: 3 } },
       { coord1: { x: 2, y: 10 }, coord2: { x: 7, y: 10 } }];
+    const layout2 = [{ coord1: { x: 5, y: 2 }, coord2: { x: 5, y: 8 } },
+      { coord1: { x: 7, y: 9 }, coord2: { x: 10, y: 9 } },
+      { coord1: { x: 8, y: 3 }, coord2: { x: 8, y: 7 } },
+      { coord1: { x: 2, y: 6 }, coord2: { x: 2, y: 10 } },
+      { coord1: { x: 1, y: 3 }, coord2: { x: 3, y: 3 } }];
     const randomNumber = Math.floor(Math.random() * 5);
     console.log(randomNumber);
     if (randomNumber === 0) {
       fillCPUShips(layout1);
     }
     if (randomNumber === 1) {
-      // when we have more layouts change the layout sent
-      fillCPUShips(layout1);
+      fillCPUShips(layout2);
     }
     if (randomNumber === 2) {
       // when we have more layouts change the layout sent
