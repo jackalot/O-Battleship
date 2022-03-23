@@ -8,6 +8,7 @@ Focus: call getAShipLayout after the player is done placing ships and start the 
         + add an event listener to it {
             + add the getAShipLayout() function to it
         }
+        + call displayButton with the start class as an argument
     }
 }
 psuedo code:
