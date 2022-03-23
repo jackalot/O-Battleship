@@ -4,7 +4,7 @@ Focus: call getAShipLayout after the player is done placing ships and start the 
 + in askPlayerCount()
 {
     + before the result is returned, if it equals 1 {
-        
+        + query select the 'start' button
     }
 }
 psuedo code:
