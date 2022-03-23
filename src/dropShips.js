@@ -212,7 +212,7 @@ function dropShip() {
       ourPlayers.playerTwo.ourBoard.placeShip(shipArray[i].coord1, shipArray[i].coord2);
     }
     clearBoards(false);
-    const domBoardManager = domBoardFile(ourPlayers.playerTwo, 'P2Box', ourPlayers.playerOne, true);
+    const domBoardManager = domBoardFile(ourPlayers.playerTwo, 'P2Box', ourPlayers.playerOne, false);
     domBoardManager.sendNextCollumn();
   }
   function getAShipLayout() {
@@ -224,6 +224,7 @@ function dropShip() {
       { coord1: { x: 7, y: 3 }, coord2: { x: 10, y: 3 } },
       { coord1: { x: 2, y: 10 }, coord2: { x: 7, y: 10 } }];
     const randomNumber = Math.floor(Math.random() * 5);
+    console.log(randomNumber);
     if (randomNumber === 0) {
       fillCPUShips(layout1);
     }
