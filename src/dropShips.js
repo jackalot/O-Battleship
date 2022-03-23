@@ -162,6 +162,13 @@ function dropShip() {
     const windowResult = Number(window.prompt('How many players will be playing? For one player, please type 1, for two players, please type 2', ''));
     // eslint-disable-next-line radix
     const result = parseInt(windowResult);
+    if (result === 1) {
+      const startBttn = document.querySelector('.start');
+      startBttn.addEventListener(() => {
+        getAShipLayout();
+      });
+      displayButton('start');
+    }
     return result;
   }
   const playerCount = askPlayerCount();
