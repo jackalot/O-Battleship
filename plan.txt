@@ -5,6 +5,9 @@ Focus: call getAShipLayout after the player is done placing ships and start the 
 {
     + before the result is returned, if it equals 1 {
         + query select the 'start' button
+        + add an event listener to it {
+            + add the getAShipLayout() function to it
+        }
     }
 }
 psuedo code:
