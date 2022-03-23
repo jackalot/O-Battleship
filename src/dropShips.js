@@ -233,6 +233,12 @@ function dropShip() {
       { coord1: { x: 8, y: 5 }, coord2: { x: 8, y: 8 } },
       { coord1: { x: 1, y: 2 }, coord2: { x: 5, y: 2 } },
       { coord1: { x: 4, y: 10 }, coord2: { x: 8, y: 10 } }];
+    const layout4 = [{ coord1: { x: 10, y: 2 }, coord2: { x: 10, y: 5 } },
+      { coord1: { x: 4, y: 3 }, coord2: { x: 8, y: 3 } },
+      { coord1: { x: 2, y: 5 }, coord2: { x: 7, y: 5 } },
+      { coord1: { x: 9, y: 7 }, coord2: { x: 9, y: 9 } },
+      { coord1: { x: 6, y: 7 }, coord2: { x: 6, y: 10 } },
+      { coord1: { x: 1, y: 9 }, coord2: { x: 4, y: 9 } }];
     let randomNumber = Math.floor(Math.random() * 5);
     // adding one makes it so its never 0
     // this also makes the if statements match the layout number
@@ -247,8 +253,7 @@ function dropShip() {
       fillCPUShips(layout3);
     }
     if (randomNumber === 4) {
-      // when we have more layouts change the layout sent
-      fillCPUShips(layout1);
+      fillCPUShips(layout4);
     }
     if (randomNumber === 5) {
       // when we have more layouts change the layout sent
