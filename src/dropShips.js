@@ -164,7 +164,7 @@ function dropShip() {
     const result = parseInt(windowResult);
     if (result === 1) {
       const startBttn = document.querySelector('.start');
-      startBttn.addEventListener(() => {
+      startBttn.addEventListener('click', () => {
         getAShipLayout();
       });
       displayButton('start');
