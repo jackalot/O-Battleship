@@ -1,6 +1,12 @@
 Focus: call getAShipLayout after the player is done placing ships and start the game:
 //getAShipLayout() properly places all the ships for the cpu and displays the ships,
 // we just need to make it function when clicking the start game button
++ in askPlayerCount()
+{
+    + before the result is returned, if it equals 1 {
+        
+    }
+}
 psuedo code:
  function askPlayerCount() {
     const windowResult = Number(window.prompt('How many players will be playing? For one player, please type 1, for two players, please type 2', ''));
