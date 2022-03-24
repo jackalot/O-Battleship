@@ -319,20 +319,24 @@ function dropShip() {
   }
   // clears the board of all event listeners
   function clearBoards(callNextFunction) {
-    if (playerCount === 1) {
-      const allBoxes = document.querySelectorAll('.box');
-      hideButton('confirmAttackBtn');
-      // since this is against the computer, starting the game will give a random attack
-      hideButton('Pass-Turn');
-      allBoxes.forEach((box) => {
+    if (playerCount === undefined) {
+      askPlayerCount();
+    } else {
+      if (playerCount === 1) {
+        const allBoxes = document.querySelectorAll('.box');
+        hideButton('confirmAttackBtn');
+        // since this is against the computer, starting the game will give a random attack
+        hideButton('Pass-Turn');
+        allBoxes.forEach((box) => {
         //  This will clone the box with itself, thus removing every event listener
-        box.replaceWith(box.cloneNode(true));
-      });
-    }
-    // this is so we can use the clear boards function multiple times
-    // without rewriting it.
-    if (callNextFunction === true) {
-      addToEachBox(playerCount);
+          box.replaceWith(box.cloneNode(true));
+        });
+      }
+      // this is so we can use the clear boards function multiple times
+      // without rewriting it.
+      if (callNextFunction === true) {
+        addToEachBox(playerCount);
+      }
     }
   }
   clearBoards(true);
