@@ -10,7 +10,7 @@ Focus: start the game after ships are placed and the lone player presses startGa
     + create an instance of the attackDomManager();
     + query select the confirmAttackBtn
     + add an event listener (() => {
-        
+        + add the attackDomManager.findUnconfirmedAttacks() function to confirmAttackBtn
     })
 }
 psuedo code:
