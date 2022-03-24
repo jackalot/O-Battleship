@@ -30,8 +30,9 @@ psuedo code:
     // update both player's board's to be ready for playing
     p1DomBoardManager.sendNextCollumn();
     p2DomBoardManager.sendNextCollumn();
+    const attackManager = attackDomFile(playerOne, playerTwo, p1DomBoardManager, p2DomBoardManager);
     const confirmAttackBtn = document.querySelector('.confirmAttackBtn');
     confirmAttackBtn.addEventListener('click', (() => {
-        
+
     }))
  }
