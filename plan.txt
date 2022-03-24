@@ -8,5 +8,9 @@ Focus: start the game after ships are placed and the lone player presses startGa
     + create instances of both players updateDomBoards, player 2 will have theirs hidden
     + update both player's boards
     + create an instance of the attackDomManager();
+    + query select the confirmAttackBtn
+    + add an event listener (() => {
+        
+    })
 }
 psuedo code:
