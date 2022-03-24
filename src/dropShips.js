@@ -11,7 +11,7 @@ function dropShip() {
     const button = document.querySelector(`.${buttonClass}`);
     button.style.visibility = 'visible';
   }
-  function startGame() {
+  function startGame(playerOne, playerTwo) {
     // hide the buttons we won't use in the game
     hideButton('confirm-place-ships');
     hideButton('start');
@@ -21,8 +21,8 @@ function dropShip() {
     // clear any ability to place down ships
     clearBoards(false);
     // get each players update dom board instances
-    const p1DomBoardManager = domBoardFile(ourPlayers.playerOne, 'P1Box', ourPlayers.playerTwo, false);
-    const p2DomBoardManager = domBoardFile(ourPlayers.playerTwo, 'P2Box', ourPlayers.playerOne, true);
+    const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', playerTwo, false);
+    const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', playerOne, true);
     // update both player's board's to be ready for playing
     p1DomBoardManager.sendNextCollumn();
     p2DomBoardManager.sendNextCollumn();
