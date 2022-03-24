@@ -30,4 +30,5 @@ psuedo code:
     // update both player's board's to be ready for playing
     p1DomBoardManager.sendNextCollumn();
     p2DomBoardManager.sendNextCollumn();
+    const confirmAttackBtn = document.querySelector('.confirmAttackBtn');
  }
