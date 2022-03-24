@@ -4,6 +4,6 @@ Focus: restart the game when all of one's players ships are sunk:
 + inside endGame() {
     + at the end of the function, get a reference to dropShips.js()
     + call dropShips playerCount function
-    + call dropShips clearBoards function with the false value
+    + call dropShips clearBoards function with the true value
 }
 psuedo code:
