@@ -1,5 +1,7 @@
 //    Manages all the attacks sent via clicking on the boards, whether that be player1
 //    or player2
+const dropShipFile = require('./dropShips');
+
 function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager) {
   // recieveDomAttack() helperFunction
 // calls p1DomBoardManager and p2DomBoardManager functions
