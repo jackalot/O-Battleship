@@ -183,6 +183,7 @@ function dropShip() {
       const startBttn = document.querySelector('.start');
       startBttn.addEventListener('click', () => {
         getAShipLayout();
+        startGame();
       });
       displayButton('start');
     }
