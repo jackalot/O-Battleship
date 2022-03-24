@@ -20,4 +20,5 @@ function endGame(defendingPlayer) {
       p2DomBoardManager.swapHideShips();
       p2DomBoardManager.sendNextCollumn();
     }
+    const dropShipInstance = dropShipFile();
   }
