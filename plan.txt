@@ -3,5 +3,6 @@ Focus: restart the game when all of one's players ships are sunk:
 + import the dropShips.js file to attackDomManager
 + inside endGame() {
     + at the end of the function, get a reference to dropShips.js()
+    + call dropShips clearBoards function with the false value
 }
 psuedo code:
