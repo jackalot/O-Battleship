@@ -1,5 +1,6 @@
 const playerFile = require('./player');
 const domBoardFile = require('./updateDOMBoard');
+const attackDomFile = require('./attackDomManager');
 
 function dropShip() {
   function hideButton(buttonClass) {
