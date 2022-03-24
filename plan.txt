@@ -21,4 +21,5 @@ function endGame(defendingPlayer) {
       p2DomBoardManager.sendNextCollumn();
     }
     const dropShipInstance = dropShipFile();
+    dropShipInstance.askPlayerCount();
   }
