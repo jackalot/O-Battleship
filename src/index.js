@@ -10,14 +10,13 @@ const dropShipFile = require('./dropShips');
 const dropShip = dropShipFile();
 const confirmPlaceShipsBtn = document.querySelector('.confirm-place-ships');
 confirmPlaceShipsBtn.addEventListener('click', dropShip.confirmPlacedShips);
-
+/*
 const playerOne = playerFile('player 1', 0);
 const playerTwo = playerFile('CPU', 1);
 //  console.log(playerOne.ourBoard);
 //  console.log(playerTwo.ourBoard);
 const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', playerTwo, false);
 const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', playerOne, true);
-/*
 
 playerOne.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
 playerTwo.ourBoard.placeShip({ x: 1, y: 1 }, { x: 1, y: 7 });
