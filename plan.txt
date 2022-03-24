@@ -1,3 +1,4 @@
 Focus: restart the game when all of one's players ships are sunk:
 * in attackDomManager
++ import the dropShips.js file to attackDomManager
 psuedo code:
