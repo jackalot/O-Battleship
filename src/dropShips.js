@@ -30,6 +30,8 @@ function dropShip() {
     const attackManager = attackDomFile(playerOne, playerTwo, p1DomBoardManager, p2DomBoardManager);
     // Get the confirmAttackBtn and allow players to attack eachother
     const confirmAttackBtn = document.querySelector('.confirmAttackBtn');
+    // in case displayButton didn't fire, forcefully make it's visbility visible
+    confirmAttackBtn.style.visibility = 'visible';
     confirmAttackBtn.addEventListener('click', (() => {
       attackManager.findUnconfirmedAttacks();
     }));
