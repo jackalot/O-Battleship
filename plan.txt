@@ -1,2 +1,3 @@
 Focus: restart the game when all of one's players ships are sunk:
+* in attackDomManager
 psuedo code:
