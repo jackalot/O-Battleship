@@ -16,5 +16,7 @@ Focus: start the game after ships are placed and the lone player presses startGa
 }
 psuedo code:
  function startGame() {
-     
+     hideButton("confirm-place-ships");
+     hideButton("start");
+     hideButton("Pass-Turn");
  }
