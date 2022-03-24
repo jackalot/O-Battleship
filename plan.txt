@@ -22,4 +22,5 @@ function endGame(defendingPlayer) {
     }
     const dropShipInstance = dropShipFile();
     dropShipInstance.askPlayerCount();
+    dropShipInstance.clearBoards(true);
   }
