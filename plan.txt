@@ -1,4 +1,7 @@
 Focus: start the game after ships are placed and the lone player presses startGame:
 // the cpu has all of its ship layouts now, the start button calls getAShipLayout()
 // thanks to askPlayerCount() having an event listener in that function.
++ inside dropShip.js, a new function called startGame() {
+    
+}
 psuedo code:
