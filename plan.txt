@@ -20,6 +20,8 @@ psuedo code:
      hideButton("confirm-place-ships");
      hideButton("start");
      hideButton("Pass-Turn");
+     // display the buttosn we will use in the game
+     displayButton("confirmAttackBtn");
      // clear any ability to place down ships
      clearBoards(false);
      // get each players update dom board instances
