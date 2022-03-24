@@ -35,6 +35,8 @@ function dropShip() {
     confirmAttackBtn.addEventListener('click', (() => {
       attackManager.findUnconfirmedAttacks();
     }));
+    const gameStatus = document.querySelector('.gameStatus');
+    gameStatus.textContent = "Click on a square to attack that board, then click below to confirm you're attack!";
   }
   // createShipObject() helper function
   function findStartPoint(orientation, allUnconfirmedCoords) {
