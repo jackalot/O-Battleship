@@ -19,4 +19,5 @@ psuedo code:
      hideButton("confirm-place-ships");
      hideButton("start");
      hideButton("Pass-Turn");
+     clearBoards(false);
  }
