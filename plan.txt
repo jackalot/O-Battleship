@@ -31,4 +31,7 @@ psuedo code:
     p1DomBoardManager.sendNextCollumn();
     p2DomBoardManager.sendNextCollumn();
     const confirmAttackBtn = document.querySelector('.confirmAttackBtn');
+    confirmAttackBtn.addEventListener('click', (() => {
+        
+    }))
  }
