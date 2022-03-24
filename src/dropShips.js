@@ -336,6 +336,6 @@ function dropShip() {
     }
   }
   clearBoards(true);
-  return { askPlayerCount, confirmPlacedShips };
+  return { askPlayerCount, confirmPlacedShips, clearBoards };
 }
 module.exports = dropShip;
