@@ -20,4 +20,8 @@ psuedo code:
      hideButton("start");
      hideButton("Pass-Turn");
      clearBoards(false);
+     const p1DomBoardManager = domBoardFile(ourPlayers.playerOne, 'P1Box', ourPlayers.playerTwo, true);
+    const p2DomBoardManager = domBoardFile(ourPlayers.playerTwo, 'P2Box', ourPlayers.playerOne, false);
+    p1DomBoardManager.sendNextCollumn();
+    p2DomBoardManager.sendNextCollumn();
  }
