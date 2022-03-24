@@ -21,8 +21,8 @@ function dropShip() {
     // clear any ability to place down ships
     clearBoards(false);
     // get each players update dom board instances
-    const p1DomBoardManager = domBoardFile(ourPlayers.playerOne, 'P1Box', ourPlayers.playerTwo, true);
-    const p2DomBoardManager = domBoardFile(ourPlayers.playerTwo, 'P2Box', ourPlayers.playerOne, false);
+    const p1DomBoardManager = domBoardFile(ourPlayers.playerOne, 'P1Box', ourPlayers.playerTwo, false);
+    const p2DomBoardManager = domBoardFile(ourPlayers.playerTwo, 'P2Box', ourPlayers.playerOne, true);
     // update both player's board's to be ready for playing
     p1DomBoardManager.sendNextCollumn();
     p2DomBoardManager.sendNextCollumn();
