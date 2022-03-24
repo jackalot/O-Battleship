@@ -171,6 +171,11 @@ function dropShip() {
     if (playerCount === 1) {
       const playerOne = playerFile('player 1', 0);
       const playerTwo = playerFile('CPU', 1);
+      const startBttn = document.querySelector('.start');
+      startBttn.addEventListener('click', () => {
+        getAShipLayout();
+        startGame(playerOne, playerTwo);
+      });
       return { playerOne, playerTwo };
     }
     if (playerCount === 2) {
@@ -185,11 +190,6 @@ function dropShip() {
     // eslint-disable-next-line radix
     const result = parseInt(windowResult);
     if (result === 1) {
-      const startBttn = document.querySelector('.start');
-      startBttn.addEventListener('click', () => {
-        getAShipLayout();
-        startGame();
-      });
       displayButton('start');
     }
     return result;
