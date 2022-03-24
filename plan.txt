@@ -33,6 +33,6 @@ psuedo code:
     const attackManager = attackDomFile(playerOne, playerTwo, p1DomBoardManager, p2DomBoardManager);
     const confirmAttackBtn = document.querySelector('.confirmAttackBtn');
     confirmAttackBtn.addEventListener('click', (() => {
-
+        attackManager.findUnconfirmedAttacks();
     }))
  }
