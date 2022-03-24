@@ -26,7 +26,9 @@ function dropShip() {
     // update both player's board's to be ready for playing
     p1DomBoardManager.sendNextCollumn();
     p2DomBoardManager.sendNextCollumn();
+    // make an attackManager so each player can attack eachother
     const attackManager = attackDomFile(playerOne, playerTwo, p1DomBoardManager, p2DomBoardManager);
+    // Get the confirmAttackBtn and allow players to attack eachother
     const confirmAttackBtn = document.querySelector('.confirmAttackBtn');
     confirmAttackBtn.addEventListener('click', (() => {
       attackManager.findUnconfirmedAttacks();
