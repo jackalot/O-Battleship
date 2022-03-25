@@ -6,6 +6,11 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
     + start off the function with an empty array called 'hitsFound'
     + check if playerAttacking's board's hitOrMissedCoords is not empty {
       + make a for loop that goes through the playerAttacking's board's hitOrMissedCoords
+      {
+        + if a coordinate with the coord type 'Hit' is found {
+          + push it onto hitsFound
+        }
+      }
     }
   }
   + inside the function sendRandomAttack() {
