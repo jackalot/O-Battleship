@@ -32,7 +32,7 @@ function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager
       p2DomBoardManager.sendNextCollumn();
     }
     const dropShipInstance = dropShipFile();
-    dropShipInstance.clearBoards(true);
+    dropShipInstance.clearBoards(false);
   }
   function recieveDomAttack(coordinate, defendingPlayer) {
     if (defendingPlayer === player1) {
