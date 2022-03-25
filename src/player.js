@@ -10,10 +10,13 @@ const playerFactory = (playerName, playerTurn) => {
   //   an already missed/hit coordinate
   function sendRandomAttack(playerAttacking) {
     let x = Math.floor(Math.random() * playerAttacking.ourBoard.topRightCorner.x);
-    const y = Math.floor(Math.random() * playerAttacking.ourBoard.topRightCorner.y);
+    let y = Math.floor(Math.random() * playerAttacking.ourBoard.topRightCorner.y);
     // so x is never out of bounds
     if (x < playerAttacking.ourBoard.bottomLeftCorner.x) {
       x += 1;
+    }
+    if (y < playerAttacking.ourBoard.bottomLeftCorner.y) {
+      y += 1;
     }
     const coordinates = { x, y };
     console.log(coordinates);
