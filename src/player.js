@@ -6,6 +6,8 @@ const playerFactory = (playerName, playerTurn) => {
     const result = ourBoard.recieveAttack(coordinates);
     return result;
   }
+  // sendRandomAttack() helper function
+  // CPU function, finds a hit in the player we are attacking so we can later find a nearby target
   function findHits(playerAttacking) {
     const hitsFound = [];
     if (playerAttacking.ourBoard.hitOrMissedCoords.length === 0) {
