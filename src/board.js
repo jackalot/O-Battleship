@@ -253,6 +253,7 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
     checkAvailableCoord,
     findFirstShip,
     checkMissesAndHits,
+    hitOrMissedCoords,
     myShips,
   };
 };
