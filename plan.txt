@@ -23,7 +23,10 @@ function findHits(playerAttacking) {
   const hitsFound = [];
   if(playerAttacking.ourBoard.hitOrMissedCoords.length === 0)
   {
-    
+    for(let i = 0; i < hitOrMissedCoords; i += 1)
+    {
+      
+    }
   }
 }
 function sendRandomAttack(playerAttacking) {
