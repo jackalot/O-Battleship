@@ -15,15 +15,18 @@ Focus: make the cpu attack when its the cpu's turn:
 }
 psuedo code:
 function swapVisibility(defendingPlayer) {
-    if (defendingPlayer === player1) {
-      p1DomBoardManager.swapHideShips();
-      p2DomBoardManager.swapHideShips();
-      p1DomBoardManager.sendNextCollumn();
-      p2DomBoardManager.sendNextCollumn();
-    } else if (defendingPlayer === player2) {
-      p2DomBoardManager.swapHideShips();
-      p1DomBoardManager.swapHideShips();
-      p2DomBoardManager.sendNextCollumn();
-      p1DomBoardManager.sendNextCollumn();
+    if(player2.playerName !== 'CPU') 
+    {
+      if (defendingPlayer === player1) {
+        p1DomBoardManager.swapHideShips();
+        p2DomBoardManager.swapHideShips();
+        p1DomBoardManager.sendNextCollumn();
+        p2DomBoardManager.sendNextCollumn();
+      } else if (defendingPlayer === player2) {
+        p2DomBoardManager.swapHideShips();
+        p1DomBoardManager.swapHideShips();
+        p2DomBoardManager.sendNextCollumn();
+        p1DomBoardManager.sendNextCollumn();
+      }
     }
   }
