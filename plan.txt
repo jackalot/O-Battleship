@@ -25,7 +25,10 @@ function findHits(playerAttacking) {
   {
     for(let i = 0; i < playerAttacking.ourBoard.hitOrMissedCoords.length; i += 1)
     {
-      
+      if(playerAttacking.ourBoard.hitOrMissedCoords[i].coordType === 'Hit')
+      {
+        
+      }
     }
   }
 }
