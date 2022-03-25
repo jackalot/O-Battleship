@@ -7,7 +7,7 @@ Focus: make the cpu attack when its the cpu's turn:
     + before the visibility is swapped, check if player 2 doesnt have the name CPU before continuing to the
     rest of the function { rest of the function }
     + if player 2 does have the name CPU {
-
+      + call callCPUAttack
     }
   }
 }
