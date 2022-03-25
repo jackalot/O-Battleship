@@ -27,7 +27,7 @@ function findHits(playerAttacking) {
     {
       if(playerAttacking.ourBoard.hitOrMissedCoords[i].coordType === 'Hit')
       {
-        
+        hitsFound.push(playerAttacking.ourBoard.hitOrMissedCoords[i]);
       }
     }
   }
