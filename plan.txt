@@ -1,26 +1,2 @@
-Focus: restart the game when all of one's players ships are sunk:
-* in attackDomManager
-+ import the dropShips.js file to attackDomManager
-+ inside endGame() {
-    + at the end of the function, get a reference to dropShips.js()
-    + call dropShips playerCount function
-    + call dropShips clearBoards function with the true value
-}
+Focus: make the cpu attack when its the cpu's turn:
 psuedo code:
-function endGame(defendingPlayer) {
-    const gameStatus = document.querySelector('.gameStatus');
-    gameStatus.textContent = `${defendingPlayer.playerName}, you lose! 
-  All your battleships have been sunk! Refresh the page to play again!`;
-
-    if (p1DomBoardManager.hideShips === true) {
-      p1DomBoardManager.swapHideShips();
-      p1DomBoardManager.sendNextCollumn();
-    }
-    if (p2DomBoardManager.hideShips === true) {
-      p2DomBoardManager.swapHideShips();
-      p2DomBoardManager.sendNextCollumn();
-    }
-    const dropShipInstance = dropShipFile();
-    dropShipInstance.askPlayerCount();
-    dropShipInstance.clearBoards(true);
-  }
