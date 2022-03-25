@@ -2,19 +2,28 @@
 //    or player2
 
 function attackDomManager(player1, player2, p1DomBoardManager, p2DomBoardManager) {
+  function callCPUAttack() {
+    player2.sendRandomAttack(player1);
+    p1DomBoardManager.sendNextCollumn();
+    p2DomBoardManager.sendNextCollumn();
+  }
   // recieveDomAttack() helperFunction
-// calls p1DomBoardManager and p2DomBoardManager functions
+  // calls p1DomBoardManager and p2DomBoardManager functions
   function swapVisibility(defendingPlayer) {
-    if (defendingPlayer === player1) {
-      p1DomBoardManager.swapHideShips();
-      p2DomBoardManager.swapHideShips();
-      p1DomBoardManager.sendNextCollumn();
-      p2DomBoardManager.sendNextCollumn();
-    } else if (defendingPlayer === player2) {
-      p2DomBoardManager.swapHideShips();
-      p1DomBoardManager.swapHideShips();
-      p2DomBoardManager.sendNextCollumn();
-      p1DomBoardManager.sendNextCollumn();
+    if (player2.playerName !== 'CPU') {
+      if (defendingPlayer === player1) {
+        p1DomBoardManager.swapHideShips();
+        p2DomBoardManager.swapHideShips();
+        p1DomBoardManager.sendNextCollumn();
+        p2DomBoardManager.sendNextCollumn();
+      } else if (defendingPlayer === player2) {
+        p2DomBoardManager.swapHideShips();
+        p1DomBoardManager.swapHideShips();
+        p2DomBoardManager.sendNextCollumn();
+        p1DomBoardManager.sendNextCollumn();
+      }
+    } else {
+      callCPUAttack();
     }
   }
   function endGame(defendingPlayer) {
