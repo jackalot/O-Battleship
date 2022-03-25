@@ -18,7 +18,7 @@ const playerFactory = (playerName, playerTurn) => {
       }
       return hitsFound;
     }
-    return 'There are no hits or misses';
+    return hitsFound;
   }
   //  this is for the AI to attack randomly, also helps check we didnt hit
   //   an already missed/hit coordinate
