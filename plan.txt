@@ -2,7 +2,8 @@ Focus: make the cpu attack when its the cpu's turn:
 * in attackDomManager.js {
   + inside attackDomManager, a new function, called callCPUAttack() {
     + call player2's sendRandomAttack function
-    
+    + call player1's updateDomBoard sendNextCollumn();
+    + call player2's updateDomBoard sendNextCollumn();
   }
   + in the function swapVisibility() {
     + before the visibility is swapped, check if player 2 doesnt have the name CPU before continuing to the
