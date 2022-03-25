@@ -15,7 +15,8 @@ Focus: make the cpu attack when its the cpu's turn:
 }
 psuedo code:
 function callCPUAttack() {
-  
+  p1DomBoardManager.sendNextCollumn();
+  p2DomBoardManager.sendNextCollumn();
 }
 function swapVisibility(defendingPlayer) {
     if(player2.playerName !== 'CPU') 
