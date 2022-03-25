@@ -20,17 +20,7 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
 }
 psuedo code:
 function sendRandomAttack(playerAttacking) {
-    let x = Math.floor(Math.random() * playerAttacking.ourBoard.topRightCorner.x);
-    let y = Math.floor(Math.random() * playerAttacking.ourBoard.topRightCorner.y);
-    // so x is never out of bounds
-    if (x < playerAttacking.ourBoard.bottomLeftCorner.x) {
-      x += 1;
-    }
-    if (y < playerAttacking.ourBoard.bottomLeftCorner.y) {
-      y += 1;
-    }
-    const coordinates = { x, y };
-    console.log(coordinates);
+    
     const fitsBoard = playerAttacking.ourBoard.checkValidCoord(coordinates);
     if (fitsBoard === true) {
       // check if these coordinates on the boord have a miss or hit checked already.
