@@ -20,6 +20,11 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
 }
 psuedo code:
 function findHits(playerAttacking) {
+  const hitsFound = [];
+  if(playerAttacking.ourBoard.length === 0)
+  {
+    
+  }
 }
 function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
