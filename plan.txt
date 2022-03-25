@@ -1,5 +1,8 @@
 Focus: make the cpu be able to attack corresponding grid items when a hit is found:
-
+* inside player.js
+{
+  
+}
 psuedo code:
 function sendRandomAttack(playerAttacking) {
     let x = Math.floor(Math.random() * playerAttacking.ourBoard.topRightCorner.x);
