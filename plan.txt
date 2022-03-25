@@ -2,7 +2,7 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
 * inside player.js
 {
   + inside player.js, a new function called findHits() {
-    
+    + parameters { playerAttacking }
   }
   + inside the function sendRandomAttack() {
     
