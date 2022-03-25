@@ -12,6 +12,7 @@ const playerFactory = (playerName, playerTurn) => {
     const x = Math.floor(Math.random() * playerAttacking.ourBoard.topRightCorner.x);
     const y = Math.floor(Math.random() * playerAttacking.ourBoard.topRightCorner.y);
     const coordinates = { x, y };
+    console.log(coordinates);
     const fitsBoard = playerAttacking.ourBoard.checkValidCoord(coordinates);
     if (fitsBoard === true) {
       // check if these coordinates on the boord have a miss or hit checked already.
