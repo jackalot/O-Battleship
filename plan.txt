@@ -1,2 +1,5 @@
 Focus: make the cpu attack when its the cpu's turn:
+* in attackDomManager.js {
+
+}
 psuedo code:
