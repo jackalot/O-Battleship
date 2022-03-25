@@ -9,8 +9,12 @@ const playerFactory = (playerName, playerTurn) => {
   //  this is for the AI to attack randomly, also helps check we didnt hit
   //   an already missed/hit coordinate
   function sendRandomAttack(playerAttacking) {
-    const x = Math.floor(Math.random() * playerAttacking.ourBoard.topRightCorner.x);
+    let x = Math.floor(Math.random() * playerAttacking.ourBoard.topRightCorner.x);
     const y = Math.floor(Math.random() * playerAttacking.ourBoard.topRightCorner.y);
+    // so x is never out of bounds
+    if (x < playerAttacking.ourBoard.bottomLeftCorner.x) {
+      x += 1;
+    }
     const coordinates = { x, y };
     console.log(coordinates);
     const fitsBoard = playerAttacking.ourBoard.checkValidCoord(coordinates);
