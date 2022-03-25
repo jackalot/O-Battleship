@@ -4,7 +4,9 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
   + inside player.js, a new function called findHits() {
     + parameters { playerAttacking }
     + start off the function with an empty array called 'hitsFound'
-    + make a for loop that goes through the playerAttacking's board's hitOrMissedCoords
+    + check if playerAttacking's board's hitOrMissedCoords is not empty {
+      + make a for loop that goes through the playerAttacking's board's hitOrMissedCoords
+    }
   }
   + inside the function sendRandomAttack() {
     
