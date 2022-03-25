@@ -15,6 +15,7 @@ Focus: make the cpu attack when its the cpu's turn:
 }
 psuedo code:
 function callCPUAttack() {
+  player2.sendRandomAttack(player1);
   p1DomBoardManager.sendNextCollumn();
   p2DomBoardManager.sendNextCollumn();
 }
