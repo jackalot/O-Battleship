@@ -1,7 +1,8 @@
 Focus: make the cpu attack when its the cpu's turn:
 * in attackDomManager.js {
   + in the function swapVisibility() {
-    
+    + before the visibility is swapped, check if player 2 doesnt have the name CPU before continuing to the
+    rest of the function { rest of the function }
   }
 }
 psuedo code:
