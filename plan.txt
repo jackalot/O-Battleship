@@ -35,6 +35,8 @@ function findHits(playerAttacking) {
 }
 function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
+    console.log(hitsFound);
+    /*
     const fitsBoard = playerAttacking.ourBoard.checkValidCoord(coordinates);
     if (fitsBoard === true) {
       // check if these coordinates on the boord have a miss or hit checked already.
@@ -44,5 +46,6 @@ function sendRandomAttack(playerAttacking) {
       }
       return openCoordinate;
     }
+    */
     return false;
   }
