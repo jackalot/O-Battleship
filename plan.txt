@@ -29,4 +29,8 @@ function swapVisibility(defendingPlayer) {
         p1DomBoardManager.sendNextCollumn();
       }
     }
+    else 
+    {
+      callCPUAttack();
+    }
   }
