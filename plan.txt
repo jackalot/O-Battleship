@@ -7,6 +7,7 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
     + make a variable called x, make it a random number between 0-10 (thanks to math.floor add 1 to remove the 1)
     + make a similar variable called y
     + turn the x and y variable into a coordinate object
+    + check the players board with checkMissesAndHits if this coordinate is a miss already.
   }
   + inside sendRandomAttack() {
     + check if hitsFound has a length greater than 0, this means that there was a hit
