@@ -46,6 +46,10 @@ function createRandomCoordinate(playerAttacking) {
   const coordinate = {
     x, y
   }
+  if(playerAttacking.ourBoard.checkMissesAndHits(coordinate) === 'Miss')
+  {
+    
+  }
 }
  function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
