@@ -44,8 +44,8 @@ const playerFactory = (playerName, playerTurn) => {
     }
     if (hitsFound.length === 0) {
       const coordinate = createRandomCoordinate(playerAttacking);
-      const attack = sendAttack(playerAttacking, coordinate);
-      return attack;
+      sendAttack(playerAttacking, coordinate);
+      return true;
     }
     return false;
   }
