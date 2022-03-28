@@ -10,7 +10,7 @@ const playerFactory = (playerName, playerTurn) => {
   // CPU function, finds a hit in the player we are attacking so we can later find a nearby target
   function findHits(playerAttacking) {
     const hitsFound = [];
-    if (playerAttacking.ourBoard.hitOrMissedCoords.length === 0) {
+    if (playerAttacking.ourBoard.hitOrMissedCoords.length !== 0) {
       for (let i = 0; i < playerAttacking.ourBoard.hitOrMissedCoords.length; i += 1) {
         if (playerAttacking.ourBoard.hitOrMissedCoords[i].coordType === 'Hit') {
           hitsFound.push(playerAttacking.ourBoard.hitOrMissedCoords[i]);
@@ -40,7 +40,7 @@ const playerFactory = (playerName, playerTurn) => {
     const hitsFound = findHits(playerAttacking);
     console.log(hitsFound);
     if (hitsFound.length > 0) {
-
+      console.log('testingh');
     }
     if (hitsFound.length === 0) {
       const coordinate = createRandomCoordinate(playerAttacking);
