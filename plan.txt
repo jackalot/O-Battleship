@@ -47,7 +47,7 @@ function findHits(playerAttacking) {
     }
     if(hitsFound.length === 0)
     {
-      
+      const coordinate = createRandomCoordinate(playerAttacking);
     }
     return false;
   }
