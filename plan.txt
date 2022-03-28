@@ -18,7 +18,7 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
     + check if hitsFound has a length greater than 0, this means that there was a hit
     + check if hits found has a length of 0, this means its our first attack
     {
-      
+      + create a reference to createRandomCoordinate() and send playerAttacking;
     }
     + return if none of the above were true
   }
