@@ -12,6 +12,7 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
       + if its a miss, call createRandomCoordinate again with a store variable
       + return the stored variable to the recursion of createRandomCoordinate();
     }
+    + return the coordinate object
   }
   + inside sendRandomAttack() {
     + check if hitsFound has a length greater than 0, this means that there was a hit
