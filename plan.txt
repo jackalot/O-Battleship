@@ -51,6 +51,7 @@ function createRandomCoordinate(playerAttacking) {
     const recall = createRandomCoordinate(playerAttacking);
     return recall;
   }
+  return coordinate;
 }
  function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
