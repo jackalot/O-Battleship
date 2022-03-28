@@ -22,3 +22,7 @@ test.skip("player1 will now have the player turn 1 (meaning its not their turn)"
 test("player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
 expect(player2.sendRandomAttack(player1)).toBe(true);
 })
+// this is so that we can have some hits on the board and test checking for possible more hits
+test("player2(CPU) sends a direct attack to player1's ship and it will return true", ()=> {
+    expect(player2.sendAttack(player1, {x: 1, y: 1})).toBe(true);
+    })
