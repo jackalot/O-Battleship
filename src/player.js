@@ -20,22 +20,32 @@ const playerFactory = (playerName, playerTurn) => {
     }
     return hitsFound;
   }
+  function createRandomCoordinate(playerAttacking) {
+    let x = Math.floor(Math.random() * 10);
+    x += 1;
+    let y = Math.floor(Math.random() * 10);
+    y += 1;
+    const coordinate = {
+      x, y,
+    };
+    if (playerAttacking.ourBoard.checkMissesAndHits(coordinate) === 'Miss') {
+      const recall = createRandomCoordinate(playerAttacking);
+      return recall;
+    }
+    return coordinate;
+  }
   //  this is for the AI to attack randomly, also helps check we didnt hit
   //   an already missed/hit coordinate
   function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
     console.log(hitsFound);
-    /*
-    const fitsBoard = playerAttacking.ourBoard.checkValidCoord(coordinates);
-    if (fitsBoard === true) {
-      // check if these coordinates on the boord have a miss or hit checked already.
-      const openCoordinate = playerAttacking.ourBoard.checkAvailableCoord(coordinates);
-      if (openCoordinate === true) {
-        sendAttack(playerAttacking, coordinates);
-      }
-      return openCoordinate;
+    if (hitsFound.length > 0) {
+
     }
-    */
+    if (hitsFound.length === 0) {
+      const coordinate = createRandomCoordinate(playerAttacking);
+      console.log(coordinate);
+    }
     return false;
   }
   function swapTurn() {
