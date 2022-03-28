@@ -63,6 +63,7 @@ function createRandomCoordinate(playerAttacking) {
     if(hitsFound.length === 0)
     {
       const coordinate = createRandomCoordinate(playerAttacking);
+      console.log(coordinate);
     }
     return false;
   }
