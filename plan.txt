@@ -38,3 +38,9 @@ function findHits(playerAttacking) {
   }
   return hitsFound;
 }
+ function sendRandomAttack(playerAttacking) {
+    const hitsFound = findHits(playerAttacking);
+    console.log(hitsFound);
+    
+    return false;
+  }
