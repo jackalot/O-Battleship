@@ -41,6 +41,9 @@ function findHits(playerAttacking) {
  function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
     console.log(hitsFound);
-    
+    if(hitsFound.length > 0)
+    {
+
+    }
     return false;
   }
