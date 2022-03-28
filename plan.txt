@@ -1,58 +1,13 @@
 Focus: make the cpu be able to attack corresponding grid items when a hit is found:
 * inside player.js
 {
-  + inside player.js, a new function called createRandomCoordinate()
-  {
-    + parameters { playerAttacking }
-    + make a variable called x, make it a random number between 0-10 (thanks to math.floor add 1 to remove the 1)
-    + make a similar variable called y
-    + turn the x and y variable into a coordinate object
-    + check the players board with checkMissesAndHits if this coordinate is a miss already.
-    {
-      + if its a miss, call createRandomCoordinate again with a store variable
-      + return the stored variable to the recursion of createRandomCoordinate();
-    }
-    + return the coordinate object
-  }
   + inside sendRandomAttack() {
     + check if hitsFound has a length greater than 0, this means that there was a hit
-    + check if hits found has a length of 0, this means its our first attack
     {
-      + create a reference to createRandomCoordinate() and send playerAttacking;
+
     }
-    + return if none of the above were true
-  }
 }
 psuedo code:
-function findHits(playerAttacking) {
-  const hitsFound = [];
-  if(playerAttacking.ourBoard.hitOrMissedCoords.length === 0)
-  {
-    for(let i = 0; i < playerAttacking.ourBoard.hitOrMissedCoords.length; i += 1)
-    {
-      if(playerAttacking.ourBoard.hitOrMissedCoords[i].coordType === 'Hit')
-      {
-        hitsFound.push(playerAttacking.ourBoard.hitOrMissedCoords[i]);
-      }
-    }
-  }
-  return hitsFound;
-}
-function createRandomCoordinate(playerAttacking) {
-  let x = Math.floor(Math.random() * 10);
-  x += 1;
-  let y = Math.floor(Math.random() * 10);
-  y += 1;
-  const coordinate = {
-    x, y
-  }
-  if(playerAttacking.ourBoard.checkMissesAndHits(coordinate) === 'Miss')
-  {
-    const recall = createRandomCoordinate(playerAttacking);
-    return recall;
-  }
-  return coordinate;
-}
  function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
     console.log(hitsFound);
