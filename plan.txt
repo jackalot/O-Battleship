@@ -45,5 +45,9 @@ function findHits(playerAttacking) {
     {
 
     }
+    if(hitsFound.length === 0)
+    {
+      
+    }
     return false;
   }
