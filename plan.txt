@@ -48,7 +48,8 @@ function createRandomCoordinate(playerAttacking) {
   }
   if(playerAttacking.ourBoard.checkMissesAndHits(coordinate) === 'Miss')
   {
-    
+    const recall = createRandomCoordinate(playerAttacking);
+    return recall;
   }
 }
  function sendRandomAttack(playerAttacking) {
