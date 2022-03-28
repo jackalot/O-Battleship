@@ -38,6 +38,9 @@ function findHits(playerAttacking) {
   }
   return hitsFound;
 }
+function createRandomCoordinate(playerAttacking) {
+  
+}
  function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
     console.log(hitsFound);
