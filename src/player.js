@@ -39,9 +39,12 @@ const playerFactory = (playerName, playerTurn) => {
   function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
     console.log(hitsFound);
+    // if ships were hit, then try to find adjoining coordinates to that coordinates
+    // in case it's a ship
     if (hitsFound.length > 0) {
       console.log('testingh');
     }
+    // if no ships were harmed, fire a random attack at any coordinate
     if (hitsFound.length === 0) {
       const coordinate = createRandomCoordinate(playerAttacking);
       sendAttack(playerAttacking, coordinate);
