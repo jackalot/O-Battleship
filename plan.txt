@@ -11,14 +11,16 @@ psuedo code:
  function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
     console.log(hitsFound);
-    if(hitsFound.length > 0)
-    {
-
+    // if ships were hit, then try to find adjoining coordinates to that coordinates
+    // in case it's a ship
+    if (hitsFound.length > 0) {
+      console.log('testingh');
     }
-    if(hitsFound.length === 0)
-    {
+    // if no ships were harmed, fire a random attack at any coordinate
+    if (hitsFound.length === 0) {
       const coordinate = createRandomCoordinate(playerAttacking);
-      console.log(coordinate);
+      sendAttack(playerAttacking, coordinate);
+      return true;
     }
     return false;
   }
