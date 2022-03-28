@@ -43,6 +43,9 @@ function createRandomCoordinate(playerAttacking) {
   x += 1;
   let y = Math.floor(Math.random() * 10);
   y += 1;
+  const coordinate = {
+    x, y
+  }
 }
  function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
