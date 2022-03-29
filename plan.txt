@@ -32,6 +32,10 @@ psuedo code:
      const slot = findAdjacentSlot(hitsFound[0].ourCoordinates,
       allDirections[i],
        playerAttacking);
+       if(slot !== hitsFound[0].ourCoordinates)
+       {
+         
+       }
    }
  }
  function sendRandomAttack(playerAttacking) {
