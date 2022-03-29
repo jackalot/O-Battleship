@@ -34,7 +34,7 @@ psuedo code:
        playerAttacking);
        if(slot !== hitsFound[0].ourCoordinates)
        {
-         
+         possibleCoordinates.push(slot);
        }
    }
  }
