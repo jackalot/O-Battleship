@@ -48,16 +48,16 @@ const playerFactory = (playerName, playerTurn) => {
     // moveByHowMuch will use this kind of coordinate system: x: 0 y: +2;
     // 0 means don't move, 1 or anything above 0 means move
     if (moveByHowMuch.x > 0) {
-      let copyCoordinate = { ...coordinate };
-      copyCoordinate += moveByHowMuch.x;
+      const copyCoordinate = { ...coordinate };
+      copyCoordinate.x += moveByHowMuch.x;
       const validSlot = validateSlot(playerAttacking, copyCoordinate);
       if (validSlot === true) {
         return copyCoordinate;
       }
     }
     if (moveByHowMuch.y > 0) {
-      let copyCoordinate = { ...coordinate };
-      copyCoordinate += moveByHowMuch.y;
+      const copyCoordinate = { ...coordinate };
+      copyCoordinate.y += moveByHowMuch.y;
       const validSlot = validateSlot(playerAttacking, copyCoordinate);
       if (validSlot === true) {
         return copyCoordinate;
