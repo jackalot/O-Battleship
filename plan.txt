@@ -1,87 +1,13 @@
 Focus: make the cpu be able to attack corresponding grid items when a hit is found:
 * inside player.js
 {
-  //  findAdjacentSlot() helper function()
-  + inside player.js, a new function called validateSlot() {
-    + parameter { playerAttacking, coordinate }
-    + call the playerAttacking's board's checkValidCoord function
-    + call playerAttacking's checkAvailableCoord function
-    + check if checkValidCoord and checkAvailableCoord both return true
-    {
-      + return true;
-    }
-    + return false;
-  }
-  //  sendRandomAttack() helper function()
-  + inside player.js, a new function called findAdjacentSlot() {
-    + parameter { coordinate, moveByHowMuch, playerAttacking }
-    // moveByHowMuch will use this kind of coordinate system: x: 0 y: +2;
-    // 0 means don't move, 2 or anything above 0 means move
-    + first check if x of moveByHowMuch is above 0
-    {
-      + make a copy of our coordinate;
-      + add to our coordinate copy moveByHowMuch;
-      + call validateSlot and send playerAttacking, along with the coordinate copy;
-      + if validateSlot returns true {
-        + return true;
-      }
-    }
-    + check if y of moveByHowMuch is above 0 
-    {
-      + make a copy of our coordinate;
-      + add to our coordinate copy moveByHowMuch;
-      + call validateSlot and send playerAttacking, along with the coordinate copy;
-      + if validateSlot returns true {
-        + return true;
-      }
-    }
-    + return false if none of the above happens
-  }
+  
   + inside sendRandomAttack() {
     + check if hitsFound has a length greater than 0, this means that there was a hit
     {
-      + call findAdjacentSlot() with the hitsFound index 0 .ourCoordinates and with 
-      a 'moveByHowMuch' of {x: 1, y: 0};
     }
 }
 psuedo code:
- //  validateSlot() helper function()
-  function validateSlot(playerAttacking, coordinate) {
-    const validCoord = playerAttacking.ourBoard.checkValidCoord(coordinate);
-    const avaliableCoord = playerAttacking.ourBoard.checkAvailableCoord(coordinate);
-    if(validCoord === true && avaliableCoord === true)
-    {
-      return true;
-    }
-    return false;
-  }
-  //  sendRandomAttack() helper function()
-  function findAdjacentSlot(coordinate, moveByHowMuch, playerAttacking)
-  {
-    // moveByHowMuch will use this kind of coordinate system: x: 0 y: +2;
-    // 0 means don't move, 1 or anything above 0 means move
-    if(moveByHowMuch.x > 0)
-    {
-      let copyCoordinate = {...coordinate};
-      copyCoordinate += moveByHowMuch.x;
-      const validSlot = validateSlot(playerAttacking, copyCoordinate);
-      if(validSlot === true)
-      {
-        return copyCoordinate;
-      }
-    }
-    if(moveByHowMuch.y > 0)
-    {
-      let copyCoordinate = {...coordinate};
-      copyCoordinate += moveByHowMuch.y;
-      const validSlot = validateSlot(playerAttacking, copyCoordinate);
-      if(validSlot === true)
-      {
-        return copyCoordinate;
-      }
-    }
-    return coordinate;
-  }
  function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
     console.log(hitsFound);
