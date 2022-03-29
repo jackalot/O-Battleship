@@ -69,7 +69,6 @@ const playerFactory = (playerName, playerTurn) => {
   //   an already missed/hit coordinate
   function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
-    console.log(hitsFound);
     // if ships were hit, then try to find adjoining coordinates to that coordinates
     // in case it's a ship
     if (hitsFound.length > 0) {
@@ -78,6 +77,7 @@ const playerFactory = (playerName, playerTurn) => {
         { x: 1, y: 0 },
         playerAttacking,
       );
+      console.log(newSlot);
     }
     // if no ships were harmed, fire a random attack at any coordinate
     if (hitsFound.length === 0) {
