@@ -69,7 +69,7 @@ const playerFactory = (playerName, playerTurn) => {
     const possibleCoordinates = [];
     //                     right           up              down          left
     const allDirections = [{ x: 1, y: 0 }, { x: 0, y: 1 }, { x: 0, y: -1 }, { x: -1, y: 0 }];
-    for (let i = 0; i < allDirections; i += 1) {
+    for (let i = 0; i < allDirections.length; i += 1) {
       const slot = findAdjacentSlot(
         hitsFound[0].ourCoordinates,
         allDirections[i],
@@ -85,7 +85,6 @@ const playerFactory = (playerName, playerTurn) => {
   //   an already missed/hit coordinate
   function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
-    console.log(hitsFound);
     // if ships were hit, then try to find adjoining coordinates to that coordinates
     // in case it's a ship
     if (hitsFound.length > 0) {
