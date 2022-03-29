@@ -5,8 +5,8 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
   // this will try every direction a slot has neighboring it (not diagnal)
   // then return the possible ones
   + inside player.js, a new function, tryEveryDirection() {
-    + start the function with an array called possibleCoordinates
-
+    + start the function with an array called possibleCoordinates, this will be empty
+    
   }
   + inside sendRandomAttack() {
     + check if hitsFound has a length greater than 0, this means that there was a hit
