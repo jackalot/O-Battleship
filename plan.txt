@@ -53,7 +53,7 @@ psuedo code:
     if(moveByHowMuch.x > 0)
     {
       let copyCoordinate = {...coordinate};
-
+      copyCoordinate += moveByHowMuch.x;
     }
     if(moveByHowMuch.y > 0)
     {
