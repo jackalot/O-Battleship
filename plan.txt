@@ -51,8 +51,9 @@ psuedo code:
     const avaliableCoord = playerAttacking.ourBoard.checkAvailableCoord(coordinate);
     if(validCoord === true && avaliableCoord === true)
     {
-      
+      return true;
     }
+    return false;
   }
   //  sendRandomAttack() helper function()
   function findAdjacentSlot(coordinate, moveByHowMuch, playerAttacking)
