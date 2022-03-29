@@ -50,6 +50,11 @@ psuedo code:
   {
     // moveByHowMuch will use this kind of coordinate system: x: 0 y: +2;
     // 0 means don't move, 1 or anything above 0 means move
+    if(moveByHowMuch.x > 0)
+    {
+
+    }
+    if(moveByHowMuch.y > 0)
   }
  function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
