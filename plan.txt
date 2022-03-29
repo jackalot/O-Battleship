@@ -7,8 +7,9 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
     + call playerAttacking's checkAvailableCoord function
     + check if checkValidCoord and checkAvailableCoord both return true
     {
-      
+      + return true;
     }
+    + return false;
   }
   + inside player.js, a new function called findAdjacentSlot() {
     + parameter { coordinate, moveByHowMuch, playerAttacking }
