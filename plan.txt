@@ -4,6 +4,8 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
   + inside player.js, a new function called findAdjacentSlot() {
     + parameter { coordinate, moveByHowMuch }
     // moveByHowMuch will use this kind of coordinate system: x: 0 y: +2;
+    // 0 means don't move, 2 or anything above 0 means move
+    
   }
   + inside sendRandomAttack() {
     + check if hitsFound has a length greater than 0, this means that there was a hit
