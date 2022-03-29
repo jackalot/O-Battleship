@@ -52,9 +52,13 @@ psuedo code:
     // 0 means don't move, 1 or anything above 0 means move
     if(moveByHowMuch.x > 0)
     {
+      let copyCoordinate = {...coordinate};
 
     }
     if(moveByHowMuch.y > 0)
+    {
+
+    }
   }
  function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
