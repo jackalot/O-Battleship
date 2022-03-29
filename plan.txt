@@ -49,7 +49,10 @@ psuedo code:
   function validateSlot(playerAttacking, coordinate) {
     const validCoord = playerAttacking.ourBoard.checkValidCoord(coordinate);
     const avaliableCoord = playerAttacking.ourBoard.checkAvailableCoord(coordinate);
-    
+    if(validCoord === true && avaliableCoord === true)
+    {
+      
+    }
   }
   //  sendRandomAttack() helper function()
   function findAdjacentSlot(coordinate, moveByHowMuch, playerAttacking)
