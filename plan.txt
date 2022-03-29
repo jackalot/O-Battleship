@@ -78,7 +78,7 @@ psuedo code:
     // if ships were hit, then try to find adjoining coordinates to that coordinates
     // in case it's a ship
     if (hitsFound.length > 0) {
-      findAdjacentSlot(hitsFound[0].ourCoordinates, {x: 1, y: 0}, playerAttacking);
+      const newSlot = findAdjacentSlot(hitsFound[0].ourCoordinates, {x: 1, y: 0}, playerAttacking);
     }
     // if no ships were harmed, fire a random attack at any coordinate
     if (hitsFound.length === 0) {
