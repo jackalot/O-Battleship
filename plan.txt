@@ -45,6 +45,9 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
     }
 }
 psuedo code:
+  function validateSlot(playerAttacking, coordinate) {
+
+  }
   //  sendRandomAttack() helper function()
   function findAdjacentSlot(coordinate, moveByHowMuch, playerAttacking)
   {
