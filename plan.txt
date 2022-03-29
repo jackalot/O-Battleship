@@ -9,6 +9,10 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
     + start the function with an array called possibleCoordinates, this will be empty
     + make an array called allDirections, this will go every direction the findAdjacentSlot function can take
     + make a for loop that goes through allDirections {
+      + call the findAdjacentSlot function, with the following arguments:
+        hitsFound[0].ourCoordinates
+        allDirections[this iteration]
+        playerAttacking
       
     }
   }
