@@ -34,6 +34,37 @@ const playerFactory = (playerName, playerTurn) => {
     }
     return coordinate;
   }
+  //  validateSlot() helper function()
+  function validateSlot(playerAttacking, coordinate) {
+    const validCoord = playerAttacking.ourBoard.checkValidCoord(coordinate);
+    const avaliableCoord = playerAttacking.ourBoard.checkAvailableCoord(coordinate);
+    if (validCoord === true && avaliableCoord === true) {
+      return true;
+    }
+    return false;
+  }
+  //  sendRandomAttack() helper function()
+  function findAdjacentSlot(coordinate, moveByHowMuch, playerAttacking) {
+    // moveByHowMuch will use this kind of coordinate system: x: 0 y: +2;
+    // 0 means don't move, 1 or anything above 0 means move
+    if (moveByHowMuch.x > 0) {
+      let copyCoordinate = { ...coordinate };
+      copyCoordinate += moveByHowMuch.x;
+      const validSlot = validateSlot(playerAttacking, copyCoordinate);
+      if (validSlot === true) {
+        return copyCoordinate;
+      }
+    }
+    if (moveByHowMuch.y > 0) {
+      let copyCoordinate = { ...coordinate };
+      copyCoordinate += moveByHowMuch.y;
+      const validSlot = validateSlot(playerAttacking, copyCoordinate);
+      if (validSlot === true) {
+        return copyCoordinate;
+      }
+    }
+    return coordinate;
+  }
   //  this is for the AI to attack randomly, also helps check we didnt hit
   //   an already missed/hit coordinate
   function sendRandomAttack(playerAttacking) {
@@ -42,7 +73,11 @@ const playerFactory = (playerName, playerTurn) => {
     // if ships were hit, then try to find adjoining coordinates to that coordinates
     // in case it's a ship
     if (hitsFound.length > 0) {
-      console.log('testingh');
+      const newSlot = findAdjacentSlot(
+        hitsFound[0].ourCoordinates,
+        { x: 1, y: 0 },
+        playerAttacking,
+      );
     }
     // if no ships were harmed, fire a random attack at any coordinate
     if (hitsFound.length === 0) {
