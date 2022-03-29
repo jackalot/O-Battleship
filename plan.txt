@@ -55,7 +55,10 @@ psuedo code:
       let copyCoordinate = {...coordinate};
       copyCoordinate += moveByHowMuch.x;
       const validSlot = validateSlot(playerAttacking, copyCoordinate);
-      
+      if(validSlot === true)
+      {
+        return copyCoordinate;
+      }
     }
     if(moveByHowMuch.y > 0)
     {
