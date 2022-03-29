@@ -28,7 +28,12 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
     }
     + check if y of moveByHowMuch is above 0 
     {
-
+      + make a copy of our coordinate;
+      + add to our coordinate copy moveByHowMuch;
+      + call validateSlot and send playerAttacking, along with the coordinate copy;
+      + if validateSlot returns true {
+        + return true;
+      }
     }
   }
   + inside sendRandomAttack() {
