@@ -29,7 +29,9 @@ psuedo code:
    const allDirections = [{x: 1, y: 0}, {x: 0, y: 1}, {x: 0, y: -1}, {x: -1, y: 0}];
    for(let i = 0; i < allDirections; i += 1)
    {
-     
+     const slot = findAdjacentSlot(hitsFound[0].ourCoordinates,
+      allDirections[i],
+       playerAttacking);
    }
  }
  function sendRandomAttack(playerAttacking) {
