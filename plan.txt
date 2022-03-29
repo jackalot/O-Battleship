@@ -37,6 +37,7 @@ psuedo code:
          possibleCoordinates.push(slot);
        }
    }
+   return possibleCoordinates;
  }
  function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
