@@ -1,7 +1,9 @@
 Focus: make the cpu be able to attack corresponding grid items when a hit is found:
 * inside player.js
 {
-  
+  + inside player.js, a new function, tryEveryDirection() {
+    
+  }
   + inside sendRandomAttack() {
     + check if hitsFound has a length greater than 0, this means that there was a hit
     {
