@@ -65,20 +65,40 @@ const playerFactory = (playerName, playerTurn) => {
     }
     return coordinate;
   }
+  function tryEveryDirection(hitsFound, playerAttacking) {
+    const possibleCoordinates = [];
+    //                     right           up              down          left
+    const allDirections = [{x: 1, y: 0}, {x: 0, y: 1}, {x: 0, y: -1}, {x: -1, y: 0}];
+    for(let i = 0; i < allDirections; i += 1)
+    {
+      const slot = findAdjacentSlot(hitsFound[0].ourCoordinates,
+       allDirections[i],
+        playerAttacking);
+        if(slot !== hitsFound[0].ourCoordinates)
+        {
+          possibleCoordinates.push(slot);
+        }
+    }
+    return possibleCoordinates;
+  }
   //  this is for the AI to attack randomly, also helps check we didnt hit
   //   an already missed/hit coordinate
   function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
+    console.log(hitsFound);
     // if ships were hit, then try to find adjoining coordinates to that coordinates
     // in case it's a ship
     if (hitsFound.length > 0) {
-      const newSlot = findAdjacentSlot(
-        hitsFound[0].ourCoordinates,
-        { x: 1, y: 0 },
-        playerAttacking,
-      );
-      console.log(newSlot);
+      const directions = tryEveryDirection(hitsFound, playerAttacking);
     }
+    // if no ships were harmed, fire a random attack at any coordinate
+    if (hitsFound.length === 0) {
+      const coordinate = createRandomCoordinate(playerAttacking);
+      sendAttack(playerAttacking, coordinate);
+      return true;
+    }
+    return false;
+  }
     // if no ships were harmed, fire a random attack at any coordinate
     if (hitsFound.length === 0) {
       const coordinate = createRandomCoordinate(playerAttacking);
