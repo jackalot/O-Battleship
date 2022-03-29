@@ -62,7 +62,13 @@ psuedo code:
     }
     if(moveByHowMuch.y > 0)
     {
-
+      let copyCoordinate = {...coordinate};
+      copyCoordinate += moveByHowMuch.y;
+      const validSlot = validateSlot(playerAttacking, copyCoordinate);
+      if(validSlot === true)
+      {
+        return copyCoordinate;
+      }
     }
   }
  function sendRandomAttack(playerAttacking) {
