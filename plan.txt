@@ -1,6 +1,7 @@
 Focus: make the cpu be able to attack corresponding grid items when a hit is found:
 * inside player.js
 {
+  //  findAdjacentSlot() helper function()
   + inside player.js, a new function called validateSlot() {
     + parameter { playerAttacking, coordinate }
     + call the playerAttacking's board's checkValidCoord function
@@ -11,6 +12,7 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
     }
     + return false;
   }
+  //  sendRandomAttack() helper function()
   + inside player.js, a new function called findAdjacentSlot() {
     + parameter { coordinate, moveByHowMuch, playerAttacking }
     // moveByHowMuch will use this kind of coordinate system: x: 0 y: +2;
