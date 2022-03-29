@@ -25,6 +25,8 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
 psuedo code:
  function tryEveryDirection(hitsFound, playerAttacking) {
    const possibleCoordinates = [];
+   //                     right           up              down          left
+   const allDirections = [{x: 1, y: 0}, {x: 0, y: 1}, {x: 0, y: -1}, {x: -1, y: 0}]
  }
  function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
