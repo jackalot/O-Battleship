@@ -48,7 +48,7 @@ psuedo code:
  //  validateSlot() helper function()
   function validateSlot(playerAttacking, coordinate) {
     playerAttacking.ourBoard.checkValidCoord(coordinate);
-    
+    playerAttacking.ourBoard.checkAvailableCoord(coordinate);
   }
   //  sendRandomAttack() helper function()
   function findAdjacentSlot(coordinate, moveByHowMuch, playerAttacking)
