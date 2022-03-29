@@ -23,6 +23,9 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
     }
 }
 psuedo code:
+ function tryEveryDirection(hitsFound, playerAttacking) {
+   
+ }
  function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
     console.log(hitsFound);
