@@ -88,7 +88,11 @@ const playerFactory = (playerName, playerTurn) => {
     const allHitsWithNeighbors = [];
     hitsFound.forEach((hit) => {
       const result = tryEveryDirection(hit, playerAttacking);
-      allHitsWithNeighbors.push(result);
+      const hitObject = {
+        hitCoordinates: hit.ourCoordinates,
+        possibleDirections: result,
+      };
+      allHitsWithNeighbors.push(hitObject);
     });
     let hitWithGreatestNeighbors = { ourCoordinates: { x: 0, y: 0 } };
     allHitsWithNeighbors.forEach((hit) => {
