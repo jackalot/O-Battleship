@@ -58,7 +58,6 @@ const playerFactory = (playerName, playerTurn) => {
     if (moveByHowMuch.y > 0) {
       const copyCoordinate = { ...coordinate };
       copyCoordinate.y += moveByHowMuch.y;
-      console.log(copyCoordinate, coordinate);
       const validSlot = validateSlot(playerAttacking, copyCoordinate);
       if (validSlot === true) {
         return copyCoordinate;
