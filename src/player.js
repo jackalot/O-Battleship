@@ -84,6 +84,7 @@ const playerFactory = (playerName, playerTurn) => {
     }
     return possibleCoordinates;
   }
+  //  sendRandomAttack() helper function
   function checkEachHitsFound(hitsFound, playerAttacking) {
     const allHitsWithNeighbors = [];
     hitsFound.forEach((hit) => {
