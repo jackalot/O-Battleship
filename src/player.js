@@ -95,9 +95,9 @@ const playerFactory = (playerName, playerTurn) => {
       allHitsWithNeighbors.push(hitObject);
     });
     let hitWithGreatestNeighbors = { ourCoordinates: { x: 0, y: 0 } };
-    allHitsWithNeighbors.forEach((hit) => {
-      if (hit.ourCoordinates > hitWithGreatestNeighbors.ourCoordinates) {
-        hitWithGreatestNeighbors = hit;
+    allHitsWithNeighbors.forEach((myHitObject) => {
+      if (myHitObject.hitCoordinates > hitWithGreatestNeighbors.ourCoordinates) {
+        hitWithGreatestNeighbors = myHitObject.hitCoordinates;
       }
     });
     return hitWithGreatestNeighbors;
