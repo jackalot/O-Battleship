@@ -24,6 +24,15 @@ testing the findAdjacentSlot function
 test("player2 will be able to send an attack 1 slot above 1, 1", () => {
     expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: 0, y: 1}, player2)).toMatchObject({x: 1, y: 2 });
 })
+test("player2 will be able to send an attack 1 slot to the right of 1, 1", () => {
+    expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: 1, y: 0}, player2)).toMatchObject({x: 2, y: 1 });
+})
+test("player2 will not be able to send an attack 1 slot below 1, 1", () => {
+    expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: 0, y: -1}, player2)).toMatchObject({x: 1, y: 1 });
+})
+test("player2 will be able to send an attack 1 slot to the right of 1, 1", () => {
+    expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: -1, y: 0}, player2)).toMatchObject({x: 1, y: 1 });
+})
 // true in this case means that after sending random attacks it managed to attack a valid coordinate
 test("player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
 expect(player2.sendRandomAttack(player1)).toBe(true);
