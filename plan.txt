@@ -10,6 +10,10 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
     }
     + make a variable called hitWithGreatestNeighbors
     + make a foreach loop that loops through all hits hitWithGreatestNeighbors
+    {
+      + on every iteration, if that iteration of hitWithGreatestNeighbors is 
+      greater than hitWithGreatestNeighbors, make hitWithGreatestNeighbors equal it.
+    }
   }
   + inside sendRandomAttack() {
     + check if hitsFound has a length greater than 0, this means that there was a hit
