@@ -85,6 +85,9 @@ const playerFactory = (playerName, playerTurn) => {
     return possibleCoordinates;
   }
   //  sendRandomAttack() helper function
+  // checks that each hit in the hitsFound array has a neighboring slot that can be hit using
+  // the try EveryDirection function, then returns the individual hit that has the most possible
+  // attacks for the cpu to use.
   function checkEachHitsFound(hitsFound, playerAttacking) {
     const allHitsWithNeighbors = [];
     hitsFound.forEach((hit) => {
