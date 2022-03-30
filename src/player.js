@@ -65,6 +65,8 @@ const playerFactory = (playerName, playerTurn) => {
     }
     return coordinate;
   }
+  //  findAdjacentSlot() and sendRandomAttack() helperFunction()
+  // calls findAdjacent slot in every possible slot
   function tryEveryDirection(hitsFound, playerAttacking) {
     const possibleCoordinates = [];
     //                     right           up              down          left
