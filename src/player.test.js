@@ -42,6 +42,6 @@ test("player2(CPU) sends a direct attack to player1's ship and it will return tr
     expect(player2.sendAttack(player1, {x: 1, y: 1})).toBe(true);
     })
 // thanks to previously hitting a ship, we now have a ship. this will now check for adjoining coords to hit
-test.skip("player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
+test("player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
     expect(player2.sendRandomAttack(player1)).toBe(true);
 })
