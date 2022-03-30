@@ -1,22 +1,6 @@
 Focus: make the cpu be able to attack corresponding grid items when a hit is found:
 * inside player.js
-{
-  // sendRandomAttack helper function
-  // this will try every direction a slot has neighboring it (not diagnal)
-  // then return the possible ones
-  + inside player.js, a new function, tryEveryDirection() {
-    + parameters { hitsFound, playerAttacking}
-    + start the function with an array called possibleCoordinates, this will be empty
-    + make an array called allDirections, this will go every direction the findAdjacentSlot function can take
-    + make a for loop that goes through allDirections {
-      + call the findAdjacentSlot function, with the following arguments:
-        hitsFound[0].ourCoordinates
-        allDirections[this iteration]
-        playerAttacking
-      + store the result of findAdjacentSlot by pushing it in possibleCoordinates;
-    }
-    return possibleCoordinates;
-  }
+
   + inside sendRandomAttack() {
     + check if hitsFound has a length greater than 0, this means that there was a hit
     {
