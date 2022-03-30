@@ -92,13 +92,16 @@ const playerFactory = (playerName, playerTurn) => {
     const allHitsWithNeighbors = [];
     // loop through hits found to find each hit we currently have, and find possible hits
     hitsFound.forEach((hit) => {
+      // check this coordinate has surrounding possible attacks we can make
       const result = tryEveryDirection(hit, playerAttacking);
+      // store the result and the coordinate we used for tryEveryDirection
       const hitObject = {
         hitCoordinates: hit.ourCoordinates,
         possibleDirections: result,
       };
       allHitsWithNeighbors.push(hitObject);
     });
+    //  make a similar object to hitObject so later, we can compare to hitObject
     let hitWithGreatestNeighbors = {
       ourCoordinates: { x: 0, y: 0 },
       possibleDirections: { x: 0, y: 0 },
