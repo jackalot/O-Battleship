@@ -68,21 +68,35 @@ const playerFactory = (playerName, playerTurn) => {
   }
   //  findAdjacentSlot() and sendRandomAttack() helperFunction()
   // calls findAdjacent slot in every possible slot
-  function tryEveryDirection(hitsFound, playerAttacking) {
+  function tryEveryDirection(hitFound, playerAttacking) {
     const possibleCoordinates = [];
     //                     right           up              down          left
     const allDirections = [{ x: 1, y: 0 }, { x: 0, y: 1 }, { x: 0, y: -1 }, { x: -1, y: 0 }];
     for (let i = 0; i < allDirections.length; i += 1) {
       const slot = findAdjacentSlot(
-        hitsFound[0].ourCoordinates,
+        hitFound.ourCoordinates,
         allDirections[i],
         playerAttacking,
       );
-      if (slot !== hitsFound[0].ourCoordinates) {
+      if (slot !== hitFound.ourCoordinates) {
         possibleCoordinates.push(slot);
       }
     }
     return possibleCoordinates;
+  }
+  function checkEachHitsFound(hitsFound, playerAttacking) {
+    const allHitsWithNeighbors = [];
+    hitsFound.foreach((hit) => {
+      const result = tryEveryDirection(hit, playerAttacking);
+      allHitsWithNeighbors.push(result);
+    });
+    let hitWithGreatestNeighbors;
+    allHitsWithNeighbors.foreach((hit) => {
+      if (hit > hitWithGreatestNeighbors) {
+        hitWithGreatestNeighbors = hit;
+      }
+    });
+    return hitWithGreatestNeighbors;
   }
   //  this is for the AI to attack randomly, also helps check we didnt hit
   //   an already missed/hit coordinate
