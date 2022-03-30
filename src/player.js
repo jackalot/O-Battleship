@@ -90,6 +90,7 @@ const playerFactory = (playerName, playerTurn) => {
   // attacks for the cpu to use.
   function checkEachHitsFound(hitsFound, playerAttacking) {
     const allHitsWithNeighbors = [];
+    // loop through hits found to find each hit we currently have, and find possible hits
     hitsFound.forEach((hit) => {
       const result = tryEveryDirection(hit, playerAttacking);
       const hitObject = {
