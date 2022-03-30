@@ -99,11 +99,14 @@ const playerFactory = (playerName, playerTurn) => {
       };
       allHitsWithNeighbors.push(hitObject);
     });
-    let hitWithGreatestNeighbors = { ourCoordinates: { x: 0, y: 0 } };
+    let hitWithGreatestNeighbors = {
+      ourCoordinates: { x: 0, y: 0 },
+      possibleDirections: { x: 0, y: 0 },
+    };
     allHitsWithNeighbors.forEach((myHitObject) => {
       if (myHitObject.hitCoordinates.x > hitWithGreatestNeighbors.ourCoordinates.x) {
         if (myHitObject.hitCoordinates.y > hitWithGreatestNeighbors.ourCoordinates.y) {
-          hitWithGreatestNeighbors = myHitObject.hitCoordinates;
+          hitWithGreatestNeighbors = myHitObject;
         }
       }
     });
