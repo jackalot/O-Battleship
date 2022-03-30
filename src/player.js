@@ -86,12 +86,12 @@ const playerFactory = (playerName, playerTurn) => {
   }
   function checkEachHitsFound(hitsFound, playerAttacking) {
     const allHitsWithNeighbors = [];
-    hitsFound.foreach((hit) => {
+    hitsFound.forEach((hit) => {
       const result = tryEveryDirection(hit, playerAttacking);
       allHitsWithNeighbors.push(result);
     });
     let hitWithGreatestNeighbors;
-    allHitsWithNeighbors.foreach((hit) => {
+    allHitsWithNeighbors.forEach((hit) => {
       if (hit > hitWithGreatestNeighbors) {
         hitWithGreatestNeighbors = hit;
       }
