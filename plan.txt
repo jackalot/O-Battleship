@@ -3,6 +3,10 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
   + inside player.js, a new function called checkEachHitsFound() {
     + parameters { hitsFound, playerAttacking}
     + make a foreach that loops through the hitsFound array
+    {
+      + on each hit, call tryEveryDirection,
+      + 
+    }
   }
   + inside sendRandomAttack() {
     + check if hitsFound has a length greater than 0, this means that there was a hit
