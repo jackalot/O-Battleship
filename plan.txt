@@ -22,21 +22,36 @@ Focus: make the cpu be able to attack corresponding grid items when a hit is fou
     }
 }
 psuedo code:
- function tryEveryDirection(hitsFound, playerAttacking) {
+ function tryEveryDirection(hitFound, playerAttacking) {
    const possibleCoordinates = [];
    //                     right           up              down          left
    const allDirections = [{x: 1, y: 0}, {x: 0, y: 1}, {x: 0, y: -1}, {x: -1, y: 0}];
    for(let i = 0; i < allDirections; i += 1)
    {
-     const slot = findAdjacentSlot(hitsFound[0].ourCoordinates,
+     const slot = findAdjacentSlot(hitFound.ourCoordinates,
       allDirections[i],
        playerAttacking);
-       if(slot !== hitsFound[0].ourCoordinates)
+       if(slot !== hitFound.ourCoordinates)
        {
          possibleCoordinates.push(slot);
        }
    }
    return possibleCoordinates;
+ }
+ function checkEachHitsFound(hitsFound, playerAttacking) {
+   const allHitsWithNeighbors = [];
+   hitsFound.foreach((hit) => {
+     const result = tryEveryDirection(hit, playerAttacking);
+     allHitsWithNeighbors.push(result);
+   });
+   let hitWithGreatestNeighbors;
+   allHitsWithNeighbors.foreach((hit) => {
+     if(hit > hitWithGreatestNeighbors)
+     {
+       hitWithGreatestNeighbors = hit;
+     }
+   });
+   return hitWithGreatestNeighbors;
  }
  function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
