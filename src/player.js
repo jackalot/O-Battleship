@@ -133,6 +133,7 @@ const playerFactory = (playerName, playerTurn) => {
     swapTurn,
     sendRandomAttack,
     callBoardRecieveAttack,
+    findAdjacentSlot,
   };
 };
 module.exports = playerFactory;
