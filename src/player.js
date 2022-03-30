@@ -90,9 +90,9 @@ const playerFactory = (playerName, playerTurn) => {
       const result = tryEveryDirection(hit, playerAttacking);
       allHitsWithNeighbors.push(result);
     });
-    let hitWithGreatestNeighbors;
+    let hitWithGreatestNeighbors = { ourCoordinates: { x: 0, y: 0 } };
     allHitsWithNeighbors.forEach((hit) => {
-      if (hit > hitWithGreatestNeighbors) {
+      if (hit.ourCoordinates > hitWithGreatestNeighbors.ourCoordinates) {
         hitWithGreatestNeighbors = hit;
       }
     });
