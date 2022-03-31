@@ -37,6 +37,7 @@ const playerFactory = (playerName, playerTurn) => {
   //  validateSlot() helper function()
   function validateSlot(playerAttacking, coordinate) {
     const validCoord = playerAttacking.ourBoard.checkValidCoord(coordinate);
+    console.log(coordinate);
     const avaliableCoord = playerAttacking.ourBoard.checkAvailableCoord(coordinate);
     if (validCoord === true && avaliableCoord === true) {
       return true;
