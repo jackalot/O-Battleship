@@ -34,7 +34,7 @@ const playerFactory = (playerName, playerTurn) => {
     }
     return coordinate;
   }
-  //  validateSlot() helper function()
+  //  findAdjacentSlot() helper function()
   function validateSlot(playerAttacking, coordinate) {
     console.log('ValidateSlot');
     console.log(coordinate);
