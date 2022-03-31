@@ -96,7 +96,7 @@ const playerFactory = (playerName, playerTurn) => {
       const result = tryEveryDirection(hit, playerAttacking);
       // store the result and the coordinate we used for tryEveryDirection
       const hitObject = {
-        hitCoordinates: hit.ourCoordinates,
+        ourCoordinates: hit.ourCoordinates,
         possibleDirections: result,
       };
       allHitsWithNeighbors.push(hitObject);
@@ -107,8 +107,8 @@ const playerFactory = (playerName, playerTurn) => {
       possibleDirections: { x: 0, y: 0 },
     };
     allHitsWithNeighbors.forEach((myHitObject) => {
-      if (myHitObject.hitCoordinates.x > hitWithGreatestNeighbors.ourCoordinates.x) {
-        if (myHitObject.hitCoordinates.y > hitWithGreatestNeighbors.ourCoordinates.y) {
+      if (myHitObject.ourCoordinates.x > hitWithGreatestNeighbors.ourCoordinates.x) {
+        if (myHitObject.ourCoordinates.y > hitWithGreatestNeighbors.ourCoordinates.y) {
           hitWithGreatestNeighbors = myHitObject;
         }
       }
