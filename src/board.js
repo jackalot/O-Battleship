@@ -87,6 +87,8 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   //  placeShip() helper function
   // This checks if its not out of bounds
   function checkValidCoord(coord) {
+    console.log('checkValidCoord');
+    console.log(coord);
     const CBLC = checkBottomLeftCorner(coord);
     const CTPRC = checkTopRightCorner(coord);
     if (CBLC === true && CTPRC === true) {
