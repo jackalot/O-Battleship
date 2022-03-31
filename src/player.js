@@ -73,11 +73,7 @@ const playerFactory = (playerName, playerTurn) => {
     //                     right           up              down          left
     const allDirections = [{ x: 1, y: 0 }, { x: 0, y: 1 }, { x: 0, y: -1 }, { x: -1, y: 0 }];
     for (let i = 0; i < allDirections.length; i += 1) {
-      const slot = findAdjacentSlot(
-        hitFound.ourCoordinates,
-        allDirections[i],
-        playerAttacking,
-      );
+      const slot = findAdjacentSlot(hitFound.ourCoordinates, allDirections[i], playerAttacking);
       if (slot !== hitFound.ourCoordinates) {
         possibleCoordinates.push(slot);
       }
