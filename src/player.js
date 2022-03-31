@@ -123,7 +123,9 @@ const playerFactory = (playerName, playerTurn) => {
     // in case it's a ship
     if (hitsFound.length > 0) {
       const placesWeCanHit = checkEachHitsFound(hitsFound, playerAttacking);
-      console.log(placesWeCanHit.possibleDirections);
+      const attackResult = sendAttack(playerAttacking, placesWeCanHit.possibleDirections[0]);
+      console.log(placesWeCanHit.possibleDirections[0]);
+      return attackResult;
     }
     // if no ships were harmed, fire a random attack at any coordinate
     if (hitsFound.length === 0) {
