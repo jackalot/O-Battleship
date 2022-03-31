@@ -169,6 +169,7 @@ const playerFactory = (playerName, playerTurn) => {
     swapTurn,
     sendRandomAttack,
     callBoardRecieveAttack,
+    tryEveryDirection,
     findAdjacentSlot,
   };
 };
