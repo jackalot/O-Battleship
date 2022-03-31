@@ -36,8 +36,9 @@ const playerFactory = (playerName, playerTurn) => {
   }
   //  validateSlot() helper function()
   function validateSlot(playerAttacking, coordinate) {
-    const validCoord = playerAttacking.ourBoard.checkValidCoord(coordinate);
+    console.log('ValidateSlot');
     console.log(coordinate);
+    const validCoord = playerAttacking.ourBoard.checkValidCoord(coordinate);
     const avaliableCoord = playerAttacking.ourBoard.checkAvailableCoord(coordinate);
     if (validCoord === true && avaliableCoord === true) {
       return true;
@@ -49,6 +50,8 @@ const playerFactory = (playerName, playerTurn) => {
   function findAdjacentSlot(coordinate, moveByHowMuch, playerAttacking) {
     // moveByHowMuch will use this kind of coordinate system: x: 0 y: +2;
     // 0 means don't move, 1 or anything above 0 means move
+    console.log('findAdjacentSlot');
+    console.log(coordinate);
     if (moveByHowMuch.x > 0) {
       const copyCoordinate = { ...coordinate };
       copyCoordinate.x += moveByHowMuch.x;
@@ -125,7 +128,6 @@ const playerFactory = (playerName, playerTurn) => {
     if (hitsFound.length > 0) {
       const placesWeCanHit = checkEachHitsFound(hitsFound, playerAttacking);
       const attackResult = sendAttack(playerAttacking, placesWeCanHit.possibleDirections[0]);
-      console.log(placesWeCanHit.possibleDirections[0]);
       //  This is so the test could pass, the AI will not always hit
       return true;
     }
