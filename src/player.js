@@ -82,6 +82,7 @@ const playerFactory = (playerName, playerTurn) => {
         possibleCoordinates.push(slot);
       }
     }
+    console.log(possibleCoordinates);
     return possibleCoordinates;
   }
   //  sendRandomAttack() helper function
