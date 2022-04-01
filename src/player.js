@@ -115,6 +115,7 @@ const playerFactory = (playerName, playerTurn) => {
   //   an already missed/hit coordinate
   function sendRandomAttack(playerAttacking) {
     const hitsFound = findHits(playerAttacking);
+    console.log(hitsFound);
     // if ships were hit, then try to find adjoining coordinates to that coordinates
     // in case it's a ship
     if (hitsFound.length > 0) {
