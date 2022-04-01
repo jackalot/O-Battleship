@@ -167,6 +167,7 @@ const playerFactory = (playerName, playerTurn) => {
     callBoardRecieveAttack,
     tryEveryDirection,
     findAdjacentSlot,
+    checkEachHitsFound,
   };
 };
 module.exports = playerFactory;
