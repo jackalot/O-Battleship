@@ -86,6 +86,13 @@ test("When it comes to 5-6, player2 can move up, left, right, and down", () => {
 /*
     These will test checkEachHitsFound
 */
+const mockHitsFound = [{
+    ourCoordinates: {x: 5, y: 6},
+    coordType: 'Hit',
+}, {
+    ourCoordinates: {x: 1, y: 1},
+    coordType: 'Hit',
+}];
 test("Player 2 will check each of their last hits and see that 5, 6 has the most possibilities", () => {
 
 })
