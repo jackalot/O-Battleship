@@ -86,6 +86,9 @@ test("When it comes to 5-6, player2 can move up, left, right, and down", () => {
 /*
     These will test checkEachHitsFound
 */
+test("Player 2 will check each of their last hits and see that 5, 6 has the most possibilities", () => {
+
+})
 // true in this case means that after sending random attacks it managed to attack a valid coordinate
 test("player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
 expect(player2.sendRandomAttack(player1)).toBe(true);
