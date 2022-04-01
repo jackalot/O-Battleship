@@ -52,6 +52,26 @@ test("When it comes to 1-1, player2 can only move up and right", () => {
         ])
     );
 });
+const mockHit2 = {
+    ourCoordinates: {x: 5, y: 6 },
+    coordType: 'Hit',
+}
+test("When it comes to 5-6, player2 can move up, left, right, and down", () => {
+    // toContain is a matcher for arrays, its to test if an array has a certain item
+    expect(player2.tryEveryDirection(mockHit, player2)).toEqual(
+        
+        expect.arrayContaining([
+            // left
+            expect.objectContaining({x: 4, y: 6 }),
+            // down
+            expect.objectContaining({x: 5, y: 5 }),
+            // up
+            expect.objectContaining({x: 5, y: 7 }),
+            expect.objectContaining({x: 6, y: 6 })
+
+        ])
+    );
+});
 // true in this case means that after sending random attacks it managed to attack a valid coordinate
 test("player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
 expect(player2.sendRandomAttack(player1)).toBe(true);
