@@ -21,23 +21,23 @@ test.skip("player1 will now have the player turn 1 (meaning its not their turn)"
 /*
 testing the findAdjacentSlot function
 */
-test.skip("player2 will be able to send an attack 1 slot above 1, 1", () => {
+test("player2 will be able to send an attack 1 slot above 1, 1", () => {
     expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: 0, y: 1}, player1)).toMatchObject({x: 1, y: 2 });
 })
-test.skip("player2 will be able to send an attack 1 slot to the right of 1, 1", () => {
+test("player2 will be able to send an attack 1 slot to the right of 1, 1", () => {
     expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: 1, y: 0}, player1)).toMatchObject({x: 2, y: 1 });
 })
-test.skip("player2 will not be able to send an attack 1 slot below 1, 1", () => {
+test("player2 will not be able to send an attack 1 slot below 1, 1", () => {
     expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: 0, y: -1}, player1)).toMatchObject({x: 1, y: 1 });
 })
-test.skip("player2 will be able to send an attack 1 slot to the right of 1, 1", () => {
+test("player2 will be able to send an attack 1 slot to the right of 1, 1", () => {
     expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: -1, y: 0}, player1)).toMatchObject({x: 1, y: 1 });
 })
 /*
     these tests will be tests at the 5-6 range and if we can attack near there.
 
 */
-test.skip("player2 will be able to send an attack 1 slot to the right of 5, 6", () => {
+test("player2 will be able to send an attack 1 slot to the right of 5, 6", () => {
     expect(player2.findAdjacentSlot({x: 5, y: 6 }, {x: 1, y: 0}, player1)).toMatchObject({x: 6, y: 6 });
 })
 test("player2 will be able to send an attack 1 slot below 5, 6", () => {
@@ -51,7 +51,7 @@ const mockHit = {
     ourCoordinates: {x: 1, y: 1 },
     coordType: 'Hit',
 }
-test.skip("When it comes to 1-1, player2 can only move up and right", () => {
+test("When it comes to 1-1, player2 can only move up and right", () => {
     // toContain is a matcher for arrays, its to test if an array has a certain item
     expect(player2.tryEveryDirection(mockHit, player1)).toEqual(
         
@@ -66,7 +66,7 @@ const mockHit2 = {
     ourCoordinates: {x: 5, y: 6 },
     coordType: 'Hit',
 }
-test.skip("When it comes to 5-6, player2 can move up, left, right, and down", () => {
+test("When it comes to 5-6, player2 can move up, left, right, and down", () => {
     // toContain is a matcher for arrays, its to test if an array has a certain item
     expect(player2.tryEveryDirection(mockHit2, player1)).toEqual(
         
