@@ -58,7 +58,7 @@ const mockHit2 = {
 }
 test("When it comes to 5-6, player2 can move up, left, right, and down", () => {
     // toContain is a matcher for arrays, its to test if an array has a certain item
-    expect(player2.tryEveryDirection(mockHit, player2)).toEqual(
+    expect(player2.tryEveryDirection(mockHit2, player2)).toEqual(
         
         expect.arrayContaining([
             // left
@@ -67,6 +67,7 @@ test("When it comes to 5-6, player2 can move up, left, right, and down", () => {
             expect.objectContaining({x: 5, y: 5 }),
             // up
             expect.objectContaining({x: 5, y: 7 }),
+            // right
             expect.objectContaining({x: 6, y: 6 })
 
         ])
