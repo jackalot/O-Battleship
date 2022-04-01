@@ -48,7 +48,7 @@ const playerFactory = (playerName, playerTurn) => {
   function findAdjacentSlot(coordinate, moveByHowMuch, playerAttacking) {
     // moveByHowMuch will use this kind of coordinate system: x: 0 y: +2;
     // 0 means don't move, 1 or anything above 0 means move
-    if (moveByHowMuch.x > 0) {
+    if (moveByHowMuch.x !== 0) {
       const copyCoordinate = { ...coordinate };
       copyCoordinate.x += moveByHowMuch.x;
       const validSlot = validateSlot(playerAttacking, copyCoordinate);
@@ -56,7 +56,7 @@ const playerFactory = (playerName, playerTurn) => {
         return copyCoordinate;
       }
     }
-    if (moveByHowMuch.y > 0) {
+    if (moveByHowMuch.y !== 0) {
       const copyCoordinate = { ...coordinate };
       console.log(copyCoordinate);
       copyCoordinate.y += moveByHowMuch.y;
