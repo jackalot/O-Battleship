@@ -51,7 +51,7 @@ const mockHit = {
     ourCoordinates: {x: 1, y: 1 },
     coordType: 'Hit',
 }
-test("When it comes to 1-1, player2 can only move up and right", () => {
+test.skip("When it comes to 1-1, player2 can only move up and right", () => {
     // toContain is a matcher for arrays, its to test if an array has a certain item
     expect(player2.tryEveryDirection(mockHit, player1)).toEqual(
         
@@ -66,7 +66,7 @@ const mockHit2 = {
     ourCoordinates: {x: 5, y: 6 },
     coordType: 'Hit',
 }
-test("When it comes to 5-6, player2 can move up, left, right, and down", () => {
+test.skip("When it comes to 5-6, player2 can move up, left, right, and down", () => {
     // toContain is a matcher for arrays, its to test if an array has a certain item
     expect(player2.tryEveryDirection(mockHit2, player1)).toEqual(
         
