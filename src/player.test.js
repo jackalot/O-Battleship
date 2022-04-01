@@ -40,6 +40,9 @@ test("player2 will be able to send an attack 1 slot to the right of 1, 1", () =>
 test("player2 will be able to send an attack 1 slot to the right of 5, 6", () => {
     expect(player2.findAdjacentSlot({x: 5, y: 6 }, {x: 1, y: 0}, player2)).toMatchObject({x: 6, y: 6 });
 })
+test("player2 will be able to send an attack 1 slot below 5, 6", () => {
+    expect(player2.findAdjacentSlot({x: 5, y: 6 }, {x: 0, y: -1}, player2)).toMatchObject({x: 5, y: 5 });
+})
 /*
 testing the tryEveryDirection function
 */
