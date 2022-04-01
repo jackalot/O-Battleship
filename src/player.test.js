@@ -108,6 +108,28 @@ test("Player 2 will check each of their last hits and see that 5, 6 has the most
         ])
     )
 })
+const mockHitsFound2 = [{
+    ourCoordinates: {x: 1, y: 3},
+    coordType: 'Hit',
+}, {
+    ourCoordinates: {x: 6, y: 8},
+    coordType: 'Hit',
+}];
+test("Player 2 will check each of their last hits and see that 5, 6 has the most possibilities", () => {
+    expect(player2.checkEachHitsFound(mockHitsFound2, player1)).toEqual(
+        expect.arrayContaining([
+            // right
+            expect.objectContaining({x: 7, y: 8 }),
+            // up
+            expect.objectContaining({x: 6, y: 9 }),
+            // down
+            expect.objectContaining({x: 6, y: 7 }),
+            // left
+            expect.objectContaining({x: 5, y: 8 })
+
+        ])
+    )
+})
 // true in this case means that after sending random attacks it managed to attack a valid coordinate
 test("player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
 expect(player2.sendRandomAttack(player1)).toBe(true);
