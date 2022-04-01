@@ -66,9 +66,9 @@ test("When it comes to 5-6, player2 can move up, left, right, and down", () => {
             // up
             expect.objectContaining({x: 5, y: 7 }),
             // down
-            expect.objectContaining({x: 5, y: 5 }).
+            expect.objectContaining({x: 5, y: 5 }),
             // left
-            expect.objectContaining({x: 4, y: 6 }),
+            expect.objectContaining({x: 4, y: 6 })
 
         ])
     );
