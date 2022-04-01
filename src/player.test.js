@@ -22,26 +22,26 @@ test.skip("player1 will now have the player turn 1 (meaning its not their turn)"
 testing the findAdjacentSlot function
 */
 test("player2 will be able to send an attack 1 slot above 1, 1", () => {
-    expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: 0, y: 1}, player2)).toMatchObject({x: 1, y: 2 });
+    expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: 0, y: 1}, player1)).toMatchObject({x: 1, y: 2 });
 })
 test("player2 will be able to send an attack 1 slot to the right of 1, 1", () => {
-    expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: 1, y: 0}, player2)).toMatchObject({x: 2, y: 1 });
+    expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: 1, y: 0}, player1)).toMatchObject({x: 2, y: 1 });
 })
 test("player2 will not be able to send an attack 1 slot below 1, 1", () => {
-    expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: 0, y: -1}, player2)).toMatchObject({x: 1, y: 1 });
+    expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: 0, y: -1}, player1)).toMatchObject({x: 1, y: 1 });
 })
 test("player2 will be able to send an attack 1 slot to the right of 1, 1", () => {
-    expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: -1, y: 0}, player2)).toMatchObject({x: 1, y: 1 });
+    expect(player2.findAdjacentSlot({x: 1, y: 1 }, {x: -1, y: 0}, player1)).toMatchObject({x: 1, y: 1 });
 })
 /*
     these tests will be tests at the 5-6 range and if we can attack near there.
 
 */
 test("player2 will be able to send an attack 1 slot to the right of 5, 6", () => {
-    expect(player2.findAdjacentSlot({x: 5, y: 6 }, {x: 1, y: 0}, player2)).toMatchObject({x: 6, y: 6 });
+    expect(player2.findAdjacentSlot({x: 5, y: 6 }, {x: 1, y: 0}, player1)).toMatchObject({x: 6, y: 6 });
 })
 test("player2 will be able to send an attack 1 slot below 5, 6", () => {
-    expect(player2.findAdjacentSlot({x: 5, y: 6 }, {x: 0, y: -1}, player2)).toMatchObject({x: 5, y: 5 });
+    expect(player2.findAdjacentSlot({x: 5, y: 6 }, {x: 0, y: -1}, player1)).toMatchObject({x: 5, y: 5 });
 })
 /*
 testing the tryEveryDirection function
