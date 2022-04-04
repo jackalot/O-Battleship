@@ -36,8 +36,10 @@ const playerFactory = (playerName, playerTurn) => {
   }
   //  findAdjacentSlot() helper function()
   function validateSlot(playerAttacking, coordinate) {
-    const validCoord = playerAttacking.ourBoard.checkValidCoord(coordinate);
-    const avaliableCoord = playerAttacking.ourBoard.checkAvailableCoord(coordinate);
+    let cloneObj = {};
+    cloneObj = { ...coordinate };
+    const validCoord = playerAttacking.ourBoard.checkValidCoord(cloneObj);
+    const avaliableCoord = playerAttacking.ourBoard.checkAvailableCoord(cloneObj);
     if (validCoord === true && avaliableCoord === true) {
       return true;
     }
