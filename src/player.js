@@ -36,9 +36,14 @@ const playerFactory = (playerName, playerTurn) => {
   }
   //  board.js checkValid coord but just for the cpu as the cpu using it causes an undefined error
   function checkPlayersValidCoord(coordinate, playerAttacking) {
-    const TRC = playerAttacking.ourBoard.checkTopRightCorner(coordinate);
-    const BLC = playerAttacking.ourBoard.checkBottomLeftCorner(coordinate);
-    if (TRC === true && BLC === true) {
+    const lessThanTRC = playerAttacking.ourBoard.checkLessThanTRC(coordinate);
+    const greaterThanBLC = playerAttacking.ourBoard.checkGreaterThanBLC(coordinate);
+    if (lessThanTRC === true && greaterThanBLC === true) {
+      const eqaulToTRC = playerAttacking.ourBoard.checkLessThanTRC(coordinate);
+      const equalToBLC = playerAttacking.ourBoard.checkGreaterThanBLC(coordinate);
+      if (eqaulToTRC === true && equalToBLC === true) {
+        return true;
+      }
       return true;
     }
     return false;
