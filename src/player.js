@@ -45,7 +45,7 @@ const playerFactory = (playerName, playerTurn) => {
     }
     return false;
   }
-  //  sendRandomAttack() helper function()
+  //  sendRandomAttack() helper function(), tryEveryDirection() calls this function
   // recieves a coordinate and checks the coordinate nearby to see if it can be attacked
   function findAdjacentSlot(coordinate, moveByHowMuch, playerAttacking) {
     // moveByHowMuch will use this kind of coordinate system: x: 0 y: +2;
