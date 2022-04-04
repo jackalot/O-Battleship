@@ -36,7 +36,8 @@ const playerFactory = (playerName, playerTurn) => {
   }
   //  board.js checkValid coord but just for the cpu as the cpu using it causes an undefined error
   function checkValidCoord(coordinate, playerAttacking) {
-
+    // This will not be segmented to smaller functions like board.js, it will be ordered through comments
+    if()
   }
   //  findAdjacentSlot() helper function()
   function validateSlot(playerAttacking, coordinate) {
