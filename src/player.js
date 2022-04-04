@@ -39,8 +39,8 @@ const playerFactory = (playerName, playerTurn) => {
     const lessThanTRC = playerAttacking.ourBoard.checkLessThanTRC(coordinate);
     const greaterThanBLC = playerAttacking.ourBoard.checkGreaterThanBLC(coordinate);
     if (lessThanTRC === true && greaterThanBLC === true) {
-      const eqaulToTRC = playerAttacking.ourBoard.checkLessThanTRC(coordinate);
-      const equalToBLC = playerAttacking.ourBoard.checkGreaterThanBLC(coordinate);
+      const eqaulToTRC = playerAttacking.ourBoard.checkEqualToTRC(coordinate);
+      const equalToBLC = playerAttacking.ourBoard.checkEqualToBLC(coordinate);
       if (eqaulToTRC === true && equalToBLC === true) {
         return true;
       }
