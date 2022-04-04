@@ -142,3 +142,12 @@ test("player2(CPU) sends a direct attack to player1's ship and it will return tr
 test("player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
     expect(player2.sendRandomAttack(player1)).toBe(true);
 })
+/*
+These are so that we can check if one of the functions sends an undefined coordinate
+*/
+test("player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
+    expect(player2.sendRandomAttack(player1)).toBe(true);
+})
+test("player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
+    expect(player2.sendRandomAttack(player1)).toBe(true);
+})
