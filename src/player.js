@@ -43,7 +43,7 @@ const playerFactory = (playerName, playerTurn) => {
   function validateSlot(playerAttacking, coordinate) {
     let cloneObj = {};
     cloneObj = { ...coordinate };
-    checkValidCoordFake(cloneObj, playerAttacking);
+    const validCoord = checkValidCoordFake(cloneObj, playerAttacking);
     const avaliableCoord = playerAttacking.ourBoard.checkAvailableCoord(cloneObj);
     if (validCoord === true && avaliableCoord === true) {
       return true;
