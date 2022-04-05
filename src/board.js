@@ -87,8 +87,12 @@ const gameBoardFactory = (bottomLeftCorner, topRightCorner) => {
   //  placeShip() helper function
   // This checks if its not out of bounds
   function checkValidCoord(coord) {
-    // console.log(coord); // most cases,
-    // a coordinate appears, but in one rare case, a undefined would appear
+    if (coord === undefined) {
+      // eslint-disable-next-line no-param-reassign
+      coord = { x: 100, y: 100 };
+      // an undefined error occured, instead of just shutting down
+      // the app, just make this coordinate invalid
+    }
     const CBLC = checkBottomLeftCorner(coord);
     const CTPRC = checkTopRightCorner(coord);
     if (CBLC === true && CTPRC === true) {
