@@ -174,6 +174,7 @@ const playerFactory = (playerName, playerTurn) => {
     tryEveryDirection,
     findAdjacentSlot,
     checkEachHitsFound,
+    removeUndefinedDirections,
   };
 };
 module.exports = playerFactory;
