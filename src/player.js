@@ -123,7 +123,7 @@ const playerFactory = (playerName, playerTurn) => {
         newPlaces.possibleDirections.push(placesWeCanHit.possibleDirections[i]);
       }
     }
-    return newPlaces;
+    return newPlaces.possibleDirections;
   }
   //  this is for the AI to attack randomly, also helps check we didnt hit
   //   an already missed/hit coordinate
