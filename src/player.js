@@ -117,6 +117,9 @@ const playerFactory = (playerName, playerTurn) => {
     const newPlaces = {
       ourCoordinates: placesWeCanHit.ourCoordinates,
     };
+    for (let i = 0; i < placesWeCanHit.possibleDirections.length; i += 1) {
+
+    }
     return newPlaces;
   }
   //  this is for the AI to attack randomly, also helps check we didnt hit
