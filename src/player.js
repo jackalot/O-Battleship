@@ -116,9 +116,12 @@ const playerFactory = (playerName, playerTurn) => {
   function removeUndefinedDirections(placesWeCanHit) {
     const newPlaces = {
       ourCoordinates: placesWeCanHit.ourCoordinates,
+      possibleDirections: [],
     };
     for (let i = 0; i < placesWeCanHit.possibleDirections.length; i += 1) {
-
+      if (placesWeCanHit.possibleDirections[i] !== undefined) {
+        newPlaces.possibleDirections.push(placesWeCanHit.possibleDirections[i]);
+      }
     }
     return newPlaces;
   }
