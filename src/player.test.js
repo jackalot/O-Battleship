@@ -137,6 +137,17 @@ const mockHitWithGreatestNeighbors = {
     ourCoordinates: { x: 0, y: 0 },
     possibleDirections: [{ x: 0, y: 0 }, { x: 1, y: 2 }, { x: 2, y: 3 }, { x: 5, y: 4 }, undefined]
   };
+test("mockHitWithGreatestNeighbors will have the undefined removed from it", () => {
+    expect(player2.removeUndefinedDirections(mockHitWithGreatestNeighbors)).toEqual(
+        expect.arrayContaining([
+            expect.objectContaining({x: 0, y: 0 }),
+            expect.objectContaining({x: 1, y: 2 }),
+            expect.objectContaining({x: 2, y: 3 }),
+            expect.objectContaining({x: 5, y: 4 })
+
+        ])
+    )
+})
 // true in this case means that after sending random attacks it managed to attack a valid coordinate
 test("attack1, player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
 expect(player2.sendRandomAttack(player1)).toBe(true);
