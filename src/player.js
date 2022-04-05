@@ -114,7 +114,10 @@ const playerFactory = (playerName, playerTurn) => {
     return hitWithGreatestNeighbors.possibleDirections;
   }
   function removeUndefinedDirections(placesWeCanHit) {
-
+    const newPlaces = {
+      ourCoordinates: placesWeCanHit.ourCoordinates,
+    };
+    return newPlaces;
   }
   //  this is for the AI to attack randomly, also helps check we didnt hit
   //   an already missed/hit coordinate
