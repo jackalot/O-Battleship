@@ -130,6 +130,9 @@ test("Player 2 will check each of their last hits and see that 5, 6 has the most
         ])
     )
 })
+/*
+    These are tests for the removeUndefinedDirections function
+*/
 // true in this case means that after sending random attacks it managed to attack a valid coordinate
 test("attack1, player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
 expect(player2.sendRandomAttack(player1)).toBe(true);
