@@ -131,7 +131,7 @@ test("Player 2 will check each of their last hits and see that 5, 6 has the most
     )
 })
 // true in this case means that after sending random attacks it managed to attack a valid coordinate
-test("player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
+test("attack1, player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
 expect(player2.sendRandomAttack(player1)).toBe(true);
 })
 // this is so that we can have some hits on the board and test checking for possible more hits
@@ -139,15 +139,15 @@ test("player2(CPU) sends a direct attack to player1's ship and it will return tr
     expect(player2.sendAttack(player1, {x: 1, y: 1})).toBe(true);
     })
 // thanks to previously hitting a ship, we now have a ship. this will now check for adjoining coords to hit
-test("player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
+test("attack2, player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
     expect(player2.sendRandomAttack(player1)).toBe(true);
 })
 /*
 These are so that we can check if one of the functions sends an undefined coordinate
 */
-test("player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
+test("attack3, player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
     expect(player2.sendRandomAttack(player1)).toBe(true);
 })
-test("player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
+test("attack4, player2(CPU) sends a random attack to player1's board and it will return true, it can either miss or hit", ()=> {
     expect(player2.sendRandomAttack(player1)).toBe(true);
 })
