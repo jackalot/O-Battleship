@@ -206,7 +206,10 @@ function dropShip() {
   }
   const playerCount = askPlayerCount();
   const ourPlayers = createPlayers(playerCount);
+  const showPlayer1 = true;
+  function hideplayerBoards() {
 
+  }
   function placeAShip(myPlayerNumber, boxID) {
     if (myPlayerNumber === 1) {
       const box = document.querySelector(`#${boxID}`);
