@@ -132,9 +132,12 @@ const playerFactory = (playerName, playerTurn) => {
     // in case it's a ship
     if (hitsFound.length > 0) {
       const placesWeCanHit = checkEachHitsFound(hitsFound, playerAttacking);
-      console.log(placesWeCanHit);
       const possibleDirections = removeUndefinedDirections(placesWeCanHit);
-      const attackResult = sendAttack(playerAttacking, possibleDirections[0]);
+      const index = Math.floor(Math.random() * possibleDirections.length);
+      const randomDirection = possibleDirections[index];
+      console.log(possibleDirections);
+      console.log(randomDirection);
+      const attackResult = sendAttack(playerAttacking, randomDirection);
       //  This is so the test could pass, the AI will not always hit
       return true;
     }
