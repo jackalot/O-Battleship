@@ -225,7 +225,7 @@ function dropShip() {
     }
   }
   function placeAShip(myPlayerNumber, boxID) {
-    if (myPlayerNumber === 1) {
+    if (myPlayerNumber === 1 && showPlayer1 === true) {
       const box = document.querySelector(`#${boxID}`);
       if (!box.classList.contains('containsShip')) {
         if (box.classList.contains('confirmShip')) {
@@ -235,7 +235,7 @@ function dropShip() {
         }
       }
     }
-    if (myPlayerNumber === 2) {
+    if (myPlayerNumber === 2 && showPlayer1 === false) {
       const box = document.querySelector(`#${boxID}`);
       if (!box.classList.contains('containsShip')) {
         if (box.classList.contains('confirmShip')) {
