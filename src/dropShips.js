@@ -365,6 +365,10 @@ function dropShip() {
       }
       if (playerCount === 2) {
         const allBoxes = document.querySelectorAll('.box');
+        const passTurnBtn = document.querySelector('.Pass-Turn');
+        passTurnBtn.addEventListener('click', () => {
+          hidePlayerBoards();
+        });
         hideButton('confirmAttackBtn');
         allBoxes.forEach((box) => {
           //  This will clone the box with itself, thus removing every event listener
