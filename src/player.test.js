@@ -133,12 +133,9 @@ test("Player 2 will check each of their last hits and see that 5, 6 has the most
 /*
     These are tests for the removeUndefinedDirections function
 */
-const mockHitWithGreatestNeighbors = {
-    ourCoordinates: { x: 0, y: 0 },
-    possibleDirections: [{ x: 0, y: 0 }, { x: 1, y: 2 }, { x: 2, y: 3 }, { x: 5, y: 4 }, undefined]
-  };
+const mockpossibleDirections = [{ x: 0, y: 0 }, { x: 1, y: 2 }, { x: 2, y: 3 }, { x: 5, y: 4 }, undefined];
 test("mockHitWithGreatestNeighbors will have the undefined removed from it", () => {
-    expect(player2.removeUndefinedDirections(mockHitWithGreatestNeighbors)).toEqual(
+    expect(player2.removeUndefinedDirections(mockpossibleDirections)).toEqual(
         expect.arrayContaining([
             expect.objectContaining({x: 0, y: 0 }),
             expect.objectContaining({x: 1, y: 2 }),
