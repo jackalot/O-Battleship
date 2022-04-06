@@ -336,6 +336,14 @@ function dropShip() {
           box.replaceWith(box.cloneNode(true));
         });
       }
+      if (playerCount === 2) {
+        const allBoxes = document.querySelector('.box');
+        hideButton('confirmAttackBtn');
+        allBoxes.forEach((box) => {
+          //  This will clone the box with itself, thus removing every event listener
+          box.replaceWith(box.cloneNode(true));
+        });
+      }
       // this is so we can use the clear boards function multiple times
       // without rewriting it.
       if (callNextFunction === true) {
