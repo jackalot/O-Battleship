@@ -113,14 +113,13 @@ const playerFactory = (playerName, playerTurn) => {
     });
     return hitWithGreatestNeighbors.possibleDirections;
   }
-  function removeUndefinedDirections(placesWeCanHit) {
+  function removeUndefinedDirections(possibleDirections) {
     const newPlaces = {
-      ourCoordinates: placesWeCanHit.ourCoordinates,
       possibleDirections: [],
     };
-    for (let i = 0; i < placesWeCanHit.possibleDirections.length; i += 1) {
-      if (placesWeCanHit.possibleDirections[i] !== undefined) {
-        newPlaces.possibleDirections.push(placesWeCanHit.possibleDirections[i]);
+    for (let i = 0; i < possibleDirections.length; i += 1) {
+      if (possibleDirections[i] !== undefined) {
+        newPlaces.possibleDirections.push(possibleDirections[i]);
       }
     }
     return newPlaces.possibleDirections;
