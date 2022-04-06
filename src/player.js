@@ -144,6 +144,11 @@ const playerFactory = (playerName, playerTurn) => {
         //  This is so the test could pass, the AI will not always hit
         return true;
       }
+      if (possibleDirections.length === 0) {
+        const coordinate = createRandomCoordinate(playerAttacking);
+        sendAttack(playerAttacking, coordinate);
+        return true;
+      }
     }
     // if no ships were harmed, fire a random attack at any coordinate
     if (hitsFound.length === 0) {
