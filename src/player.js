@@ -133,7 +133,9 @@ const playerFactory = (playerName, playerTurn) => {
     if (hitsFound.length > 0) {
       const placesWeCanHit = checkEachHitsFound(hitsFound, playerAttacking);
       const possibleDirections = removeUndefinedDirections(placesWeCanHit);
-      if (possibleDirections.length !== 0) {
+      // if for whatever reason, no possible directions are found,
+      // prevent this block from continuing
+      if (possibleDirections.length > 0) {
         const index = Math.floor(Math.random() * possibleDirections.length);
         const randomDirection = possibleDirections[index];
         console.log(possibleDirections);
