@@ -198,6 +198,9 @@ function dropShip() {
     if (result === 1) {
       displayButton('start');
     }
+    if (result === 2) {
+      displayButton('Pass-Turn');
+    }
     return result;
   }
   const playerCount = askPlayerCount();
