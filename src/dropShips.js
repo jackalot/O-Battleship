@@ -214,6 +214,12 @@ function dropShip() {
       // update both player's board's to be ready for playing
       p1DomBoardManager.sendNextCollumn();
       p2DomBoardManager.sendNextCollumn();
+    } else if (showPlayer1 === false) {
+      const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', playerTwo, true);
+      const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', playerOne, false);
+      // update both player's board's to be ready for playing
+      p1DomBoardManager.sendNextCollumn();
+      p2DomBoardManager.sendNextCollumn();
     }
   }
   function placeAShip(myPlayerNumber, boxID) {
