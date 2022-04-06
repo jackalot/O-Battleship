@@ -209,19 +209,21 @@ function dropShip() {
   let showPlayer1 = true;
   function hidePlayerBoards() {
     if (showPlayer1 === true) {
-      const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', playerTwo, false);
-      const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', playerOne, true);
+      const p1DomBoardManager = domBoardFile(ourPlayers.playerOne, 'P1Box', ourPlayers.playerTwo, false);
+      const p2DomBoardManager = domBoardFile(ourPlayers.playerTwo, 'P2Box', ourPlayers.playerOne, true);
       // update both player's board's to be ready for playing
       p1DomBoardManager.sendNextCollumn();
       p2DomBoardManager.sendNextCollumn();
       showPlayer1 = false;
+      clearBoards(false);
     } else if (showPlayer1 === false) {
-      const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', playerTwo, true);
-      const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', playerOne, false);
+      const p1DomBoardManager = domBoardFile(ourPlayers.playerOne, 'P1Box', ourPlayers.playerTwo, true);
+      const p2DomBoardManager = domBoardFile(ourPlayers.playerTwo, 'P2Box', ourPlayers.playerOne, false);
       // update both player's board's to be ready for playing
       p1DomBoardManager.sendNextCollumn();
       p2DomBoardManager.sendNextCollumn();
       showPlayer1 = true;
+      clearBoards(false);
     }
   }
   function placeAShip(myPlayerNumber, boxID) {
