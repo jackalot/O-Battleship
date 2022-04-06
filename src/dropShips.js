@@ -215,7 +215,7 @@ function dropShip() {
       p1DomBoardManager.sendNextCollumn();
       p2DomBoardManager.sendNextCollumn();
       showPlayer1 = false;
-      clearBoards(false);
+      clearBoards(true);
     } else if (showPlayer1 === false) {
       const p1DomBoardManager = domBoardFile(ourPlayers.playerOne, 'P1Box', ourPlayers.playerTwo, true);
       const p2DomBoardManager = domBoardFile(ourPlayers.playerTwo, 'P2Box', ourPlayers.playerOne, false);
@@ -223,7 +223,7 @@ function dropShip() {
       p1DomBoardManager.sendNextCollumn();
       p2DomBoardManager.sendNextCollumn();
       showPlayer1 = true;
-      clearBoards(false);
+      clearBoards(true);
     }
   }
   function placeAShip(myPlayerNumber, boxID) {
