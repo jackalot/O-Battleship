@@ -200,6 +200,7 @@ function dropShip() {
     }
     if (result === 2) {
       displayButton('Pass-Turn');
+      hideButton('start');
     }
     return result;
   }
