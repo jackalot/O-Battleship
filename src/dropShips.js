@@ -206,7 +206,7 @@ function dropShip() {
   }
   const playerCount = askPlayerCount();
   const ourPlayers = createPlayers(playerCount);
-  const showPlayer1 = true;
+  let showPlayer1 = true;
   function hidePlayerBoards() {
     if (showPlayer1 === true) {
       const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', playerTwo, false);
@@ -214,12 +214,14 @@ function dropShip() {
       // update both player's board's to be ready for playing
       p1DomBoardManager.sendNextCollumn();
       p2DomBoardManager.sendNextCollumn();
+      showPlayer1 = false;
     } else if (showPlayer1 === false) {
       const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', playerTwo, true);
       const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', playerOne, false);
       // update both player's board's to be ready for playing
       p1DomBoardManager.sendNextCollumn();
       p2DomBoardManager.sendNextCollumn();
+      showPlayer1 = true;
     }
   }
   function placeAShip(myPlayerNumber, boxID) {
