@@ -207,8 +207,14 @@ function dropShip() {
   const playerCount = askPlayerCount();
   const ourPlayers = createPlayers(playerCount);
   const showPlayer1 = true;
-  function hideplayerBoards() {
-
+  function hidePlayerBoards() {
+    if (showPlayer1 === true) {
+      const p1DomBoardManager = domBoardFile(playerOne, 'P1Box', playerTwo, false);
+      const p2DomBoardManager = domBoardFile(playerTwo, 'P2Box', playerOne, true);
+      // update both player's board's to be ready for playing
+      p1DomBoardManager.sendNextCollumn();
+      p2DomBoardManager.sendNextCollumn();
+    }
   }
   function placeAShip(myPlayerNumber, boxID) {
     if (myPlayerNumber === 1) {
