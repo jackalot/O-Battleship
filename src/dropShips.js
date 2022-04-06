@@ -218,6 +218,16 @@ function dropShip() {
         }
       }
     }
+    if (myPlayerNumber === 2) {
+      const box = document.querySelector(`#${boxID}`);
+      if (!box.classList.contains('containsShip')) {
+        if (box.classList.contains('confirmShip')) {
+          box.classList.remove('confirmShip');
+        } else {
+          box.classList.add('confirmShip');
+        }
+      }
+    }
   }
   // addToEachBox() helper function
   // finds the player number in the id
