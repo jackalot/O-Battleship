@@ -138,8 +138,6 @@ const playerFactory = (playerName, playerTurn) => {
       if (possibleDirections.length > 0) {
         const index = Math.floor(Math.random() * possibleDirections.length);
         const randomDirection = possibleDirections[index];
-        console.log(possibleDirections);
-        console.log(randomDirection);
         const attackResult = sendAttack(playerAttacking, randomDirection);
         //  This is so the test could pass, the AI will not always hit
         return true;
