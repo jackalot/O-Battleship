@@ -133,13 +133,15 @@ const playerFactory = (playerName, playerTurn) => {
     if (hitsFound.length > 0) {
       const placesWeCanHit = checkEachHitsFound(hitsFound, playerAttacking);
       const possibleDirections = removeUndefinedDirections(placesWeCanHit);
-      const index = Math.floor(Math.random() * possibleDirections.length);
-      const randomDirection = possibleDirections[index];
-      console.log(possibleDirections);
-      console.log(randomDirection);
-      const attackResult = sendAttack(playerAttacking, randomDirection);
-      //  This is so the test could pass, the AI will not always hit
-      return true;
+      if (possibleDirections.length !== 0) {
+        const index = Math.floor(Math.random() * possibleDirections.length);
+        const randomDirection = possibleDirections[index];
+        console.log(possibleDirections);
+        console.log(randomDirection);
+        const attackResult = sendAttack(playerAttacking, randomDirection);
+        //  This is so the test could pass, the AI will not always hit
+        return true;
+      }
     }
     // if no ships were harmed, fire a random attack at any coordinate
     if (hitsFound.length === 0) {
