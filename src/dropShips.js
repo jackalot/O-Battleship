@@ -214,10 +214,12 @@ function dropShip() {
   function hidePlayerBoards() {
     if (showPlayer1 === true) {
       revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo, false);
-      revealBoard(ourPlayers.playerTwo, ourPlayers.playerOne, false);
+      revealBoard(ourPlayers.playerTwo, ourPlayers.playerOne, true);
+      showPlayer1 = false;
     } else if (showPlayer1 === false) {
-      revealBoard(ourPlayers.playerTwo, ourPlayers.playerOne, false);
+      revealBoard(ourPlayers.playerTwo, ourPlayers.playerOne, true);
       revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo, false);
+      showPlayer1 = true;
     }
   }
   function placeAShip(myPlayerNumber, boxID) {
