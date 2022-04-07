@@ -337,6 +337,7 @@ function dropShip() {
     const allUnconfirmedShips = findUnconfirmedShips();
     const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
     const shipObject = createShipObject(unconfirmedCoordinates);
+    const allBoxes = document.querySelectorAll('.confirmShip');
     allBoxes.forEach((box) => {
       box.classList.remove('confirmShip');
     });
