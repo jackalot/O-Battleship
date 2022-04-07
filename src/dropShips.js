@@ -342,8 +342,10 @@ function dropShip() {
       revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
     }
     if (playerCount === 2) {
-      ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
-      revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
+      if (showPlayer1 === true) {
+        ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
+        revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
+      }
     }
   }
   // adds an event listener to each box
