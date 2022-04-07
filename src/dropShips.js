@@ -346,6 +346,10 @@ function dropShip() {
         ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
         revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
       }
+      if (showPlayer1 === false) {
+        ourPlayers.playerTwo.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
+        revealBoard(ourPlayers.playerTwo, ourPlayers.playerTwo);
+      }
     }
   }
   // adds an event listener to each box
