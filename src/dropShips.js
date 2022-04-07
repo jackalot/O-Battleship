@@ -251,7 +251,7 @@ function dropShip() {
     }
     return false;
   }
-  function revealBoard(currentPlayer, otherPlayer) {
+  function revealBoard(currentPlayer, otherPlayer, callClearBoards) {
     const allBoxes = document.querySelectorAll('.confirmShip');
     //  The ship has been confirmed, remove the confirmShip class
     allBoxes.forEach((box) => {
@@ -259,7 +259,9 @@ function dropShip() {
     });
     const domBoardManager = domBoardFile(currentPlayer, 'P1Box', otherPlayer, false);
     domBoardManager.sendNextCollumn();
-    clearBoards(true);
+    if (callClearBoards === true) {
+      clearBoards(true);
+    }
   }
   function fillCPUShips(shipArray) {
     for (let i = 0; i < shipArray.length; i += 1) {
