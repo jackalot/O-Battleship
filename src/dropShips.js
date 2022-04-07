@@ -333,17 +333,17 @@ function dropShip() {
     });
     if (playerCount === 1) {
       ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
-      revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
+      revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo, true);
     }
     if (playerCount === 2) {
       if (showPlayer1 === true) {
         ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
-        revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
+        revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo, true);
         showPlayer1 = false;
       }
       if (showPlayer1 === false) {
         ourPlayers.playerTwo.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
-        revealBoard(ourPlayers.playerTwo, ourPlayers.playerOne);
+        revealBoard(ourPlayers.playerTwo, ourPlayers.playerOne, true);
         showPlayer1 = true;
       }
     }
