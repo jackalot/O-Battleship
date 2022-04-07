@@ -259,10 +259,19 @@ function dropShip() {
     allBoxes.forEach((box) => {
       box.classList.remove('confirmShip');
     });
-    const domBoardManager = domBoardFile(currentPlayer, 'P1Box', otherPlayer, false);
-    domBoardManager.sendNextCollumn();
-    if (callClearBoards === true) {
-      clearBoards(true);
+    if (currentPlayer === ourPlayers.playerOne) {
+      const domBoardManager = domBoardFile(currentPlayer, 'P1Box', otherPlayer, false);
+      domBoardManager.sendNextCollumn();
+      if (callClearBoards === true) {
+        clearBoards(true);
+      }
+    }
+    if (currentPlayer === ourPlayers.playerTwo) {
+      const domBoardManager = domBoardFile(currentPlayer, 'P2Box', otherPlayer, false);
+      domBoardManager.sendNextCollumn();
+      if (callClearBoards === true) {
+        clearBoards(true);
+      }
     }
   }
   function fillCPUShips(shipArray) {
