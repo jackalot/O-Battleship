@@ -86,22 +86,24 @@ function dropShip() {
     let yMatches = 0;
     // when looping, if something matches this y coordinate,
     // add 1 to yMatches
-    const yMatcher = allUnconfirmedCoords[0].y;
-    let xMatches = 0;
-    const xMatcher = allUnconfirmedCoords[0].x;
-    for (let i = 1; i < allUnconfirmedCoords.length; i += 1) {
-      if (allUnconfirmedCoords[i].x === xMatcher) {
-        xMatches += 1;
+    if (allUnconfirmedCoords.length > 0) {
+      const yMatcher = allUnconfirmedCoords[0].y;
+      let xMatches = 0;
+      const xMatcher = allUnconfirmedCoords[0].x;
+      for (let i = 1; i < allUnconfirmedCoords.length; i += 1) {
+        if (allUnconfirmedCoords[i].x === xMatcher) {
+          xMatches += 1;
+        }
+        if (allUnconfirmedCoords[i].y === yMatcher) {
+          yMatches += 1;
+        }
       }
-      if (allUnconfirmedCoords[i].y === yMatcher) {
-        yMatches += 1;
+      if (xMatches === allUnconfirmedCoords.length - 1) {
+        return 'vertical';
       }
-    }
-    if (xMatches === allUnconfirmedCoords.length - 1) {
-      return 'vertical';
-    }
-    if (yMatches === allUnconfirmedCoords.length - 1) {
-      return 'horizontal';
+      if (yMatches === allUnconfirmedCoords.length - 1) {
+        return 'horizontal';
+      }
     }
     return 'none';
   }
