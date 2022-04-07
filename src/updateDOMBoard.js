@@ -33,7 +33,6 @@ function updateDOMBoard(myPlayer, searchQuery, otherPlayer, hideShips) {
         const anyPreviousAttacks = document.querySelectorAll('.unconfirmedAttack');
         // if there isn't any, move on
         if (anyPreviousAttacks.length === 0) {
-          console.log(temporaryBox);
           temporaryBox.classList.add('unconfirmedAttack');
           const gameStatus = document.querySelector('.gameStatus');
           gameStatus.textContent = `${otherPlayer.playerName}, please confirm attack`;
