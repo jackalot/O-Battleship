@@ -213,9 +213,11 @@ function dropShip() {
   let showPlayer1 = true;
   function hidePlayerBoards() {
     if (showPlayer1 === true) {
-
+      revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo, false);
+      revealBoard(ourPlayers.playerTwo, ourPlayers.playerOne, false);
     } else if (showPlayer1 === false) {
-
+      revealBoard(ourPlayers.playerTwo, ourPlayers.playerOne, false);
+      revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo, false);
     }
   }
   function placeAShip(myPlayerNumber, boxID) {
