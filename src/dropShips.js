@@ -337,6 +337,9 @@ function dropShip() {
     const allUnconfirmedShips = findUnconfirmedShips();
     const unconfirmedCoordinates = getShipCoordinates(allUnconfirmedShips);
     const shipObject = createShipObject(unconfirmedCoordinates);
+    allBoxes.forEach((box) => {
+      box.classList.remove('confirmShip');
+    });
     if (playerCount === 1) {
       ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
       revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
@@ -344,11 +347,9 @@ function dropShip() {
     if (playerCount === 2) {
       if (showPlayer1 === true) {
         ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
-        revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
       }
       if (showPlayer1 === false) {
         ourPlayers.playerTwo.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
-        revealBoard(ourPlayers.playerTwo, ourPlayers.playerTwo);
       }
     }
   }
