@@ -348,11 +348,13 @@ function dropShip() {
     if (playerCount === 2) {
       if (showPlayer1 === true) {
         ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
-        hidePlayerBoards();
+        revealBoard(ourPlayers.playerOne, ourPlayers.playerTwo);
+        showPlayer1 = false;
       }
       if (showPlayer1 === false) {
         ourPlayers.playerTwo.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
-        hidePlayerBoards();
+        revealBoard(ourPlayers.playerTwo, ourPlayers.playerOne);
+        showPlayer1 = true;
       }
     }
   }
