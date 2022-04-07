@@ -348,9 +348,11 @@ function dropShip() {
     if (playerCount === 2) {
       if (showPlayer1 === true) {
         ourPlayers.playerOne.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
+        hidePlayerBoards();
       }
       if (showPlayer1 === false) {
         ourPlayers.playerTwo.ourBoard.placeShip(shipObject.startPoint, shipObject.endPoint);
+        hidePlayerBoards();
       }
     }
   }
